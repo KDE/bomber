@@ -1,0 +1,43 @@
+project(bomber)
+find_package(KDE4 REQUIRED)
+#include (KDE4Defaults)
+include_directories( ${KDE4_INCLUDES} ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/libkdegames/highscore )
+
+if(KDE4_ENABLE_FPIE)
+    set ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_CXX_FPIE_FLAGS}")
+endif(KDE4_ENABLE_FPIE)
+
+set(bomber_SRCS
+   bomber.cpp
+   main.cpp
+   bomberwidget.cpp   
+   board.cpp
+   plane.cpp
+   bomb.cpp
+   renderer.cpp     
+   building.cpp 
+   buildingtile.cpp
+   explodable.cpp
+ )
+
+kde4_add_ui_files(bomber_SRCS prefs_base.ui)
+
+kde4_add_kcfg_files(bomber_SRCS settings.kcfgc )
+
+kde4_add_executable(bomber ${bomber_SRCS})
+
+if(KDE4_ENABLE_FPIE)
+    target_link_libraries(bomber ${KDE4_KDEUI_LIBS} kdegames ${KDE4_PHONON_LIBS} ${KDE4_PIE_LDFLAGS})    
+else(KDE4_ENABLE_FPIE)
+    target_link_libraries(bomber ${KDE4_KDEUI_LIBS} kdegames ${KDE4_PHONON_LIBS})
+endif(KDE4_ENABLE_FPIE)
+
+install(TARGETS bomber DESTINATION ${BIN_INSTALL_DIR} )
+
+
+########### install files ###############
+
+install( FILES bomber.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( FILES bomber.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
+install( FILES bomberui.rc  DESTINATION  ${DATA_INSTALL_DIR}/bomber )
+

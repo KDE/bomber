@@ -1,0 +1,16 @@
+[Desktop Entry]
+Encoding=UTF-8
+
+Name=Bomber
+
+Exec=bomber -caption "%c"
+Icon=bomber
+Type=Application
+DocPath=bomber/index.html
+GenericName=A KDE4 Application
+Terminal=0
+
+GenericName=Bomber Game
+
+Categories=Qt;KDE;Game;ArcadeGame;
+

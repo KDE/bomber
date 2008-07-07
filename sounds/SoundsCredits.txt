@@ -1,0 +1,4 @@
+The Bomber game uses the following files from Freesounds (http://freesound.iua.upf.edu). 
+They are all licensed under the Creative Commons License (http://creativecommons.org/licenses/by-nd/2.0/).
+
+explode.ogg from sandyrb (http://www.freesound.org/samplesViewSingle.php?id=35643)

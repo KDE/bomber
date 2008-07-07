@@ -1,0 +1,19 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="Bomber" version="1">
+	<MenuBar>
+		<Menu name="settings">
+			<Action name="toggle_sound" append="save_merge" />
+		</Menu>
+	</MenuBar>
+	<ToolBar name="mainToolBar">
+		<text>Main Toolbar</text>
+		<Action name="game_new" />
+		<Action name="game_pause" />
+		<Separator />
+		<Action name="game_highscores" />
+	</ToolBar>
+	<StatusBar />
+	<ActionProperties>
+		<Action shortcut="Space" name="drop_bomb" />		
+	</ActionProperties>
+</kpartgui>

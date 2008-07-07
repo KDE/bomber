@@ -1,0 +1,192 @@
+/*
+ * Copyright (C) 2007-2008 John-Paul Stanford <jp@stanwood.org.uk>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public
+ * License along with this program; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+#ifndef BOMBER_WIDGET_H
+#define BOMBER_WIDGET_H
+
+#include <kgamecanvas.h>
+#include <QMouseEvent>
+
+#include "board.h"
+#include "renderer.h"
+
+class KGameTheme;
+
+/**
+ * This is the main game widget class. It manages things like the lives, source coutns and game states.
+ */
+class BomberGameWidget : public KGameCanvasWidget
+{
+    Q_OBJECT
+
+public:
+    /** The different states that the game can be in */
+    enum State
+    {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver};
+
+    explicit BomberGameWidget( QWidget* parent = 0 );
+    ~BomberGameWidget();
+
+    /** 
+     * Used to find out the current level 
+     * \return The current level
+     */
+    int level();
+    
+    /** 
+     * Used to find the current score
+     * \return the current score
+     */
+    int score();
+    
+    /**
+     * Used to return the game sate
+     * \return The game state
+     */
+    BomberGameWidget::State state() const
+    {   return m_state;}
+
+public slots:
+	/**
+	 * Used to end the game
+	 */
+    void closeGame();
+    
+    /**
+     * Used to start a new game
+     */
+    void newGame();
+    
+    /**
+     * Used to pause the game
+     * \param paused True to pause the game, False to unpause the game
+     */
+    void setPaused( bool paused );
+    
+    /**
+     * This is called when the settings change to save the settings
+     */
+    void settingsChanged();
+    
+    /** 
+     * Ennabled or disabled the sounds 
+     * \param val True to enable the sounds, otherwise false 
+     */
+    void setSounds( bool val);
+    
+    /**
+     * Used to toggle the suppended game state. If val is true and the state is currently running,
+     * them set the sate to suppended. If val is false and the state is suppended, set the sate to running.
+     * \param val True to set state to suspended, False to set state to running.
+     */
+    void setSuspended( bool val);
+
+    /** 
+     * This is called when the drop bomb key is press or the mouse in the game area.
+     * If the game state is running, If it is between levels, then a new level is created and
+     * if it's BeforeFirstGame then a new game is started.
+     */
+    void onDropBomb();
+
+    signals:
+    /** 
+     * This is emited when the game is over
+     */
+    void gameOver();
+    
+    /**
+     * This is emited when the level changes.
+     * \param level The new level
+     */
+    void levelChanged( int level );
+    
+    /**
+     * This is emited when the sorce changes
+     * \param score The new score
+     */
+    void scoreChanged( int score );
+    
+    /**
+     * This is emited when the lives change
+     * \param lives The new lives
+     */
+    void livesChanged( int lives );
+    
+    /**
+     * This is emited when the time changes
+     * \param time The new time value
+     */
+    void timeChanged( int time );
+    
+    /**
+     * This is emited when the game state changes
+     * \param state The new game state
+     */
+    void stateChanged( BomberGameWidget::State state );
+
+private slots:
+    void tick();
+
+    /**
+     * This is called when a bomb hits a building
+     */
+    void onBombHit();
+
+    /** 
+     * This slot is called when a level has been cleared to change the state and get
+     * ready for the next level.
+     */
+    void onLevelCleared();
+
+    /**
+     * This slot is called when the plane crashes
+     */
+    void onPlaneCrashed();
+
+private:
+    virtual void resizeEvent( QResizeEvent* event );
+    virtual void mouseReleaseEvent( QMouseEvent* event );
+    virtual void mouseMoveEvent( QMouseEvent* event );
+
+    /**
+     * Greate the overlay used to display info to the user. The info will
+     * change depending on the game state.
+     */
+    void generateOverlay();
+    void redraw();
+
+    void closeLevel();
+    void newLevel();
+
+    State m_state;
+    int m_level;
+    int m_score;
+    int m_lives;
+    int m_time;
+    /** Used to store the remaining score before a new life is given */
+    int m_scoreLeftBeforeNewLife;
+
+    BomberRenderer m_renderer;
+    KGameTheme *m_theme;
+    QTimer* m_clock;
+    BomberBoard* m_board;
+
+    KGameCanvasPixmap* m_overlay;
+};
+
+#endif
