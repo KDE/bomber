@@ -1,6 +1,4 @@
 project(bomber)
-find_package(KDE4 REQUIRED)
-#include (KDE4Defaults)
 include_directories( ${KDE4_INCLUDES} ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/libkdegames/highscore )
 
 if(KDE4_ENABLE_FPIE)
