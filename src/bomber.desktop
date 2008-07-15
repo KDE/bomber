@@ -8,9 +8,11 @@ Icon=bomber
 Type=Application
 DocPath=bomber/index.html
 GenericName=A KDE4 Application
+GenericName[et]=KDE4 rakendus
 Terminal=0
 
 GenericName=Bomber Game
+GenericName[et]=Pommitamismäng
 
 Categories=Qt;KDE;Game;ArcadeGame;
 
