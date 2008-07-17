@@ -31,7 +31,6 @@ int main(int argc, char **argv)
     KAboutData about("bomber", 0, ki18n("Bomber"), version, ki18n(description),
                      KAboutData::License_GPL, ki18n("(C) 2007 John-Paul Stanford"), KLocalizedString(), 0, "jp@stanwood.org.uk");
     about.addAuthor(ki18n("John-Paul Stanford"), KLocalizedString(), "jp@stanwood.org.uk" );
-    about.addCredit(ki18n("sandyrb"),ki18n("Explode sound sample"),"","http://www.freesound.org/samplesViewSingle.php?id=35643");
     KCmdLineArgs::init(argc, argv, &about);
     
     KApplication app;
