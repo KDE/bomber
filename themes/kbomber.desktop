@@ -1,6 +1,7 @@
 [KGameTheme]
 VersionFormat=1
 Name=KBomber - Star Wars
+Name[sv]=Bomber - Stjärnornas krig
 FileName=kbomber.svg
 Author=Eugene Trounev [it-s]
 AuthorEmail=eugene.trounev@gmail.com
