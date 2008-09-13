@@ -153,6 +153,11 @@ void BomberGameWidget::settingsChanged()
     }
 
     m_renderer.load(m_theme->graphics() );
+
+    QPalette palette;
+	palette.setBrush(backgroundRole(), m_renderer.renderBackground() );
+	setPalette(palette);
+
     redraw();
 }
 
@@ -176,7 +181,7 @@ emit 	        livesChanged(m_lives);
 }
 
 void BomberGameWidget::onBombHit()
-{       
+{
     int bonus = SCORE_INCREMENT * m_level;
     m_score+= bonus;
     emit            scoreChanged(m_score);
@@ -186,7 +191,7 @@ void BomberGameWidget::onBombHit()
         m_lives++;
         emit livesChanged(m_lives);
     }
-    
+
 
 }
 
@@ -359,5 +364,5 @@ emit 	            levelChanged(m_level );
 emit 	            stateChanged(m_state );
         redraw();
     }
-    
+
 }
