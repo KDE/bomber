@@ -7,14 +7,9 @@ Exec=bomber -caption "%c"
 Icon=bomber
 Type=Application
 DocPath=bomber/index.html
-GenericName=A KDE4 Application
-GenericName[et]=KDE4 rakendus
-GenericName[sv]=Ett KDE 4-program
-Terminal=0
+Terminal=false
 
-GenericName=Bomber Game
-GenericName[et]=Pommitamismäng
-GenericName[sv]=Bombspel
+GenericName=Arcade bombing game
 
 Categories=Qt;KDE;Game;ArcadeGame;
 
