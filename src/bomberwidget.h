@@ -42,18 +42,18 @@ public:
     explicit BomberGameWidget( QWidget* parent = 0 );
     ~BomberGameWidget();
 
-    /** 
-     * Used to find out the current level 
+    /**
+     * Used to find out the current level
      * \return The current level
      */
     int level();
-    
-    /** 
+
+    /**
      * Used to find the current score
      * \return the current score
      */
     int score();
-    
+
     /**
      * Used to return the game sate
      * \return The game state
@@ -66,37 +66,37 @@ public slots:
 	 * Used to end the game
 	 */
     void closeGame();
-    
+
     /**
      * Used to start a new game
      */
     void newGame();
-    
+
     /**
      * Used to pause the game
-     * \param paused True to pause the game, False to unpause the game
+     * \param paused True to pause the game, False to resume the game
      */
     void setPaused( bool paused );
-    
+
     /**
      * This is called when the settings change to save the settings
      */
     void settingsChanged();
-    
-    /** 
-     * Ennabled or disabled the sounds 
-     * \param val True to enable the sounds, otherwise false 
-     */
-    void setSounds( bool val);
-    
-    /**
-     * Used to toggle the suppended game state. If val is true and the state is currently running,
-     * them set the sate to suppended. If val is false and the state is suppended, set the sate to running.
-     * \param val True to set state to suspended, False to set state to running.
-     */
-    void setSuspended( bool val);
 
-    /** 
+    /**
+     * Enabled or disabled the sounds
+     * \param value True to enable the sounds, otherwise false
+     */
+    void setSounds( bool value);
+
+    /**
+     * Used to toggle the suspended game state. If val is true and the state is currently running,
+     * them set the sate to suspended. If value is false and the state is suspended, set the sate to running.
+     * \param value True to set state to suspended, False to set state to running.
+     */
+    void setSuspended( bool value);
+
+    /**
      * This is called when the drop bomb key is press or the mouse in the game area.
      * If the game state is running, If it is between levels, then a new level is created and
      * if it's BeforeFirstGame then a new game is started.
@@ -104,37 +104,37 @@ public slots:
     void onDropBomb();
 
     signals:
-    /** 
-     * This is emited when the game is over
+    /**
+     * This is emitted when the game is over
      */
     void gameOver();
-    
+
     /**
-     * This is emited when the level changes.
+     * This is emitted when the level changes.
      * \param level The new level
      */
     void levelChanged( int level );
-    
+
     /**
-     * This is emited when the sorce changes
+     * This is emitted when the source changes
      * \param score The new score
      */
     void scoreChanged( int score );
-    
+
     /**
-     * This is emited when the lives change
+     * This is emitted when the lives change
      * \param lives The new lives
      */
     void livesChanged( int lives );
-    
+
     /**
-     * This is emited when the time changes
+     * This is emitted when the time changes
      * \param time The new time value
      */
     void timeChanged( int time );
-    
+
     /**
-     * This is emited when the game state changes
+     * This is emitted when the game state changes
      * \param state The new game state
      */
     void stateChanged( BomberGameWidget::State state );
@@ -147,7 +147,7 @@ private slots:
      */
     void onBombHit();
 
-    /** 
+    /**
      * This slot is called when a level has been cleared to change the state and get
      * ready for the next level.
      */

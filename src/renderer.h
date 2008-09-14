@@ -38,10 +38,10 @@ public:
 	/**
 	 * Loads SVG file and invalidates pixmap cache
 	 * \param fileName The SVG theme filename
-	 * \return True if sucessfull, otherwise false
+	 * \return True if successful, otherwise false
 	 */
 	bool load( const QString& fileName );
-	
+
 	/**
 	 * Sets Background size and invalidates background cache
 	 * \param size The size of the background
@@ -76,13 +76,13 @@ public:
 	 * \return A pixmap with the element rendered onto it
 	 */
 	QPixmap renderElement( const QString& id, int frame, const QSize& size = QSize( 0, 0 ) );
-	
-	/** 
-	 * Get the maxiumn number of building styles
-	 * \return The maxium number of building styles 
-	 */ 
+
+	/**
+	 * Get the maximum number of building styles
+	 * \return The maximum number of building styles
+	 */
 	int maxBuildingStyles();
-	
+
 private:
     /**
      * Returns true of the element with the given ID exists in the SVG theme

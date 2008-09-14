@@ -45,7 +45,7 @@ class BomberBoard : public QObject, public KGameCanvasGroup
 	Q_OBJECT
 
 public:
-	
+
 	/**
 	 * The constructor used to creeate the board.
 	 * \param renderer The Render used to renderer game objects
@@ -53,15 +53,15 @@ public:
 	 * \param parent The widget which the board is inserted into
 	 */
 	explicit BomberBoard( BomberRenderer* renderer, KGameCanvasAbstract* canvas = NULL, QWidget* parent = 0 );
-	
+
 	~BomberBoard();
-	
+
 	/**
 	 * This is called when the game board is resized
 	 * \param size The new tile size used on the game board
 	 */
 	void resize( QSize& size );
-	
+
 	/**
 	 * This will redraw the game board
 	 */
@@ -72,7 +72,7 @@ public:
 	 * \param level The level number been started
 	 */
 	void newLevel( int level );
-	
+
 	/**
 	 * This is called to pause the game.
 	 * \param val True if pased, otherwise false
@@ -84,24 +84,24 @@ public:
 	 * \param name The sound to play
 	 */
 	void playSound( const QString& name );
-	
+
 	/**
 	 * Used to activate/deactivate sounds while playing
 	 * \param val True to turn on the sounds, otherwise false
 	 */
 	void setSounds( bool val );
 
-	/** 
+	/**
 	 * This will convert the tile location to actual cords on the board
-	 * \param pos The cords releative to the tile 
-	 * \return The cords releative to the widget 
-	 */	
+	 * \param pos The cords releative to the tile
+	 * \return The cords releative to the widget
+	 */
 	QPoint mapPosition( const QPointF& pos ) const;
-	
-	/** 
+
+	/**
 	 * This will convert the widget location to tile locations
 	 * \param pos The cords releative to the widget
-	 * \return The cords releative to the tile 
+	 * \return The cords releative to the tile
 	 */
 	QPointF unmapPosition( const QPoint& pos ) const;
 
@@ -117,18 +117,18 @@ public:
 
 signals:
 	/**
-	 * This is emitted when a plane crashes into a building	 
+	 * This is emitted when a plane crashes into a building
 	 */
 	void onPlaneCrash();
 
 	/**
-	 * This singnal is emitied when a bomb hits a building and before it's exploding 
-	 * animation starts	 
+	 * This singnal is emitied when a bomb hits a building and before it's exploding
+	 * animation starts
 	 */
 	void onBombHit();
-	
+
 	/**
-	 * This is emitted when the level has been cleared of all buildings 
+	 * This is emitted when the level has been cleared of all buildings
 	 */
 	void levelCleared();
 
@@ -141,12 +141,12 @@ private slots:
 	void planeExploded();
 
 	/**
-	 * This is called when a bomb has finished exploding	 
+	 * This is called when a bomb has finished exploding
 	 */
 	void bombExploded();
 
-private:	
-	/** 
+private:
+	/**
 	 * This is called when a bomb hits a building
 	 * \param bomb The bomb that hit
 	 * \param moveBombToX The x position to move the explosion too
@@ -154,8 +154,8 @@ private:
 	 */
 	void bombHit(Bomb *bomb,qreal moveBombToX,qreal moveBombToY);
 
-	/** 
-	 * This is used to remove all the current game objects, usally called before
+	/**
+	 * This is used to remove all the current game objects, usually called before
 	 * stating a new level
 	 */
 	void clear();
@@ -181,17 +181,17 @@ private:
 
 	/** If their is a bomb currently dropping then it is pointed to by this */
 	Bomb* m_bomb;
-	
+
 	/** This points to the plane object used in the level */
 	Plane* m_plane;
-	
+
 	/** This contains all the buildings in the current level */
 	QList<Building *> m_buildings;
-	
+
 
 	/** This contains all the bombs that are currently exploding */
 	QQueue<Bomb *> m_explodingBombs;
-	
+
 	/** This is the number of blocks that make up the buildings */
 	int m_buildingBlocks;
 };
