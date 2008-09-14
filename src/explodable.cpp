@@ -23,7 +23,6 @@
 
 #include "board.h"
 #include "renderer.h"
-#include "explodable.h"
 
 const qreal Explodable::EXPLOSION_RELATIVE_SIZE_H = 1.0;
 const qreal Explodable::EXPLOSION_RELATIVE_SIZE_W = 1.0;
