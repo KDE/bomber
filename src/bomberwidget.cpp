@@ -328,7 +328,7 @@ void BomberGameWidget::generateOverlay()
         text = i18n("Game over.");
         break;
     default:
-        text = QString();
+        text.clear();
     }
 
     QFont font;
