@@ -1,15 +1,9 @@
 [Desktop Entry]
-Encoding=UTF-8
-
 Name=Bomber
-
 Exec=bomber -caption "%c"
 Icon=bomber
 Type=Application
-DocPath=bomber/index.html
 Terminal=false
-
 GenericName=Arcade bombing game
-
 Categories=Qt;KDE;Game;ArcadeGame;
 
