@@ -36,10 +36,14 @@ BomberRenderer::~BomberRenderer()
 }
 
 bool BomberRenderer::load(const QString& fileName)
-{	
+{
 	m_tileCache.clear();
 	m_cachedBackground = QPixmap();
-	return m_svgRenderer.load(fileName);
+	bool success = m_svgRenderer.load(fileName);
+
+	renderBackground();
+
+	return success;
 }
 
 void BomberRenderer::setBackgroundSize(const QSize& size)
@@ -56,7 +60,7 @@ QPixmap BomberRenderer::renderBackground()
 	if (m_cachedBackground.isNull())
 	{
 		//This is a dirty fix to the qt's m_svgRenderer.render() method that
-		//leaves an garbage-filled border of a pixmap		
+		//leaves an garbage-filled border of a pixmap
 		m_cachedBackground = QPixmap(m_backgroundSize);
 		m_cachedBackground.fill(QApplication::palette().window().color());
 		QPainter p( &m_cachedBackground);
@@ -92,12 +96,15 @@ QPixmap BomberRenderer::renderElement(const QString& id, const QSize& size)
 	{
 		QImage baseImage(size, QImage::Format_ARGB32_Premultiplied);
 		baseImage.fill( 0);
+
 		QPainter p( &baseImage);
 		m_svgRenderer.render( &p, id);
 		p.end();
+
 		QPixmap renderedTile = QPixmap::fromImage(baseImage);
 		elementIt = m_tileCache.insert(id, renderedTile);
 	}
+
 	return elementIt.value();
 }
 

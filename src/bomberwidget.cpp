@@ -44,11 +44,13 @@ BomberGameWidget::BomberGameWidget(QWidget* parent) :
     connect(m_board, SIGNAL(levelCleared()), this, SLOT(onLevelCleared()));
 
     m_overlay = new KGameCanvasPixmap( this );
+
     m_overlay->raise();
     m_overlay->hide();
 
     m_clock = new QTimer( this );
     m_clock->setInterval(GAME_TIME_DELAY);
+
     connect(m_clock, SIGNAL(timeout() ), this, SLOT(tick() ));
 
     setMouseTracking( true);
@@ -142,8 +144,6 @@ emit 		                stateChanged(m_state);
 
 void BomberGameWidget::settingsChanged()
 {
-    kDebug();
-
     m_board->setSounds(BomberSettings::playSounds() );
 
     if ( !m_theme->load(BomberSettings::theme() ) )
@@ -156,8 +156,8 @@ void BomberGameWidget::settingsChanged()
 
     QPalette palette;
 	palette.setBrush(backgroundRole(), m_renderer.renderBackground() );
-	setPalette(palette);
 
+	setPalette(palette);
     redraw();
 }
 

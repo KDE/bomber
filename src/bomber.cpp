@@ -43,14 +43,15 @@ Bomber::Bomber()
     m_statusBar->insertItem(i18n("Score: %1", QString::fromLatin1("XXXXXX") ), 2, 1);
     m_statusBar->insertItem(i18n("Lives: %1", QString::fromLatin1("XX") ), 4, 1);
 
-    m_gameWidget =new BomberGameWidget(this);    
+    m_gameWidget =new BomberGameWidget(this);
+
     connect(m_gameWidget, SIGNAL( levelChanged( int ) ), this, SLOT( displayLevel( int ) ));
     connect(m_gameWidget, SIGNAL( scoreChanged( int
             ) ), this, SLOT( displayScore( int ) ));
     connect(m_gameWidget, SIGNAL( livesChanged( int
             ) ), this, SLOT( displayLives( int ) ));
-    connect(m_gameWidget, 
-    SIGNAL(stateChanged(BomberGameWidget::State) ), this, 
+    connect(m_gameWidget,
+    SIGNAL(stateChanged(BomberGameWidget::State) ), this,
     SLOT(gameStateChanged(BomberGameWidget::State) ));
 
     setCentralWidget(m_gameWidget);
@@ -58,10 +59,11 @@ Bomber::Bomber()
     initXMLUI();
 
     setFocusPolicy(Qt::StrongFocus);
+
     setFocus();
     setupGUI();
 
-    readSettings();
+    // readSettings();
 }
 
 Bomber::~Bomber()
@@ -80,13 +82,13 @@ void Bomber::initXMLUI()
     KStandardGameAction::highscores(this, SLOT(showHighscore()), actionCollection());
     KStandardGameAction::quit(this, SLOT(close()), actionCollection());
 
-    // Settings		    
+    // Settings
     KStandardAction::preferences( this, SLOT(configureSettings() ), actionCollection() );
     m_soundAction = new KToggleAction( i18n("&Play Sounds"), this );
     actionCollection()->addAction("toggle_sound", m_soundAction);
     connect(m_soundAction, SIGNAL( triggered( bool ) ), this, SLOT( setSounds( bool ) ));
 
-    QAction *dropBombAction = actionCollection()->addAction ("drop_bomb");   
+    QAction *dropBombAction = actionCollection()->addAction ("drop_bomb");
     dropBombAction->setText (i18n ("&Drop bomb"));
     dropBombAction->setToolTip (i18n ("Drop bomb"));
     dropBombAction->setWhatsThis (i18n ("Makes the plane drop a bomb while flying"));
@@ -162,7 +164,6 @@ void Bomber::showHighscore()
 
 void Bomber::highscore()
 {
-    kDebug();
     KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score| KScoreDialog::Level, this);
 
     KScoreDialog::FieldInfo info;
@@ -224,7 +225,7 @@ void Bomber::gameStateChanged(BomberGameWidget::State state)
         m_statusBar->clearMessage();
         break;
     case BomberGameWidget::GameOver:
-        statusBar()->showMessage(i18n("Game over. Press <Space> for a new game") );
+        statusBar()->showMessage(i18n("Game over. Press %s for a new game",m_pauseAction->globalShortcut().toString()));
         highscore();
         break;
     default:

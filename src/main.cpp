@@ -20,6 +20,7 @@
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
 #include <KDE/KLocale>
+#include <kdebug.h>
 
 static const char description[] =
     I18N_NOOP("A KDE 4 Application");
@@ -32,9 +33,9 @@ int main(int argc, char **argv)
                      KAboutData::License_GPL, ki18n("(C) 2007 John-Paul Stanford"), KLocalizedString(), 0, "jp@stanwood.org.uk");
     about.addAuthor(ki18n("John-Paul Stanford"), KLocalizedString(), "jp@stanwood.org.uk" );
     KCmdLineArgs::init(argc, argv, &about);
-    
+
     KApplication app;
-    KGlobal::locale()->insertCatalog("libkdegames");    
+    KGlobal::locale()->insertCatalog("libkdegames");
 
     // see if we are starting with session management
     if (app.isSessionRestored())
@@ -44,7 +45,8 @@ int main(int argc, char **argv)
     else
     {
     	Bomber *widget = new Bomber;
-    	widget->show();        
+    	widget->show();
+    	widget->readSettings();
     }
 
     return app.exec();

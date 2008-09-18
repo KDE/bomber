@@ -30,7 +30,7 @@ class KToggleAction;
  * This class serves as the main window for Bomber.  It handles the
  * menus, toolbars, and status bars.
  *
- * @short Main window class 
+ * @short Main window class
  */
 class Bomber : public KXmlGuiWindow
 {
@@ -41,18 +41,19 @@ public:
 	 */
 	Bomber();
 
+	void readSettings();
+
 	/**
 	 * Default Destructor
 	 */
 	virtual ~Bomber();
 
-private slots:    
-	void closeGame();	
+private slots:
+	void closeGame();
 	void newGame();
 	void pauseGame();
 	void gameOverNow();
 	void configureSettings();
-	void readSettings();
 	void showHighscore();
 	void settingsChanged();
 

@@ -53,19 +53,16 @@ BomberBoard::BomberBoard(BomberRenderer* renderer, KGameCanvasAbstract* canvas,
 	m_clock = new QTimer( this );
 	m_clock->setInterval(GAME_DELAY);
 	connect(m_clock, SIGNAL(timeout() ), this, SLOT(tick() ));
-
 	m_plane = new Plane(m_renderer,this);
 	m_plane->resize(m_tileSize);
 	m_plane->raise();
 	m_plane->show();
 	resetPlane();
-
 	clear();
 
 	m_audioPlayer = 0;
 	m_playSounds = false;
 	m_soundPath = KStandardDirs::locate("appdata", "sounds/");
-
 }
 
 BomberBoard::~BomberBoard()
@@ -124,31 +121,31 @@ void BomberBoard::newLevel(int level)
 	{
 		level = MAX_LEVEL;
 	}
-	
+
 	if (level==1) {
 	    m_plane->setVelocity(Plane::DEFAULT_VELOCITY);
 	}
-	else if (level % 2 == 0){	    
+	else if (level % 2 == 0){
 	    m_plane->setVelocity(m_plane->velocity()+PLANE_INC_VELOCITY);
 	}
-	
+
 	m_clock->stop();
 	clear();
 	m_plane->setState(Explodable::Moving);
 	m_buildingBlocks = 0;
 	//Create the buildings
 	for (int i=0; i<NUMBER_BUILDINGS; i++)
-	{	   
+	{
 	    int min = level;
 	    if (min < 3) {
 	        min = 3;
-	    }	 
+	    }
 	    int max = level +3;
 	    if (max<5) {
 	        max = 5;
-	    }	    
-		int height = (KRandom::random() % (max-min))+min;		
-		
+	    }
+		int height = (KRandom::random() % (max-min))+min;
+
 		m_buildingBlocks+=height;
 		Building *building = new Building(m_renderer,this,i+1,height);
 
@@ -171,10 +168,10 @@ void BomberBoard::setPaused(bool val)
 void BomberBoard::playSound(const QString& name)
 {
 	if (m_playSounds == true && !name.isEmpty())
-	{		    
-	    QString file = m_soundPath.filePath(name);	    	   
+	{
+	    QString file = m_soundPath.filePath(name);
 		m_audioPlayer->setCurrentSource(file);
-		m_audioPlayer->play();	    
+		m_audioPlayer->play();
 	}
 }
 
@@ -270,7 +267,7 @@ void BomberBoard::checkCollisions()
 				m_bomb = NULL;
 			}
 		}
-		
+
 		if (m_plane->state()==Explodable::Moving && /*m_plane->position().x()>Plane::PLANE_MAX_POSITION_X &&*/ m_buildingBlocks==0)
 		{
 			emit levelCleared();
@@ -291,14 +288,14 @@ void BomberBoard::bombHit(Bomb *bomb, qreal moveBombToX, qreal moveBombToY)
 void BomberBoard::bombExploded()
 {
 	Bomb *bomb = m_explodingBombs.dequeue();
-	bomb->hide();	
+	bomb->hide();
 	delete bomb;
 }
 
 void BomberBoard::planeExploded()
 {
-	m_plane->setState(Plane::Exploded);	
-emit 				onPlaneCrash();	
+	m_plane->setState(Plane::Exploded);
+emit 				onPlaneCrash();
 }
 
 void BomberBoard::crashed()

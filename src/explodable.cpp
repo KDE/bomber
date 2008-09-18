@@ -30,11 +30,16 @@ const qreal Explodable::EXPLOSION_RELATIVE_SIZE_W = 1.0;
 Explodable::Explodable(QString mainSvg,QString explosionSvg,qreal relativeWidth,qreal relativeHeight,BomberRenderer* renderer, BomberBoard* board) :
 	KGameCanvasPixmap(board), m_renderer(renderer), m_board(board),m_mainSvg(mainSvg),m_explosionSvg(explosionSvg)
 {
-    m_relativeWidth = relativeWidth;  
-    m_relativeHeight = relativeHeight; 
+    m_relativeWidth = relativeWidth;
+    m_relativeHeight = relativeHeight;
     m_size = QSize( 32, 64);
-	resetPixmaps();	
-	setState(Moving);	
+	resetPixmaps();
+	m_state = Moving;
+	m_nextBoundingRect.setSize(QSizeF(m_relativeWidth,m_relativeHeight) );
+	// m_lastSize = tileSize;
+	//m_size.setWidth( static_cast<int>(m_relativeWidth * tileSize.width() ) );
+	//m_size.setHeight( static_cast<int> (m_relativeHeight * tileSize.height() ) );
+	//moveTo(m_board->mapPosition(QPointF(m_xPos, m_yPos) ) );
 }
 
 Explodable::~Explodable()
@@ -86,6 +91,7 @@ void Explodable::resize(const QSize& tileSize)
 		m_size.setHeight( static_cast<int> (EXPLOSION_RELATIVE_SIZE_H
 				* tileSize.height() ) );
 	}
+
 	moveTo(m_board->mapPosition(QPointF(m_xPos, m_yPos) ) );
 	setFrame(m_frame);
 }
