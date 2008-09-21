@@ -1,7 +1,10 @@
 [KGameTheme]
 VersionFormat=1
 Name=KBomber - Star Wars
+Name[km]=KBomber - សង្គ្រាម​ផ្កាយ
+Name[pt]=KBomber - Guerra das Estrelas
 Name[sv]=Bomber - Stjärnornas krig
+Name[uk]=KBomber — Зоряні війни
 FileName=kbomber.svg
 Author=Eugene Trounev [it-s]
 AuthorEmail=eugene.trounev@gmail.com
