@@ -52,7 +52,6 @@ private slots:
 	void closeGame();
 	void newGame();
 	void pauseGame();
-	void gameOverNow();
 	void configureSettings();
 	void showHighscore();
 	void settingsChanged();

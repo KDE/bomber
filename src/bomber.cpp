@@ -39,9 +39,9 @@
 Bomber::Bomber()
 {
     m_statusBar = statusBar();
-    m_statusBar->insertItem(i18n("Level: %1", QString::fromLatin1("XX") ), 1, 1);
-    m_statusBar->insertItem(i18n("Score: %1", QString::fromLatin1("XXXXXX") ), 2, 1);
-    m_statusBar->insertItem(i18n("Lives: %1", QString::fromLatin1("XX") ), 4, 1);
+    m_statusBar->insertItem(i18nc("Default text shown to the user before the level is known at game start","Level: XX" ), 1, 1);
+    m_statusBar->insertItem(i18nc("Default text shown to the user before the score is known at game start","Score: XXXXX" ), 2, 1);
+    m_statusBar->insertItem(i18nc("Default text shown to the user before the lives are known at game start","Lives: XX"), 4, 1);
 
     m_gameWidget =new BomberGameWidget(this);
 
@@ -147,12 +147,6 @@ void Bomber::closeGame()
     }
 }
 
-void Bomber::gameOverNow()
-{
-    statusBar()->showMessage(i18n("Game over. Press <Space> for a new game") );
-    highscore();
-}
-
 /**
  * Bring up the standard kde high score dialog.
  */
@@ -208,14 +202,13 @@ void Bomber::displayScore(int score)
 
 void Bomber::displayLives(int lives)
 {
-
     m_statusBar->changeItem(i18n("Lives: %1", lives), 4);
 }
 
 void Bomber::gameStateChanged(BomberGameWidget::State state)
 {
-    switch (state)
-    {
+    switch (state) {
+
     case BomberGameWidget::Paused:
         m_pauseAction->setChecked( true);
         m_statusBar->clearMessage();
@@ -225,7 +218,7 @@ void Bomber::gameStateChanged(BomberGameWidget::State state)
         m_statusBar->clearMessage();
         break;
     case BomberGameWidget::GameOver:
-        statusBar()->showMessage(i18n("Game over. Press %s for a new game",m_pauseAction->globalShortcut().toString()));
+        m_statusBar->showMessage(i18n("Game over. Press '%1' for a new game",m_newAction->shortcuts().first().toString()));
         highscore();
         break;
     default:

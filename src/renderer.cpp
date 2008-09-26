@@ -39,6 +39,7 @@ bool BomberRenderer::load(const QString& fileName)
 {
 	m_tileCache.clear();
 	m_cachedBackground = QPixmap();
+
 	bool success = m_svgRenderer.load(fileName);
 
 	renderBackground();
