@@ -2,8 +2,3 @@ Bugs
 ----
 
 When flying above the top level of building blocks, it's not possible to bomb them.
-
-The following messages are produced when the plane crashes:
-Couldn't find node plane_2. Skipping rendering.
-Couldn't find node plane_1. Skipping rendering.
-

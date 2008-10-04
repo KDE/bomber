@@ -109,6 +109,11 @@ void Explodable::setRandomFrame()
 		if (m_mainFramesNum > 0)
 			frame = KRandom::random() % m_mainFramesNum;
 	}
+	else {
+		if (m_explosionFramesNum > 0)
+					frame = KRandom::random() % m_explosionFramesNum;
+	}
+
 	setFrame(frame);
 }
 
@@ -148,6 +153,7 @@ void Explodable::resetPixmaps()
 	m_frame = 0;
 	m_mainFramesNum = m_renderer->frames(m_mainSvg );
 	m_explosionFramesNum = m_renderer->frames(m_explosionSvg );
+
 	setFrame(m_frame);
 }
 
@@ -162,4 +168,5 @@ void Explodable::setFrame(int frame)
 		setPixmap(m_renderer->renderElement(m_explosionSvg, frame,
 				m_size) );
 	}
+	m_frame = frame;
 }
