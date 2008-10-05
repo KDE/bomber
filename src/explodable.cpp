@@ -36,10 +36,9 @@ Explodable::Explodable(QString mainSvg,QString explosionSvg,qreal relativeWidth,
 	resetPixmaps();
 	m_state = Moving;
 	m_nextBoundingRect.setSize(QSizeF(m_relativeWidth,m_relativeHeight) );
-	// m_lastSize = tileSize;
 	//m_size.setWidth( static_cast<int>(m_relativeWidth * tileSize.width() ) );
 	//m_size.setHeight( static_cast<int> (m_relativeHeight * tileSize.height() ) );
-	//moveTo(m_board->mapPosition(QPointF(m_xPos, m_yPos) ) );
+	moveTo(m_board->mapPosition(QPointF(m_xPos, m_yPos) ) );
 }
 
 Explodable::~Explodable()

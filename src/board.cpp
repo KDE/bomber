@@ -229,10 +229,8 @@ void BomberBoard::dropBomb()
 {
 	if (m_bomb == NULL&& m_plane->state() == Explodable::Moving)
 	{
-		m_bomb = new Bomb(m_renderer,this);
-		m_bomb->resize(m_tileSize);
 		QPointF planePos = m_plane->position();
-		m_bomb->setPosition(planePos.x(), planePos.y()+1);
+		m_bomb = new Bomb(m_renderer,this,planePos.x(), planePos.y()+1,m_tileSize);
 		m_bomb->raise();
 		m_bomb->show();
 	}
@@ -245,6 +243,7 @@ void BomberBoard::checkCollisions()
 		if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state()
 				== Explodable::Moving)
 		{
+			// Plane crashed into the building
 			building->destoryTop();
 			m_buildingBlocks--;
 			crashed();
@@ -255,20 +254,22 @@ void BomberBoard::checkCollisions()
 			if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state()
 					== Explodable::Moving)
 			{
+				// Bomb hit a building
 				building->destoryTop();
 				m_buildingBlocks--;
 				emit onBombHit();
 				bombHit(m_bomb,building->position().x(),Building::BUILD_BASE_LOCATION-(building->height()));
 				m_bomb = NULL;
 			}
-			else if (m_bomb->position().y()>=Building::BUILD_BASE_LOCATION)
+			else if (m_bomb->position().y()>=Building::BUILD_BASE_LOCATION+1)
 			{
+				// Bomb hit the ground
 				bombHit(m_bomb,(int)m_bomb->position().x(),Building::BUILD_BASE_LOCATION);
 				m_bomb = NULL;
 			}
 		}
 
-		if (m_plane->state()==Explodable::Moving && /*m_plane->position().x()>Plane::PLANE_MAX_POSITION_X &&*/ m_buildingBlocks==0)
+		if (m_plane->state()==Explodable::Moving &&  m_buildingBlocks==0)
 		{
 			emit levelCleared();
 		}

@@ -30,11 +30,13 @@
 const qreal Bomb::BOMB_RELATIVE_SIZE_H = 0.7;
 const qreal Bomb::BOMB_RELATIVE_SIZE_W = 0.2;
 
-Bomb::Bomb(BomberRenderer* renderer, BomberBoard* board) :
+Bomb::Bomb(BomberRenderer* renderer, BomberBoard* board,qreal xPos,qreal yPos,const QSize& tileSize) :
 	Explodable(QString("bomb"), QString("bomb_explode"), BOMB_RELATIVE_SIZE_W,
 			BOMB_RELATIVE_SIZE_H, renderer, board)
 {
 	setVelocity(DEFAULT_VELOCITY);
+	setPosition(xPos, yPos);
+	resize(tileSize);
 }
 
 Bomb::~Bomb()

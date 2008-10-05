@@ -30,14 +30,14 @@ class BomberBoard;
  */
 class Bomb : public Explodable
 {
-public:	
+public:
 	/** The width of the bomb releative to the tile */
 	static const qreal BOMB_RELATIVE_SIZE_W;
 	/** The height of the bomb releative to the tile */
-	static const qreal BOMB_RELATIVE_SIZE_H;	
+	static const qreal BOMB_RELATIVE_SIZE_H;
 
-	Bomb(BomberRenderer* renderer, BomberBoard* board);
-	~Bomb();	
+	Bomb(BomberRenderer* renderer, BomberBoard* board,qreal xPos,qreal yPos,const QSize& tileSize);
+	~Bomb();
 
 	/**
 	 * Performs move calculations
