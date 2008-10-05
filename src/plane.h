@@ -15,8 +15,8 @@
  * License along with this program; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#ifndef PLANE_H_
-#define PLANE_H_
+#ifndef PLANE_H
+#define PLANE_H
 
 #include "explodable.h"
 
@@ -57,4 +57,4 @@ public:
 	void resetPosition();
 };
 
-#endif /*PLANE_H_*/
+#endif /*PLANE_H*/

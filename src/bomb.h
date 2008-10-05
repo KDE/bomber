@@ -15,8 +15,8 @@
  * License along with this program; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#ifndef BOMB_H_
-#define BOMB_H_
+#ifndef BOMB_H
+#define BOMB_H
 
 #include "explodable.h"
 
@@ -46,4 +46,4 @@ public:
 	void advanceItem();
 };
 
-#endif /*BOMB_H_*/
+#endif /*BOMB_H*/

@@ -16,8 +16,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef EXPLODABLE_H_
-#define EXPLODABLE_H_
+#ifndef EXPLODABLE_H
+#define EXPLODABLE_H
 
 #include "kgamecanvas.h"
 
@@ -158,4 +158,4 @@ private:
 	QString m_explosionSvg;
 };
 
-#endif /*EXPLODABLE_H_*/
+#endif /*EXPLODABLE_H*/

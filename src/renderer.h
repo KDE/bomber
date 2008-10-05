@@ -16,8 +16,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef RENDERER_H_
-#define RENDERER_H_
+#ifndef RENDERER_H
+#define RENDERER_H
 
 #include <KSvgRenderer>
 
@@ -97,4 +97,4 @@ private:
 	QHash<QString, QPixmap> m_tileCache;
 };
 
-#endif /*RENDERER_H_*/
+#endif /*RENDERER_H*/

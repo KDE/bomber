@@ -192,17 +192,17 @@ void Bomber::setSounds(bool val)
 
 void Bomber::displayLevel(int level)
 {
-    m_statusBar->changeItem(i18n("Level: %1", level), 1);
+    m_statusBar->changeItem(i18nc("Used to display the current level of play to the user","Level: %1", level), 1);
 }
 
 void Bomber::displayScore(int score)
 {
-    m_statusBar->changeItem(i18n("Score: %1", score), 2);
+    m_statusBar->changeItem(i18nc("Used to inform the user of their current score","Score: %1", score), 2);
 }
 
 void Bomber::displayLives(int lives)
 {
-    m_statusBar->changeItem(i18n("Lives: %1", lives), 4);
+    m_statusBar->changeItem(i18nc("Used to tell the user how many lives they have left","Lives: %1", lives), 4);
 }
 
 void Bomber::gameStateChanged(BomberGameWidget::State state)

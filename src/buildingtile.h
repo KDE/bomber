@@ -16,8 +16,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef BUILDINGTILE_H_
-#define BUILDINGTILE_H_
+#ifndef BUILDINGTILE_H
+#define BUILDINGTILE_H
 
 #include "kgamecanvas.h"
 
@@ -66,4 +66,4 @@ private:
 	QSize m_tileSize;
 };
 
-#endif /*BUILDINGTILE_H_*/
+#endif /*BUILDINGTILE_H*/

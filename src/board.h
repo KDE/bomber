@@ -15,8 +15,8 @@
  * License along with this program; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#ifndef BOARD_H_
-#define BOARD_H_
+#ifndef BOARD_H
+#define BOARD_H
 
 #include "kgamecanvas.h"
 
@@ -196,4 +196,4 @@ private:
 	int m_buildingBlocks;
 };
 
-#endif /*BOARD_H_*/
+#endif /*BOARD_H*/

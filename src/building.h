@@ -16,8 +16,8 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef BUILDING_
-#define BUILDING_
+#ifndef BUILDING_H
+#define BUILDING_H
 
 #include <QtCore/QRect>
 #include <QtCore/QSize>
@@ -117,4 +117,4 @@ private:
 	qreal m_xPos;
 };
 
-#endif /*BUILDING_*/
+#endif /*BUILDING_H*/
