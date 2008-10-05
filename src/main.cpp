@@ -23,7 +23,7 @@
 #include <kdebug.h>
 
 static const char description[] =
-    I18N_NOOP("A KDE 4 Application");
+    I18N_NOOP("Arcade bombing game");
 
 static const char version[] = "0.1";
 

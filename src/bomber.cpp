@@ -218,7 +218,7 @@ void Bomber::gameStateChanged(BomberGameWidget::State state)
         m_statusBar->clearMessage();
         break;
     case BomberGameWidget::GameOver:
-        m_statusBar->showMessage(i18n("Game over. Press '%1' for a new game",m_newAction->shortcuts().first().toString()));
+        m_statusBar->showMessage(i18n("Game over. Press '%1' for a new game",m_newAction->shortcuts().first().toString(QKeySequence::NativeText)));
         highscore();
         break;
     default:
