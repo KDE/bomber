@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+  <!ENTITY bomber "<application>Bomber</application>">
+  <!ENTITY kappname "&bomber;">
+  <!ENTITY package "kdegames">
+  <!ENTITY kappversion "1.0"><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY docversion "1.0"><!--Document version. Use this variable everywhere it's needed.-->
+  <!ENTITY docupdate "2007-05-12"><!--Document version. Use this variable everywhere it's needed.-->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<book lang="&language;">
+	<bookinfo>
+		<title>The &bomber; Handbook</title>
+
+		<authorgroup>
+			<author>
+				<firstname>John-Paul</firstname>
+				<surname>Stanford</surname>
+				<affiliation>
+					<address>
+						<email>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+
+		</authorgroup>
+		<copyright>
+			<year>2008</year>
+			<holder>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice>&FDLNotice;
+		</legalnotice>
+
+		<date>&docupdate;
+		</date><!-- Date of (re)writing, ro update. Use the variable definitions within header to change this value.-->
+		<releaseinfo>&docversion;
+		</releaseinfo><!-- Application version number. Use the variable definitions within header to change this value.-->
+
+		<abstract>
+			<para>
+				This documentation describes the game of &bomber; version
+				&kappversion;
+			</para>
+		</abstract>
+
+		<keywordset>
+			<keyword>KDE</keyword><!-- do not change this! -->
+			<keyword>kdegames</keyword><!-- do not change this! -->
+			<keyword>game</keyword><!-- do not change this! -->
+			<keyword>arcade</keyword>
+			<keyword>bomber</keyword>
+			<keyword>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title>Introduction</title>
+		<note>
+			<title>Gametype:</title>
+			<para>Arcade</para>
+		</note>
+		<note>
+			<title>Number of possible players:</title>
+			<para>One</para>
+		</note>
+
+		<para>
+			&bomber; is a single player arcade game. The player is
+			invading various cities in a plane that is decreasing in
+			height.
+		</para>
+		<para>
+			The goal of the game is to destory all the buildings and
+			advance to the next level. Each level gets a harder by
+			increasing the speed of the plane and the height of the
+			buildings.
+		</para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title>How To Play</title>
+		<para>
+			The player is flying a plane in a city. The plane flys from
+			right to left. Everytime it disapears off the side of the
+			play area, it reapears on the right side again, but lowever
+			than it was before.
+		</para>
+		<para>
+			The player has to destory all the buildings to clear the
+			level. If they crash into a building, then they loose a life
+			and the plane is moved to the top left of the play area
+			again.
+		</para>
+		<para>
+			Buildings are destroyed by droping bombs on them. This can
+			be done by clicking the
+			&LMB;
+			or pressing the
+			<quote>Space</quote>
+			key. The bomb will fall from the plane and hit anything
+			directory below it.
+		</para>
+		<para>
+			After clearing a level, the player advances to the next
+			level. Each level gets slightly harder than the previous
+			level as the buildings get taller and the plane gets faster.
+		</para>
+	</chapter>	
+
+	<chapter id="configuration">
+		<title>Game Configuration</title><!-- do not change this! -->
+		<para>
+			The &bomber; configuration dialog allows you to select visual
+			themes for &bomber;.
+		</para>
+		<para>
+			To select a new theme simply choose the theme's name from
+			the selection list.
+		</para>
+		<note>
+			<title>Note:</title>
+			<para>
+				For your convenience a quick preview screenshot will be
+				displayed on the right hand sided of the selection list
+				as soon as you select the theme you are interested in.
+			</para>
+		</note>
+		<para>
+			Once you are satisfied with the theme you have selected you
+			can either click the
+			<guibutton>Apply</guibutton>
+			, or simply click the
+			<guibutton>Ok</guibutton>
+			button, located at the bottom part of this dialog.
+		</para>
+		<para>
+			If, however you are dissatisfied with your selection –
+			simply click
+			<guimenu>Cancel</guimenu>
+			to discard the changes.
+		</para>
+	</chapter>
+
+	<chapter id="credits-and-licenses">
+		<title>Credits and Licenses</title>
+
+
+		<para>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para>
+					John-Paul Stanford
+					<email>jp@stanwood.org.uk</email>
+					- Original Author
+				</para>
+			</listitem>
+		</itemizedlist>
+		<para>
+			Documentation copyright 2008, John-Paul Stanford
+			<email>jp@stanwood.org.uk</email>
+		</para>
+		
+		<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+		&underFDL;
+
+		&underGPL;
+
+	</chapter>
+
+	<appendix id="installation">
+		<title>Installation</title>
+
+		&install.intro.documentation;
+
+		&install.compile.documentation;
+
+	</appendix>
+
+
+</book>
