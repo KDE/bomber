@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
-  <!ENTITY kappname "Bomber">
+  <!ENTITY bomber "<application>Bomber</application>">
+  <!ENTITY kappname "&bomber;">
   <!ENTITY package "kdegames">
   <!ENTITY kappversion "1.0"><!--Applicaion version. Use this variable everywhere it's needed.-->
   <!ENTITY docversion "1.0"><!--Document version. Use this variable everywhere it's needed.-->
@@ -10,7 +11,7 @@
 ]>
 <book lang="&language;">
 	<bookinfo>
-		<title>The Bomber Handbook</title>
+		<title>The &bomber; Handbook</title>
 
 		<authorgroup>
 			<author>
@@ -39,7 +40,7 @@
 
 		<abstract>
 			<para>
-				This documentation describes the game of Bomber version
+				This documentation describes the game of &bomber; version
 				&kappversion;
 			</para>
 		</abstract>
@@ -67,7 +68,7 @@
 		</note>
 
 		<para>
-			Bomber is a single player arcade game. The player is
+			&bomber; is a single player arcade game. The player is
 			invading various cities in a plane that is decreasing in
 			height.
 		</para>
@@ -111,8 +112,8 @@
 	<chapter id="configuration">
 		<title>Game Configuration</title><!-- do not change this! -->
 		<para>
-			The Bomber configuration dialog allows you to select visual
-			themes for Bomber.
+			The &bomber; configuration dialog allows you to select visual
+			themes for &bomber;.
 		</para>
 		<para>
 			To select a new theme simply choose the theme's name from
@@ -146,7 +147,7 @@
 		<title>Credits and Licenses</title>
 
 
-		<para>Bomber</para>
+		<para>&bomber;</para>
 		<itemizedlist>
 			<listitem>
 				<para>
