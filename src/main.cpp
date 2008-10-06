@@ -45,6 +45,7 @@ int main(int argc, char **argv)
     else
     {
     	Bomber *widget = new Bomber;
+    	widget->setMinimumSize(320,200);
     	widget->show();
     	widget->readSettings();
     }
