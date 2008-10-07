@@ -3,9 +3,9 @@
   <!ENTITY bomber "<application>Bomber</application>">
   <!ENTITY kappname "&bomber;">
   <!ENTITY package "kdegames">
-  <!ENTITY kappversion "1.0"><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY kappversion "0.1"><!--Applicaion version. Use this variable everywhere it's needed.-->
   <!ENTITY docversion "1.0"><!--Document version. Use this variable everywhere it's needed.-->
-  <!ENTITY docupdate "2007-05-12"><!--Document version. Use this variable everywhere it's needed.-->
+  <!ENTITY docupdate "2008-10-07"><!--Document version. Use this variable everywhere it's needed.-->
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
@@ -73,7 +73,7 @@
 			height.
 		</para>
 		<para>
-			The goal of the game is to destory all the buildings and
+			The goal of the game is to destroy all the buildings and
 			advance to the next level. Each level gets a harder by
 			increasing the speed of the plane and the height of the
 			buildings.
@@ -82,25 +82,25 @@
 	<chapter id="how-to-play">
 		<title>How To Play</title>
 		<para>
-			The player is flying a plane in a city. The plane flys from
-			right to left. Everytime it disapears off the side of the
-			play area, it reapears on the right side again, but lowever
+			The player is flying a plane in a city. The plane flies from
+			left to right. Everytime it disappears off the side of the
+			play area, it reappears on the left side again, but lower
 			than it was before.
 		</para>
 		<para>
-			The player has to destory all the buildings to clear the
-			level. If they crash into a building, then they loose a life
+			The player has to destroy all the buildings to clear the
+			level. If the plane crashes into a building, then the player loses a life
 			and the plane is moved to the top left of the play area
 			again.
 		</para>
 		<para>
-			Buildings are destroyed by droping bombs on them. This can
+			Buildings are destroyed by dropping bombs on them. This can
 			be done by clicking the
 			&LMB;
 			or pressing the
 			<quote>Space</quote>
 			key. The bomb will fall from the plane and hit anything
-			directory below it.
+			directly below it.
 		</para>
 		<para>
 			After clearing a level, the player advances to the next
