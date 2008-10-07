@@ -8,6 +8,7 @@ Icon=bomber
 Type=Application
 Terminal=false
 GenericName=Arcade bombing game
+GenericName[de]=Ein Arkade-Bombenspiel
 GenericName[el]=Παιχνίδι Arcade βομβαρδισμού
 GenericName[gl]=Xogo arcade de tirar bombas
 GenericName[km]=ល្បែង​គ្រាប់បែក​ Arcade
