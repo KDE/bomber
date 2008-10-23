@@ -88,7 +88,7 @@ void Bomber::initXMLUI()
     actionCollection()->addAction("toggle_sound", m_soundAction);
     connect(m_soundAction, SIGNAL( triggered( bool ) ), this, SLOT( setSounds( bool ) ));
 
-    QAction *dropBombAction = actionCollection()->addAction ("drop_bomb");
+    KAction *dropBombAction = actionCollection()->addAction ("drop_bomb");
     dropBombAction->setText (i18n ("&Drop bomb"));
     dropBombAction->setToolTip (i18n ("Drop bomb"));
     dropBombAction->setWhatsThis (i18n ("Makes the plane drop a bomb while flying"));
