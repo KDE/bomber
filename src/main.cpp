@@ -22,33 +22,34 @@
 #include <KDE/KLocale>
 #include <kdebug.h>
 
-static const char description[] =
-    I18N_NOOP("Arcade bombing game");
+static const char description[] = I18N_NOOP("Arcade bombing game");
 
 static const char version[] = "0.1";
 
 int main(int argc, char **argv)
 {
-    KAboutData about("bomber", 0, ki18n("Bomber"), version, ki18n(description),
-                     KAboutData::License_GPL, ki18n("(C) 2007 John-Paul Stanford"), KLocalizedString(), 0, "jp@stanwood.org.uk");
-    about.addAuthor(ki18n("John-Paul Stanford"), KLocalizedString(), "jp@stanwood.org.uk" );
-    KCmdLineArgs::init(argc, argv, &about);
+	KAboutData about("bomber", 0, ki18n("Bomber"), version, ki18n(description),
+			KAboutData::License_GPL, ki18n("(C) 2007 John-Paul Stanford"),
+			KLocalizedString(), 0, "jp@stanwood.org.uk");
+	about.addAuthor(ki18n("John-Paul Stanford"), KLocalizedString(),
+			"jp@stanwood.org.uk");
+	KCmdLineArgs::init(argc, argv, &about);
 
-    KApplication app;
-    KGlobal::locale()->insertCatalog("libkdegames");
+	KApplication app;
+	KGlobal::locale()->insertCatalog("libkdegames");
 
-    // see if we are starting with session management
-    if (app.isSessionRestored())
-    {
-        RESTORE(Bomber);
-    }
-    else
-    {
-    	Bomber *widget = new Bomber;
-    	widget->setMinimumSize(320,200);
-    	widget->show();
-    	widget->readSettings();
-    }
+	// see if we are starting with session management
+	if (app.isSessionRestored())
+	{
+		RESTORE(Bomber);
+	}
+	else
+	{
+		Bomber *widget = new Bomber;
+		widget->setMinimumSize(320, 200);
+		widget->show();
+		widget->readSettings();
+	}
 
-    return app.exec();
+	return app.exec();
 }

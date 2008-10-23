@@ -25,7 +25,7 @@
 #include <QtGui/QPalette>
 
 BomberRenderer::BomberRenderer() :
-	m_svgRenderer(), m_backgroundSize(QSize( 0, 0) )
+	m_svgRenderer(), m_backgroundSize(QSize(0, 0))
 {
 
 }
@@ -64,8 +64,8 @@ QPixmap BomberRenderer::renderBackground()
 		//leaves an garbage-filled border of a pixmap
 		m_cachedBackground = QPixmap(m_backgroundSize);
 		m_cachedBackground.fill(QApplication::palette().window().color());
-		QPainter p( &m_cachedBackground);
-		m_svgRenderer.render( &p, "background");
+		QPainter p(&m_cachedBackground);
+		m_svgRenderer.render(&p, "background");
 	}
 	return m_cachedBackground;
 }
@@ -75,31 +75,32 @@ bool BomberRenderer::elementExists(const QString& id)
 	return m_svgRenderer.elementExists(id);
 }
 
-int BomberRenderer::frames(const QString& id)
+unsigned int BomberRenderer::frames(const QString& id)
 {
-	int frame = 0;
-	while (elementExists(id + '_'+ QString::number(frame) ) )
+	unsigned int frame = 0;
+	while (elementExists(id + '_' + QString::number(frame)))
 		frame++;
 	return frame;
 }
 
 QPixmap BomberRenderer::renderElement(const QString& id, const QSize& size)
 {
-	QHash<QString, QPixmap>::const_iterator elementIt =
-			m_tileCache.constFind(id);
+	QHash<QString, QPixmap>::const_iterator elementIt = m_tileCache.constFind(
+			id);
 	QHash<QString, QPixmap>::const_iterator itEnd = m_tileCache.constEnd();
-	if (elementIt == itEnd && size.isEmpty() )
+	if (elementIt == itEnd && size.isEmpty())
 	{
 		return QPixmap();
 	}
 
-	if (elementIt == itEnd || (size != QSize( 0, 0) && size != elementIt.value().size() ))
+	if (elementIt == itEnd || (size != QSize(0, 0) && size
+			!= elementIt.value().size()))
 	{
 		QImage baseImage(size, QImage::Format_ARGB32_Premultiplied);
-		baseImage.fill( 0);
+		baseImage.fill(0);
 
-		QPainter p( &baseImage);
-		m_svgRenderer.render( &p, id);
+		QPainter p(&baseImage);
+		m_svgRenderer.render(&p, id);
 		p.end();
 
 		QPixmap renderedTile = QPixmap::fromImage(baseImage);
@@ -109,21 +110,22 @@ QPixmap BomberRenderer::renderElement(const QString& id, const QSize& size)
 	return elementIt.value();
 }
 
-QPixmap BomberRenderer::renderElement(const QString& id, int frame,
+QPixmap BomberRenderer::renderElement(const QString& id, unsigned int frame,
 		const QSize& size)
 {
-	QString name = id + '_'+ QString::number(frame);
+	QString name = id + '_' + QString::number(frame);
 	return renderElement(name, size);
 }
 
-int BomberRenderer::maxBuildingStyles()
+unsigned int BomberRenderer::maxBuildingStyles()
 {
-    static signed int style = -1;
-    if (style==-1)
-    {
-        style=0;
-        while (elementExists(QString("building_") + QString::number(style)+QString("_0") ) )
-            style++;
-    }
-    return style;
+	static signed int style = -1;
+	if (style == -1)
+	{
+		style = 0;
+		while (elementExists(QString("building_") + QString::number(style)
+				+ QString("_0")))
+			style++;
+	}
+	return style;
 }

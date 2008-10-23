@@ -29,7 +29,7 @@
 
 namespace Phonon
 {
-	class MediaObject;
+class MediaObject;
 }
 
 class Plane;
@@ -37,24 +37,24 @@ class Building;
 class Bomb;
 
 /**
- * This class used to repesent the game board. This makes sure all the game objects
+ * This class used to represent the game board. This makes sure all the game objects
  * get moved and redrawn every second. It also checks for any collisions
  */
-class BomberBoard : public QObject, public KGameCanvasGroup
+class BomberBoard: public QObject, public KGameCanvasGroup
 {
-	Q_OBJECT
+Q_OBJECT
 
 public:
 
 	/**
-	 * The constructor used to creeate the board.
+	 * The constructor used to create the board.
 	 * \param renderer The Render used to renderer game objects
 	 * \param canvas The object were the games objects are drawn onto
 	 * \param parent The widget which the board is inserted into
 	 */
-	explicit BomberBoard( BomberRenderer* renderer, KGameCanvasAbstract* canvas = NULL, QWidget* parent = 0 );
+	explicit BomberBoard( BomberRenderer* renderer, KGameCanvasAbstract* canvas = NULL, QWidget* parent = 0 )		;
 
-	~BomberBoard();
+~	BomberBoard();
 
 	/**
 	 * This is called when the game board is resized
@@ -71,7 +71,7 @@ public:
 	 * This is called to start a new level
 	 * \param level The level number been started
 	 */
-	void newLevel( int level );
+	void newLevel( unsigned int level );
 
 	/**
 	 * This is called to pause the game.
@@ -93,15 +93,15 @@ public:
 
 	/**
 	 * This will convert the tile location to actual cords on the board
-	 * \param pos The cords releative to the tile
-	 * \return The cords releative to the widget
+	 * \param pos The cords relative to the tile
+	 * \return The cords relative to the widget
 	 */
 	QPoint mapPosition( const QPointF& pos ) const;
 
 	/**
 	 * This will convert the widget location to tile locations
-	 * \param pos The cords releative to the widget
-	 * \return The cords releative to the tile
+	 * \param pos The cords relative to the widget
+	 * \return The cords relative to the tile
 	 */
 	QPointF unmapPosition( const QPoint& pos ) const;
 
@@ -115,14 +115,14 @@ public:
 	 */
 	void dropBomb();
 
-signals:
+	signals:
 	/**
 	 * This is emitted when a plane crashes into a building
 	 */
 	void onPlaneCrash();
 
 	/**
-	 * This singnal is emitied when a bomb hits a building and before it's exploding
+	 * This signal is emitted when a bomb hits a building and before it's exploding
 	 * animation starts
 	 */
 	void onBombHit();
@@ -133,7 +133,7 @@ signals:
 	void levelCleared();
 
 private slots:
-    /** This is called once a second to update and draw all the game objects */
+	/** This is called once a second to update and draw all the game objects */
 	void tick();
 	/**
 	 * This is called when a plane has finished exploding
@@ -188,12 +188,11 @@ private:
 	/** This contains all the buildings in the current level */
 	QList<Building *> m_buildings;
 
-
 	/** This contains all the bombs that are currently exploding */
 	QQueue<Bomb *> m_explodingBombs;
 
 	/** This is the number of blocks that make up the buildings */
-	int m_buildingBlocks;
+	unsigned int m_buildingBlocks;
 };
 
 #endif /*BOARD_H*/

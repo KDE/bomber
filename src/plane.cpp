@@ -46,10 +46,9 @@ Plane::~Plane()
 
 void Plane::resetPosition()
 {
-	m_xPos=0, m_yPos= 0;
+	m_xPos = 0, m_yPos = 0;
 	m_nextBoundingRect.moveTo(m_xPos, m_yPos);
 }
-
 
 void Plane::advanceItem()
 {

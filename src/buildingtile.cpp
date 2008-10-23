@@ -62,7 +62,7 @@ void BuildingTile::advanceItem()
 /**
  * Sets plane's current frame
  */
-void BuildingTile::setFrame(int)
+void BuildingTile::setFrame(unsigned int)
 {
 	setPixmap(m_renderer->renderElement(m_pixmapName, m_tileSize));
 }
@@ -73,5 +73,5 @@ void BuildingTile::setFrame(int)
  */
 void BuildingTile::setPixmapName(QString pixmap)
 {
-	m_pixmapName =pixmap;
+	m_pixmapName = pixmap;
 }

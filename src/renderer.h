@@ -40,13 +40,13 @@ public:
 	 * \param fileName The SVG theme filename
 	 * \return True if successful, otherwise false
 	 */
-	bool load( const QString& fileName );
+	bool load(const QString& fileName);
 
 	/**
 	 * Sets Background size and invalidates background cache
 	 * \param size The size of the background
 	 */
-	void setBackgroundSize( const QSize& size);
+	void setBackgroundSize(const QSize& size);
 	/**
 	 * Renders background to QPixmap of size set by setBachgroundSize
 	 * Background pixmap is cached (setBackgroundSize() invalidates the cache)
@@ -59,7 +59,7 @@ public:
 	 * \param id the ID of the SVG element
 	 * \return The number of frames for the SVG element.
 	 */
-	int frames( const QString& id );
+	unsigned int frames(const QString& id);
 
 	/**
 	 * Renders elements to pixmap.
@@ -67,7 +67,7 @@ public:
 	 * \param size if == QSize( 0, 0 ) will return rendered element of former size.
 	 * \return A pixmap with the element rendered onto it
 	 */
-	QPixmap renderElement( const QString& id, const QSize& size = QSize( 0, 0 ) );
+	QPixmap renderElement(const QString& id, const QSize& size = QSize(0, 0));
 	/**
 	 * Renders frame of an element to pixmap
 	 * \param id The id of the element in the SVG theme to render
@@ -75,21 +75,22 @@ public:
 	 * \param size if == QSize( 0, 0 ) will return rendered element of former size
 	 * \return A pixmap with the element rendered onto it
 	 */
-	QPixmap renderElement( const QString& id, int frame, const QSize& size = QSize( 0, 0 ) );
+	QPixmap renderElement(const QString& id, unsigned int frame, const QSize& size =
+			QSize(0, 0));
 
 	/**
 	 * Get the maximum number of building styles
 	 * \return The maximum number of building styles
 	 */
-	int maxBuildingStyles();
+	unsigned int maxBuildingStyles();
 
 private:
-    /**
-     * Returns true of the element with the given ID exists in the SVG theme
-     * \param id The element to look for in the SVG theme
-     * \return True if element exists in the SVG theme
-     */
-	bool elementExists( const QString& id );
+	/**
+	 * Returns true of the element with the given ID exists in the SVG theme
+	 * \param id The element to look for in the SVG theme
+	 * \return True if element exists in the SVG theme
+	 */
+	bool elementExists(const QString& id);
 
 	KSvgRenderer m_svgRenderer;
 	QSize m_backgroundSize;

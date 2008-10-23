@@ -23,20 +23,20 @@
 class BomberRenderer;
 class BomberBoard;
 
-
 /**
  * This is the bomb game object class. It extends Explodable as it
  * is a explodable object.
  */
-class Bomb : public Explodable
+class Bomb: public Explodable
 {
 public:
-	/** The width of the bomb releative to the tile */
+	/** The width of the bomb relative to the tile */
 	static const qreal BOMB_RELATIVE_SIZE_W;
-	/** The height of the bomb releative to the tile */
+	/** The height of the bomb relative to the tile */
 	static const qreal BOMB_RELATIVE_SIZE_H;
 
-	Bomb(BomberRenderer* renderer, BomberBoard* board,qreal xPos,qreal yPos,const QSize& tileSize);
+	Bomb(BomberRenderer* renderer, BomberBoard* board, qreal xPos, qreal yPos,
+			const QSize& tileSize);
 	~Bomb();
 
 	/**

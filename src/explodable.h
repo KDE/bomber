@@ -27,19 +27,23 @@ class BomberBoard;
 /**
  * This is a game object that can explode.
  */
-class Explodable : public KGameCanvasPixmap
+class Explodable: public KGameCanvasPixmap
 {
 public:
 	/** The states that a bomb can be in */
 	enum State
-	{	Moving, Exploding, Exploded};
+	{
+		Moving, Exploding, Exploded
+	};
 
 	/** The width of the explostion releative to the tile */
 	static const qreal EXPLOSION_RELATIVE_SIZE_W;
 	/** The height of the explostion releative to the tile */
 	static const qreal EXPLOSION_RELATIVE_SIZE_H;
 
-	explicit Explodable(QString mainSvg,QString explosionSvg,qreal relativeWidth,qreal relativeHeight,BomberRenderer* renderer, BomberBoard* board);
+	explicit Explodable(QString mainSvg, QString explosionSvg,
+			qreal relativeWidth, qreal relativeHeight,
+			BomberRenderer* renderer, BomberBoard* board);
 	virtual ~Explodable();
 
 	/**
@@ -52,26 +56,28 @@ public:
 	 * Sets width and height of bomb. Using the current tile size.
 	 * \param tileSize The size of the tile
 	 */
-	void resize( const QSize& tileSize );
+	void resize(const QSize& tileSize);
 
 	/**
 	 * Sets items's current frame
 	 * \param frame The frame number
 	 */
-	void setFrame(int frame);
+	void setFrame(unsigned int frame);
 
 	/**
 	 * Sets the velocity of the explodable object
 	 * \param velocity The velocity of the object
 	 */
-	void setVelocity( qreal velocity);
+	void setVelocity(qreal velocity);
 
 	/**
 	 * Used to get the velocity of the explodable object
 	 * \return The velocity
 	 */
 	qreal velocity() const
-	{	return m_velocity;}
+	{
+		return m_velocity;
+	}
 
 	/**
 	 * Rechecks the number of frames of bomb animation and sets new pixmaps.
@@ -84,9 +90,9 @@ public:
 	 * \param xPos Set the x position of the item
 	 * \param yPos Set the y position of the item
 	 */
-	void setPosition(qreal xPos,qreal yPos);
+	void setPosition(qreal xPos, qreal yPos);
 
-	/** 
+	/**
 	 * Return the position of the bomb
 	 * \return The position of the bomb
 	 */
@@ -108,8 +114,11 @@ public:
 	 * Get the current state of the bomb
 	 * \return The current state of the bomb
 	 */
-	Explodable::State state() const 
-	{ return m_state; };
+	Explodable::State state() const
+	{
+		return m_state;
+	}
+	;
 
 	/**
 	 * Set the current state of the bomb
@@ -134,18 +143,18 @@ private:
 	/**
 	 * Current frame of bomb's animation.
 	 */
-	int m_frame;
+	unsigned int m_frame;
 
 	/**
 	 * Number of frames of ball's animation.
 	 */
-	int m_mainFramesNum;
-	int m_explosionFramesNum;
+	unsigned int m_mainFramesNum;
+	unsigned int m_explosionFramesNum;
 
 	qreal m_velocity;
 
-	/** 
-	 * The state the bomb is currently in 
+	/**
+	 * The state the bomb is currently in
 	 */
 	State m_state;
 

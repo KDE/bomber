@@ -24,7 +24,7 @@
 class BomberRenderer;
 class BomberBoard;
 
-class BuildingTile : public KGameCanvasPixmap
+class BuildingTile: public KGameCanvasPixmap
 {
 public:
 	BuildingTile(BomberRenderer* renderer, BomberBoard* board);
@@ -33,7 +33,7 @@ public:
 	/**
 	 * Sets width and height of plane.
 	 */
-	void setSize( const QSize& tileSize );
+	void setSize(const QSize& tileSize);
 
 	/**
 	 * Updates plane position and pixmap.
@@ -51,7 +51,7 @@ public:
 	 * Sets plane's current frame
 	 * \param frame The number of the frame
 	 */
-	void setFrame(int frame);
+	void setFrame(unsigned int frame);
 
 	/**
 	 * Used to set the name of the pixmap used to display the tile

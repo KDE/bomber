@@ -32,28 +32,34 @@
 #include "building.h"
 #include "bomb.h"
 
-#define PLANE_INC_VELOCITY 0.0005
-#define GAME_DELAY 15
-#define TILE_NUM_H 20
-#define NUMBER_BUILDINGS 10
-#define TILE_NUM_W ((NUMBER_BUILDINGS)+2)
-#define MAX_LEVEL 11
+/** The value that the plane velocity increases by */
+const qreal PLANE_INC_VELOCITY = 0.0005;
+/** The value of this controls the speed of the game */
+const unsigned int GAME_DELAY = 15;
+/** The number of tiles vertical in the playing area */
+const unsigned int TILE_NUM_H = 20;
+/** The number of builds to display */
+const unsigned int NUMBER_BUILDINGS = 10;
+/** The number of tiles horizontally in the playing area */
+const unsigned int TILE_NUM_W = ((NUMBER_BUILDINGS)+2);
+/** The maximum level number before the game stops getting harder */
+const unsigned int MAX_LEVEL = 11;
 
-/** This time in miliseconds that the plane exloding animation is played for */
-#define PLANE_EXPLODE_TIME 2000
+/** This time in milliseconds that the plane exploding animation is played for */
+const unsigned int PLANE_EXPLODE_TIME = 2000;
 
-/** This time in miliseconds that the bomb exloding animation is played for */
-#define BOMB_EXPLODE_TIME 1000
+/** This time in milliseconds that the bomb exploding animation is played for */
+const unsigned int BOMB_EXPLODE_TIME = 1000;
 
 BomberBoard::BomberBoard(BomberRenderer* renderer, KGameCanvasAbstract* canvas,
 		QWidget* parent) :
 	QObject(parent), KGameCanvasGroup(canvas), m_renderer(renderer)
 {
-	m_bomb=NULL;
-	m_clock = new QTimer( this );
+	m_bomb = NULL;
+	m_clock = new QTimer(this);
 	m_clock->setInterval(GAME_DELAY);
 	connect(m_clock, SIGNAL(timeout() ), this, SLOT(tick() ));
-	m_plane = new Plane(m_renderer,this);
+	m_plane = new Plane(m_renderer, this);
 	m_plane->resize(m_tileSize);
 	m_plane->raise();
 	m_plane->show();
@@ -82,51 +88,52 @@ void BomberBoard::resetPlane()
 
 void BomberBoard::resize(QSize& size)
 {
-	int minTileSizeWidth, minTileSizeHeight;
+	unsigned int minTileSizeWidth, minTileSizeHeight;
 
 	minTileSizeWidth = size.width() / TILE_NUM_W;
 	minTileSizeHeight = size.height() / TILE_NUM_H;
 
 	m_tileSize = QSize(minTileSizeWidth, minTileSizeHeight);
 
-	foreach(Building* building, m_buildings)
-	{
-		building->resize(m_tileSize);
-	}
+	foreach(Building* building, m_buildings){
+	building->resize(m_tileSize);
+}
 
-	m_plane->resize(m_tileSize);
-	if (m_bomb!=NULL)
-	{
-		m_bomb->resize(m_tileSize);
-	}
+m_plane->resize(m_tileSize);
+if (m_bomb!=NULL)
+{
+	m_bomb->resize(m_tileSize);
+}
 
-	redraw();
+redraw();
 
-	size.setWidth(minTileSizeWidth * TILE_NUM_W);
-	size.setHeight(minTileSizeHeight * TILE_NUM_H);
+size.setWidth(minTileSizeWidth * TILE_NUM_W);
+size.setHeight(minTileSizeHeight * TILE_NUM_H);
 }
 
 void BomberBoard::redraw()
 {
 	m_plane->resetPixmaps();
-	if (m_bomb !=NULL)
+	if (m_bomb != NULL)
 	{
 		m_bomb->resetPixmaps();
 	}
 }
 
-void BomberBoard::newLevel(int level)
+void BomberBoard::newLevel(unsigned int level)
 {
 	if (level > MAX_LEVEL)
 	{
 		level = MAX_LEVEL;
 	}
 
-	if (level==1) {
-	    m_plane->setVelocity(Plane::DEFAULT_VELOCITY);
+	if (level == 1)
+	{
+		m_plane->setVelocity(Plane::DEFAULT_VELOCITY);
 	}
-	else if (level % 2 == 0){
-	    m_plane->setVelocity(m_plane->velocity()+PLANE_INC_VELOCITY);
+	else if (level % 2 == 0)
+	{
+		m_plane->setVelocity(m_plane->velocity() + PLANE_INC_VELOCITY);
 	}
 
 	m_clock->stop();
@@ -134,20 +141,22 @@ void BomberBoard::newLevel(int level)
 	m_plane->setState(Explodable::Moving);
 	m_buildingBlocks = 0;
 	//Create the buildings
-	for (int i=0; i<NUMBER_BUILDINGS; i++)
+	for (unsigned int i = 0; i < NUMBER_BUILDINGS; i++)
 	{
-	    int min = level;
-	    if (min < 3) {
-	        min = 3;
-	    }
-	    int max = level +3;
-	    if (max<5) {
-	        max = 5;
-	    }
-		int height = (KRandom::random() % (max-min))+min;
+		unsigned int min = level;
+		if (min < 3)
+		{
+			min = 3;
+		}
+		unsigned int max = level + 3;
+		if (max < 5)
+		{
+			max = 5;
+		}
+		unsigned int height = (KRandom::random() % (max - min)) + min;
 
-		m_buildingBlocks+=height;
-		Building *building = new Building(m_renderer,this,i+1,height);
+		m_buildingBlocks += height;
+		Building *building = new Building(m_renderer, this, i + 1, height);
 
 		building->resize(m_tileSize);
 		building->raise();
@@ -169,7 +178,7 @@ void BomberBoard::playSound(const QString& name)
 {
 	if (m_playSounds == true && !name.isEmpty())
 	{
-	    QString file = m_soundPath.filePath(name);
+		QString file = m_soundPath.filePath(name);
 		m_audioPlayer->setCurrentSource(file);
 		m_audioPlayer->play();
 	}
@@ -178,7 +187,7 @@ void BomberBoard::playSound(const QString& name)
 void BomberBoard::setSounds(bool val)
 {
 	m_playSounds = val;
-	if (val == true&& m_audioPlayer == 0)
+	if (val == true && m_audioPlayer == 0)
 	{
 		m_audioPlayer = Phonon::createPlayer(Phonon::GameCategory);
 	}
@@ -189,48 +198,48 @@ void BomberBoard::tick()
 	checkCollisions();
 
 	// Move everything
-	foreach(Building* building, m_buildings)
-	{
-		building->advanceItem();
-	}
+	foreach(Building* building, m_buildings){
+	building->advanceItem();
+}
 
-	m_plane->advanceItem();
+m_plane->advanceItem();
 
-	if (m_bomb!=NULL)
-	{
-		m_bomb->advanceItem();
-	}
+if (m_bomb!=NULL)
+{
+	m_bomb->advanceItem();
+}
 
-	foreach(Bomb* bomb, m_explodingBombs)
-	{
-		bomb->advanceItem();
-	}
+foreach(Bomb* bomb, m_explodingBombs)
+{
+	bomb->advanceItem();
+}
 
-	// Draw everything
-	m_plane->update();
+// Draw everything
+m_plane->update();
 
-	foreach(Building* building, m_buildings)
-	{
-		building->update();
-	}
+foreach(Building* building, m_buildings)
+{
+	building->update();
+}
 
-	if (m_bomb!=NULL)
-	{
-		m_bomb->update();
-	}
+if (m_bomb!=NULL)
+{
+	m_bomb->update();
+}
 
-	foreach(Bomb* bomb, m_explodingBombs)
-	{
-		bomb->update();
-	}
+foreach(Bomb* bomb, m_explodingBombs)
+{
+	bomb->update();
+}
 }
 
 void BomberBoard::dropBomb()
 {
-	if (m_bomb == NULL&& m_plane->state() == Explodable::Moving)
+	if (m_bomb == NULL && m_plane->state() == Explodable::Moving)
 	{
 		QPointF planePos = m_plane->position();
-		m_bomb = new Bomb(m_renderer,this,planePos.x(), planePos.y()+1,m_tileSize);
+		m_bomb
+				= new Bomb(m_renderer, this, planePos.x(), planePos.y() + 1, m_tileSize);
 		m_bomb->raise();
 		m_bomb->show();
 	}
@@ -238,42 +247,41 @@ void BomberBoard::dropBomb()
 
 void BomberBoard::checkCollisions()
 {
-	foreach(Building *building, m_buildings)
+	foreach(Building *building, m_buildings){
+	if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state()
+			== Explodable::Moving)
 	{
-		if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state()
+		// Plane crashed into the building
+		building->destoryTop();
+		m_buildingBlocks--;
+		crashed();
+	}
+
+	if (m_bomb!=NULL)
+	{
+		if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state()
 				== Explodable::Moving)
 		{
-			// Plane crashed into the building
+			// Bomb hit a building
 			building->destoryTop();
 			m_buildingBlocks--;
-			crashed();
+			emit onBombHit();
+			bombHit(m_bomb,building->position().x(),Building::BUILD_BASE_LOCATION-(building->height()));
+			m_bomb = NULL;
 		}
-
-		if (m_bomb!=NULL)
+		else if (m_bomb->position().y()>=Building::BUILD_BASE_LOCATION+1)
 		{
-			if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state()
-					== Explodable::Moving)
-			{
-				// Bomb hit a building
-				building->destoryTop();
-				m_buildingBlocks--;
-				emit onBombHit();
-				bombHit(m_bomb,building->position().x(),Building::BUILD_BASE_LOCATION-(building->height()));
-				m_bomb = NULL;
-			}
-			else if (m_bomb->position().y()>=Building::BUILD_BASE_LOCATION+1)
-			{
-				// Bomb hit the ground
-				bombHit(m_bomb,(int)m_bomb->position().x(),Building::BUILD_BASE_LOCATION);
-				m_bomb = NULL;
-			}
-		}
-
-		if (m_plane->state()==Explodable::Moving &&  m_buildingBlocks==0)
-		{
-			emit levelCleared();
+			// Bomb hit the ground
+			bombHit(m_bomb,(unsigned int)m_bomb->position().x(),Building::BUILD_BASE_LOCATION);
+			m_bomb = NULL;
 		}
 	}
+
+	if (m_plane->state()==Explodable::Moving && m_buildingBlocks==0)
+	{
+		emit levelCleared();
+	}
+}
 
 }
 
@@ -296,13 +304,13 @@ void BomberBoard::bombExploded()
 void BomberBoard::planeExploded()
 {
 	m_plane->setState(Plane::Exploded);
-emit 				onPlaneCrash();
+	emit onPlaneCrash();
 }
 
 void BomberBoard::crashed()
 {
 	QPointF pos = m_plane->position();
-	m_plane->setPosition(pos.x()+1, pos.y());
+	m_plane->setPosition(pos.x() + 1, pos.y());
 	m_plane->setState(Plane::Exploding);
 	playSound(QString("explode.ogg"));
 	QTimer::singleShot(PLANE_EXPLODE_TIME, this, SLOT(planeExploded()));
@@ -310,30 +318,29 @@ void BomberBoard::crashed()
 
 void BomberBoard::clear()
 {
-	foreach(Building* building, m_buildings)
-	{
-		delete building;
-	}
+	foreach(Building* building, m_buildings){
+	delete building;
+}
 
-	m_buildings.clear();
+m_buildings.clear();
 
-	if (m_bomb!=NULL)
-	{
-		delete m_bomb;
-		m_bomb=NULL;
-	}
+if (m_bomb!=NULL)
+{
+	delete m_bomb;
+	m_bomb=NULL;
+}
 
-	resetPlane();
+resetPlane();
 }
 
 QPoint BomberBoard::mapPosition(const QPointF& pos) const
 {
-	return QPoint( static_cast<int>(m_tileSize.width() * pos.x() ),
-			static_cast<int>(m_tileSize.height() * pos.y() ) );
+	return QPoint(static_cast<unsigned int> (m_tileSize.width() * pos.x()),
+			static_cast<int> (m_tileSize.height() * pos.y()));
 }
 
 QPointF BomberBoard::unmapPosition(const QPoint& pos) const
 {
-	return QPointF( 1.0 * pos.x() / m_tileSize.width(), 1.0 * pos.y()
-			/ m_tileSize.height() );
+	return QPointF(1.0 * pos.x() / m_tileSize.width(), 1.0 * pos.y()
+			/ m_tileSize.height());
 }

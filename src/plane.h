@@ -24,33 +24,33 @@ class BomberRenderer;
 class BomberBoard;
 
 /**
- * This class is used to repesent the plane object in the game. It extends class 
+ * This class is used to represent the plane object in the game. It extends class
  * explodable as the plane will explode when it hits buildings. The plane
- * flys from left to right and each time it goes off the side of the screen it 
- * is reposisitioned back at the left side, one place lower than before.
+ * flys from left to right and each time it goes off the side of the screen it
+ * is repositioned back at the left side, one place lower than before.
  */
-class Plane : public Explodable
+class Plane: public Explodable
 {
 
-public:	
+public:
 	/** This is the planes size relative to the tile */
 	static const qreal PLANE_RELATIVE_SIZE;
-	
+
 	/** This is the position before the plane goes off the screen */
 	static const qreal PLANE_MAX_POSITION_X;
-	
+
 	/** The speed the plane will fly at */
 	static const qreal DEFAULT_VELOCITY;
 
 	Plane(BomberRenderer* renderer, BomberBoard* board);
-	~Plane();	
+	~Plane();
 
 	/**
 	 * Performs move calculations
 	 * This method is called once per frame
 	 */
 	void advanceItem();
-	
+
 	/**
 	 * Used to reset the plane to it's starting position
 	 */

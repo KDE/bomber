@@ -32,9 +32,9 @@ class KToggleAction;
  *
  * @short Main window class
  */
-class Bomber : public KXmlGuiWindow
+class Bomber: public KXmlGuiWindow
 {
-	Q_OBJECT
+Q_OBJECT
 public:
 	/**
 	 * Default Constructor
@@ -57,9 +57,9 @@ private slots:
 	void settingsChanged();
 
 	void setSounds( bool val );
-	void displayLevel( int level );
-	void displayScore( int score );
-	void displayLives( int lives );
+	void displayLevel( unsigned int level );
+	void displayScore( unsigned int score );
+	void displayLives( unsigned int lives );
 	void gameStateChanged( BomberGameWidget::State state );
 
 private:

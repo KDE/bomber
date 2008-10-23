@@ -28,33 +28,36 @@ class BomberBoard;
 class BuildingTile;
 
 /**
- * This class is used to repesent the Building game objects. Each buildings are made up for
+ * This class is used to represent the Building game objects. Each buildings are made up for
  * building tiles which are placed on the game canvas.
  */
 class Building
 {
 public:
-	static const int BUILD_BASE_LOCATION;
-	Building(BomberRenderer* renderer, BomberBoard* board,int position,int height);
+	static const unsigned int BUILD_BASE_LOCATION;
+	Building(BomberRenderer* renderer, BomberBoard* board, unsigned int position,
+			unsigned int height);
 	~Building();
 
 	/**
 	 * Set the height of the building
 	 * \param height The new height of the building
 	 */
-	void setHeight(int height);
-	
+	void setHeight(unsigned int height);
+
 	/**
 	 * Get the height of the building
 	 * \return The height of the building
 	 */
-	int height() const 
-	{ return m_height; }
+	unsigned int height() const
+	{
+		return m_height;
+	}
 
 	/**
 	 * Sets width and height of plane.
 	 */
-	void resize( const QSize& tileSize );
+	void resize(const QSize& tileSize);
 
 	/**
 	 * Updates plane position and pixmap.
@@ -71,7 +74,7 @@ public:
 	/**
 	 * Sets building's current frame
 	 */
-	void setFrame(int frame);
+	void setFrame(unsigned int frame);
 
 	/** Restacks the building item on the top of the canvas. */
 	void raise();
@@ -80,7 +83,7 @@ public:
 	void show();
 
 	/**
-	 * Get the bounding rectange of the building 
+	 * Get the bounding rectange of the building
 	 * \return the Bounding rectangle of the building
 	 */
 	QRectF boundingRect();
@@ -90,13 +93,13 @@ public:
 	 */
 	void destoryTop();
 
-	/** 
+	/**
 	 * Return the position of the building
 	 * \return The position of the building
 	 */
 	QPointF position();
 
-private:    
+private:
 	/**
 	 * Setup the tiles that make up the building
 	 */
@@ -106,9 +109,9 @@ private:
 	 * \param pixmap The pixmap the building tile should be created with
 	 * \param height The height that the tile is been created at
 	 */
-	BuildingTile* createBuildingTile(QString pixmap,int height);
+	BuildingTile* createBuildingTile(QString pixmap, unsigned int height);
 
-	int m_height;
+	unsigned int m_height;
 	QRectF m_boundingRect;
 	BomberRenderer* m_renderer;
 	BomberBoard* m_board;
