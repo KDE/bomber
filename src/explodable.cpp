@@ -39,8 +39,9 @@ Explodable::Explodable(QString mainSvg, QString explosionSvg,
 		qreal relativeWidth, qreal relativeHeight, BomberRenderer* renderer,
 		BomberBoard* board) :
 	KGameCanvasPixmap(board), m_renderer(renderer), m_board(board), m_mainSvg(
-			mainSvg), m_explosionSvg(explosionSvg),m_size(32, 64)
+			mainSvg), m_explosionSvg(explosionSvg)
 {
+	m_size = QSize(32, 64);
 	m_relativeWidth = relativeWidth;
 	m_relativeHeight = relativeHeight;
 	resetPixmaps();
