@@ -18,11 +18,11 @@
 
 #include "bomb.h"
 
-#include <kdebug.h>
-
 #include "board.h"
 #include "renderer.h"
 #include "explodable.h"
+
+#include <kdebug.h>
 
 /** The speed the bomb will fall at */
 const qreal DEFAULT_VELOCITY = 0.2;

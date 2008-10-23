@@ -19,11 +19,11 @@
 #ifndef BOMBER_WIDGET_H
 #define BOMBER_WIDGET_H
 
-#include <kgamecanvas.h>
-#include <QMouseEvent>
-
 #include "board.h"
 #include "renderer.h"
+
+#include <kgamecanvas.h>
+#include <QMouseEvent>
 
 class KGameTheme;
 

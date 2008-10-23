@@ -18,9 +18,9 @@
 #ifndef BOMBER_H
 #define BOMBER_H
 
-#include <kxmlguiwindow.h>
-
 #include "bomberwidget.h"
+
+#include <kxmlguiwindow.h>
 
 class KAction;
 class KStatusBar;

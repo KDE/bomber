@@ -17,6 +17,9 @@
  */
 #include "bomber.h"
 
+#include "bomberwidget.h"
+#include "settings.h"
+
 #include <KAction>
 #include <KActionCollection>
 #include <KConfigDialog>
@@ -32,9 +35,6 @@
 #include <kstandardgameaction.h>
 #include <KScoreDialog>
 #include <KGameThemeSelector>
-
-#include "bomberwidget.h"
-#include "settings.h"
 
 Bomber::Bomber()
 {

@@ -17,11 +17,11 @@
  */
 #include "plane.h"
 
-#include <kdebug.h>
-
 #include "board.h"
 #include "renderer.h"
 #include "explodable.h"
+
+#include <kdebug.h>
 
 /** The speed the plane will fly at */
 const qreal Plane::DEFAULT_VELOCITY = 0.08;

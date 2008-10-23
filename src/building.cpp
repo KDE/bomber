@@ -18,12 +18,12 @@
 
 #include "building.h"
 
-#include <kdebug.h>
-#include <KRandom>
-
 #include "board.h"
 #include "renderer.h"
 #include "buildingtile.h"
+
+#include <kdebug.h>
+#include <KRandom>
 
 /**
  * How big is a building in relation to the tiles width.

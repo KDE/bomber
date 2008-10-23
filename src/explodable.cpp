@@ -18,11 +18,11 @@
 
 #include "explodable.h"
 
-#include <kdebug.h>
-#include <KRandom>
-
 #include "board.h"
 #include "renderer.h"
+
+#include <kdebug.h>
+#include <KRandom>
 
 /**
  * How big is the explosion in relation to the tiles height.

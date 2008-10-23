@@ -17,6 +17,10 @@
  */
 #include "board.h"
 
+#include "plane.h"
+#include "building.h"
+#include "bomb.h"
+
 #include "kgamecanvas.h"
 
 #include <kdebug.h>
@@ -27,10 +31,6 @@
 #include <KStandardDirs>
 
 #include <QTimer>
-
-#include "plane.h"
-#include "building.h"
-#include "bomb.h"
 
 /** The value that the plane velocity increases by */
 const qreal PLANE_INC_VELOCITY = 0.0005;

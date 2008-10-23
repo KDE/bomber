@@ -18,14 +18,14 @@
 #ifndef BOARD_H
 #define BOARD_H
 
+#include "renderer.h"
+
 #include "kgamecanvas.h"
 
 #include <QSize>
 #include <QList>
 #include <QQueue>
 #include <QDir>
-
-#include "renderer.h"
 
 namespace Phonon
 {
