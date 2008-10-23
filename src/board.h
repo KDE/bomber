@@ -195,4 +195,4 @@ private:
 	unsigned int m_buildingBlocks;
 };
 
-#endif /*BOARD_H*/
+#endif

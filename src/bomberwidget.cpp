@@ -81,9 +81,9 @@ void BomberGameWidget::closeGame()
 	{
 		closeLevel();
 
-		m_state = GameOver;emit
-		stateChanged(m_state);emit
-		gameOver();
+		m_state = GameOver;
+		emit stateChanged(m_state);
+		emit gameOver();
 
 		redraw();
 	}
@@ -98,10 +98,9 @@ void BomberGameWidget::newGame()
 	m_lives = 3;
 	m_scoreLeftBeforeNewLife = NEW_LIVE_AT_SCORE;
 
-	emit
-	levelChanged(m_level);emit
-	scoreChanged(m_score);emit
-	livesChanged(m_lives);
+	emit levelChanged(m_level);
+	emit scoreChanged(m_score);
+	emit livesChanged(m_lives);
 
 	newLevel();
 }
@@ -171,8 +170,8 @@ void BomberGameWidget::setSounds(bool val)
 
 void BomberGameWidget::onPlaneCrashed()
 {
-	m_lives--;emit
-	livesChanged(m_lives);
+	m_lives--;
+	emit livesChanged(m_lives);
 	if (m_lives <= 0)
 	{
 		closeGame();

@@ -98,4 +98,4 @@ private:
 	QHash<QString, QPixmap> m_tileCache;
 };
 
-#endif /*RENDERER_H*/
+#endif

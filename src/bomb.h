@@ -46,4 +46,4 @@ public:
 	void advanceItem();
 };
 
-#endif /*BOMB_H*/
+#endif

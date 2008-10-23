@@ -75,4 +75,4 @@ private:
 
 };
 
-#endif // _BOMBER_H_
+#endif

@@ -53,9 +53,8 @@ const unsigned int BOMB_EXPLODE_TIME = 1000;
 
 BomberBoard::BomberBoard(BomberRenderer* renderer, KGameCanvasAbstract* canvas,
 		QWidget* parent) :
-	QObject(parent), KGameCanvasGroup(canvas), m_renderer(renderer)
+	QObject(parent), KGameCanvasGroup(canvas), m_renderer(renderer), m_bomb(NULL)
 {
-	m_bomb = NULL;
 	m_clock = new QTimer(this);
 	m_clock->setInterval(GAME_DELAY);
 	connect(m_clock, SIGNAL(timeout() ), this, SLOT(tick() ));
@@ -67,7 +66,7 @@ BomberBoard::BomberBoard(BomberRenderer* renderer, KGameCanvasAbstract* canvas,
 	clear();
 
 	m_audioPlayer = 0;
-	m_playSounds = false;
+
 	m_soundPath = KStandardDirs::locate("appdata", "sounds/");
 }
 
@@ -88,27 +87,26 @@ void BomberBoard::resetPlane()
 
 void BomberBoard::resize(QSize& size)
 {
-	unsigned int minTileSizeWidth, minTileSizeHeight;
-
-	minTileSizeWidth = size.width() / TILE_NUM_W;
-	minTileSizeHeight = size.height() / TILE_NUM_H;
+	unsigned int minTileSizeWidth = size.width() / TILE_NUM_W;
+	unsigned int minTileSizeHeight = size.height() / TILE_NUM_H;
 
 	m_tileSize = QSize(minTileSizeWidth, minTileSizeHeight);
 
-	foreach(Building* building, m_buildings){
-	building->resize(m_tileSize);
-}
+	foreach(Building* building, m_buildings)
+	{
+		building->resize(m_tileSize);
+	}
 
-m_plane->resize(m_tileSize);
-if (m_bomb!=NULL)
-{
-	m_bomb->resize(m_tileSize);
-}
+	m_plane->resize(m_tileSize);
+	if (m_bomb!=NULL)
+	{
+		m_bomb->resize(m_tileSize);
+	}
 
-redraw();
+	redraw();
 
-size.setWidth(minTileSizeWidth * TILE_NUM_W);
-size.setHeight(minTileSizeHeight * TILE_NUM_H);
+	size.setWidth(minTileSizeWidth * TILE_NUM_W);
+	size.setHeight(minTileSizeHeight * TILE_NUM_H);
 }
 
 void BomberBoard::redraw()

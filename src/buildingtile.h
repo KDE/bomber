@@ -66,4 +66,4 @@ private:
 	QSize m_tileSize;
 };
 
-#endif /*BUILDINGTILE_H*/
+#endif

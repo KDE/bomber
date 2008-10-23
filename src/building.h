@@ -120,4 +120,4 @@ private:
 	qreal m_xPos;
 };
 
-#endif /*BUILDING_H*/
+#endif

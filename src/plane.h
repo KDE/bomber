@@ -57,4 +57,4 @@ public:
 	void resetPosition();
 };
 
-#endif /*PLANE_H*/
+#endif

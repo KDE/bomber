@@ -167,4 +167,4 @@ private:
 	QString m_explosionSvg;
 };
 
-#endif /*EXPLODABLE_H*/
+#endif
