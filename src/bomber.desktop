@@ -1,10 +1,17 @@
 [Desktop Entry]
 Name=Bomber
+Name[uk]=Бомбардувальник
+Name[zh_TW]=轟炸機
 Exec=bomber -caption "%c"
 Icon=bomber
 Type=Application
 Terminal=false
 GenericName=Arcade bombing game
+GenericName[cs]=Arkádová bombardovací hra
+GenericName[pt]=Jogo de bombardeio em arcada
+GenericName[pt_BR]=Jogo de bombardeio em arcada
+GenericName[uk]=Аркадна гра у бомбардування
+GenericName[zh_TW]=轟炸機遊戲
 Categories=Qt;KDE;Game;ArcadeGame;
 X-DocPath=bomber/index.html
 X-DBUS-StartupType=Multi
