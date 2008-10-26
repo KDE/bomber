@@ -42,21 +42,16 @@ Bomber::Bomber()
 	m_statusBar->insertItem(
     i18nc("Default text shown to the user before the level is known at game start",
 		  "Level: 0"), 1, 1);
-	m_statusBar->insertItem(i18nc(
-					"Default text shown to the user before the score is known at game start",
-					"Score: 0"), 2, 1);
-	m_statusBar->insertItem(
-			i18nc(
-					"Default text shown to the user before the lives are known at game start",
-					"Lives: 3"), 4, 1);
+	m_statusBar->insertItem(i18nc("Default text shown to the user before the score is known at game start",
+					              "Score: 0"), 2, 1);
+	m_statusBar->insertItem(i18nc("Default text shown to the user before the lives are known at game start",
+					              "Lives: 3"), 4, 1);
 
 	m_gameWidget = new BomberGameWidget(this);
 
 	connect(m_gameWidget, SIGNAL( levelChanged( unsigned int ) ), this, SLOT( displayLevel( unsigned int ) ));
-	connect(m_gameWidget, SIGNAL( scoreChanged( unsigned int
-			) ), this, SLOT( displayScore( unsigned int ) ));
-	connect(m_gameWidget, SIGNAL( livesChanged( unsigned int
-			) ), this, SLOT( displayLives( unsigned int ) ));
+	connect(m_gameWidget, SIGNAL( scoreChanged( unsigned int ) ), this, SLOT( displayScore( unsigned int ) ));
+	connect(m_gameWidget, SIGNAL( livesChanged( unsigned int ) ), this, SLOT( displayLives( unsigned int ) ));
 	connect(m_gameWidget, SIGNAL(stateChanged(BomberGameWidget::State) ), this, SLOT(gameStateChanged(BomberGameWidget::State) ));
 
 	setCentralWidget(m_gameWidget);
@@ -161,15 +156,13 @@ void Bomber::closeGame()
  */
 void Bomber::showHighscore()
 {
-	KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score
-			| KScoreDialog::Level, this);
+	KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
 	ksdialog.exec();
 }
 
 void Bomber::highscore()
 {
-	KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score
-			| KScoreDialog::Level, this);
+	KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
 
 	KScoreDialog::FieldInfo info;
 	info[KScoreDialog::Score].setNum(m_gameWidget->score());
@@ -183,7 +176,7 @@ void Bomber::configureSettings()
 	if (KConfigDialog::showDialog("settings"))
 		return;
 
-	KConfigDialog* dialog =
+	KConfigDialog *dialog =
 			new KConfigDialog(this, "settings", BomberSettings::self());
 	dialog->addPage(
 			new KGameThemeSelector(dialog, BomberSettings::self(), KGameThemeSelector::NewStuffDisableDownload),
@@ -240,8 +233,7 @@ void Bomber::gameStateChanged(BomberGameWidget::State state)
 		break;
 	case BomberGameWidget::GameOver:
 		m_statusBar->showMessage(i18nc("Game over messaged displayed in the status bar","Game over. Press '%1' for a new game",
-				m_newAction->shortcuts().first().toString(
-						QKeySequence::NativeText)));
+				m_newAction->shortcuts().first().toString(QKeySequence::NativeText)));
 		highscore();
 		break;
 	default:

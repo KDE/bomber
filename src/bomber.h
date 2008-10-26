@@ -68,7 +68,7 @@ private:
 	void setupActions();
 
 	BomberGameWidget *m_gameWidget;
-	KStatusBar* m_statusBar;
+	KStatusBar *m_statusBar;
 
 	KToggleAction *m_pauseAction, *m_backgroundShowAction, *m_soundAction;
 	KAction *m_newAction;

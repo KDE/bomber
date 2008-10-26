@@ -27,7 +27,7 @@ class BomberBoard;
 class BuildingTile: public KGameCanvasPixmap
 {
 public:
-	BuildingTile(BomberRenderer* renderer, BomberBoard* board);
+	BuildingTile(BomberRenderer *renderer, BomberBoard *board);
 	~BuildingTile();
 
 	/**
@@ -59,8 +59,8 @@ public:
 	 */
 	void setPixmapName(QString pixmap);
 private:
-	BomberRenderer* m_renderer;
-	BomberBoard* m_board;
+	BomberRenderer *m_renderer;
+	BomberBoard *m_board;
 
 	QString m_pixmapName;
 	QSize m_tileSize;

@@ -36,8 +36,8 @@ const qreal Explodable::EXPLOSION_RELATIVE_SIZE_H = 1.0;
 const qreal Explodable::EXPLOSION_RELATIVE_SIZE_W = 1.0;
 
 Explodable::Explodable(QString mainSvg, QString explosionSvg,
-		qreal relativeWidth, qreal relativeHeight, BomberRenderer* renderer,
-		BomberBoard* board) :
+		qreal relativeWidth, qreal relativeHeight, BomberRenderer *renderer,
+		BomberBoard *board) :
 	KGameCanvasPixmap(board), m_renderer(renderer), m_board(board), m_mainSvg(
 			mainSvg), m_explosionSvg(explosionSvg)
 {

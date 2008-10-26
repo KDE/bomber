@@ -33,9 +33,8 @@ static const unsigned int SCORE_INCREMENT = 5;
 static const unsigned int GAME_TIME_DELAY = 1000;
 static const unsigned int TICKS_PER_SECOND = 1000 / GAME_TIME_DELAY;
 
-BomberGameWidget::BomberGameWidget(QWidget* parent) :
-	KGameCanvasWidget(parent), m_state(BeforeFirstGame), m_level(0),
-			m_lives(0), m_time(0)
+BomberGameWidget::BomberGameWidget(QWidget *parent) :
+	KGameCanvasWidget(parent), m_state(BeforeFirstGame), m_level(0),m_lives(0), m_time(0)
 {
 	m_theme = new KGameTheme("KGameTheme");
 	m_theme->loadDefault();
@@ -199,7 +198,7 @@ void BomberGameWidget::onBombHit()
 
 void BomberGameWidget::tick()
 {
-	static unsigned int ticks = TICKS_PER_SECOND;
+	static signed int ticks = TICKS_PER_SECOND;
 	ticks--;
 	if (ticks <= 0)
 	{
@@ -209,7 +208,7 @@ void BomberGameWidget::tick()
 	}
 }
 
-void BomberGameWidget::resizeEvent(QResizeEvent* ev)
+void BomberGameWidget::resizeEvent(QResizeEvent *ev)
 {
 	QPalette palette;
 	m_renderer.setBackgroundSize(ev->size());
@@ -247,7 +246,7 @@ void BomberGameWidget::newLevel()
 	redraw();
 }
 
-void BomberGameWidget::mouseReleaseEvent(QMouseEvent* event)
+void BomberGameWidget::mouseReleaseEvent(QMouseEvent *event)
 {
 	if (event->button() & Qt::LeftButton)
 	{
@@ -334,16 +333,14 @@ void BomberGameWidget::generateOverlay()
 	QFont font;
 	font.setPointSize(28);
 	p.setFont(font);
-	unsigned int textWidth = p.boundingRect(p.viewport(), Qt::AlignCenter
-			| Qt::AlignVCenter, text).width();
+	unsigned int textWidth = p.boundingRect(p.viewport(), Qt::AlignCenter | Qt::AlignVCenter, text).width();
 	unsigned int fontSize = 28;
 	while ((textWidth > itemWidth * 0.95))
 	{
 		fontSize--;
 		font.setPointSize(fontSize);
 		p.setFont(font);
-		textWidth = p.boundingRect(p.viewport(), Qt::AlignCenter
-				| Qt::AlignVCenter, text).width();
+		textWidth = p.boundingRect(p.viewport(), Qt::AlignCenter | Qt::AlignVCenter, text).width();
 	}
 
 	p.setPen(QColor(0, 0, 0, 255));
@@ -351,8 +348,7 @@ void BomberGameWidget::generateOverlay()
 	p.end();
 
 	m_overlay->setPixmap(px);
-	m_overlay->moveTo((size().width() - itemWidth) / 2, (size().height()
-			- itemHeight) / 2);
+	m_overlay->moveTo((size().width() - itemWidth) / 2, (size().height() - itemHeight) / 2);
 }
 
 void BomberGameWidget::onLevelCleared()

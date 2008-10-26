@@ -42,7 +42,7 @@ public:
 	/** The speed the plane will fly at */
 	static const qreal DEFAULT_VELOCITY;
 
-	Plane(BomberRenderer* renderer, BomberBoard* board);
+	Plane(BomberRenderer *renderer, BomberBoard *board);
 	~Plane();
 
 	/**

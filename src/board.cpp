@@ -51,8 +51,8 @@ const unsigned int PLANE_EXPLODE_TIME = 2000;
 /** This time in milliseconds that the bomb exploding animation is played for */
 const unsigned int BOMB_EXPLODE_TIME = 1000;
 
-BomberBoard::BomberBoard(BomberRenderer* renderer, KGameCanvasAbstract* canvas,
-		QWidget* parent) :
+BomberBoard::BomberBoard(BomberRenderer *renderer, KGameCanvasAbstract *canvas,
+		QWidget *parent) :
 	QObject(parent), KGameCanvasGroup(canvas), m_renderer(renderer), m_bomb(NULL)
 {
 	m_clock = new QTimer(this);
@@ -92,7 +92,7 @@ void BomberBoard::resize(QSize& size)
 
 	m_tileSize = QSize(minTileSizeWidth, minTileSizeHeight);
 
-	foreach(Building* building, m_buildings)
+	foreach(Building *building, m_buildings)
 	{
 		building->resize(m_tileSize);
 	}
@@ -196,39 +196,40 @@ void BomberBoard::tick()
 	checkCollisions();
 
 	// Move everything
-	foreach(Building* building, m_buildings){
-	building->advanceItem();
-}
+	foreach(Building *building, m_buildings)
+	{
+		building->advanceItem();
+	}
 
-m_plane->advanceItem();
+	m_plane->advanceItem();
 
-if (m_bomb!=NULL)
-{
-	m_bomb->advanceItem();
-}
+	if (m_bomb!=NULL)
+	{
+		m_bomb->advanceItem();
+	}
 
-foreach(Bomb* bomb, m_explodingBombs)
-{
-	bomb->advanceItem();
-}
+	foreach(Bomb *bomb, m_explodingBombs)
+	{
+		bomb->advanceItem();
+	}
 
-// Draw everything
-m_plane->update();
+	// Draw everything
+	m_plane->update();
 
-foreach(Building* building, m_buildings)
-{
-	building->update();
-}
+	foreach(Building *building, m_buildings)
+	{
+		building->update();
+	}
 
-if (m_bomb!=NULL)
-{
-	m_bomb->update();
-}
+	if (m_bomb!=NULL)
+	{
+		m_bomb->update();
+	}
 
-foreach(Bomb* bomb, m_explodingBombs)
-{
-	bomb->update();
-}
+	foreach(Bomb *bomb, m_explodingBombs)
+	{
+		bomb->update();
+	}
 }
 
 void BomberBoard::dropBomb()
@@ -245,42 +246,42 @@ void BomberBoard::dropBomb()
 
 void BomberBoard::checkCollisions()
 {
-	foreach(Building *building, m_buildings){
-	if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state()
-			== Explodable::Moving)
+	foreach(Building *building, m_buildings)
 	{
-		// Plane crashed into the building
-		building->destoryTop();
-		m_buildingBlocks--;
-		crashed();
-	}
-
-	if (m_bomb!=NULL)
-	{
-		if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state()
+		if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state()
 				== Explodable::Moving)
 		{
-			// Bomb hit a building
+			// Plane crashed into the building
 			building->destoryTop();
 			m_buildingBlocks--;
-			emit onBombHit();
-			bombHit(m_bomb,building->position().x(),Building::BUILD_BASE_LOCATION-(building->height()));
-			m_bomb = NULL;
+			crashed();
 		}
-		else if (m_bomb->position().y()>=Building::BUILD_BASE_LOCATION+1)
+
+		if (m_bomb!=NULL)
 		{
-			// Bomb hit the ground
-			bombHit(m_bomb,(unsigned int)m_bomb->position().x(),Building::BUILD_BASE_LOCATION);
-			m_bomb = NULL;
+			if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state()
+					== Explodable::Moving)
+			{
+				// Bomb hit a building
+				building->destoryTop();
+				m_buildingBlocks--;
+				emit onBombHit();
+				bombHit(m_bomb,building->position().x(),Building::BUILD_BASE_LOCATION-(building->height()));
+				m_bomb = NULL;
+			}
+			else if (m_bomb->position().y()>=Building::BUILD_BASE_LOCATION+1)
+			{
+				// Bomb hit the ground
+				bombHit(m_bomb,(unsigned int)m_bomb->position().x(),Building::BUILD_BASE_LOCATION);
+				m_bomb = NULL;
+			}
+		}
+
+		if (m_plane->state()==Explodable::Moving && m_buildingBlocks==0)
+		{
+			emit levelCleared();
 		}
 	}
-
-	if (m_plane->state()==Explodable::Moving && m_buildingBlocks==0)
-	{
-		emit levelCleared();
-	}
-}
-
 }
 
 void BomberBoard::bombHit(Bomb *bomb, qreal moveBombToX, qreal moveBombToY)
@@ -316,19 +317,20 @@ void BomberBoard::crashed()
 
 void BomberBoard::clear()
 {
-	foreach(Building* building, m_buildings){
-	delete building;
-}
+	foreach(Building *building, m_buildings)
+	{
+		delete building;
+	}
 
-m_buildings.clear();
+	m_buildings.clear();
 
-if (m_bomb!=NULL)
-{
-	delete m_bomb;
-	m_bomb=NULL;
-}
+	if (m_bomb!=NULL)
+	{
+		delete m_bomb;
+		m_bomb=NULL;
+	}
 
-resetPlane();
+	resetPlane();
 }
 
 QPoint BomberBoard::mapPosition(const QPointF& pos) const

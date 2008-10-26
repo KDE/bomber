@@ -43,7 +43,7 @@ public:
 
 	explicit Explodable(QString mainSvg, QString explosionSvg,
 			qreal relativeWidth, qreal relativeHeight,
-			BomberRenderer* renderer, BomberBoard* board);
+			BomberRenderer *renderer, BomberBoard *board);
 	virtual ~Explodable();
 
 	/**
@@ -132,8 +132,8 @@ protected:
 	QRectF m_nextBoundingRect;
 
 private:
-	BomberRenderer* m_renderer;
-	BomberBoard* m_board;
+	BomberRenderer *m_renderer;
+	BomberBoard *m_board;
 
 	/**
 	 * Size of the bomb

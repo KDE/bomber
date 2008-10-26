@@ -35,7 +35,7 @@ class Building
 {
 public:
 	static const unsigned int BUILD_BASE_LOCATION;
-	Building(BomberRenderer* renderer, BomberBoard* board, unsigned int position,
+	Building(BomberRenderer *renderer, BomberBoard *board, unsigned int position,
 			unsigned int height);
 	~Building();
 
@@ -109,12 +109,12 @@ private:
 	 * \param pixmap The pixmap the building tile should be created with
 	 * \param height The height that the tile is been created at
 	 */
-	BuildingTile* createBuildingTile(QString pixmap, unsigned int height);
+	BuildingTile *createBuildingTile(QString pixmap, unsigned int height);
 
 	unsigned int m_height;
 	QRectF m_boundingRect;
-	BomberRenderer* m_renderer;
-	BomberBoard* m_board;
+	BomberRenderer *m_renderer;
+	BomberBoard *m_board;
 	QList<BuildingTile*> m_buildingTiles;
 
 	qreal m_xPos;

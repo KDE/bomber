@@ -40,7 +40,7 @@ const unsigned int MAX_STYLE = 1;
 /** The vertical tile number of the bottom tile in the building */
 const unsigned int Building::BUILD_BASE_LOCATION = 16;
 
-Building::Building(BomberRenderer* renderer, BomberBoard* board, unsigned int position,
+Building::Building(BomberRenderer *renderer, BomberBoard *board, unsigned int position,
 		unsigned int height) :
 	m_renderer(renderer), m_board(board)
 {
@@ -94,7 +94,7 @@ void Building::setupBuildingTiles()
 	m_boundingRect.moveTo(m_xPos, BUILD_BASE_LOCATION - m_height + 1);
 }
 
-BuildingTile* Building::createBuildingTile(QString pixmap, unsigned int)
+BuildingTile *Building::createBuildingTile(QString pixmap, unsigned int)
 {
 	BuildingTile *tile = new BuildingTile(m_renderer, m_board);
 	tile->setPixmapName(pixmap);
@@ -103,30 +103,34 @@ BuildingTile* Building::createBuildingTile(QString pixmap, unsigned int)
 
 void Building::raise()
 {
-	foreach(BuildingTile *tile, m_buildingTiles){
-	tile->raise();
-}
+	foreach(BuildingTile *tile, m_buildingTiles)
+	{
+		tile->raise();
+	}
 }
 
 void Building::show()
 {
-	foreach(BuildingTile *tile, m_buildingTiles){
-	tile->show();
-}
+	foreach(BuildingTile *tile, m_buildingTiles)
+	{
+		tile->show();
+	}
 }
 
 void Building::update()
 {
-	foreach(BuildingTile *tile, m_buildingTiles){
-	tile->update();
-}
+	foreach(BuildingTile *tile, m_buildingTiles)
+	{
+		tile->update();
+	}
 }
 
 void Building::advanceItem()
 {
-	foreach(BuildingTile *tile, m_buildingTiles){
-	tile->advanceItem();
-}
+	foreach(BuildingTile *tile, m_buildingTiles)
+	{
+		tile->advanceItem();
+	}
 }
 
 void Building::resize(const QSize& size)

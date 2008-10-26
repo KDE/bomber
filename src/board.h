@@ -29,7 +29,7 @@
 
 namespace Phonon
 {
-class MediaObject;
+	class MediaObject;
 }
 
 class Plane;
@@ -52,9 +52,9 @@ public:
 	 * \param canvas The object were the games objects are drawn onto
 	 * \param parent The widget which the board is inserted into
 	 */
-	explicit BomberBoard( BomberRenderer* renderer, KGameCanvasAbstract* canvas = NULL, QWidget* parent = 0 )		;
+	explicit BomberBoard( BomberRenderer *renderer, KGameCanvasAbstract *canvas = NULL, QWidget *parent = 0 )		;
 
-~	BomberBoard();
+	~BomberBoard();
 
 	/**
 	 * This is called when the game board is resized
@@ -170,20 +170,20 @@ private:
 	 */
 	void crashed();
 
-	BomberRenderer* m_renderer;
+	BomberRenderer *m_renderer;
 	QSize m_tileSize;
 
-	QTimer* m_clock;
+	QTimer *m_clock;
 
-	Phonon::MediaObject* m_audioPlayer;
+	Phonon::MediaObject *m_audioPlayer;
 	bool m_playSounds;
 	QDir m_soundPath;
 
 	/** If their is a bomb currently dropping then it is pointed to by this */
-	Bomb* m_bomb;
+	Bomb *m_bomb;
 
 	/** This points to the plane object used in the level */
-	Plane* m_plane;
+	Plane *m_plane;
 
 	/** This contains all the buildings in the current level */
 	QList<Building *> m_buildings;

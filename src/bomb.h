@@ -35,7 +35,7 @@ public:
 	/** The height of the bomb relative to the tile */
 	static const qreal BOMB_RELATIVE_SIZE_H;
 
-	Bomb(BomberRenderer* renderer, BomberBoard* board, qreal xPos, qreal yPos,
+	Bomb(BomberRenderer *renderer, BomberBoard *board, qreal xPos, qreal yPos,
 			const QSize& tileSize);
 	~Bomb();
 

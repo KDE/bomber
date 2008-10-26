@@ -37,9 +37,9 @@ Q_OBJECT
 public:
     /** The different states that the game can be in */
     enum State
-    {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver}	;
+    {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver};
 
-	explicit BomberGameWidget ( QWidget* parent = 0 );
+	explicit BomberGameWidget ( QWidget *parent = 0 );
 	~BomberGameWidget();
 
 	/**
@@ -59,7 +59,7 @@ public:
 	 * \return The game state
 	 */
 	BomberGameWidget::State state() const
-	{	return m_state;}
+	{ return m_state; }
 
 public slots:
 	/**
@@ -159,8 +159,8 @@ private slots:
 	void onPlaneCrashed();
 
 private:
-	virtual void resizeEvent( QResizeEvent* event );
-	virtual void mouseReleaseEvent( QMouseEvent* event );
+	virtual void resizeEvent( QResizeEvent *event );
+	virtual void mouseReleaseEvent( QMouseEvent *event );
 
 	/**
 	 * Create the overlay used to display info to the user. The info will
@@ -182,10 +182,10 @@ private:
 
 	BomberRenderer m_renderer;
 	KGameTheme *m_theme;
-	QTimer* m_clock;
-	BomberBoard* m_board;
+	QTimer *m_clock;
+	BomberBoard *m_board;
 
-	KGameCanvasPixmap* m_overlay;
+	KGameCanvasPixmap *m_overlay;
 };
 
 #endif
