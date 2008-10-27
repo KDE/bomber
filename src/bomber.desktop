@@ -8,6 +8,7 @@ Type=Application
 Terminal=false
 GenericName=Arcade bombing game
 GenericName[cs]=Arkádová bombardovací hra
+GenericName[es]=Juego de bombas de tipo arcade
 GenericName[pt]=Jogo de bombardeio em arcada
 GenericName[pt_BR]=Jogo de bombardeio em arcada
 GenericName[uk]=Аркадна гра у бомбардування
