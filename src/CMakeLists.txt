@@ -30,7 +30,7 @@ else(KDE4_ENABLE_FPIE)
     target_link_libraries(bomber ${KDE4_KDEUI_LIBS} ${KDEGAMES_LIBRARY} ${KDE4_PHONON_LIBS})
 endif(KDE4_ENABLE_FPIE)
 
-install(TARGETS bomber DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS bomber ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
