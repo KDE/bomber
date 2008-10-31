@@ -8,6 +8,7 @@ Type=Application
 Terminal=false
 GenericName=Arcade bombing game
 GenericName[cs]=Arkádová bombardovací hra
+GenericName[el]=Παιχνίδι Arcade βομβαρδισμού
 GenericName[es]=Juego de bombas de tipo arcade
 GenericName[fr]=Jeu d'arcade de bombe
 GenericName[nds]=Speelhall-Bomberspeel
