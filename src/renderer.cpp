@@ -85,9 +85,9 @@ unsigned int BomberRenderer::frames(const QString& id)
 
 QPixmap BomberRenderer::renderElement(const QString& id, const QSize& size)
 {
-	QHash<QString, QPixmap>::const_iterator elementIt = m_tileCache.constFind(
+	QHash<QString, QPixmap>::iterator elementIt = m_tileCache.find(
 			id);
-	QHash<QString, QPixmap>::const_iterator itEnd = m_tileCache.constEnd();
+	QHash<QString, QPixmap>::iterator itEnd = m_tileCache.end();
 	if (elementIt == itEnd && size.isEmpty())
 	{
 		return QPixmap();
