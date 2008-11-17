@@ -1,5 +1,5 @@
 project(bomber)
-include_directories( ${KDE4_INCLUDES} ${QT_INCLUDES} ${CMAKE_SOURCE_DIR}/libkdegames/highscore )
+include_directories(${CMAKE_SOURCE_DIR}/libkdegames/highscore)
 
 if(KDE4_ENABLE_FPIE)
     set ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_CXX_FPIE_FLAGS}")
@@ -24,10 +24,9 @@ kde4_add_kcfg_files(bomber_SRCS settings.kcfgc )
 
 kde4_add_executable(bomber ${bomber_SRCS})
 
+target_link_libraries(bomber kdegames ${KDE4_KDEUI_LIBS ${KDE4_PHONON_LIBS})
 if(KDE4_ENABLE_FPIE)
-    target_link_libraries(bomber ${KDE4_KDEUI_LIBS} ${KDEGAMES_LIBRARY} ${KDE4_PHONON_LIBS} ${KDE4_PIE_LDFLAGS})    
-else(KDE4_ENABLE_FPIE)
-    target_link_libraries(bomber ${KDE4_KDEUI_LIBS} ${KDEGAMES_LIBRARY} ${KDE4_PHONON_LIBS})
+    target_link_libraries(bomber ${KDE4_PIE_LDFLAGS})    
 endif(KDE4_ENABLE_FPIE)
 
 install(TARGETS bomber ${INSTALL_TARGETS_DEFAULT_ARGS} )
