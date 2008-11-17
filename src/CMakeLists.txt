@@ -24,7 +24,7 @@ kde4_add_kcfg_files(bomber_SRCS settings.kcfgc )
 
 kde4_add_executable(bomber ${bomber_SRCS})
 
-target_link_libraries(bomber kdegames ${KDE4_KDEUI_LIBS ${KDE4_PHONON_LIBS})
+target_link_libraries(bomber kdegames ${KDE4_KDEUI_LIBS} ${KDE4_PHONON_LIBS})
 if(KDE4_ENABLE_FPIE)
     target_link_libraries(bomber ${KDE4_PIE_LDFLAGS})    
 endif(KDE4_ENABLE_FPIE)
