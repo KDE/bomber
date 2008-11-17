@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Bomber
 Name[uk]=Бомбардувальник
+Name[x-test]=xxBomberxx
 Name[zh_TW]=轟炸機
 Exec=bomber -caption "%c"
 Icon=bomber
@@ -18,6 +19,7 @@ GenericName[pt_BR]=Jogo de bombardeio em arcada
 GenericName[sv]=Bombspel
 GenericName[tr]=Bombalama oyunu
 GenericName[uk]=Аркадна гра у бомбардування
+GenericName[x-test]=xxArcade bombing gamexx
 GenericName[zh_TW]=轟炸機遊戲
 Categories=Qt;KDE;Game;ArcadeGame;
 X-DocPath=bomber/index.html
