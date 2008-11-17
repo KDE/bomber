@@ -23,7 +23,7 @@
 #include <kdebug.h>
 
 #include <KLocale>
-#include <KGameTheme>
+#include <kgametheme.h>
 
 #define NEW_LIVE_AT_SCORE 10000;
 

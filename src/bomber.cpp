@@ -34,7 +34,7 @@
 
 #include <kstandardgameaction.h>
 #include <KScoreDialog>
-#include <KGameThemeSelector>
+#include <kgamethemeselector.h>
 
 Bomber::Bomber()
 {
