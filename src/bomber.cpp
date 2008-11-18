@@ -39,13 +39,9 @@
 Bomber::Bomber()
 {
 	m_statusBar = statusBar();
-	m_statusBar->insertItem(
-    i18nc("Default text shown to the user before the level is known at game start",
-		  "Level: 0"), 1, 1);
-	m_statusBar->insertItem(i18nc("Default text shown to the user before the score is known at game start",
-					              "Score: 0"), 2, 1);
-	m_statusBar->insertItem(i18nc("Default text shown to the user before the lives are known at game start",
-					              "Lives: 3"), 4, 1);
+	m_statusBar->insertItem(i18nc("Used to display the current level of play to the user", "Level: %1", 0), 1, 1);
+	m_statusBar->insertItem(i18nc("Used to inform the user of their current score", "Score: %1", 0), 2, 1);
+	m_statusBar->insertItem(i18nc("Used to tell the user how many lives they have left", "Lives: %1", 3), 4, 1);
 
 	m_gameWidget = new BomberGameWidget(this);
 
