@@ -10,6 +10,7 @@ Type=Application
 Terminal=false
 GenericName=Arcade bombing game
 GenericName[el]=Παιχνίδι Arcade βομβαρδισμού
+GenericName[gl]=Xogo arcade de tirar bombas
 GenericName[nds]=Speelhall-Bombenspeel
 GenericName[nn]=Bombespel
 GenericName[pt]=Jogo de bombardeamento para arcadas
