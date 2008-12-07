@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Bomber
 Name[nn]=Bombar
+Name[ro]=Bombardier
 Name[uk]=Бомбардувальник
 Name[x-test]=xxBomberxx
 Name[zh_CN]=投弹者
@@ -17,6 +18,7 @@ GenericName[nds]=Speelhall-Bombenspeel
 GenericName[nn]=Bombespel
 GenericName[pt]=Jogo de bombardeamento para arcadas
 GenericName[pt_BR]=Jogo de bombardeamento para arcadas
+GenericName[ro]=Joc de aventuri cu bombardamente
 GenericName[sv]=Bombspel
 GenericName[tr]=Bombalama macera oyunu
 GenericName[uk]=Аркадна гра у бомбардування
