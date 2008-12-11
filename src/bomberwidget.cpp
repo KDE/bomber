@@ -314,7 +314,7 @@ void BomberGameWidget::generateOverlay()
 	switch (m_state)
 	{
 	case BeforeFirstGame:
-		text = i18nc("Message show to the user when the game is loaded","Welcome to Bomber.\n Click to start a game");
+		text = i18nc("Message show to the user when the game is loaded","Welcome to Bomber.\nClick to start a game");
 		break;
 	case Paused:
 		text = i18nc("Message show to the user while the game is paused","Paused");
