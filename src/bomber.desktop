@@ -12,6 +12,7 @@ Type=Application
 Terminal=false
 GenericName=Arcade bombing game
 GenericName[cs]=Arkádová bombardovcí hra
+GenericName[de]=Spiel mit Bomben für die Spielhalle
 GenericName[el]=Παιχνίδι Arcade βομβαρδισμού
 GenericName[et]=Seikluslik pommitamismäng
 GenericName[gl]=Xogo arcade de tirar bombas
