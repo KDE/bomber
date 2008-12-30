@@ -1,7 +1,19 @@
 [KGameTheme]
 VersionFormat=1
 Name=Lava-Island
+Name[et]=Laavasaar
+Name[gl]=Illa de lava
+Name[pt]=Ilha de Lava
+Name[pt_BR]=Ilha de Lava
+Name[uk]=Лавовий острів
+Name[zh_TW]=火山島
 Description=Stop the lava and save the day
+Description[et]=Peata laava ja tunne end päästjana
+Description[gl]=Deteña a lava e faga o día
+Description[pt]=Pare a lava e seja o salvador do dia
+Description[pt_BR]=Pare a lava e seja o salvador do dia
+Description[uk]=Зупиніть лаву і врятуйте всіх
+Description[zh_TW]=阻止岩漿，拯救世界
 FileName=Lava-Island.svgz
 Author=Sean Wilson
 AuthorEmail=suseux@gmail.com
