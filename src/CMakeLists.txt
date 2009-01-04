@@ -18,8 +18,6 @@ set(bomber_SRCS
    explodable.cpp
  )
 
-kde4_add_ui_files(bomber_SRCS prefs_base.ui)
-
 kde4_add_kcfg_files(bomber_SRCS settings.kcfgc )
 
 kde4_add_executable(bomber ${bomber_SRCS})
