@@ -19,7 +19,7 @@ set(bomber_SRCS
  )
 
 kde4_add_kcfg_files(bomber_SRCS settings.kcfgc )
-
+kde4_add_app_icon(bomber_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../pictures/hi*-app-bomber.png"})
 kde4_add_executable(bomber ${bomber_SRCS})
 
 target_link_libraries(bomber kdegames ${KDE4_KDEUI_LIBS} ${KDE4_PHONON_LIBS})
