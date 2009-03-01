@@ -1,5 +1,10 @@
-<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="Bomber" version="1">
+<?xml version="1.0" encoding="UTF-8"?>
+<gui name="Bomber"
+     version="1"
+     xmlns="http://www.kde.org/standards/kxmlgui/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0
+                         http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
 	<MenuBar>
 		<Menu name="settings">
 			<Action name="toggle_sound" append="save_merge" />
@@ -16,4 +21,4 @@
 	<ActionProperties>
 		<Action shortcut="Space" name="drop_bomb" />		
 	</ActionProperties>
-</kpartgui>
+</gui>
