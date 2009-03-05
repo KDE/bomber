@@ -4,8 +4,6 @@
   <!ENTITY kappname "&bomber;">
   <!ENTITY package "kdegames">
   <!ENTITY kappversion "0.1"><!--Applicaion version. Use this variable everywhere it's needed.-->
-  <!ENTITY docversion "1.0"><!--Document version. Use this variable everywhere it's needed.-->
-  <!ENTITY docupdate "2008-10-07"><!--Document version. Use this variable everywhere it's needed.-->
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
@@ -34,9 +32,8 @@
 		<legalnotice>&FDLNotice;
 		</legalnotice>
 
-		<date>&docupdate;
-		</date><!-- Date of (re)writing, or update. Use the variable definitions within header to change this value.-->
-		<releaseinfo>&docversion;
+		<date>2008-10-07</date><!-- Date of (re)writing, or update.-->
+		<releaseinfo>&kappversion;
 		</releaseinfo><!-- Application version number. Use the variable definitions within header to change this value.-->
 
 		<abstract>
