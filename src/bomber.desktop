@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Bomber
+Name[hne]=बम्बर
 Name[it]=Bombardiere
 Name[nn]=Bombar
 Name[ro]=Bombardier
@@ -21,6 +22,7 @@ GenericName[et]=Seikluslik pommitamismäng
 GenericName[fr]=Jeu d'arcade de bombardement
 GenericName[ga]=Cluiche stuara buamála
 GenericName[gl]=Xogo arcade de tirar bombas
+GenericName[hne]=आर्केड बम्बिंग खेल
 GenericName[it]=Gioco arcade di bombardamento
 GenericName[ja]=爆弾投下アーケードゲーム
 GenericName[lv]=Spridzināšanas spēle
