@@ -150,7 +150,7 @@ void Explodable::setState(Explodable::State state)
 	resize(m_lastSize);
 }
 
-QPointF Explodable::position()
+QPointF Explodable::position() const
 {
 	return QPointF(m_xPos, m_yPos);
 }
@@ -175,4 +175,14 @@ void Explodable::setFrame(unsigned int frame)
 		setPixmap(m_renderer->renderElement(m_explosionSvg, frame, m_size));
 	}
 	m_frame = frame;
+}
+
+Explodable::State Explodable::state() const
+{
+	return m_state;
+}
+
+qreal Explodable::velocity() const
+{
+	return m_velocity;
 }

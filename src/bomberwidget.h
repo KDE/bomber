@@ -46,20 +46,19 @@ public:
 	 * Used to find out the current level
 	 * \return The current level
 	 */
-	unsigned int level();
+	unsigned int level() const;
 
 	/**
 	 * Used to find the current score
 	 * \return the current score
 	 */
-	unsigned int score();
+	unsigned int score() const;
 
 	/**
 	 * Used to return the game sate
 	 * \return The game state
 	 */
-	BomberGameWidget::State state() const
-	{ return m_state; }
+	BomberGameWidget::State state() const;
 
 public slots:
 	/**

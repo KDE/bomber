@@ -147,7 +147,7 @@ void Building::resize(const QSize& size)
 	}
 }
 
-QRectF Building::boundingRect()
+QRectF Building::boundingRect() const
 {
 	return m_boundingRect;
 }
@@ -157,7 +157,12 @@ void Building::destoryTop()
 	setHeight(m_height - 1);
 }
 
-QPointF Building::position()
+QPointF Building::position() const
 {
 	return QPointF(m_xPos, BUILD_BASE_LOCATION);
+}
+
+unsigned int Building::height() const
+{
+	return m_height;
 }

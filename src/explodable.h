@@ -74,10 +74,7 @@ public:
 	 * Used to get the velocity of the explodable object
 	 * \return The velocity
 	 */
-	qreal velocity() const
-	{
-		return m_velocity;
-	}
+	qreal velocity() const;
 
 	/**
 	 * Rechecks the number of frames of bomb animation and sets new pixmaps.
@@ -96,14 +93,14 @@ public:
 	 * Return the position of the bomb
 	 * \return The position of the bomb
 	 */
-	QPointF position();
+	QPointF position() const;
 
 	/**
 	 * Set the current frame to a random frame from the frame set
 	 */
 	void setRandomFrame();
 
-	/*
+	/**
 	 * Returns bomb's bounding rect expected in next frame
 	 * used by colision test
 	 * \return The items next bounding rect
@@ -114,11 +111,7 @@ public:
 	 * Get the current state of the bomb
 	 * \return The current state of the bomb
 	 */
-	Explodable::State state() const
-	{
-		return m_state;
-	}
-	;
+	Explodable::State state() const;
 
 	/**
 	 * Set the current state of the bomb

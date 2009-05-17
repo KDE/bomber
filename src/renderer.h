@@ -47,6 +47,7 @@ public:
 	 * \param size The size of the background
 	 */
 	void setBackgroundSize(const QSize& size);
+	
 	/**
 	 * Renders background to QPixmap of size set by setBachgroundSize
 	 * Background pixmap is cached (setBackgroundSize() invalidates the cache)
@@ -68,6 +69,7 @@ public:
 	 * \return A pixmap with the element rendered onto it
 	 */
 	QPixmap renderElement(const QString& id, const QSize& size = QSize(0, 0));
+	
 	/**
 	 * Renders frame of an element to pixmap
 	 * \param id The id of the element in the SVG theme to render
@@ -90,7 +92,7 @@ private:
 	 * \param id The element to look for in the SVG theme
 	 * \return True if element exists in the SVG theme
 	 */
-	bool elementExists(const QString& id);
+	bool elementExists(const QString& id) const;
 
 	KSvgRenderer m_svgRenderer;
 	QSize m_backgroundSize;

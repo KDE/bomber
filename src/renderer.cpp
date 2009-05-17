@@ -70,7 +70,7 @@ QPixmap BomberRenderer::renderBackground()
 	return m_cachedBackground;
 }
 
-bool BomberRenderer::elementExists(const QString& id)
+bool BomberRenderer::elementExists(const QString& id) const
 {
 	return m_svgRenderer.elementExists(id);
 }

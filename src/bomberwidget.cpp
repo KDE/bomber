@@ -64,12 +64,12 @@ BomberGameWidget::~BomberGameWidget()
 	delete m_theme;
 }
 
-unsigned int BomberGameWidget::level()
+unsigned int BomberGameWidget::level() const
 {
 	return m_level;
 }
 
-unsigned int BomberGameWidget::score()
+unsigned int BomberGameWidget::score() const
 {
 	return m_score;
 }
@@ -365,4 +365,9 @@ void BomberGameWidget::onLevelCleared()
 		redraw();
 	}
 
+}
+
+BomberGameWidget::State BomberGameWidget::state() const
+{ 
+  return m_state;
 }

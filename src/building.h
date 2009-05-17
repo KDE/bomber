@@ -49,10 +49,7 @@ public:
 	 * Get the height of the building
 	 * \return The height of the building
 	 */
-	unsigned int height() const
-	{
-		return m_height;
-	}
+	unsigned int height() const;
 
 	/**
 	 * Sets width and height of plane.
@@ -86,7 +83,7 @@ public:
 	 * Get the bounding rectange of the building
 	 * \return the Bounding rectangle of the building
 	 */
-	QRectF boundingRect();
+	QRectF boundingRect() const;
 
 	/**
 	 * This is used to destory the top of the building
@@ -97,17 +94,19 @@ public:
 	 * Return the position of the building
 	 * \return The position of the building
 	 */
-	QPointF position();
+	QPointF position() const;
 
 private:
 	/**
 	 * Setup the tiles that make up the building
 	 */
 	void setupBuildingTiles();
+	
 	/**
 	 * Used to create a new building tile
 	 * \param pixmap The pixmap the building tile should be created with
 	 * \param height The height that the tile is been created at
+	 * \return The new created building tile
 	 */
 	BuildingTile *createBuildingTile(QString pixmap, unsigned int height);
 
