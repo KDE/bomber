@@ -1,6 +1,7 @@
 [KGameTheme]
 VersionFormat=1
 Name=KBomber - Star Wars
+Name[ca]=KBomber - Guerra de les galàxies
 Name[cs]=KBomber - Hvězdné války
 Name[de]=KBomber - Krieg der Sterne
 Name[es]=KBomber - Guerra de las galaxias
@@ -17,6 +18,8 @@ Name[pt]=KBomber - Guerra das Estrelas
 Name[pt_BR]=KBomber - Guerra nas Estrelas
 Name[ro]=KBombardier - Războiul stelelor
 Name[sl]=KBomber - Vojna zvezd
+Name[sr]=К‑бомбардер — Ратови звезда
+Name[sr@latin]=K‑bombarder — Ratovi zvezda
 Name[sv]=Kbomber - stjärnornas krig
 Name[tr]=KBomber - Yıldız Savaşları
 Name[uk]=KBomber — Зоряні війни
