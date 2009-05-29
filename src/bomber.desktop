@@ -15,6 +15,7 @@ Icon=bomber
 Type=Application
 Terminal=false
 GenericName=Arcade Bombing Game
+GenericName[da]=Arkade-bombespil
 GenericName[de]=Spiel mit Flugzeugbomben
 GenericName[et]=Seikluslik pommitamismäng
 GenericName[nn]=Bombespel
