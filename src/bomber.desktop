@@ -2,6 +2,7 @@
 Name=Bomber
 Name[hne]=बम्बर
 Name[it]=Bombardiere
+Name[km]=គ្រាប់បែក
 Name[nn]=Bombar
 Name[ro]=Bombardier
 Name[sr]=Бомбардер
@@ -18,6 +19,7 @@ GenericName=Arcade Bombing Game
 GenericName[da]=Arkade-bombespil
 GenericName[de]=Spiel mit Flugzeugbomben
 GenericName[et]=Seikluslik pommitamismäng
+GenericName[km]=ល្បែង​គ្រាប់បែក​របស់ Arcade
 GenericName[nn]=Bombespel
 GenericName[pt]=Jogo de Bombardeamento para Arcadas
 GenericName[pt_BR]=Jogo de bombardeiro tipo arcade
