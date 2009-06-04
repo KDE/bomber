@@ -57,7 +57,7 @@ public:
 	 * Used to set the name of the pixmap used to display the tile
 	 * \param pixmap the name of the pixmap
 	 */
-	void setPixmapName(QString pixmap);
+	void setPixmapName(const QString& pixmap);
 private:
 	BomberRenderer *m_renderer;
 	BomberBoard *m_board;

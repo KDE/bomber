@@ -41,7 +41,7 @@ public:
 	/** The height of the explostion releative to the tile */
 	static const qreal EXPLOSION_RELATIVE_SIZE_H;
 
-	explicit Explodable(QString mainSvg, QString explosionSvg,
+	explicit Explodable(const QString& mainSvg, const QString& explosionSvg,
 			qreal relativeWidth, qreal relativeHeight,
 			BomberRenderer *renderer, BomberBoard *board);
 	virtual ~Explodable();

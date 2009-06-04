@@ -71,7 +71,7 @@ void BuildingTile::setFrame(unsigned int)
  * Used to set the name of the pixmap used to display the tile
  * \param pixmap the name of the pixmap
  */
-void BuildingTile::setPixmapName(QString pixmap)
+void BuildingTile::setPixmapName(const QString& pixmap)
 {
 	m_pixmapName = pixmap;
 }

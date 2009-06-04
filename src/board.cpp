@@ -324,11 +324,8 @@ void BomberBoard::clear()
 
 	m_buildings.clear();
 
-	if (m_bomb!=NULL)
-	{
-		delete m_bomb;
-		m_bomb=NULL;
-	}
+	delete m_bomb;
+	m_bomb=NULL;
 
 	resetPlane();
 }
