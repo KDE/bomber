@@ -1,6 +1,7 @@
 [KGameTheme]
 VersionFormat=1
 Name=Lava-Island
+Name[ca]=Illa de Lava
 Name[de]=Lava-Insel
 Name[el]=Νησί λάβας
 Name[es]=La isla de la lava
@@ -25,6 +26,7 @@ Name[x-test]=xxLava-Islandxx
 Name[zh_CN]=火山岛
 Name[zh_TW]=火山島
 Description=Stop the lava and save the day
+Description[ca]=Atura la lava i salva el dia
 Description[cs]=Zastavte lávu a zachraňte den
 Description[da]=Stop lavaen og red dagen
 Description[de]=Die Lava aufhalten und den Tag retten.
