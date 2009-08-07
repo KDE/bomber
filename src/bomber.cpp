@@ -24,13 +24,11 @@
 #include <KActionCollection>
 #include <KConfigDialog>
 #include <kdebug.h>
-#include <KGlobal>
 #include <KLocale>
 #include <KMessageBox>
 #include <krandom.h>
-#include <KStatusBar>
-#include <KStandardDirs>
 #include <KToggleAction>
+#include <KStatusBar>
 
 #include <kstandardgameaction.h>
 #include <KScoreDialog>

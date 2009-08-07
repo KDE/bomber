@@ -24,8 +24,6 @@
 #include "kgamecanvas.h"
 
 #include <kdebug.h>
-#include <KGlobal>
-#include <KLocale>
 #include <KRandom>
 #include <Phonon/MediaObject>
 #include <KStandardDirs>
