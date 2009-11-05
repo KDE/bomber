@@ -2,6 +2,7 @@
 VersionFormat=1
 Name=Lava-Island
 Name[ca]=Illa de Lava
+Name[cs]=Lávový ostrov
 Name[da]=Lava-Island
 Name[de]=Lava-Insel
 Name[el]=Νησί λάβας
@@ -27,6 +28,7 @@ Name[sl]=Otok lave
 Name[sr]=Острво с лавом
 Name[sr@latin]=Ostrvo s lavom
 Name[sv]=Lavaö
+Name[tr]=Lava-Adası
 Name[uk]=Лавовий острів
 Name[x-test]=xxLava-Islandxx
 Name[zh_CN]=火山岛
