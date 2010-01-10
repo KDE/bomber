@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Bomber
 Name[ca]=Bomber
+Name[ca@valencia]=Bomber
 Name[cs]=Bomber
 Name[da]=Bomber
 Name[de]=Bomber
@@ -45,6 +46,7 @@ Type=Application
 Terminal=false
 GenericName=Arcade Bombing Game
 GenericName[ca]=Joc arcade de bombardeig
+GenericName[ca@valencia]=Joc arcade de bombardeig
 GenericName[cs]=Arkádová bombardovací hra
 GenericName[da]=Arkade-bombespil
 GenericName[de]=Fliegerbomben-Spiel
