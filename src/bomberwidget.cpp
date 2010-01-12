@@ -149,7 +149,7 @@ void BomberGameWidget::settingsChanged()
 
 	if (!m_theme->load(BomberSettings::theme()))
 	{
-		kDebug("Load default theme");
+		kDebug() << "Load default theme";
 		m_theme->loadDefault();
 	}
 
