@@ -315,11 +315,7 @@ void BomberBoard::crashed()
 
 void BomberBoard::clear()
 {
-	foreach(Building *building, m_buildings)
-	{
-		delete building;
-	}
-
+	qDeleteAll(m_buildings);
 	m_buildings.clear();
 
 	delete m_bomb;
