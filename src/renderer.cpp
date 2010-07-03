@@ -70,15 +70,10 @@ QPixmap BomberRenderer::renderBackground()
 	return m_cachedBackground;
 }
 
-bool BomberRenderer::elementExists(const QString& id) const
-{
-	return m_svgRenderer.elementExists(id);
-}
-
 unsigned int BomberRenderer::frames(const QString& id)
 {
 	unsigned int frame = 0;
-	while (elementExists(id + '_' + QString::number(frame)))
+	while (m_svgRenderer.elementExists(id + '_' + QString::number(frame)))
 		frame++;
 	return frame;
 }
@@ -123,8 +118,7 @@ unsigned int BomberRenderer::maxBuildingStyles()
 	if (style == -1)
 	{
 		style = 0;
-		while (elementExists(QString("building_") + QString::number(style)
-				+ QString("_0")))
+		while (m_svgRenderer.elementExists(QString("building_%1_0").arg(style)))
 			style++;
 	}
 	return style;

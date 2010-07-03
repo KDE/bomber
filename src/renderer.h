@@ -87,13 +87,6 @@ public:
 	unsigned int maxBuildingStyles();
 
 private:
-	/**
-	 * Returns true of the element with the given ID exists in the SVG theme
-	 * \param id The element to look for in the SVG theme
-	 * \return True if element exists in the SVG theme
-	 */
-	bool elementExists(const QString& id) const;
-
 	KSvgRenderer m_svgRenderer;
 	QSize m_backgroundSize;
 	QPixmap m_cachedBackground;
