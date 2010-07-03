@@ -19,7 +19,7 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include <KSvgRenderer>
+#include <QSvgRenderer>
 
 #include <QSize>
 #include <QHash>
@@ -87,7 +87,7 @@ public:
 	unsigned int maxBuildingStyles();
 
 private:
-	KSvgRenderer m_svgRenderer;
+	QSvgRenderer m_svgRenderer;
 	QSize m_backgroundSize;
 	QPixmap m_cachedBackground;
 	QHash<QString, QPixmap> m_tileCache;
