@@ -19,9 +19,7 @@
 #include "explodable.h"
 
 #include "board.h"
-#include "renderer.h"
 
-#include <kdebug.h>
 #include <KRandom>
 
 /**
@@ -36,12 +34,12 @@ const qreal Explodable::EXPLOSION_RELATIVE_SIZE_H = 1.0;
 const qreal Explodable::EXPLOSION_RELATIVE_SIZE_W = 1.0;
 
 Explodable::Explodable(const QString& mainSvg, const QString& explosionSvg,
-		qreal relativeWidth, qreal relativeHeight, BomberRenderer *renderer,
+		qreal relativeWidth, qreal relativeHeight, KGameRenderer *renderer,
 		BomberBoard *board) :
-	KGameCanvasPixmap(board), m_renderer(renderer), m_board(board), m_mainSvg(
+	KGameCanvasRenderedPixmap(renderer, mainSvg, board), m_board(board), m_mainSvg(
 			mainSvg), m_explosionSvg(explosionSvg)
 {
-	m_size = QSize(32, 64);
+	setRenderSize(QSize(32, 64));
 	m_relativeWidth = relativeWidth;
 	m_relativeHeight = relativeHeight;
 	resetPixmaps();
@@ -62,23 +60,7 @@ void Explodable::setPosition(qreal xPos, qreal yPos)
 
 void Explodable::update()
 {
-	m_frame++;
-	if (m_state == Moving)
-	{
-		if (m_frame >= m_mainFramesNum)
-		{
-			m_frame = 0;
-		}
-	}
-	else
-	{
-		if (m_frame >= m_explosionFramesNum)
-		{
-			m_frame = 0;
-		}
-	}
-
-	setFrame(m_frame);
+	setFrame(frame() + 1);
 	moveTo(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
 }
 
@@ -87,20 +69,19 @@ void Explodable::resize(const QSize& tileSize)
 	m_lastSize = tileSize;
 	if (m_state == Moving)
 	{
-		m_size.setWidth(static_cast<unsigned int> (m_relativeWidth * tileSize.width()));
-		m_size.setHeight(
-				static_cast<unsigned int> (m_relativeHeight * tileSize.height()));
+		setRenderSize(QSize(
+			m_relativeWidth * tileSize.width(),
+			m_relativeHeight * tileSize.height()
+		));
 	}
 	else
 	{
-		m_size.setWidth(static_cast<unsigned int> (EXPLOSION_RELATIVE_SIZE_W
-				* tileSize.width()));
-		m_size.setHeight(static_cast<unsigned int> (EXPLOSION_RELATIVE_SIZE_H
-				* tileSize.height()));
+		setRenderSize(QSize(
+			EXPLOSION_RELATIVE_SIZE_W * tileSize.width(),
+			EXPLOSION_RELATIVE_SIZE_H * tileSize.height()
+		));
 	}
-
 	moveTo(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
-	setFrame(m_frame);
 }
 
 void Explodable::setVelocity(qreal vX)
@@ -110,19 +91,7 @@ void Explodable::setVelocity(qreal vX)
 
 void Explodable::setRandomFrame()
 {
-	unsigned int frame = 0;
-	if (m_state == Moving)
-	{
-		if (m_mainFramesNum > 0)
-			frame = KRandom::random() % m_mainFramesNum;
-	}
-	else
-	{
-		if (m_explosionFramesNum > 0)
-			frame = KRandom::random() % m_explosionFramesNum;
-	}
-
-	setFrame(frame);
+	setFrame(KRandom::random());
 }
 
 /**
@@ -141,11 +110,12 @@ void Explodable::setState(Explodable::State state)
 	if (m_state == Moving)
 	{
 		m_nextBoundingRect.setSize(QSizeF(m_relativeWidth, m_relativeHeight));
+		setSpriteKey(m_mainSvg);
 	}
 	else
 	{
-		m_nextBoundingRect.setSize(QSizeF(EXPLOSION_RELATIVE_SIZE_W,
-				EXPLOSION_RELATIVE_SIZE_H));
+		m_nextBoundingRect.setSize(QSizeF(EXPLOSION_RELATIVE_SIZE_W, EXPLOSION_RELATIVE_SIZE_H));
+		setSpriteKey(m_explosionSvg);
 	}
 	resize(m_lastSize);
 }
@@ -157,24 +127,7 @@ QPointF Explodable::position() const
 
 void Explodable::resetPixmaps()
 {
-	m_frame = 0;
-	m_mainFramesNum = m_renderer->frames(m_mainSvg);
-	m_explosionFramesNum = m_renderer->frames(m_explosionSvg);
-
-	setFrame(m_frame);
-}
-
-void Explodable::setFrame(unsigned int frame)
-{
-	if (m_state == Moving)
-	{
-		setPixmap(m_renderer->renderElement(m_mainSvg, frame, m_size));
-	}
-	else
-	{
-		setPixmap(m_renderer->renderElement(m_explosionSvg, frame, m_size));
-	}
-	m_frame = frame;
+	setFrame(0);
 }
 
 Explodable::State Explodable::state() const

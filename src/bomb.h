@@ -20,9 +20,6 @@
 
 #include "explodable.h"
 
-class BomberRenderer;
-class BomberBoard;
-
 /**
  * This is the bomb game object class. It extends Explodable as it
  * is a explodable object.
@@ -35,7 +32,7 @@ public:
 	/** The height of the bomb relative to the tile */
 	static const qreal BOMB_RELATIVE_SIZE_H;
 
-	Bomb(BomberRenderer *renderer, BomberBoard *board, qreal xPos, qreal yPos,
+	Bomb(KGameRenderer *renderer, BomberBoard *board, qreal xPos, qreal yPos,
 			const QSize& tileSize);
 	~Bomb();
 

@@ -49,7 +49,7 @@ const unsigned int PLANE_EXPLODE_TIME = 2000;
 /** This time in milliseconds that the bomb exploding animation is played for */
 const unsigned int BOMB_EXPLODE_TIME = 1000;
 
-BomberBoard::BomberBoard(BomberRenderer *renderer, KGameCanvasAbstract *canvas,
+BomberBoard::BomberBoard(KGameRenderer *renderer, KGameCanvasAbstract *canvas,
 		QWidget *parent) :
 	QObject(parent), KGameCanvasGroup(canvas), m_renderer(renderer), m_bomb(NULL)
 {
@@ -193,12 +193,6 @@ void BomberBoard::tick()
 {
 	checkCollisions();
 
-	// Move everything
-	foreach(Building *building, m_buildings)
-	{
-		building->advanceItem();
-	}
-
 	m_plane->advanceItem();
 
 	if (m_bomb!=NULL)
@@ -213,11 +207,6 @@ void BomberBoard::tick()
 
 	// Draw everything
 	m_plane->update();
-
-	foreach(Building *building, m_buildings)
-	{
-		building->update();
-	}
 
 	if (m_bomb!=NULL)
 	{

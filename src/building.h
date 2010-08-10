@@ -23,9 +23,9 @@
 #include <QtCore/QSize>
 #include <QtCore/QList>
 
-class BomberRenderer;
+class KGameCanvasRenderedPixmap;
+class KGameRenderer;
 class BomberBoard;
-class BuildingTile;
 
 /**
  * This class is used to represent the Building game objects. Each buildings are made up for
@@ -35,7 +35,7 @@ class Building
 {
 public:
 	static const unsigned int BUILD_BASE_LOCATION;
-	Building(BomberRenderer *renderer, BomberBoard *board, unsigned int position,
+	Building(KGameRenderer *renderer, BomberBoard *board, unsigned int position,
 			unsigned int height);
 	~Building();
 
@@ -55,18 +55,6 @@ public:
 	 * Sets width and height of plane.
 	 */
 	void resize(const QSize& tileSize);
-
-	/**
-	 * Updates plane position and pixmap.
-	 * This method is called once per frame.
-	 */
-	void update();
-
-	/**
-	 * Performs move calculations
-	 * This method is called once per frame
-	 */
-	void advanceItem();
 
 	/**
 	 * Sets building's current frame
@@ -105,16 +93,15 @@ private:
 	/**
 	 * Used to create a new building tile
 	 * \param pixmap The pixmap the building tile should be created with
-	 * \param height The height that the tile is been created at
 	 * \return The new created building tile
 	 */
-	BuildingTile *createBuildingTile(QString pixmap, unsigned int height);
+	KGameCanvasRenderedPixmap *createBuildingTile(const QString& pixmap);
 
 	unsigned int m_height;
 	QRectF m_boundingRect;
-	BomberRenderer *m_renderer;
+	KGameRenderer *m_renderer;
 	BomberBoard *m_board;
-	QList<BuildingTile*> m_buildingTiles;
+	QList<KGameCanvasRenderedPixmap*> m_buildingTiles;
 
 	qreal m_xPos;
 };

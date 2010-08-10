@@ -19,10 +19,7 @@
 #include "building.h"
 
 #include "board.h"
-#include "renderer.h"
-#include "buildingtile.h"
 
-#include <kdebug.h>
 #include <KRandom>
 
 /**
@@ -40,7 +37,7 @@ const unsigned int MAX_STYLE = 1;
 /** The vertical tile number of the bottom tile in the building */
 const unsigned int Building::BUILD_BASE_LOCATION = 16;
 
-Building::Building(BomberRenderer *renderer, BomberBoard *board, unsigned int position,
+Building::Building(KGameRenderer *renderer, BomberBoard *board, unsigned int position,
 		unsigned int height) :
 	m_renderer(renderer), m_board(board)
 {
@@ -75,35 +72,39 @@ void Building::setHeight(unsigned int height)
 
 void Building::setupBuildingTiles()
 {
-	unsigned int style = KRandom::random() % (m_renderer->maxBuildingStyles());
-	unsigned int maxVarient = m_renderer->frames(QString("building_") + QString::number(
-			style));
+	//determine number of building styles
+	static signed int styleCount = -1;
+	if (styleCount == -1)
+	{
+		styleCount = 0;
+		while (m_renderer->spriteExists(QString("building_%1_0").arg(styleCount)))
+			++styleCount;
+	}
+	unsigned int style = KRandom::random() % styleCount;
+	unsigned int maxVarient = m_renderer->frameCount(QString("building_%1").arg(style));
 
 	for (unsigned int heightIndex = 0; heightIndex < m_height - 1; heightIndex++)
 	{
 		unsigned int varient = KRandom::random() % (maxVarient);
-		QString pixmap;
-		pixmap.sprintf("building_%d_%d", style, varient);
-		m_buildingTiles.append(createBuildingTile(pixmap, heightIndex));
+		const QString pixmap = QString::fromLatin1("building_%1_%2").arg(style).arg(varient);
+		m_buildingTiles.append(createBuildingTile(pixmap));
 	}
 
-	unsigned int varient = 0;
-	QString pixmap;
-	pixmap.sprintf("roof_%d_%d", style, varient);
-	m_buildingTiles.append(createBuildingTile(pixmap, m_height));
+	const QString pixmap = QString::fromLatin1("roof_%1_0").arg(style);
+	m_buildingTiles.append(createBuildingTile(pixmap));
 	m_boundingRect.moveTo(m_xPos, BUILD_BASE_LOCATION - m_height + 1);
 }
 
-BuildingTile *Building::createBuildingTile(QString pixmap, unsigned int)
+KGameCanvasRenderedPixmap *Building::createBuildingTile(const QString& pixmap)
 {
-	BuildingTile *tile = new BuildingTile(m_renderer, m_board);
-	tile->setPixmapName(pixmap);
+	KGameCanvasRenderedPixmap* tile = new KGameCanvasRenderedPixmap(m_renderer, pixmap, m_board);
+	tile->setRenderSize(QSize(32, 64));
 	return tile;
 }
 
 void Building::raise()
 {
-	foreach(BuildingTile *tile, m_buildingTiles)
+	foreach(KGameCanvasRenderedPixmap *tile, m_buildingTiles)
 	{
 		tile->raise();
 	}
@@ -111,25 +112,9 @@ void Building::raise()
 
 void Building::show()
 {
-	foreach(BuildingTile *tile, m_buildingTiles)
+	foreach(KGameCanvasRenderedPixmap *tile, m_buildingTiles)
 	{
 		tile->show();
-	}
-}
-
-void Building::update()
-{
-	foreach(BuildingTile *tile, m_buildingTiles)
-	{
-		tile->update();
-	}
-}
-
-void Building::advanceItem()
-{
-	foreach(BuildingTile *tile, m_buildingTiles)
-	{
-		tile->advanceItem();
 	}
 }
 
@@ -139,11 +124,9 @@ void Building::resize(const QSize& size)
 			static_cast<unsigned int> (BUILDING_RELATIVE_HEIGHT * size.height()));
 	for (int i = 0; i < m_buildingTiles.size(); i++)
 	{
-		BuildingTile *tile = m_buildingTiles.at(i);
-		tile->setSize(tileSize);
-		tile->moveTo(m_board->mapPosition(QPointF(m_xPos, BUILD_BASE_LOCATION
-				- i)));
-		tile->setFrame(0);
+		KGameCanvasRenderedPixmap *tile = m_buildingTiles.at(i);
+		tile->setRenderSize(tileSize);
+		tile->moveTo(m_board->mapPosition(QPointF(m_xPos, BUILD_BASE_LOCATION - i)));
 	}
 }
 

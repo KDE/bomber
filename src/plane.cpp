@@ -18,10 +18,7 @@
 #include "plane.h"
 
 #include "board.h"
-#include "renderer.h"
 #include "explodable.h"
-
-#include <kdebug.h>
 
 /** The speed the plane will fly at */
 const qreal Plane::DEFAULT_VELOCITY = 0.08;
@@ -32,7 +29,7 @@ const qreal Plane::PLANE_RELATIVE_SIZE = 1;
 /** This is the position before the plane goes off the screen */
 const qreal Plane::PLANE_MAX_POSITION_X = 12;
 
-Plane::Plane(BomberRenderer *renderer, BomberBoard *board) :
+Plane::Plane(KGameRenderer *renderer, BomberBoard *board) :
 	Explodable(QString("plane"), QString("plane_explode"), PLANE_RELATIVE_SIZE,
 			PLANE_RELATIVE_SIZE, renderer, board)
 {

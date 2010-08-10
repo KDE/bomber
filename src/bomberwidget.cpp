@@ -1,4 +1,6 @@
-/* Copyright (C) 2007-2008 John-Paul Stanford <jp@stanwood.org.uk>
+/*
+ * Copyright (C) 2007-2008 John-Paul Stanford <jp@stanwood.org.uk>
+ * Copyright 2010 Stefan Majewsky <majewsky@gmx.net>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -20,10 +22,7 @@
 #include <QPalette>
 #include <QTimer>
 
-#include <kdebug.h>
-
 #include <KLocale>
-#include <kgametheme.h>
 
 #define NEW_LIVE_AT_SCORE 10000;
 
@@ -35,9 +34,9 @@ static const unsigned int TICKS_PER_SECOND = 1000 / GAME_TIME_DELAY;
 
 BomberGameWidget::BomberGameWidget(QWidget *parent) :
 	KGameCanvasWidget(parent), m_state(BeforeFirstGame), m_level(0),m_lives(0), m_time(0)
+	, m_renderer("themes/kbomber.desktop")
 {
-	m_theme = new KGameTheme("KGameTheme");
-	m_theme->loadDefault();
+	m_renderer.setTheme(BomberSettings::theme());
 
 	m_board = new BomberBoard(&m_renderer, this, this);
 	connect(m_board, SIGNAL(onPlaneCrash()), this, SLOT(onPlaneCrashed()));
@@ -61,7 +60,6 @@ BomberGameWidget::~BomberGameWidget()
 {
 	delete m_board;
 	delete m_overlay;
-	delete m_theme;
 }
 
 unsigned int BomberGameWidget::level() const
@@ -146,18 +144,10 @@ void BomberGameWidget::setSuspended(bool val)
 void BomberGameWidget::settingsChanged()
 {
 	m_board->setSounds(BomberSettings::playSounds());
-
-	if (!m_theme->load(BomberSettings::theme()))
-	{
-		kDebug() << "Load default theme";
-		m_theme->loadDefault();
-	}
-
-	m_renderer.load(m_theme->graphics());
+	m_renderer.setTheme(BomberSettings::theme());
 
 	QPalette palette;
-	palette.setBrush(backgroundRole(), m_renderer.renderBackground());
-
+	palette.setBrush(backgroundRole(), m_renderer.spritePixmap("background", size()));
 	setPalette(palette);
 	redraw();
 }
@@ -211,12 +201,11 @@ void BomberGameWidget::tick()
 void BomberGameWidget::resizeEvent(QResizeEvent *ev)
 {
 	QPalette palette;
-	m_renderer.setBackgroundSize(ev->size());
-	palette.setBrush(backgroundRole(), m_renderer.renderBackground());
+	palette.setBrush(backgroundRole(), m_renderer.spritePixmap("background", ev->size()));
 	setPalette(palette);
 	setAutoFillBackground(true);
 
-	QSize boardSize(ev->size().width(), ev->size().height());
+	QSize boardSize = ev->size();
 	m_board->resize(boardSize);
 	m_board->moveTo((ev->size().width() - boardSize.width()) / 2,
 			(ev->size().height() - boardSize.height()) / 2);

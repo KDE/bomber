@@ -21,13 +21,12 @@
 
 #include "kgamecanvas.h"
 
-class BomberRenderer;
 class BomberBoard;
 
 /**
  * This is a game object that can explode.
  */
-class Explodable: public KGameCanvasPixmap
+class Explodable: public KGameCanvasRenderedPixmap
 {
 public:
 	/** The states that a bomb can be in */
@@ -43,7 +42,7 @@ public:
 
 	explicit Explodable(const QString& mainSvg, const QString& explosionSvg,
 			qreal relativeWidth, qreal relativeHeight,
-			BomberRenderer *renderer, BomberBoard *board);
+			KGameRenderer *renderer, BomberBoard *board);
 	virtual ~Explodable();
 
 	/**
@@ -57,12 +56,6 @@ public:
 	 * \param tileSize The size of the tile
 	 */
 	void resize(const QSize& tileSize);
-
-	/**
-	 * Sets items's current frame
-	 * \param frame The frame number
-	 */
-	void setFrame(unsigned int frame);
 
 	/**
 	 * Sets the velocity of the explodable object
@@ -125,24 +118,7 @@ protected:
 	QRectF m_nextBoundingRect;
 
 private:
-	BomberRenderer *m_renderer;
 	BomberBoard *m_board;
-
-	/**
-	 * Size of the bomb
-	 */
-	QSize m_size;
-
-	/**
-	 * Current frame of bomb's animation.
-	 */
-	unsigned int m_frame;
-
-	/**
-	 * Number of frames of ball's animation.
-	 */
-	unsigned int m_mainFramesNum;
-	unsigned int m_explosionFramesNum;
 
 	qreal m_velocity;
 

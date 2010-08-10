@@ -12,9 +12,7 @@ set(bomber_SRCS
    board.cpp
    plane.cpp
    bomb.cpp
-   renderer.cpp     
    building.cpp 
-   buildingtile.cpp
    explodable.cpp
  )
 

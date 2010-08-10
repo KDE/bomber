@@ -18,9 +18,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include "renderer.h"
-
-#include "kgamecanvas.h"
+#include <KGameCanvas>
+#include <KGameRenderer>
 
 #include <QSize>
 #include <QList>
@@ -52,7 +51,7 @@ public:
 	 * \param canvas The object were the games objects are drawn onto
 	 * \param parent The widget which the board is inserted into
 	 */
-	explicit BomberBoard( BomberRenderer *renderer, KGameCanvasAbstract *canvas = NULL, QWidget *parent = 0 )		;
+	explicit BomberBoard(KGameRenderer *renderer, KGameCanvasAbstract *canvas = NULL, QWidget *parent = 0);
 
 	~BomberBoard();
 
@@ -170,7 +169,7 @@ private:
 	 */
 	void crashed();
 
-	BomberRenderer *m_renderer;
+	KGameRenderer *m_renderer;
 	QSize m_tileSize;
 
 	QTimer *m_clock;

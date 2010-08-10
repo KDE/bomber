@@ -20,9 +20,6 @@
 
 #include "explodable.h"
 
-class BomberRenderer;
-class BomberBoard;
-
 /**
  * This class is used to represent the plane object in the game. It extends class
  * explodable as the plane will explode when it hits buildings. The plane
@@ -42,7 +39,7 @@ public:
 	/** The speed the plane will fly at */
 	static const qreal DEFAULT_VELOCITY;
 
-	Plane(BomberRenderer *renderer, BomberBoard *board);
+	Plane(KGameRenderer *renderer, BomberBoard *board);
 	~Plane();
 
 	/**

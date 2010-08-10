@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2007-2008 John-Paul Stanford <jp@stanwood.org.uk>
+ * Copyright 2010 Stefan Majewsky <majewsky@gmx.net>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -20,9 +21,9 @@
 #define BOMBER_WIDGET_H
 
 #include "board.h"
-#include "renderer.h"
 
-#include <kgamecanvas.h>
+#include <KGameCanvas>
+#include <KGameRenderer>
 #include <QMouseEvent>
 
 class KGameTheme;
@@ -179,8 +180,7 @@ private:
 	/** Used to store the remaining score before a new life is given */
 	unsigned int m_scoreLeftBeforeNewLife;
 
-	BomberRenderer m_renderer;
-	KGameTheme *m_theme;
+	KGameRenderer m_renderer;
 	QTimer *m_clock;
 	BomberBoard *m_board;
 
