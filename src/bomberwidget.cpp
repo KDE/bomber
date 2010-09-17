@@ -34,7 +34,7 @@ static const unsigned int TICKS_PER_SECOND = 1000 / GAME_TIME_DELAY;
 
 BomberGameWidget::BomberGameWidget(QWidget *parent) :
 	KGameCanvasWidget(parent), m_state(BeforeFirstGame), m_level(0),m_lives(0), m_time(0)
-	, m_renderer("themes/kbomber.desktop")
+	, m_renderer(BomberSettings::defaultThemeValue())
 {
 	m_renderer.setTheme(BomberSettings::theme());
 

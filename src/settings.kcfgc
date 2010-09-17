@@ -3,4 +3,5 @@ File=bomber.kcfg
 ClassName=BomberSettings
 Singleton=true
 Mutators=true
+DefaultValueGetters=Theme
 # will create the necessary code for setting those variables
