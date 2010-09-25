@@ -79,10 +79,10 @@ void Bomber::initXMLUI()
 	// Settings
 	KStandardAction::preferences(this, SLOT(configureSettings() ), actionCollection());
 	m_soundAction = new KToggleAction(i18nc("Menu item used to disable or enable sound","&Play Sounds"), this);
-	actionCollection()->addAction("toggle_sound", m_soundAction);
+	actionCollection()->addAction( QLatin1String( "toggle_sound" ), m_soundAction);
 	connect(m_soundAction, SIGNAL( triggered( bool ) ), this, SLOT( setSounds( bool ) ));
 
-	KAction *dropBombAction = actionCollection()->addAction("drop_bomb");
+	KAction *dropBombAction = actionCollection()->addAction( QLatin1String( "drop_bomb" ));
 	dropBombAction->setText(i18nc("The name of the action used for dropping bombs","&Drop bomb"));
 	dropBombAction->setToolTip(i18nc("The tool tip text for the action used to drop bombs","Drop bomb"));
 	dropBombAction->setWhatsThis(i18nc("Description of the action used to drop bombs",

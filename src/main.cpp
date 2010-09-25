@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 	KCmdLineArgs::init(argc, argv, &about);
 
 	KApplication app;
-	KGlobal::locale()->insertCatalog("libkdegames");
+	KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ));
 
 	// see if we are starting with session management
 	if (app.isSessionRestored())
