@@ -30,7 +30,7 @@ install(TARGETS bomber ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
-install( FILES bomber.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS bomber.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES bomber.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES bomberui.rc  DESTINATION  ${DATA_INSTALL_DIR}/bomber )
 
