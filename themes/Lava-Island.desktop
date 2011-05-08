@@ -2,6 +2,7 @@
 VersionFormat=1
 Name=Lava-Island
 Name[ast]=La islla de la llava
+Name[bs]=Lava-otok
 Name[ca]=Illa de Lava
 Name[ca@valencia]=Illa de Lava
 Name[cs]=Lávový ostrov
@@ -45,6 +46,7 @@ Name[zh_CN]=火山岛
 Name[zh_TW]=火山島
 Description=Stop the lava and save the day
 Description[ast]=Detén la llava y salva'l día
+Description[bs]=Zaustavi lavu i spasi dan
 Description[ca]=Atura la lava i salva el dia
 Description[ca@valencia]=Atura la lava i salva el dia
 Description[cs]=Zastavte lávu a zachraňte den
