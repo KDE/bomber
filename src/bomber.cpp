@@ -175,6 +175,7 @@ void Bomber::configureSettings()
 	dialog->addPage(
 			new KGameThemeSelector(dialog, BomberSettings::self(), KGameThemeSelector::NewStuffDisableDownload),
 			i18n("Theme"), "games-config-theme");
+	dialog->setFaceType(KConfigDialog::Plain); //only one page -> no page selection necessary
 	dialog->setHelp(QString(), "bomber");
 	dialog->show();
 	connect(dialog, SIGNAL( settingsChanged( const QString& ) ), this, SLOT( settingsChanged() ));
