@@ -43,10 +43,10 @@ Bomber::Bomber()
 
 	m_gameWidget = new BomberGameWidget(this);
 
-	connect(m_gameWidget, SIGNAL( levelChanged( unsigned int ) ), this, SLOT( displayLevel( unsigned int ) ));
-	connect(m_gameWidget, SIGNAL( scoreChanged( unsigned int ) ), this, SLOT( displayScore( unsigned int ) ));
-	connect(m_gameWidget, SIGNAL( livesChanged( unsigned int ) ), this, SLOT( displayLives( unsigned int ) ));
-	connect(m_gameWidget, SIGNAL(stateChanged(BomberGameWidget::State) ), this, SLOT(gameStateChanged(BomberGameWidget::State) ));
+	connect(m_gameWidget, SIGNAL(levelChanged(uint)), this, SLOT(displayLevel(uint)));
+	connect(m_gameWidget, SIGNAL(scoreChanged(uint)), this, SLOT(displayScore(uint)));
+	connect(m_gameWidget, SIGNAL(livesChanged(uint)), this, SLOT(displayLives(uint)));
+	connect(m_gameWidget, SIGNAL(stateChanged(BomberGameWidget::State)), this, SLOT(gameStateChanged(BomberGameWidget::State)));
 
 	setCentralWidget(m_gameWidget);
 
@@ -77,10 +77,10 @@ void Bomber::initXMLUI()
 	KStandardGameAction::quit(this, SLOT(close()), actionCollection());
 
 	// Settings
-	KStandardAction::preferences(this, SLOT(configureSettings() ), actionCollection());
+	KStandardAction::preferences(this, SLOT(configureSettings()), actionCollection());
 	m_soundAction = new KToggleAction(i18nc("Menu item used to disable or enable sound","&Play Sounds"), this);
 	actionCollection()->addAction( QLatin1String( "toggle_sound" ), m_soundAction);
-	connect(m_soundAction, SIGNAL( triggered( bool ) ), this, SLOT( setSounds( bool ) ));
+	connect(m_soundAction, SIGNAL(triggered(bool)), this, SLOT(setSounds(bool)));
 
 	KAction *dropBombAction = actionCollection()->addAction( QLatin1String( "drop_bomb" ));
 	dropBombAction->setText(i18nc("The name of the action used for dropping bombs","&Drop bomb"));
@@ -89,7 +89,7 @@ void Bomber::initXMLUI()
 			"Makes the plane drop a bomb while flying"));
 	dropBombAction->setShortcut(Qt::Key_Space);
 	dropBombAction->setEnabled(true);
-	connect(dropBombAction, SIGNAL (triggered (bool)), m_gameWidget, SLOT (onDropBomb()));
+	connect(dropBombAction, SIGNAL (triggered(bool)), m_gameWidget, SLOT (onDropBomb()));
 }
 
 void Bomber::readSettings()
@@ -178,7 +178,7 @@ void Bomber::configureSettings()
 	dialog->setFaceType(KConfigDialog::Plain); //only one page -> no page selection necessary
 	dialog->setHelp(QString(), "bomber");
 	dialog->show();
-	connect(dialog, SIGNAL( settingsChanged( const QString& ) ), this, SLOT( settingsChanged() ));
+	connect(dialog, SIGNAL(settingsChanged(QString)), this, SLOT(settingsChanged()));
 }
 
 void Bomber::settingsChanged()

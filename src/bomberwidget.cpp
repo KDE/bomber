@@ -51,7 +51,7 @@ BomberGameWidget::BomberGameWidget(QWidget *parent) :
 	m_clock = new QTimer(this);
 	m_clock->setInterval(GAME_TIME_DELAY);
 
-	connect(m_clock, SIGNAL(timeout() ), this, SLOT(tick() ));
+	connect(m_clock, SIGNAL(timeout()), this, SLOT(tick()));
 
 	setMouseTracking(true);
 }
