@@ -32,12 +32,10 @@ static const unsigned int SCORE_INCREMENT = 5;
 static const unsigned int GAME_TIME_DELAY = 1000;
 static const unsigned int TICKS_PER_SECOND = 1000 / GAME_TIME_DELAY;
 
-BomberGameWidget::BomberGameWidget(QWidget *parent) :
+BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
 	KGameCanvasWidget(parent), m_state(BeforeFirstGame), m_level(0),m_lives(0), m_time(0)
-	, m_renderer(BomberSettings::defaultThemeValue())
+	, m_renderer(provider)
 {
-	m_renderer.setTheme(BomberSettings::theme());
-
 	m_board = new BomberBoard(&m_renderer, this, this);
 	connect(m_board, SIGNAL(onPlaneCrash()), this, SLOT(onPlaneCrashed()));
 	connect(m_board, SIGNAL(onBombHit()), this, SLOT(onBombHit()));
@@ -144,7 +142,6 @@ void BomberGameWidget::setSuspended(bool val)
 void BomberGameWidget::settingsChanged()
 {
 	m_board->setSounds(BomberSettings::playSounds());
-	m_renderer.setTheme(BomberSettings::theme());
 
 	QPalette palette;
 	palette.setBrush(backgroundRole(), m_renderer.spritePixmap("background", size()));

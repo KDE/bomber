@@ -22,7 +22,6 @@
 
 #include <KAction>
 #include <KActionCollection>
-#include <KConfigDialog>
 #include <kdebug.h>
 #include <KLocale>
 #include <KMessageBox>
@@ -32,16 +31,24 @@
 
 #include <kstandardgameaction.h>
 #include <KScoreDialog>
-#include <kgamethemeselector.h>
+#include <kgthemeselector.h>
 
 Bomber::Bomber()
 {
+	m_provider.discoverThemes(
+		"appdata", QLatin1String("themes"), //theme data location
+		QLatin1String("kbomber")            //default theme name
+	);
+	m_selector = new KgThemeSelector(&m_provider);
+
 	m_statusBar = statusBar();
 	m_statusBar->insertItem(i18nc("Used to display the current level of play to the user", "Level: %1", 0), 1, 1);
 	m_statusBar->insertItem(i18nc("Used to inform the user of their current score", "Score: %1", 0), 2, 1);
 	m_statusBar->insertItem(i18nc("Used to tell the user how many lives they have left", "Lives: %1", 3), 4, 1);
 
-	m_gameWidget = new BomberGameWidget(this);
+	m_gameWidget = new BomberGameWidget(&m_provider, this);
+	connect(&m_provider, SIGNAL(currentThemeChanged(const KgTheme*)),
+		m_gameWidget, SLOT(settingsChanged()));
 
 	connect(m_gameWidget, SIGNAL(levelChanged(uint)), this, SLOT(displayLevel(uint)));
 	connect(m_gameWidget, SIGNAL(scoreChanged(uint)), this, SLOT(displayScore(uint)));
@@ -62,6 +69,7 @@ Bomber::Bomber()
 
 Bomber::~Bomber()
 {
+	delete m_selector;
 }
 
 /**
@@ -77,7 +85,7 @@ void Bomber::initXMLUI()
 	KStandardGameAction::quit(this, SLOT(close()), actionCollection());
 
 	// Settings
-	KStandardAction::preferences(this, SLOT(configureSettings()), actionCollection());
+	KStandardAction::preferences(m_selector, SLOT(showAsDialog()), actionCollection());
 	m_soundAction = new KToggleAction(i18nc("Menu item used to disable or enable sound","&Play Sounds"), this);
 	actionCollection()->addAction( QLatin1String( "toggle_sound" ), m_soundAction);
 	connect(m_soundAction, SIGNAL(triggered(bool)), this, SLOT(setSounds(bool)));
@@ -95,7 +103,7 @@ void Bomber::initXMLUI()
 void Bomber::readSettings()
 {
 	m_soundAction->setChecked(BomberSettings::playSounds());
-	settingsChanged();
+	m_gameWidget->settingsChanged();
 }
 
 void Bomber::newGame()
@@ -165,31 +173,10 @@ void Bomber::highscore()
 		ksdialog.exec();
 }
 
-void Bomber::configureSettings()
-{
-	if (KConfigDialog::showDialog("settings"))
-		return;
-
-	KConfigDialog *dialog =
-			new KConfigDialog(this, "settings", BomberSettings::self());
-	dialog->addPage(
-			new KGameThemeSelector(dialog, BomberSettings::self(), KGameThemeSelector::NewStuffDisableDownload),
-			i18n("Theme"), "games-config-theme");
-	dialog->setFaceType(KConfigDialog::Plain); //only one page -> no page selection necessary
-	dialog->setHelp(QString(), "bomber");
-	dialog->show();
-	connect(dialog, SIGNAL(settingsChanged(QString)), this, SLOT(settingsChanged()));
-}
-
-void Bomber::settingsChanged()
-{
-	m_gameWidget->settingsChanged();
-}
-
 void Bomber::setSounds(bool val)
 {
 	BomberSettings::setPlaySounds(val);
-	settingsChanged();
+	m_gameWidget->settingsChanged();
 }
 
 void Bomber::displayLevel(unsigned int level)

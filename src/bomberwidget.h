@@ -26,7 +26,7 @@
 #include <KGameRenderer>
 #include <QMouseEvent>
 
-class KGameTheme;
+class KgThemeProvider;
 
 /**
  * This is the main game widget class. It manages things like the lives, source coutns and game states.
@@ -40,7 +40,7 @@ public:
     enum State
     {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver};
 
-	explicit BomberGameWidget ( QWidget *parent = 0 );
+	explicit BomberGameWidget ( KgThemeProvider *provider, QWidget *parent = 0 );
 	~BomberGameWidget();
 
 	/**

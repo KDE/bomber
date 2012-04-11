@@ -21,10 +21,12 @@
 #include "bomberwidget.h"
 
 #include <kxmlguiwindow.h>
+#include <kgthemeprovider.h>
 
 class KAction;
 class KStatusBar;
 class KToggleAction;
+class KgThemeSelector;
 
 /**
  * This class serves as the main window for Bomber.  It handles the
@@ -52,9 +54,7 @@ private slots:
 	void closeGame();
 	void newGame();
 	void pauseGame();
-	void configureSettings();
 	void showHighscore();
-	void settingsChanged();
 
 	void setSounds( bool val );
 	void displayLevel( unsigned int level );
@@ -66,6 +66,9 @@ private:
 	void highscore();
 	void initXMLUI();
 	void setupActions();
+
+	KgThemeProvider m_provider;
+	KgThemeSelector* m_selector;
 
 	BomberGameWidget *m_gameWidget;
 	KStatusBar *m_statusBar;
