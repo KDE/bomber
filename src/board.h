@@ -18,7 +18,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <KGameCanvas>
+#include <QGraphicsScene>
 #include <KGameRenderer>
 
 #include <QSize>
@@ -39,7 +39,7 @@ class Bomb;
  * This class used to represent the game board. This makes sure all the game objects
  * get moved and redrawn every second. It also checks for any collisions
  */
-class BomberBoard: public QObject, public KGameCanvasGroup
+class BomberBoard: public QGraphicsScene
 {
 Q_OBJECT
 
@@ -47,11 +47,11 @@ public:
 
 	/**
 	 * The constructor used to create the board.
-	 * \param renderer The Render used to renderer game objects
-	 * \param canvas The object were the games objects are drawn onto
+	 * \param renderer The renderer used to render game objects
+	 * \param view The graphics view object which this board is bound to
 	 * \param parent The widget which the board is inserted into
 	 */
-	explicit BomberBoard(KGameRenderer *renderer, KGameCanvasAbstract *canvas = NULL, QWidget *parent = 0);
+	explicit BomberBoard(KGameRenderer *renderer, QGraphicsView* view, QObject *parent = 0);
 
 	~BomberBoard();
 
@@ -114,7 +114,7 @@ public:
 	 */
 	void dropBomb();
 
-	signals:
+signals:
 	/**
 	 * This is emitted when a plane crashes into a building
 	 */
@@ -131,9 +131,16 @@ public:
 	 */
 	void levelCleared();
 
+public slots:
+	/**
+	 * This is called when the settings change to save the settings
+	 */
+	void settingsChanged();
+
 private slots:
 	/** This is called once a second to update and draw all the game objects */
 	void tick();
+
 	/**
 	 * This is called when a plane has finished exploding
 	 */
@@ -169,9 +176,11 @@ private:
 	 */
 	void crashed();
 
+	/** This is the renderer used to render game objects */
 	KGameRenderer *m_renderer;
-	QSize m_tileSize;
 
+	/** This is the size of a tiling block */
+	QSize m_tileSize;
 	QTimer *m_clock;
 
 	Phonon::MediaObject *m_audioPlayer;
@@ -192,6 +201,9 @@ private:
 
 	/** This is the number of blocks that make up the buildings */
 	unsigned int m_buildingBlocks;
+
+	/** This is the graphics view object which this board is bound. */
+	QGraphicsView *m_view;
 };
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "board.h"
 
-#include <KGameCanvas>
-#include <KGameRenderer>
+#include <QGraphicsView>
 #include <QMouseEvent>
 
 class KgThemeProvider;
@@ -31,7 +30,7 @@ class KgThemeProvider;
 /**
  * This is the main game widget class. It manages things like the lives, source coutns and game states.
  */
-class BomberGameWidget: public KGameCanvasWidget
+class BomberGameWidget: public QGraphicsView
 {
 Q_OBJECT
 
@@ -103,7 +102,7 @@ public slots:
 	 */
 	void onDropBomb();
 
-	signals:
+signals:
 	/**
 	 * This is emitted when the game is over
 	 */
@@ -184,7 +183,8 @@ private:
 	QTimer *m_clock;
 	BomberBoard *m_board;
 
-	KGameCanvasPixmap *m_overlay;
+	QGraphicsPixmapItem *m_overlay;
+
 };
 
 #endif

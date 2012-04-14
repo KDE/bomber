@@ -19,14 +19,14 @@
 #ifndef EXPLODABLE_H
 #define EXPLODABLE_H
 
-#include "kgamecanvas.h"
+#include <KGameRenderedItem>
 
 class BomberBoard;
 
 /**
  * This is a game object that can explode.
  */
-class Explodable: public KGameCanvasRenderedPixmap
+class Explodable: public KGameRenderedItem
 {
 public:
 	/** The states that a bomb can be in */

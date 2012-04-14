@@ -21,14 +21,15 @@
 #include "building.h"
 #include "bomb.h"
 
-#include "kgamecanvas.h"
+#include "settings.h"
 
-#include <kdebug.h>
 #include <KRandom>
 #include <Phonon/MediaObject>
 #include <KStandardDirs>
 
 #include <QTimer>
+#include <QGraphicsScene>
+#include <QGraphicsView>
 
 /** The value that the plane velocity increases by */
 const qreal PLANE_INC_VELOCITY = 0.0005;
@@ -49,16 +50,16 @@ const unsigned int PLANE_EXPLODE_TIME = 2000;
 /** This time in milliseconds that the bomb exploding animation is played for */
 const unsigned int BOMB_EXPLODE_TIME = 1000;
 
-BomberBoard::BomberBoard(KGameRenderer *renderer, KGameCanvasAbstract *canvas,
-		QWidget *parent) :
-	QObject(parent), KGameCanvasGroup(canvas), m_renderer(renderer), m_bomb(NULL)
+BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView* view, QObject *parent) :
+	QGraphicsScene(parent), m_renderer(renderer), m_view(view)
 {
+	m_bomb = NULL;
 	m_clock = new QTimer(this);
 	m_clock->setInterval(GAME_DELAY);
 	connect(m_clock, SIGNAL(timeout()), this, SLOT(tick()));
 	m_plane = new Plane(m_renderer, this);
 	m_plane->resize(m_tileSize);
-	m_plane->raise();
+	this->addItem(m_plane);
 	m_plane->show();
 	resetPlane();
 	clear();
@@ -85,6 +86,8 @@ void BomberBoard::resetPlane()
 
 void BomberBoard::resize(QSize& size)
 {
+	setBackgroundBrush(m_renderer->spritePixmap("background", size));
+
 	unsigned int minTileSizeWidth = size.width() / TILE_NUM_W;
 	unsigned int minTileSizeHeight = size.height() / TILE_NUM_H;
 
@@ -155,7 +158,6 @@ void BomberBoard::newLevel(unsigned int level)
 		Building *building = new Building(m_renderer, this, i + 1, height);
 
 		building->resize(m_tileSize);
-		building->raise();
 		building->show();
 
 		m_buildings.append(building);
@@ -224,9 +226,8 @@ void BomberBoard::dropBomb()
 	if (m_bomb == NULL && m_plane->state() == Explodable::Moving)
 	{
 		QPointF planePos = m_plane->position();
-		m_bomb
-				= new Bomb(m_renderer, this, planePos.x(), planePos.y() + 1, m_tileSize);
-		m_bomb->raise();
+		m_bomb = new Bomb(m_renderer, this, planePos.x(), planePos.y() + 1, m_tileSize);
+		this->addItem(m_bomb);
 		m_bomb->show();
 	}
 }
@@ -285,6 +286,13 @@ void BomberBoard::bombExploded()
 	Bomb *bomb = m_explodingBombs.dequeue();
 	bomb->hide();
 	delete bomb;
+}
+
+void BomberBoard::settingsChanged()
+{
+	setSounds(BomberSettings::playSounds());
+	setBackgroundBrush(m_renderer->spritePixmap("background", m_view->size()));
+	redraw();
 }
 
 void BomberBoard::planeExploded()

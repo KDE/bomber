@@ -20,7 +20,6 @@
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
 #include <KDE/KLocale>
-#include <kdebug.h>
 
 static const char description[] = I18N_NOOP("Arcade bombing game");
 
@@ -33,6 +32,8 @@ int main(int argc, char **argv)
 			KLocalizedString(), 0, "jp@stanwood.org.uk");
 	about.addAuthor(ki18n("John-Paul Stanford"), KLocalizedString(),
 			"jp@stanwood.org.uk");
+	about.addAuthor(ki18n("Mehmet Emre"), ki18n("Porting to QGraphicsView."),
+			"maemre2@gmail.com");
 	KCmdLineArgs::init(argc, argv, &about);
 
 	KApplication app;

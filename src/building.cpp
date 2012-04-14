@@ -19,7 +19,7 @@
 #include "building.h"
 
 #include "board.h"
-
+#include <KGameRenderedItem>
 #include <KRandom>
 
 /**
@@ -49,6 +49,8 @@ Building::Building(KGameRenderer *renderer, BomberBoard *board, unsigned int pos
 
 Building::~Building()
 {
+	foreach (KGameRenderedItem *tile, m_buildingTiles)
+		m_board->removeItem(tile);
 	qDeleteAll(m_buildingTiles);
 }
 
@@ -60,6 +62,8 @@ void Building::setHeight(unsigned int height)
 		for (unsigned int i = 1; i <= m_height - height; i++)
 		{
 			m_buildingTiles.at(m_height - i)->hide();
+			m_board->removeItem(m_buildingTiles.at(m_height - i));
+			delete m_buildingTiles.at(m_height - i);
 			m_buildingTiles.removeAt(m_height - i);
 		}
 	}
@@ -93,26 +97,20 @@ void Building::setupBuildingTiles()
 	const QString pixmap = QString::fromLatin1("roof_%1_0").arg(style);
 	m_buildingTiles.append(createBuildingTile(pixmap));
 	m_boundingRect.moveTo(m_xPos, BUILD_BASE_LOCATION - m_height + 1);
+	foreach (KGameRenderedItem *tile, m_buildingTiles)
+		m_board->addItem(tile);
 }
 
-KGameCanvasRenderedPixmap *Building::createBuildingTile(const QString& pixmap)
+KGameRenderedItem *Building::createBuildingTile(const QString& pixmap)
 {
-	KGameCanvasRenderedPixmap* tile = new KGameCanvasRenderedPixmap(m_renderer, pixmap, m_board);
+	KGameRenderedItem* tile = new KGameRenderedItem(m_renderer, pixmap);
 	tile->setRenderSize(QSize(32, 64));
 	return tile;
 }
 
-void Building::raise()
-{
-	foreach(KGameCanvasRenderedPixmap *tile, m_buildingTiles)
-	{
-		tile->raise();
-	}
-}
-
 void Building::show()
 {
-	foreach(KGameCanvasRenderedPixmap *tile, m_buildingTiles)
+	foreach(KGameRenderedItem *tile, m_buildingTiles)
 	{
 		tile->show();
 	}
@@ -124,9 +122,9 @@ void Building::resize(const QSize& size)
 			static_cast<unsigned int> (BUILDING_RELATIVE_HEIGHT * size.height()));
 	for (int i = 0; i < m_buildingTiles.size(); i++)
 	{
-		KGameCanvasRenderedPixmap *tile = m_buildingTiles.at(i);
+		KGameRenderedItem *tile = m_buildingTiles.at(i);
 		tile->setRenderSize(tileSize);
-		tile->moveTo(m_board->mapPosition(QPointF(m_xPos, BUILD_BASE_LOCATION - i)));
+		tile->setPos(m_board->mapPosition(QPointF(m_xPos, BUILD_BASE_LOCATION - i)));
 	}
 }
 

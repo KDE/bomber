@@ -22,7 +22,7 @@
 
 #include <KAction>
 #include <KActionCollection>
-#include <kdebug.h>
+#include <KConfigDialog>
 #include <KLocale>
 #include <KMessageBox>
 #include <krandom.h>

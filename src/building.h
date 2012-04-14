@@ -23,7 +23,7 @@
 #include <QtCore/QSize>
 #include <QtCore/QList>
 
-class KGameCanvasRenderedPixmap;
+class KGameRenderedItem;
 class KGameRenderer;
 class BomberBoard;
 
@@ -61,10 +61,7 @@ public:
 	 */
 	void setFrame(unsigned int frame);
 
-	/** Restacks the building item on the top of the canvas. */
-	void raise();
-
-	/** Show the building item on the game canvas */
+	/** Show the building item on the game scene */
 	void show();
 
 	/**
@@ -89,19 +86,19 @@ private:
 	 * Setup the tiles that make up the building
 	 */
 	void setupBuildingTiles();
-	
+
 	/**
 	 * Used to create a new building tile
 	 * \param pixmap The pixmap the building tile should be created with
 	 * \return The new created building tile
 	 */
-	KGameCanvasRenderedPixmap *createBuildingTile(const QString& pixmap);
+	KGameRenderedItem *createBuildingTile(const QString& pixmap);
 
 	unsigned int m_height;
 	QRectF m_boundingRect;
 	KGameRenderer *m_renderer;
 	BomberBoard *m_board;
-	QList<KGameCanvasRenderedPixmap*> m_buildingTiles;
+	QList<KGameRenderedItem*> m_buildingTiles;
 
 	qreal m_xPos;
 };

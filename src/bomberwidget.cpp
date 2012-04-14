@@ -19,10 +19,12 @@
 #include "bomberwidget.h"
 #include "settings.h"
 
-#include <QPalette>
 #include <QTimer>
+#include <QGraphicsView>
+#include <QGraphicsItem>
 
 #include <KLocale>
+#include <sys/stat.h>
 
 #define NEW_LIVE_AT_SCORE 10000;
 
@@ -31,20 +33,29 @@ static const unsigned int SCORE_INCREMENT = 5;
 
 static const unsigned int GAME_TIME_DELAY = 1000;
 static const unsigned int TICKS_PER_SECOND = 1000 / GAME_TIME_DELAY;
+/** The z-value for overlays */
+static const unsigned int OVERLAY_Z_VALUE = 1000;
 
 BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
-	KGameCanvasWidget(parent), m_state(BeforeFirstGame), m_level(0),m_lives(0), m_time(0)
-	, m_renderer(provider)
+	QGraphicsView(parent), m_state(BeforeFirstGame), m_level(0),m_lives(0), m_time(0),
+	m_renderer(provider)
 {
+	// Gameboard
 	m_board = new BomberBoard(&m_renderer, this, this);
 	connect(m_board, SIGNAL(onPlaneCrash()), this, SLOT(onPlaneCrashed()));
 	connect(m_board, SIGNAL(onBombHit()), this, SLOT(onBombHit()));
 	connect(m_board, SIGNAL(levelCleared()), this, SLOT(onLevelCleared()));
+	setScene(m_board);
+	setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+	setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+	setFrameStyle(QFrame::NoFrame);
+	setCacheMode(QGraphicsView::CacheBackground); // Optimize caching
+	setFocusPolicy(Qt::StrongFocus);
+	setAlignment(Qt::AlignLeft | Qt::AlignTop);
+	// Overlay
+	m_overlay = new QGraphicsPixmapItem();
 
-	m_overlay = new KGameCanvasPixmap(this);
-
-	m_overlay->raise();
-	m_overlay->hide();
+	m_board->addItem(m_overlay);
 
 	m_clock = new QTimer(this);
 	m_clock->setInterval(GAME_TIME_DELAY);
@@ -52,12 +63,13 @@ BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
 	connect(m_clock, SIGNAL(timeout()), this, SLOT(tick()));
 
 	setMouseTracking(true);
+	generateOverlay();
 }
 
 BomberGameWidget::~BomberGameWidget()
 {
 	delete m_board;
-	delete m_overlay;
+	//delete m_overlay; // m_overlay is implicitly deleted by m_board
 }
 
 unsigned int BomberGameWidget::level() const
@@ -141,12 +153,7 @@ void BomberGameWidget::setSuspended(bool val)
 
 void BomberGameWidget::settingsChanged()
 {
-	m_board->setSounds(BomberSettings::playSounds());
-
-	QPalette palette;
-	palette.setBrush(backgroundRole(), m_renderer.spritePixmap("background", size()));
-	setPalette(palette);
-	redraw();
+	m_board->settingsChanged();
 }
 
 void BomberGameWidget::setSounds(bool val)
@@ -197,16 +204,8 @@ void BomberGameWidget::tick()
 
 void BomberGameWidget::resizeEvent(QResizeEvent *ev)
 {
-	QPalette palette;
-	palette.setBrush(backgroundRole(), m_renderer.spritePixmap("background", ev->size()));
-	setPalette(palette);
-	setAutoFillBackground(true);
-
 	QSize boardSize = ev->size();
 	m_board->resize(boardSize);
-	m_board->moveTo((ev->size().width() - boardSize.width()) / 2,
-			(ev->size().height() - boardSize.height()) / 2);
-
 	redraw();
 }
 
@@ -260,20 +259,23 @@ void BomberGameWidget::redraw()
 {
 	if (size().isEmpty())
 		return;
-
+	QGraphicsItem* item;
 	switch (m_state)
 	{
 	case BeforeFirstGame:
-		m_board->hide();
+		foreach (item, m_board->items())
+			item->hide();
 		generateOverlay();
 		m_overlay->show();
 		break;
 	case Running:
-		m_board->show();
+		foreach (item, m_board->items())
+			item->show();
 		m_overlay->hide();
 		break;
 	default:
-		m_board->show();
+		foreach (item, m_board->items())
+			item->show();
 		generateOverlay();
 		m_overlay->show();
 		break;
@@ -334,7 +336,8 @@ void BomberGameWidget::generateOverlay()
 	p.end();
 
 	m_overlay->setPixmap(px);
-	m_overlay->moveTo((size().width() - itemWidth) / 2, (size().height() - itemHeight) / 2);
+	m_overlay->setPos((size().width() - itemWidth) / 2, (size().height() - itemHeight) / 2);
+	m_overlay->setZValue(OVERLAY_Z_VALUE);
 }
 
 void BomberGameWidget::onLevelCleared()
