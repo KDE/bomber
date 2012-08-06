@@ -32,8 +32,8 @@
 		<legalnotice>&FDLNotice;
 		</legalnotice>
 
-		<date>2008-10-07</date><!-- Date of (re)writing, or update.-->
-		<releaseinfo>&kappversion;
+		<date>2012-08-06</date><!-- Date of (re)writing, or update.-->
+		<releaseinfo>&kappversion; (&kde; 4.9)
 		</releaseinfo><!-- Application version number. Use the variable definitions within header to change this value.-->
 
 		<abstract>
@@ -114,30 +114,14 @@
 			themes for &bomber;.
 		</para>
 		<para>
-			To select a new theme simply choose the theme's name from
-			the selection list.
+			To select a new theme simply choose the theme from
+			the selection list. Each item in the list shows a small
+			preview left to the theme name. A selection is immediately applied.
 		</para>
-		<note>
-			<title>Note:</title>
-			<para>
-				For your convenience a quick preview screenshot will be
-				displayed on the right hand sided of the selection list
-				as soon as you select the theme you are interested in.
-			</para>
-		</note>
 		<para>
 			Once you are satisfied with the theme you have selected you
-			can either click the
-			<guibutton>Apply</guibutton>
-			, or simply click the
-			<guibutton>Ok</guibutton>
+			can click the <guibutton>Close</guibutton>
 			button, located at the bottom part of this dialog.
-		</para>
-		<para>
-			If, however you are dissatisfied with your selection –
-			simply click
-			<guimenu>Cancel</guimenu>
-			to discard the changes.
 		</para>
 	</chapter>
 
