@@ -1,6 +1,9 @@
 [KGameTheme]
 VersionFormat=1
 Name=KBomber - Star Wars
+Name[ms]=KBomber - Perang Angkasa
+Name[uk]=KBomber — Зоряні війни
+Name[x-test]=xxKBomber - Star Warsxx
 FileName=kbomber.svgz
 Author=Eugene Trounev [it-s]
 AuthorEmail=eugene.trounev@gmail.com

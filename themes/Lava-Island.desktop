@@ -1,7 +1,13 @@
 [KGameTheme]
 VersionFormat=1
 Name=Lava-Island
+Name[ms]=Pulau Lava
+Name[uk]=Лавовий острів
+Name[x-test]=xxLava-Islandxx
 Description=Stop the lava and save the day
+Description[ms]=Hentikan lava dan jadi penyelamat
+Description[uk]=Зупиніть лаву і врятуйте всіх
+Description[x-test]=xxStop the lava and save the dayxx
 FileName=Lava-Island.svgz
 Author=Sean Wilson
 AuthorEmail=suseux@gmail.com

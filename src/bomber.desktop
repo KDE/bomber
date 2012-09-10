@@ -1,10 +1,16 @@
 [Desktop Entry]
 Name=Bomber
+Name[ms]=Pengebom
+Name[uk]=Бомбардувальник
+Name[x-test]=xxBomberxx
 Exec=bomber -caption "%c"
 Icon=bomber
 Type=Application
 Terminal=false
 GenericName=Arcade Bombing Game
+GenericName[ms]=Permainan Arked Pengebom
+GenericName[uk]=Аркадна гра у бомбардування
+GenericName[x-test]=xxArcade Bombing Gamexx
 Categories=Qt;KDE;Game;ArcadeGame;
 X-DocPath=bomber/index.html
 X-DBUS-StartupType=Multi
