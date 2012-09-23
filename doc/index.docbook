@@ -8,7 +8,7 @@
   <!ENTITY % English "INCLUDE">
 ]>
 <book id="bomber" lang="&language;">
-	<book id="bomber"info>
+	<bookinfo>
 		<title>The &bomber; Handbook</title>
 
 		<authorgroup>
