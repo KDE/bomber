@@ -8,11 +8,11 @@ endif(KDE4_ENABLE_FPIE)
 set(bomber_SRCS
    bomber.cpp
    main.cpp
-   bomberwidget.cpp   
+   bomberwidget.cpp
    board.cpp
    plane.cpp
    bomb.cpp
-   building.cpp 
+   building.cpp
    explodable.cpp
  )
 
@@ -22,7 +22,7 @@ kde4_add_executable(bomber ${bomber_SRCS})
 
 target_link_libraries(bomber kdegames ${KDE4_KDEUI_LIBS} ${KDE4_PHONON_LIBS})
 if(KDE4_ENABLE_FPIE)
-    target_link_libraries(bomber ${KDE4_PIE_LDFLAGS})    
+    target_link_libraries(bomber ${KDE4_PIE_LDFLAGS})
 endif(KDE4_ENABLE_FPIE)
 
 install(TARGETS bomber ${INSTALL_TARGETS_DEFAULT_ARGS} )
@@ -31,6 +31,7 @@ install(TARGETS bomber ${INSTALL_TARGETS_DEFAULT_ARGS} )
 ########### install files ###############
 
 install( PROGRAMS bomber.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( FILES bomber.appdata.xml DESTINATION  ${DATA_INSTALL_DIR}/appdata )
 install( FILES bomber.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES bomberui.rc  DESTINATION  ${DATA_INSTALL_DIR}/bomber )
 
