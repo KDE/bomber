@@ -9,6 +9,7 @@
   <name xml:lang="nds">Bomber</name>
   <name xml:lang="nl">Bomber</name>
   <name xml:lang="pl">Bomber</name>
+  <name xml:lang="pt">Bomber</name>
   <name xml:lang="pt-BR">Bomber</name>
   <name xml:lang="sk">Bomber</name>
   <name xml:lang="sr">Бомбардер</name>
@@ -27,6 +28,7 @@
     <p xml:lang="nds">Bomber is en Enkelspeler-Speelhallenspeel. De Speler griept en Reeg Steder mit en Fleger an, dat jümmers wieder daal kummt.</p>
     <p xml:lang="nl">Bomber is een arcade spel voor een enkele speler. De speler is bezoekt verschillende steden in een vliegtuig dat dat steeds lager gaat.</p>
     <p xml:lang="pl">Bomber to gra arcade dla jednego gracza. Gracz najeżdża różne miasta na płaszczyźnie, która obniża się na wysokości.</p>
+    <p xml:lang="pt">O Bomber é um jogo simples para um jogador. O jogador está a invadir diversas cidades com um avião que vai reduzindo a sua altitude.</p>
     <p xml:lang="pt-BR">Bomber é um jogo tipo arcade para um único jogador. O jogador está invadindo várias cidades com um avião que vai descendo em altitude.</p>
     <p xml:lang="sk">Bomber je arkádová hra pre jedného hráča. Hráč napáda rôzne mestá v lietadle, ktoré klesá.</p>
     <p xml:lang="sr">Бомбардер је аркадна игра за једног играча. Нападајте градове авионом којем опада висина.</p>
@@ -45,6 +47,7 @@
     <p xml:lang="nds">Dat Speel is, Du rietst all Hüüs daal un kummst so na de nakamen Speelstoop. Elkeen Stoop is sworer; de Fleger fliggt gauer un de Hüüs sünd höger.</p>
     <p xml:lang="nl">Het doel van het spel is om alle gebouwen te vernietigen en verder te gaan naar het volgende niveau. Elk niveau wordt een beetje moeilijker door de snelheid van het vliegtuig te verhogen en de hoogte van de gebouwen.</p>
     <p xml:lang="pl">Celem gry jest zniszczenie wszystkich budynków i przejście do następnego poziomu. Każdy poziom staje się coraz trudniejszy poprzez zwiększanie szybkości płaszczyzny i wysokości budynków.</p>
+    <p xml:lang="pt">O objectivo do jogo é destruir todos os edifícios e avançar para o nível seguinte. Cada nível vai ficando mais difícil, aumentando a velocidade do avião e a altura dos edifícios.</p>
     <p xml:lang="pt-BR">O objetivo do jogo é destruir todos os edifícios e passar ao nível seguinte. Cada nível vai ficando um pouco mais difícil ao aumentar a velocidade do avião e a altura dos edifícios.</p>
     <p xml:lang="sk">Cieľom hry je zničiť všetky budovy na postúpenie do ďalšej úrovne. Každá úroveň je o niečo ťažšia zvýšením rýchlosti lietadla a výškou budov.</p>
     <p xml:lang="sr">Циљ игре је уништити све зграде и прећи на следећи ниво. Сваки ниво је мало тежи од претходног, тиме што се повећава брзина авиона и висина зграда.</p>
@@ -70,6 +73,7 @@
   <developer_name xml:lang="nds">De KDE-Meenschap</developer_name>
   <developer_name xml:lang="nl">De KDE gemeenschap</developer_name>
   <developer_name xml:lang="pl">Społeczność KDE</developer_name>
+  <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
   <developer_name xml:lang="pt-BR">KDE Community</developer_name>
   <developer_name xml:lang="sk">KDE komunita</developer_name>
   <developer_name xml:lang="sr">заједница КДЕ‑а</developer_name>
