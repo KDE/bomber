@@ -17,6 +17,7 @@
   <name xml:lang="pt">Bomber</name>
   <name xml:lang="pt-BR">Bomber</name>
   <name xml:lang="sk">Bomber</name>
+  <name xml:lang="sl">Bombnik</name>
   <name xml:lang="sr">Бомбардер</name>
   <name xml:lang="sr-Latn">Bombarder</name>
   <name xml:lang="sr-ijekavian">Бомбардер</name>
@@ -40,6 +41,7 @@
     <p xml:lang="pt">O Bomber é um jogo simples para um jogador. O jogador está a invadir diversas cidades com um avião que vai reduzindo a sua altitude.</p>
     <p xml:lang="pt-BR">Bomber é um jogo tipo arcade para um único jogador. O jogador está invadindo várias cidades com um avião que vai descendo em altitude.</p>
     <p xml:lang="sk">Bomber je arkádová hra pre jedného hráča. Hráč napáda rôzne mestá v lietadle, ktoré klesá.</p>
+    <p xml:lang="sl">Bombnik je enoigralska arkadna igra. Igralec napada raznolika mesta z letalom, ki se sčasoma spušča.</p>
     <p xml:lang="sr">Бомбардер је аркадна игра за једног играча. Нападајте градове авионом којем опада висина.</p>
     <p xml:lang="sr-Latn">Bombarder je arkadna igra za jednog igrača. Napadajte gradove avionom kojem opada visina.</p>
     <p xml:lang="sr-ijekavian">Бомбардер је аркадна игра за једног играча. Нападајте градове авионом којем опада висина.</p>
@@ -63,6 +65,7 @@
     <p xml:lang="pt">O objectivo do jogo é destruir todos os edifícios e avançar para o nível seguinte. Cada nível vai ficando mais difícil, aumentando a velocidade do avião e a altura dos edifícios.</p>
     <p xml:lang="pt-BR">O objetivo do jogo é destruir todos os edifícios e passar ao nível seguinte. Cada nível vai ficando um pouco mais difícil ao aumentar a velocidade do avião e a altura dos edifícios.</p>
     <p xml:lang="sk">Cieľom hry je zničiť všetky budovy na postúpenie do ďalšej úrovne. Každá úroveň je o niečo ťažšia zvýšením rýchlosti lietadla a výškou budov.</p>
+    <p xml:lang="sl">Cilj igre je uničiti vse zgradbe in tako preiti v naslednjo stopnjo. Vsaka stopnja je težja, saj se poveča hitrost letala in višina zgradb.</p>
     <p xml:lang="sr">Циљ игре је уништити све зграде и прећи на следећи ниво. Сваки ниво је мало тежи од претходног, тиме што се повећава брзина авиона и висина зграда.</p>
     <p xml:lang="sr-Latn">Cilj igre je uništiti sve zgrade i preći na sledeći nivo. Svaki nivo je malo teži od prethodnog, time što se povećava brzina aviona i visina zgrada.</p>
     <p xml:lang="sr-ijekavian">Циљ игре је уништити све зграде и прећи на следећи ниво. Сваки ниво је мало тежи од претходног, тиме што се повећава брзина авиона и висина зграда.</p>
@@ -94,6 +97,7 @@
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
   <developer_name xml:lang="pt-BR">KDE Community</developer_name>
   <developer_name xml:lang="sk">KDE komunita</developer_name>
+  <developer_name xml:lang="sl">Skupnost KDE</developer_name>
   <developer_name xml:lang="sr">заједница КДЕ‑а</developer_name>
   <developer_name xml:lang="sr-Latn">zajednica KDE‑a</developer_name>
   <developer_name xml:lang="sr-ijekavian">заједница КДЕ‑а</developer_name>
