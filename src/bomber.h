@@ -23,8 +23,8 @@
 #include <kxmlguiwindow.h>
 #include <kgthemeprovider.h>
 
-class KAction;
-class KStatusBar;
+class QAction;
+class QStatusBar;
 class KToggleAction;
 class KgThemeSelector;
 
@@ -71,10 +71,10 @@ private:
 	KgThemeSelector* m_selector;
 
 	BomberGameWidget *m_gameWidget;
-	KStatusBar *m_statusBar;
+	QStatusBar *m_statusBar;
 
 	KToggleAction *m_pauseAction, *m_backgroundShowAction, *m_soundAction;
-	KAction *m_newAction;
+	QAction *m_newAction;
 
 };
 

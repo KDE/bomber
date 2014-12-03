@@ -1,5 +1,5 @@
 project(bomber)
-include_directories(${CMAKE_SOURCE_DIR}/libkdegames/highscore)
+include_directories(${CMAKE_SOURCE_DIR}/libKF5KDEGames/highscore)
 
 if(KDE4_ENABLE_FPIE)
     set ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_CXX_FPIE_FLAGS}")
@@ -16,14 +16,11 @@ set(bomber_SRCS
    explodable.cpp
  )
 
-kde4_add_kcfg_files(bomber_SRCS settings.kcfgc )
+kconfig_add_kcfg_files(bomber_SRCS settings.kcfgc )
 kde4_add_app_icon(bomber_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../pictures/hi*-app-bomber.png")
-kde4_add_executable(bomber ${bomber_SRCS})
+add_executable(bomber ${bomber_SRCS})
 
-target_link_libraries(bomber kdegames ${KDE4_KDEUI_LIBS} ${KDE4_PHONON_LIBS})
-if(KDE4_ENABLE_FPIE)
-    target_link_libraries(bomber ${KDE4_PIE_LDFLAGS})
-endif(KDE4_ENABLE_FPIE)
+target_link_libraries(bomber KF5KDEGames  Phonon::phonon4qt5 KF5::XmlGui KF5::KDELibs4Support)
 
 install(TARGETS bomber ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

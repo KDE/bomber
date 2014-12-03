@@ -20,7 +20,7 @@
 #include "bomberwidget.h"
 #include "settings.h"
 
-#include <KAction>
+#include <QAction>
 #include <KActionCollection>
 #include <KConfigDialog>
 #include <KLocale>
@@ -42,9 +42,9 @@ Bomber::Bomber()
 	m_selector = new KgThemeSelector(&m_provider);
 
 	m_statusBar = statusBar();
-	m_statusBar->insertItem(i18nc("Used to display the current level of play to the user", "Level: %1", 0), 1, 1);
-	m_statusBar->insertItem(i18nc("Used to inform the user of their current score", "Score: %1", 0), 2, 1);
-	m_statusBar->insertItem(i18nc("Used to tell the user how many lives they have left", "Lives: %1", 3), 4, 1);
+	//QT5 m_statusBar->insertItem(i18nc("Used to display the current level of play to the user", "Level: %1", 0), 1, 1);
+	//QT5 m_statusBar->insertItem(i18nc("Used to inform the user of their current score", "Score: %1", 0), 2, 1);
+	//QT5 m_statusBar->insertItem(i18nc("Used to tell the user how many lives they have left", "Lives: %1", 3), 4, 1);
 
 	m_gameWidget = new BomberGameWidget(&m_provider, this);
 	connect(&m_provider, SIGNAL(currentThemeChanged(const KgTheme*)),
@@ -90,7 +90,7 @@ void Bomber::initXMLUI()
 	actionCollection()->addAction( QLatin1String( "toggle_sound" ), m_soundAction);
 	connect(m_soundAction, SIGNAL(triggered(bool)), this, SLOT(setSounds(bool)));
 
-	KAction *dropBombAction = actionCollection()->addAction( QLatin1String( "drop_bomb" ));
+	QAction *dropBombAction = actionCollection()->addAction( QLatin1String( "drop_bomb" ));
 	dropBombAction->setText(i18nc("The name of the action used for dropping bombs","&Drop bomb"));
 	dropBombAction->setToolTip(i18nc("The tool tip text for the action used to drop bombs","Drop bomb"));
 	dropBombAction->setWhatsThis(i18nc("Description of the action used to drop bombs",
@@ -181,23 +181,29 @@ void Bomber::setSounds(bool val)
 
 void Bomber::displayLevel(unsigned int level)
 {
+#if 0 //QT5
 	m_statusBar->changeItem(i18nc(
 			"Used to display the current level of play to the user",
 			"Level: %1", level), 1);
+#endif
 }
 
 void Bomber::displayScore(unsigned int score)
 {
+#if 0 //QT5
 	m_statusBar->changeItem(i18nc(
 			"Used to inform the user of their current score", "Score: %1",
 			score), 2);
+#endif
 }
 
 void Bomber::displayLives(unsigned int lives)
 {
+#if 0 //QT5
 	m_statusBar->changeItem(i18nc(
 			"Used to tell the user how many lives they have left", "Lives: %1",
 			lives), 4);
+#endif
 }
 
 void Bomber::gameStateChanged(BomberGameWidget::State state)

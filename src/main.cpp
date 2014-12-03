@@ -17,7 +17,7 @@
  */
 #include "bomber.h"
 #include <kapplication.h>
-#include <kaboutdata.h>
+#include <K4AboutData>
 #include <kcmdlineargs.h>
 #include <KDE/KLocale>
 
@@ -27,8 +27,8 @@ static const char version[] = "0.1";
 
 int main(int argc, char **argv)
 {
-	KAboutData about("bomber", 0, ki18n("Bomber"), version, ki18n(description),
-			KAboutData::License_GPL, ki18n("(C) 2007 John-Paul Stanford"),
+	K4AboutData about("bomber", 0, ki18n("Bomber"), version, ki18n(description),
+			K4AboutData::License_GPL, ki18n("(C) 2007 John-Paul Stanford"),
 			KLocalizedString(), 0, "jp@stanwood.org.uk");
 	about.addAuthor(ki18n("John-Paul Stanford"), KLocalizedString(),
 			"jp@stanwood.org.uk");
@@ -37,7 +37,6 @@ int main(int argc, char **argv)
 	KCmdLineArgs::init(argc, argv, &about);
 
 	KApplication app;
-	KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ));
 
 	// see if we are starting with session management
 	if (app.isSessionRestored())
