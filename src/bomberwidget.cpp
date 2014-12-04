@@ -23,7 +23,7 @@
 #include <QGraphicsView>
 #include <QGraphicsItem>
 
-#include <KLocale>
+#include <KLocalizedString>
 #include <sys/stat.h>
 
 #define NEW_LIVE_AT_SCORE 10000;

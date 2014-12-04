@@ -23,7 +23,7 @@
 #include <QAction>
 #include <KActionCollection>
 #include <KConfigDialog>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <krandom.h>
 #include <KToggleAction>

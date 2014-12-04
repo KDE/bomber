@@ -19,7 +19,7 @@
 #include <kapplication.h>
 #include <K4AboutData>
 #include <kcmdlineargs.h>
-#include <KDE/KLocale>
+#include <KLocalizedString>
 
 static const char description[] = I18N_NOOP("Arcade bombing game");
 
