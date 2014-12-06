@@ -27,7 +27,7 @@
 #include <KMessageBox>
 #include <krandom.h>
 #include <KToggleAction>
-#include <KStatusBar>
+#include <QStatusBar>
 
 #include <kstandardgameaction.h>
 #include <KScoreDialog>
