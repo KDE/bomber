@@ -25,11 +25,12 @@
 
 #include <KRandom>
 #include <Phonon/MediaObject>
-#include <KStandardDirs>
+
 
 #include <QTimer>
 #include <QGraphicsScene>
 #include <QGraphicsView>
+#include <QStandardPaths>
 
 /** The value that the plane velocity increases by */
 const qreal PLANE_INC_VELOCITY = 0.0005;
@@ -66,7 +67,7 @@ BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView* view, QObject *
 
 	m_audioPlayer = 0;
 
-	m_soundPath = KStandardDirs::locate("appdata", "sounds/");
+	m_soundPath = QStandardPaths::locate(QStandardPaths::DataLocation, "sounds", QStandardPaths::LocateDirectory);
 }
 
 BomberBoard::~BomberBoard()

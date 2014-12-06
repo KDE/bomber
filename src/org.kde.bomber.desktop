@@ -111,3 +111,4 @@ GenericName[zh_TW]=大型遊戲機的戰鬥機遊戲
 Categories=Qt;KDE;Game;ArcadeGame;
 X-DocPath=bomber/index.html
 X-DBUS-StartupType=Multi
+X-DBUS-ServiceName=org.kde.bomber
