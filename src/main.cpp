@@ -16,10 +16,12 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 #include "bomber.h"
-#include <kapplication.h>
-#include <K4AboutData>
-#include <kcmdlineargs.h>
+
+#include <KAboutData>
+
 #include <KLocalizedString>
+#include <QApplication>
+#include <QCommandLineParser>
 
 static const char description[] = I18N_NOOP("Arcade bombing game");
 
@@ -27,16 +29,22 @@ static const char version[] = "0.1";
 
 int main(int argc, char **argv)
 {
-	K4AboutData about("bomber", 0, ki18n("Bomber"), version, ki18n(description),
-			K4AboutData::License_GPL, ki18n("(C) 2007 John-Paul Stanford"),
-			KLocalizedString(), 0, "jp@stanwood.org.uk");
-	about.addAuthor(ki18n("John-Paul Stanford"), KLocalizedString(),
+	KAboutData about("bomber", i18n("Bomber"), QLatin1String(version), i18n(description),
+			KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
+			QString(), "jp@stanwood.org.uk");
+	about.addAuthor(i18n("John-Paul Stanford"), QString(),
 			"jp@stanwood.org.uk");
-	about.addAuthor(ki18n("Mehmet Emre"), ki18n("Porting to QGraphicsView."),
+	about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
 			"maemre2@gmail.com");
-	KCmdLineArgs::init(argc, argv, &about);
+    QApplication app(argc, argv);
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(about);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    about.setupCommandLine(&parser);
+    parser.process(app);
+    about.processCommandLine(&parser);
 
-	KApplication app;
 
 	// see if we are starting with session management
 	if (app.isSessionRestored())
