@@ -42,9 +42,9 @@ BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
 {
 	// Gameboard
 	m_board = new BomberBoard(&m_renderer, this, this);
-	connect(m_board, SIGNAL(onPlaneCrash()), this, SLOT(onPlaneCrashed()));
-	connect(m_board, SIGNAL(onBombHit()), this, SLOT(onBombHit()));
-	connect(m_board, SIGNAL(levelCleared()), this, SLOT(onLevelCleared()));
+	connect(m_board, &BomberBoard::onPlaneCrash, this, &BomberGameWidget::onPlaneCrashed);
+	connect(m_board, &BomberBoard::onBombHit, this, &BomberGameWidget::onBombHit);
+	connect(m_board, &BomberBoard::levelCleared, this, &BomberGameWidget::onLevelCleared);
 	setScene(m_board);
 	setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 	setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -60,7 +60,7 @@ BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
 	m_clock = new QTimer(this);
 	m_clock->setInterval(GAME_TIME_DELAY);
 
-	connect(m_clock, SIGNAL(timeout()), this, SLOT(tick()));
+	connect(m_clock, &QTimer::timeout, this, &BomberGameWidget::tick);
 
 	setMouseTracking(true);
 	generateOverlay();

@@ -57,7 +57,7 @@ BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView* view, QObject *
 	m_bomb = NULL;
 	m_clock = new QTimer(this);
 	m_clock->setInterval(GAME_DELAY);
-	connect(m_clock, SIGNAL(timeout()), this, SLOT(tick()));
+	connect(m_clock, &QTimer::timeout, this, &BomberBoard::tick);
 	m_plane = new Plane(m_renderer, this);
 	m_plane->resize(m_tileSize);
 	this->addItem(m_plane);
