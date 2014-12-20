@@ -228,4 +228,4 @@ void Bomber::gameStateChanged(BomberGameWidget::State state)
 	}
 }
 
-#include "bomber.moc"
+
