@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <QApplication>
 #include <QCommandLineParser>
+#include <kdelibs4configmigrator.h>
 
 static const char description[] = I18N_NOOP("Arcade bombing game");
 
@@ -29,6 +30,11 @@ static const char version[] = "0.1";
 
 int main(int argc, char **argv)
 {
+    Kdelibs4ConfigMigrator migrate(QStringLiteral("bomber"));
+    migrate.setConfigFiles(QStringList() << QStringLiteral("bomberrc"));
+    migrate.setUiFiles(QStringList() << QStringLiteral("bomberui.rc"));
+    migrate.migrate();
+
 	KAboutData about("bomber", i18n("Bomber"), QLatin1String(version), i18n(description),
 			KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
 			QString(), "jp@stanwood.org.uk");
