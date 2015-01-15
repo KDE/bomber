@@ -31,6 +31,8 @@ static const char version[] = "0.1";
 
 int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
+
     Kdelibs4ConfigMigrator migrate(QStringLiteral("bomber"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("bomberrc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("bomberui.rc"));
@@ -43,7 +45,6 @@ int main(int argc, char **argv)
 			"jp@stanwood.org.uk");
 	about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
 			"maemre2@gmail.com");
-    QApplication app(argc, argv);
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     parser.addVersionOption();
