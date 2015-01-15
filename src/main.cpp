@@ -23,6 +23,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <kdelibs4configmigrator.h>
+#include <KDBusService>
 
 static const char description[] = I18N_NOOP("Arcade bombing game");
 
@@ -50,7 +51,7 @@ int main(int argc, char **argv)
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
-
+    KDBusService service;
 
 	// see if we are starting with session management
 	if (app.isSessionRestored())
