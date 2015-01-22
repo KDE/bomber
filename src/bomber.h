@@ -27,6 +27,7 @@ class QAction;
 class QStatusBar;
 class KToggleAction;
 class KgThemeSelector;
+class QLabel;
 
 /**
  * This class serves as the main window for Bomber.  It handles the
@@ -75,7 +76,7 @@ private:
 
 	KToggleAction *m_pauseAction, *m_backgroundShowAction, *m_soundAction;
 	QAction *m_newAction;
-
+        QLabel *m_level, *m_score, *m_lives;
 };
 
 #endif

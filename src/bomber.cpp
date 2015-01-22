@@ -28,7 +28,7 @@
 #include <krandom.h>
 #include <KToggleAction>
 #include <QStatusBar>
-
+#include <QLabel>
 #include <kstandardgameaction.h>
 #include <KScoreDialog>
 #include <kgthemeselector.h>
@@ -42,9 +42,12 @@ Bomber::Bomber()
 	m_selector = new KgThemeSelector(&m_provider);
 
 	m_statusBar = statusBar();
-	//QT5 m_statusBar->insertItem(i18nc("Used to display the current level of play to the user", "Level: %1", 0), 1, 1);
-	//QT5 m_statusBar->insertItem(i18nc("Used to inform the user of their current score", "Score: %1", 0), 2, 1);
-	//QT5 m_statusBar->insertItem(i18nc("Used to tell the user how many lives they have left", "Lives: %1", 3), 4, 1);
+        m_level = new QLabel(i18nc("Used to display the current level of play to the user", "Level: %1", 0));
+        m_statusBar->addPermanentWidget(m_level);
+        m_score = new QLabel(i18nc("Used to inform the user of their current score", "Score: %1", 0));
+        m_statusBar->addPermanentWidget(m_score);
+        m_lives = new QLabel(i18nc("Used to tell the user how many lives they have left", "Lives: %1", 3));
+        m_statusBar->addPermanentWidget(m_lives);
 
 	m_gameWidget = new BomberGameWidget(&m_provider, this);
 	connect(&m_provider, &KgThemeProvider::currentThemeChanged, m_gameWidget, &BomberGameWidget::settingsChanged);
@@ -180,29 +183,23 @@ void Bomber::setSounds(bool val)
 
 void Bomber::displayLevel(unsigned int level)
 {
-#if 0 //QT5
-	m_statusBar->changeItem(i18nc(
-			"Used to display the current level of play to the user",
-			"Level: %1", level), 1);
-#endif
+    m_level->setText(i18nc(
+                         "Used to display the current level of play to the user",
+                         "Level: %1", level));
 }
 
 void Bomber::displayScore(unsigned int score)
 {
-#if 0 //QT5
-	m_statusBar->changeItem(i18nc(
-			"Used to inform the user of their current score", "Score: %1",
-			score), 2);
-#endif
+    m_score->setText(i18nc(
+                         "Used to inform the user of their current score", "Score: %1",
+                         score));
 }
 
 void Bomber::displayLives(unsigned int lives)
 {
-#if 0 //QT5
-	m_statusBar->changeItem(i18nc(
-			"Used to tell the user how many lives they have left", "Lives: %1",
-			lives), 4);
-#endif
+    m_lives->setText(i18nc(
+                         "Used to tell the user how many lives they have left", "Lives: %1",
+                         lives));
 }
 
 void Bomber::gameStateChanged(BomberGameWidget::State state)
