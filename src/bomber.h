@@ -37,46 +37,46 @@ class QLabel;
  */
 class Bomber: public KXmlGuiWindow
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-	/**
-	 * Default Constructor
-	 */
-	Bomber();
+    /**
+     * Default Constructor
+     */
+    Bomber();
 
-	void readSettings();
+    void readSettings();
 
-	/**
-	 * Default Destructor
-	 */
-	virtual ~Bomber();
+    /**
+     * Default Destructor
+     */
+    virtual ~Bomber();
 
 private slots:
-	void closeGame();
-	void newGame();
-	void pauseGame();
-	void showHighscore();
+    void closeGame();
+    void newGame();
+    void pauseGame();
+    void showHighscore();
 
-	void setSounds( bool val );
-	void displayLevel( unsigned int level );
-	void displayScore( unsigned int score );
-	void displayLives( unsigned int lives );
-	void gameStateChanged( BomberGameWidget::State state );
+    void setSounds(bool val);
+    void displayLevel(unsigned int level);
+    void displayScore(unsigned int score);
+    void displayLives(unsigned int lives);
+    void gameStateChanged(BomberGameWidget::State state);
 
 private:
-	void highscore();
-	void initXMLUI();
-	void setupActions();
+    void highscore();
+    void initXMLUI();
+    void setupActions();
 
-	KgThemeProvider m_provider;
-	KgThemeSelector* m_selector;
+    KgThemeProvider m_provider;
+    KgThemeSelector *m_selector;
 
-	BomberGameWidget *m_gameWidget;
-	QStatusBar *m_statusBar;
+    BomberGameWidget *m_gameWidget;
+    QStatusBar *m_statusBar;
 
-	KToggleAction *m_pauseAction, *m_backgroundShowAction, *m_soundAction;
-	QAction *m_newAction;
-        QLabel *m_level, *m_score, *m_lives;
+    KToggleAction *m_pauseAction, *m_backgroundShowAction, *m_soundAction;
+    QAction *m_newAction;
+    QLabel *m_level, *m_score, *m_lives;
 };
 
 #endif

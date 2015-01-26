@@ -39,12 +39,12 @@ int main(int argc, char **argv)
     migrate.migrate();
 
     KAboutData about(QLatin1Literal("bomber"), i18n("Bomber"), QLatin1String(version), i18n(description),
-			KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
-            QString(), QLatin1Literal("jp@stanwood.org.uk"));
-	about.addAuthor(i18n("John-Paul Stanford"), QString(),
-            QLatin1Literal("jp@stanwood.org.uk"));
-	about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
-            QLatin1Literal("maemre2@gmail.com"));
+                     KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
+                     QString(), QLatin1Literal("jp@stanwood.org.uk"));
+    about.addAuthor(i18n("John-Paul Stanford"), QString(),
+                    QLatin1Literal("jp@stanwood.org.uk"));
+    about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
+                    QLatin1Literal("maemre2@gmail.com"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     parser.addVersionOption();
@@ -54,18 +54,15 @@ int main(int argc, char **argv)
     about.processCommandLine(&parser);
     KDBusService service;
 
-	// see if we are starting with session management
-	if (app.isSessionRestored())
-	{
-		RESTORE(Bomber);
-	}
-	else
-	{
-		Bomber *widget = new Bomber;
-		widget->setMinimumSize(320, 200);
-		widget->show();
-		widget->readSettings();
-	}
+    // see if we are starting with session management
+    if (app.isSessionRestored()) {
+        RESTORE(Bomber);
+    } else {
+        Bomber *widget = new Bomber;
+        widget->setMinimumSize(320, 200);
+        widget->show();
+        widget->readSettings();
+    }
 
-	return app.exec();
+    return app.exec();
 }

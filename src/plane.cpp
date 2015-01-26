@@ -31,10 +31,10 @@ const qreal Plane::PLANE_MAX_POSITION_X = 12;
 
 Plane::Plane(KGameRenderer *renderer, BomberBoard *board) :
     Explodable(QLatin1Literal("plane"), QLatin1Literal("plane_explode"), PLANE_RELATIVE_SIZE,
-			PLANE_RELATIVE_SIZE, renderer, board)
+               PLANE_RELATIVE_SIZE, renderer, board)
 {
-	setVelocity(DEFAULT_VELOCITY);
-	resetPosition();
+    setVelocity(DEFAULT_VELOCITY);
+    resetPosition();
 }
 
 Plane::~Plane()
@@ -43,20 +43,18 @@ Plane::~Plane()
 
 void Plane::resetPosition()
 {
-	m_xPos = 0, m_yPos = 0;
-	m_nextBoundingRect.moveTo(m_xPos, m_yPos);
+    m_xPos = 0, m_yPos = 0;
+    m_nextBoundingRect.moveTo(m_xPos, m_yPos);
 }
 
 void Plane::advanceItem()
 {
-	if (state() == Moving)
-	{
-		m_xPos += velocity();
-		if (m_xPos > PLANE_MAX_POSITION_X)
-		{
-			m_xPos = 0;
-			m_yPos++;
-		}
-	}
-	m_nextBoundingRect.moveTo(m_xPos + velocity(), m_yPos);
+    if (state() == Moving) {
+        m_xPos += velocity();
+        if (m_xPos > PLANE_MAX_POSITION_X) {
+            m_xPos = 0;
+            m_yPos++;
+        }
+    }
+    m_nextBoundingRect.moveTo(m_xPos + velocity(), m_yPos);
 }

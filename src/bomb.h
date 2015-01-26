@@ -27,20 +27,20 @@
 class Bomb: public Explodable
 {
 public:
-	/** The width of the bomb relative to the tile */
-	static const qreal BOMB_RELATIVE_SIZE_W;
-	/** The height of the bomb relative to the tile */
-	static const qreal BOMB_RELATIVE_SIZE_H;
+    /** The width of the bomb relative to the tile */
+    static const qreal BOMB_RELATIVE_SIZE_W;
+    /** The height of the bomb relative to the tile */
+    static const qreal BOMB_RELATIVE_SIZE_H;
 
-	Bomb(KGameRenderer *renderer, BomberBoard *board, qreal xPos, qreal yPos,
-			const QSize& tileSize);
-	~Bomb();
+    Bomb(KGameRenderer *renderer, BomberBoard *board, qreal xPos, qreal yPos,
+         const QSize &tileSize);
+    ~Bomb();
 
-	/**
-	 * Performs move calculations
-	 * This method is called once per frame
-	 */
-	void advanceItem();
+    /**
+     * Performs move calculations
+     * This method is called once per frame
+     */
+    void advanceItem();
 };
 
 #endif

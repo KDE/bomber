@@ -33,19 +33,19 @@ const qreal Explodable::EXPLOSION_RELATIVE_SIZE_H = 1.0;
  */
 const qreal Explodable::EXPLOSION_RELATIVE_SIZE_W = 1.0;
 
-Explodable::Explodable(const QString& mainSvg, const QString& explosionSvg,
-		qreal relativeWidth, qreal relativeHeight, KGameRenderer *renderer,
-		BomberBoard *board) :
-	KGameRenderedItem(renderer, mainSvg), m_board(board), m_mainSvg(
-			mainSvg), m_explosionSvg(explosionSvg)
+Explodable::Explodable(const QString &mainSvg, const QString &explosionSvg,
+                       qreal relativeWidth, qreal relativeHeight, KGameRenderer *renderer,
+                       BomberBoard *board) :
+    KGameRenderedItem(renderer, mainSvg), m_board(board), m_mainSvg(
+        mainSvg), m_explosionSvg(explosionSvg)
 {
-	setRenderSize(QSize(32, 64));
-	m_relativeWidth = relativeWidth;
-	m_relativeHeight = relativeHeight;
-	resetPixmaps();
-	m_state = Moving;
-	m_nextBoundingRect.setSize(QSizeF(m_relativeWidth, m_relativeHeight));
-	setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
+    setRenderSize(QSize(32, 64));
+    m_relativeWidth = relativeWidth;
+    m_relativeHeight = relativeHeight;
+    resetPixmaps();
+    m_state = Moving;
+    m_nextBoundingRect.setSize(QSizeF(m_relativeWidth, m_relativeHeight));
+    setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
 }
 
 Explodable::~Explodable()
@@ -54,44 +54,41 @@ Explodable::~Explodable()
 
 void Explodable::setPosition(qreal xPos, qreal yPos)
 {
-	m_xPos = xPos, m_yPos = yPos;
-	m_nextBoundingRect.moveTo(m_xPos, m_yPos);
+    m_xPos = xPos, m_yPos = yPos;
+    m_nextBoundingRect.moveTo(m_xPos, m_yPos);
 }
 
 void Explodable::update()
 {
-	setFrame(frame() + 1);
-	setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
+    setFrame(frame() + 1);
+    setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
 }
 
-void Explodable::resize(const QSize& tileSize)
+void Explodable::resize(const QSize &tileSize)
 {
-	m_lastSize = tileSize;
-	if (m_state == Moving)
-	{
-		setRenderSize(QSize(
-			m_relativeWidth * tileSize.width(),
-			m_relativeHeight * tileSize.height()
-		));
-	}
-	else
-	{
-		setRenderSize(QSize(
-			EXPLOSION_RELATIVE_SIZE_W * tileSize.width(),
-			EXPLOSION_RELATIVE_SIZE_H * tileSize.height()
-		));
-	}
-	setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
+    m_lastSize = tileSize;
+    if (m_state == Moving) {
+        setRenderSize(QSize(
+                          m_relativeWidth * tileSize.width(),
+                          m_relativeHeight * tileSize.height()
+                      ));
+    } else {
+        setRenderSize(QSize(
+                          EXPLOSION_RELATIVE_SIZE_W * tileSize.width(),
+                          EXPLOSION_RELATIVE_SIZE_H * tileSize.height()
+                      ));
+    }
+    setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
 }
 
 void Explodable::setVelocity(qreal vX)
 {
-	m_velocity = vX;
+    m_velocity = vX;
 }
 
 void Explodable::setRandomFrame()
 {
-	setFrame(KRandom::random());
+    setFrame(KRandom::random());
 }
 
 /**
@@ -100,42 +97,39 @@ void Explodable::setRandomFrame()
  */
 QRectF Explodable::nextBoundingRect() const
 {
-	return m_nextBoundingRect;
+    return m_nextBoundingRect;
 }
 
 void Explodable::setState(Explodable::State state)
 {
-	m_state = state;
-	setRandomFrame();
-	if (m_state == Moving)
-	{
-		m_nextBoundingRect.setSize(QSizeF(m_relativeWidth, m_relativeHeight));
-		setSpriteKey(m_mainSvg);
-	}
-	else
-	{
-		m_nextBoundingRect.setSize(QSizeF(EXPLOSION_RELATIVE_SIZE_W, EXPLOSION_RELATIVE_SIZE_H));
-		setSpriteKey(m_explosionSvg);
-	}
-	resize(m_lastSize);
+    m_state = state;
+    setRandomFrame();
+    if (m_state == Moving) {
+        m_nextBoundingRect.setSize(QSizeF(m_relativeWidth, m_relativeHeight));
+        setSpriteKey(m_mainSvg);
+    } else {
+        m_nextBoundingRect.setSize(QSizeF(EXPLOSION_RELATIVE_SIZE_W, EXPLOSION_RELATIVE_SIZE_H));
+        setSpriteKey(m_explosionSvg);
+    }
+    resize(m_lastSize);
 }
 
 QPointF Explodable::position() const
 {
-	return QPointF(m_xPos, m_yPos);
+    return QPointF(m_xPos, m_yPos);
 }
 
 void Explodable::resetPixmaps()
 {
-	setFrame(0);
+    setFrame(0);
 }
 
 Explodable::State Explodable::state() const
 {
-	return m_state;
+    return m_state;
 }
 
 qreal Explodable::velocity() const
 {
-	return m_velocity;
+    return m_velocity;
 }

@@ -34,73 +34,73 @@ class BomberBoard;
 class Building
 {
 public:
-	static const unsigned int BUILD_BASE_LOCATION;
-	Building(KGameRenderer *renderer, BomberBoard *board, unsigned int position,
-			unsigned int height);
-	~Building();
+    static const unsigned int BUILD_BASE_LOCATION;
+    Building(KGameRenderer *renderer, BomberBoard *board, unsigned int position,
+             unsigned int height);
+    ~Building();
 
-	/**
-	 * Set the height of the building
-	 * \param height The new height of the building
-	 */
-	void setHeight(unsigned int height);
+    /**
+     * Set the height of the building
+     * \param height The new height of the building
+     */
+    void setHeight(unsigned int height);
 
-	/**
-	 * Get the height of the building
-	 * \return The height of the building
-	 */
-	unsigned int height() const;
+    /**
+     * Get the height of the building
+     * \return The height of the building
+     */
+    unsigned int height() const;
 
-	/**
-	 * Sets width and height of plane.
-	 */
-	void resize(const QSize& tileSize);
+    /**
+     * Sets width and height of plane.
+     */
+    void resize(const QSize &tileSize);
 
-	/**
-	 * Sets building's current frame
-	 */
-	void setFrame(unsigned int frame);
+    /**
+     * Sets building's current frame
+     */
+    void setFrame(unsigned int frame);
 
-	/** Show the building item on the game scene */
-	void show();
+    /** Show the building item on the game scene */
+    void show();
 
-	/**
-	 * Get the bounding rectange of the building
-	 * \return the Bounding rectangle of the building
-	 */
-	QRectF boundingRect() const;
+    /**
+     * Get the bounding rectange of the building
+     * \return the Bounding rectangle of the building
+     */
+    QRectF boundingRect() const;
 
-	/**
-	 * This is used to destory the top of the building
-	 */
-	void destoryTop();
+    /**
+     * This is used to destory the top of the building
+     */
+    void destoryTop();
 
-	/**
-	 * Return the position of the building
-	 * \return The position of the building
-	 */
-	QPointF position() const;
+    /**
+     * Return the position of the building
+     * \return The position of the building
+     */
+    QPointF position() const;
 
 private:
-	/**
-	 * Setup the tiles that make up the building
-	 */
-	void setupBuildingTiles();
+    /**
+     * Setup the tiles that make up the building
+     */
+    void setupBuildingTiles();
 
-	/**
-	 * Used to create a new building tile
-	 * \param pixmap The pixmap the building tile should be created with
-	 * \return The new created building tile
-	 */
-	KGameRenderedItem *createBuildingTile(const QString& pixmap);
+    /**
+     * Used to create a new building tile
+     * \param pixmap The pixmap the building tile should be created with
+     * \return The new created building tile
+     */
+    KGameRenderedItem *createBuildingTile(const QString &pixmap);
 
-	unsigned int m_height;
-	QRectF m_boundingRect;
-	KGameRenderer *m_renderer;
-	BomberBoard *m_board;
-	QList<KGameRenderedItem*> m_buildingTiles;
+    unsigned int m_height;
+    QRectF m_boundingRect;
+    KGameRenderer *m_renderer;
+    BomberBoard *m_board;
+    QList<KGameRenderedItem *> m_buildingTiles;
 
-	qreal m_xPos;
+    qreal m_xPos;
 };
 
 #endif

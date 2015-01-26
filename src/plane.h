@@ -30,28 +30,28 @@ class Plane: public Explodable
 {
 
 public:
-	/** This is the planes size relative to the tile */
-	static const qreal PLANE_RELATIVE_SIZE;
+    /** This is the planes size relative to the tile */
+    static const qreal PLANE_RELATIVE_SIZE;
 
-	/** This is the position before the plane goes off the screen */
-	static const qreal PLANE_MAX_POSITION_X;
+    /** This is the position before the plane goes off the screen */
+    static const qreal PLANE_MAX_POSITION_X;
 
-	/** The speed the plane will fly at */
-	static const qreal DEFAULT_VELOCITY;
+    /** The speed the plane will fly at */
+    static const qreal DEFAULT_VELOCITY;
 
-	Plane(KGameRenderer *renderer, BomberBoard *board);
-	~Plane();
+    Plane(KGameRenderer *renderer, BomberBoard *board);
+    ~Plane();
 
-	/**
-	 * Performs move calculations
-	 * This method is called once per frame
-	 */
-	void advanceItem();
+    /**
+     * Performs move calculations
+     * This method is called once per frame
+     */
+    void advanceItem();
 
-	/**
-	 * Used to reset the plane to it's starting position
-	 */
-	void resetPosition();
+    /**
+     * Used to reset the plane to it's starting position
+     */
+    void resetPosition();
 };
 
 #endif
