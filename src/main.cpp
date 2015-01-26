@@ -38,13 +38,13 @@ int main(int argc, char **argv)
     migrate.setUiFiles(QStringList() << QStringLiteral("bomberui.rc"));
     migrate.migrate();
 
-	KAboutData about("bomber", i18n("Bomber"), QLatin1String(version), i18n(description),
+    KAboutData about(QLatin1Literal("bomber"), i18n("Bomber"), QLatin1String(version), i18n(description),
 			KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
-			QString(), "jp@stanwood.org.uk");
+            QString(), QLatin1Literal("jp@stanwood.org.uk"));
 	about.addAuthor(i18n("John-Paul Stanford"), QString(),
-			"jp@stanwood.org.uk");
+            QLatin1Literal("jp@stanwood.org.uk"));
 	about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
-			"maemre2@gmail.com");
+            QLatin1Literal("maemre2@gmail.com"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     parser.addVersionOption();

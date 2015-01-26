@@ -67,7 +67,7 @@ BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView* view, QObject *
 
 	m_audioPlayer = 0;
 
-	m_soundPath = QStandardPaths::locate(QStandardPaths::DataLocation, "sounds", QStandardPaths::LocateDirectory);
+    m_soundPath = QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1Literal("sounds"), QStandardPaths::LocateDirectory);
 }
 
 BomberBoard::~BomberBoard()
@@ -87,7 +87,7 @@ void BomberBoard::resetPlane()
 
 void BomberBoard::resize(QSize& size)
 {
-	setBackgroundBrush(m_renderer->spritePixmap("background", size));
+    setBackgroundBrush(m_renderer->spritePixmap(QLatin1Literal("background"), size));
 
 	unsigned int minTileSizeWidth = size.width() / TILE_NUM_W;
 	unsigned int minTileSizeHeight = size.height() / TILE_NUM_H;
@@ -292,7 +292,7 @@ void BomberBoard::bombExploded()
 void BomberBoard::settingsChanged()
 {
 	setSounds(BomberSettings::playSounds());
-	setBackgroundBrush(m_renderer->spritePixmap("background", m_view->size()));
+    setBackgroundBrush(m_renderer->spritePixmap(QLatin1Literal("background"), m_view->size()));
 	redraw();
 }
 
@@ -307,7 +307,7 @@ void BomberBoard::crashed()
 	QPointF pos = m_plane->position();
 	m_plane->setPosition(pos.x() + 1, pos.y());
 	m_plane->setState(Plane::Exploding);
-	playSound(QString("explode.ogg"));
+    playSound(QLatin1Literal("explode.ogg"));
 	QTimer::singleShot(PLANE_EXPLODE_TIME, this, SLOT(planeExploded()));
 }
 
