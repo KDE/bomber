@@ -41,13 +41,13 @@ Bomber::Bomber()
 	);
 	m_selector = new KgThemeSelector(&m_provider);
 
-	m_statusBar = statusBar();
-        m_level = new QLabel(i18nc("Used to display the current level of play to the user", "Level: %1", 0));
-        m_statusBar->addPermanentWidget(m_level);
-        m_score = new QLabel(i18nc("Used to inform the user of their current score", "Score: %1", 0));
-        m_statusBar->addPermanentWidget(m_score);
-        m_lives = new QLabel(i18nc("Used to tell the user how many lives they have left", "Lives: %1", 3));
-        m_statusBar->addPermanentWidget(m_lives);
+    m_statusBar = statusBar();
+    m_level = new QLabel(i18nc("Used to display the current level of play to the user", "Level: %1", 0));
+    m_statusBar->addPermanentWidget(m_level);
+    m_score = new QLabel(i18nc("Used to inform the user of their current score", "Score: %1", 0));
+    m_statusBar->addPermanentWidget(m_score);
+    m_lives = new QLabel(i18nc("Used to tell the user how many lives they have left", "Lives: %1", 3));
+    m_statusBar->addPermanentWidget(m_lives);
 
 	m_gameWidget = new BomberGameWidget(&m_provider, this);
 	connect(&m_provider, &KgThemeProvider::currentThemeChanged, m_gameWidget, &BomberGameWidget::settingsChanged);
