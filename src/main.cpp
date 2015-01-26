@@ -54,6 +54,8 @@ int main(int argc, char **argv)
     about.processCommandLine(&parser);
     KDBusService service;
 
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("bomber")));
+
     // see if we are starting with session management
     if (app.isSessionRestored()) {
         RESTORE(Bomber);
