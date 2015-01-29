@@ -25,7 +25,6 @@
   <name xml:lang="sr-ijekavian">Бомбардер</name>
   <name xml:lang="sr-ijekavianlatin">Bombarder</name>
   <name xml:lang="sv">Bomber</name>
-  <name xml:lang="tr">Bombacı</name>
   <name xml:lang="uk">Bomber</name>
   <name xml:lang="x-test">xxBomberxx</name>
   <name xml:lang="zh-TW">戰鬥機_Bomber</name>
@@ -52,7 +51,6 @@
     <p xml:lang="sr-ijekavian">Бомбардер је аркадна игра за једног играча. Нападајте градове авионом којем опада висина.</p>
     <p xml:lang="sr-ijekavianlatin">Bombarder je arkadna igra za jednog igrača. Napadajte gradove avionom kojem opada visina.</p>
     <p xml:lang="sv">Bomber är ett spelhallsspel för en ensam spelare. Spelaren invaderar olika städer i ett flygplan som flyger på allt lägre höjd.</p>
-    <p xml:lang="tr">Bombacı tek oyunculu bir bilgisayar oyunudur. Oyuncu yüksekliği azalan bir uçakta çeşitli şehirleri istila eder.</p>
     <p xml:lang="uk">Bomber — аркадна гра для одного гравця. Гравець бомбардує з літака міста, висота будинків у яких поступово зростає.</p>
     <p xml:lang="x-test">xxBomber is a single player arcade game. The player is invading various cities in a plane that is decreasing in height.xx</p>
     <p xml:lang="zh-TW">Bomber 是個大型單玩家遊戲。玩家要侵略多個城市，由高到低。</p>
@@ -79,7 +77,6 @@
     <p xml:lang="sr-ijekavian">Циљ игре је уништити све зграде и прећи на следећи ниво. Сваки ниво је мало тежи од претходног, тиме што се повећава брзина авиона и висина зграда.</p>
     <p xml:lang="sr-ijekavianlatin">Cilj igre je uništiti sve zgrade i preći na sledeći nivo. Svaki nivo je malo teži od prethodnog, time što se povećava brzina aviona i visina zgrada.</p>
     <p xml:lang="sv">Spelets mål är att förstöra alla byggnader och gå vidare till nästa nivå. Varje nivå blir lite svårare genom att planets hastighet och byggnadernas höjd ökar.</p>
-    <p xml:lang="tr">Oyunun amacı tüm binaları yok etmek ve sonraki seviyeye ilerlemektir. Her seviye uçağın hızı ve binaların yükseklikleri arttığından dolayı biraz daha zorlaşır.</p>
     <p xml:lang="uk">Метою гри є зруйнувати всі будинки і перейти на наступний рівень. З кожним рівнем гра стає складнішою, оскільки зростає швидкість літака і висота будинків.</p>
     <p xml:lang="x-test">xxThe goal of the game is to destroy all the buildings and advance to the next level. Each level gets a bit harder by increasing the speed of the plane and the height of the buildings.xx</p>
     <p xml:lang="zh-TW">遊戲的目的是要催毀所有的建築物，並進到下一關。每一關難度會越來越高，建築物也會越來越高。</p>
@@ -113,7 +110,6 @@
   <developer_name xml:lang="sr-ijekavian">заједница КДЕ‑а</developer_name>
   <developer_name xml:lang="sr-ijekavianlatin">zajednica KDE‑a</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
-  <developer_name xml:lang="tr">KDE Topluluğu</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
   <developer_name xml:lang="zh-TW">KDE 社群</developer_name>
