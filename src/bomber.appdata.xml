@@ -27,6 +27,7 @@
   <name xml:lang="sv">Bomber</name>
   <name xml:lang="uk">Bomber</name>
   <name xml:lang="x-test">xxBomberxx</name>
+  <name xml:lang="zh-CN">Bomber</name>
   <name xml:lang="zh-TW">戰鬥機_Bomber</name>
   <description>
     <p>
@@ -112,6 +113,7 @@
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
+  <developer_name xml:lang="zh-CN">KDE 社区</developer_name>
   <developer_name xml:lang="zh-TW">KDE 社群</developer_name>
   <provides>
     <binary>bomber</binary>
