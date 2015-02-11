@@ -102,7 +102,7 @@ void Building::setupBuildingTiles()
 
 KGameRenderedItem *Building::createBuildingTile(const QString &pixmap)
 {
-    KGameRenderedItem *tile = new KGameRenderedItem(m_renderer, pixmap);
+    auto tile = new KGameRenderedItem(m_renderer, pixmap);
     tile->setRenderSize(QSize(32, 64));
     return tile;
 }

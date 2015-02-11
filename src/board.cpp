@@ -53,7 +53,7 @@ const unsigned int BOMB_EXPLODE_TIME = 1000;
 BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *parent) :
     QGraphicsScene(parent), m_renderer(renderer), m_view(view)
 {
-    m_bomb = NULL;
+    m_bomb = Q_NULLPTR;
     m_clock = new QTimer(this);
     m_clock->setInterval(GAME_DELAY);
     connect(m_clock, &QTimer::timeout, this, &BomberBoard::tick);
@@ -64,7 +64,7 @@ BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *
     resetPlane();
     clear();
 
-    m_audioPlayer = 0;
+    m_audioPlayer = Q_NULLPTR;
 
     m_soundPath = QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1Literal("sounds"), QStandardPaths::LocateDirectory);
 }
@@ -98,7 +98,7 @@ void BomberBoard::resize(QSize &size)
     }
 
     m_plane->resize(m_tileSize);
-    if (m_bomb != NULL) {
+    if (m_bomb != Q_NULLPTR) {
         m_bomb->resize(m_tileSize);
     }
 
@@ -111,7 +111,7 @@ void BomberBoard::resize(QSize &size)
 void BomberBoard::redraw()
 {
     m_plane->resetPixmaps();
-    if (m_bomb != NULL) {
+    if (m_bomb != Q_NULLPTR) {
         m_bomb->resetPixmaps();
     }
 }
@@ -145,7 +145,7 @@ void BomberBoard::newLevel(unsigned int level)
         unsigned int height = (KRandom::random() % (max - min)) + min;
 
         m_buildingBlocks += height;
-        Building *building = new Building(m_renderer, this, i + 1, height);
+        auto building = new Building(m_renderer, this, i + 1, height);
 
         building->resize(m_tileSize);
         building->show();
@@ -175,7 +175,7 @@ void BomberBoard::playSound(const QString &name)
 void BomberBoard::setSounds(bool val)
 {
     m_playSounds = val;
-    if (val == true && m_audioPlayer == 0) {
+    if (val == true && m_audioPlayer == Q_NULLPTR) {
         m_audioPlayer = Phonon::createPlayer(Phonon::GameCategory);
     }
 }
@@ -186,7 +186,7 @@ void BomberBoard::tick()
 
     m_plane->advanceItem();
 
-    if (m_bomb != NULL) {
+    if (m_bomb != Q_NULLPTR) {
         m_bomb->advanceItem();
     }
 
@@ -197,7 +197,7 @@ void BomberBoard::tick()
     // Draw everything
     m_plane->update();
 
-    if (m_bomb != NULL) {
+    if (m_bomb != Q_NULLPTR) {
         m_bomb->update();
     }
 
@@ -208,7 +208,7 @@ void BomberBoard::tick()
 
 void BomberBoard::dropBomb()
 {
-    if (m_bomb == NULL && m_plane->state() == Explodable::Moving) {
+    if (m_bomb == Q_NULLPTR && m_plane->state() == Explodable::Moving) {
         QPointF planePos = m_plane->position();
         m_bomb = new Bomb(m_renderer, this, planePos.x(), planePos.y() + 1, m_tileSize);
         this->addItem(m_bomb);
@@ -227,7 +227,7 @@ void BomberBoard::checkCollisions()
             crashed();
         }
 
-        if (m_bomb != NULL) {
+        if (m_bomb != Q_NULLPTR) {
             if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state()
                     == Explodable::Moving) {
                 // Bomb hit a building
@@ -235,11 +235,11 @@ void BomberBoard::checkCollisions()
                 m_buildingBlocks--;
                 emit onBombHit();
                 bombHit(m_bomb, building->position().x(), Building::BUILD_BASE_LOCATION - (building->height()));
-                m_bomb = NULL;
+                m_bomb = Q_NULLPTR;
             } else if (m_bomb->position().y() >= Building::BUILD_BASE_LOCATION + 1) {
                 // Bomb hit the ground
                 bombHit(m_bomb, (unsigned int)m_bomb->position().x(), Building::BUILD_BASE_LOCATION);
-                m_bomb = NULL;
+                m_bomb = Q_NULLPTR;
             }
         }
 
@@ -293,7 +293,7 @@ void BomberBoard::clear()
     m_buildings.clear();
 
     delete m_bomb;
-    m_bomb = NULL;
+    m_bomb = Q_NULLPTR;
 
     resetPlane();
 }

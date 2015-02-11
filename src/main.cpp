@@ -60,7 +60,7 @@ int main(int argc, char **argv)
     if (app.isSessionRestored()) {
         RESTORE(Bomber);
     } else {
-        Bomber *widget = new Bomber;
+        auto widget = new Bomber;
         widget->setMinimumSize(320, 200);
         widget->show();
         widget->readSettings();

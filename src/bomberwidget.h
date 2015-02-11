@@ -39,7 +39,7 @@ public:
     enum State
     {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver};
 
-    explicit BomberGameWidget(KgThemeProvider *provider, QWidget *parent = 0);
+    explicit BomberGameWidget(KgThemeProvider *provider, QWidget *parent = Q_NULLPTR);
     ~BomberGameWidget();
 
     /**
@@ -158,8 +158,8 @@ private slots:
     void onPlaneCrashed();
 
 private:
-    virtual void resizeEvent(QResizeEvent *event);
-    virtual void mouseReleaseEvent(QMouseEvent *event);
+    virtual void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
+    virtual void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * Create the overlay used to display info to the user. The info will

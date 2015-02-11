@@ -51,7 +51,7 @@ public:
      * \param view The graphics view object which this board is bound to
      * \param parent The widget which the board is inserted into
      */
-    explicit BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *parent = 0);
+    explicit BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *parent = Q_NULLPTR);
 
     ~BomberBoard();
 
