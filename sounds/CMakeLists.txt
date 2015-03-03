@@ -1,2 +1,2 @@
 install(FILES                
-        DESTINATION  ${DATA_INSTALL_DIR}/bomber/sounds)
+        DESTINATION  ${KDE_INSTALL_DATADIR}/bomber/sounds)
