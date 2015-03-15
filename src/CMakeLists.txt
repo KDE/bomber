@@ -12,7 +12,7 @@ set(bomber_SRCS
  )
 
 kconfig_add_kcfg_files(bomber_SRCS settings.kcfgc )
-file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../pictures/hi*-apps-bomber.png")
+file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../pictures/*-apps-bomber.png")
 ecm_add_app_icon(bomber_SRCS ICONS ${ICONS_SRCS})
 add_executable(bomber ${bomber_SRCS})
 
