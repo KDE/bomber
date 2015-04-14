@@ -31,12 +31,12 @@ static const char version[] = "0.2";
 
 int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
     Kdelibs4ConfigMigrator migrate(QStringLiteral("bomber"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("bomberrc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("bomberui.rc"));
     migrate.migrate();
 
-    QApplication app(argc, argv);
     KAboutData about(QLatin1Literal("bomber"), i18n("Bomber"), QLatin1String(version), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
                      QString(), QLatin1Literal("jp@stanwood.org.uk"));
