@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Bomber
+Name[ast]=Bomber
 Name[bs]=Bombarder
 Name[ca]=Bomber
 Name[ca@valencia]=Bomber
@@ -57,6 +58,7 @@ Icon=bomber
 Type=Application
 Terminal=false
 GenericName=Arcade Bombing Game
+GenericName[ast]=Xuegu de bombardéu Arcade
 GenericName[bs]=Bombaški napad arkada igra
 GenericName[ca]=Joc arcade de bombardeig
 GenericName[ca@valencia]=Joc arcade de bombardeig
