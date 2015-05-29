@@ -37,6 +37,8 @@ int main(int argc, char **argv)
     migrate.setUiFiles(QStringList() << QStringLiteral("bomberui.rc"));
     migrate.migrate();
 
+    KLocalizedString::setApplicationDomain("bomber");
+
     KAboutData about(QLatin1Literal("bomber"), i18n("Bomber"), QLatin1String(version), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
                      QString(), QLatin1Literal("jp@stanwood.org.uk"));
