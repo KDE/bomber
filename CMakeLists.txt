@@ -13,7 +13,9 @@ find_package(KF5 REQUIRED COMPONENTS
     DBusAddons
     I18n
     ConfigWidgets
-    XmlGui)
+    XmlGui
+    DocTools
+)
 
 find_package(KF5KDEGames 4.9.0 REQUIRED)
 find_package(Phonon4Qt5 CONFIG REQUIRED)
