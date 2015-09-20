@@ -24,7 +24,6 @@ install(TARGETS bomber ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 ########### install files ###############
 
 install( PROGRAMS org.kde.bomber.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
-install( FILES bomber.appdata.xml DESTINATION  ${KDE_INSTALL_DATADIR}/appdata )
+install( FILES org.kde.bomber.appdata.xml DESTINATION  ${CMAKE_INSTALL_METAINFODIR} )
 install( FILES bomber.kcfg  DESTINATION  ${KDE_INSTALL_KCFGDIR} )
 install( FILES bomberui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/bomber )
-
