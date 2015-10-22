@@ -12,7 +12,6 @@ find_package(KF5 REQUIRED COMPONENTS
     Config
     DBusAddons
     I18n
-    ConfigWidgets
     XmlGui
     DocTools
 )

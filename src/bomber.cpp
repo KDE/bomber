@@ -22,7 +22,6 @@
 
 #include <QAction>
 #include <KActionCollection>
-#include <KConfigDialog>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <krandom.h>
