@@ -93,7 +93,7 @@ void Explodable::setRandomFrame()
 
 /**
  * Returns bomb's bounding rect expected in next frame
- * used by colision test
+ * used by collision test
  */
 QRectF Explodable::nextBoundingRect() const
 {
