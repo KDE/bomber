@@ -158,13 +158,13 @@ void Bomber::showHighscore()
 
 void Bomber::highscore()
 {
-    KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
+    QPointer<KScoreDialog> ksdialog = new KScoreDialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
 
     KScoreDialog::FieldInfo info;
     info[KScoreDialog::Score].setNum(m_gameWidget->score());
     info[KScoreDialog::Level].setNum(m_gameWidget->level());
-    if (ksdialog.addScore(info)) {
-        ksdialog.exec();
+    if (ksdialog->addScore(info)) {
+        ksdialog->exec();
     }
 }
 
