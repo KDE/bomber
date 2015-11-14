@@ -216,4 +216,3 @@ void Bomber::gameStateChanged(BomberGameWidget::State state)
         break;
     }
 }
-

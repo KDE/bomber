@@ -48,4 +48,3 @@ void Bomb::advanceItem()
     }
     m_nextBoundingRect.moveTo(m_xPos, m_yPos + velocity());
 }
-

@@ -28,7 +28,7 @@
 class KgThemeProvider;
 
 /**
- * This is the main game widget class. It manages things like the lives, source coutns and game states.
+ * This is the main game widget class. It manages things like the lives, source counts and game states.
  */
 class BomberGameWidget: public QGraphicsView
 {

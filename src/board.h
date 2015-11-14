@@ -74,7 +74,7 @@ public:
 
     /**
      * This is called to pause the game.
-     * \param val True if pased, otherwise false
+     * \param val True if paused, otherwise false
      */
     void setPaused(bool val);
 

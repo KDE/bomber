@@ -65,7 +65,7 @@ public:
     void show();
 
     /**
-     * Get the bounding rectange of the building
+     * Get the bounding rectangle of the building
      * \return the Bounding rectangle of the building
      */
     QRectF boundingRect() const;

@@ -34,9 +34,9 @@ public:
         Moving, Exploding, Exploded
     };
 
-    /** The width of the explostion releative to the tile */
+    /** The width of the explosion relative to the tile */
     static const qreal EXPLOSION_RELATIVE_SIZE_W;
-    /** The height of the explostion releative to the tile */
+    /** The height of the explosion relative to the tile */
     static const qreal EXPLOSION_RELATIVE_SIZE_H;
 
     explicit Explodable(const QString &mainSvg, const QString &explosionSvg,
@@ -94,7 +94,7 @@ public:
 
     /**
      * Returns bomb's bounding rect expected in next frame
-     * used by colision test
+     * used by collision test
      * \return The items next bounding rect
      */
     QRectF nextBoundingRect() const;
