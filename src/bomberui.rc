@@ -17,7 +17,7 @@
         <Separator />
         <Action name="game_highscores"/>
     </ToolBar>
-    <StatusBar />
+    <StatusBar/>
     <ActionProperties>
         <Action shortcut="Space" name="drop_bomb"/>
     </ActionProperties>
