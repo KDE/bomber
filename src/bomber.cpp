@@ -166,6 +166,7 @@ void Bomber::highscore()
     if (ksdialog->addScore(info)) {
         ksdialog->exec();
     }
+    delete ksdialog;
 }
 
 void Bomber::setSounds(bool val)
