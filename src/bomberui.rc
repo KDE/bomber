@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gui name="Bomber"
-     version="1"
-     xmlns="http://www.kde.org/standards/kxmlgui/1.0"
+<gui xmlns="http://www.kde.org/standards/kxmlgui/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     name="Bomber"
+     version="2"
      xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0
                          http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
     <MenuBar>
@@ -14,10 +14,9 @@
         <text>Main Toolbar</text>
         <Action name="game_new"/>
         <Action name="game_pause"/>
-        <Separator />
+        <Separator/>
         <Action name="game_highscores"/>
     </ToolBar>
-    <StatusBar/>
     <ActionProperties>
         <Action shortcut="Space" name="drop_bomb"/>
     </ActionProperties>
