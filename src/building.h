@@ -19,9 +19,9 @@
 #ifndef BUILDING_H
 #define BUILDING_H
 
-#include <QtCore/QRect>
-#include <QtCore/QSize>
-#include <QtCore/QList>
+#include <QRect>
+#include <QSize>
+#include <QList>
 
 class KGameRenderedItem;
 class KGameRenderer;
