@@ -41,7 +41,7 @@ public:
     enum class State
     {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver};
 
-    explicit BomberGameWidget(KgThemeProvider *provider, QWidget *parent = Q_NULLPTR);
+    explicit BomberGameWidget(KgThemeProvider *provider, QWidget *parent = nullptr);
     ~BomberGameWidget();
 
     /**

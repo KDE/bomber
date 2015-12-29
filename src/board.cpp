@@ -51,9 +51,8 @@ const unsigned int PLANE_EXPLODE_TIME = 2000;
 const unsigned int BOMB_EXPLODE_TIME = 1000;
 
 BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *parent) :
-    QGraphicsScene(parent), m_renderer(renderer), m_view(view)
+    QGraphicsScene(parent), m_renderer(renderer), m_audioPlayer(nullptr), m_bomb(nullptr), m_view(view)
 {
-    m_bomb = Q_NULLPTR;
     m_clock = new QTimer(this);
     m_clock->setInterval(GAME_DELAY);
     connect(m_clock, &QTimer::timeout, this, &BomberBoard::tick);
@@ -63,8 +62,6 @@ BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *
     m_plane->show();
     resetPlane();
     clear();
-
-    m_audioPlayer = Q_NULLPTR;
 
     m_soundPath = QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1Literal("sounds"), QStandardPaths::LocateDirectory);
 }
@@ -98,7 +95,7 @@ void BomberBoard::resize(QSize &size)
     }
 
     m_plane->resize(m_tileSize);
-    if (m_bomb != Q_NULLPTR) {
+    if (m_bomb != nullptr) {
         m_bomb->resize(m_tileSize);
     }
 
@@ -111,7 +108,7 @@ void BomberBoard::resize(QSize &size)
 void BomberBoard::redraw()
 {
     m_plane->resetPixmaps();
-    if (m_bomb != Q_NULLPTR) {
+    if (m_bomb != nullptr) {
         m_bomb->resetPixmaps();
     }
 }
@@ -175,7 +172,7 @@ void BomberBoard::playSound(const QString &name)
 void BomberBoard::setSounds(bool val)
 {
     m_playSounds = val;
-    if (val == true && m_audioPlayer == Q_NULLPTR) {
+    if (val == true && m_audioPlayer == nullptr) {
         m_audioPlayer = Phonon::createPlayer(Phonon::GameCategory);
     }
 }
@@ -186,7 +183,7 @@ void BomberBoard::tick()
 
     m_plane->advanceItem();
 
-    if (m_bomb != Q_NULLPTR) {
+    if (m_bomb != nullptr) {
         m_bomb->advanceItem();
     }
 
@@ -197,7 +194,7 @@ void BomberBoard::tick()
     // Draw everything
     m_plane->update();
 
-    if (m_bomb != Q_NULLPTR) {
+    if (m_bomb != nullptr) {
         m_bomb->update();
     }
 
@@ -208,7 +205,7 @@ void BomberBoard::tick()
 
 void BomberBoard::dropBomb()
 {
-    if (m_bomb == Q_NULLPTR && m_plane->state() == Explodable::State::Moving) {
+    if (m_bomb == nullptr && m_plane->state() == Explodable::State::Moving) {
         QPointF planePos = m_plane->position();
         m_bomb = new Bomb(m_renderer, this, planePos.x(), planePos.y() + 1, m_tileSize);
         this->addItem(m_bomb);
@@ -227,7 +224,7 @@ void BomberBoard::checkCollisions()
             crashed();
         }
 
-        if (m_bomb != Q_NULLPTR) {
+        if (m_bomb != nullptr) {
             if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state()
                     == Explodable::State::Moving) {
                 // Bomb hit a building
@@ -235,11 +232,11 @@ void BomberBoard::checkCollisions()
                 --m_buildingBlocks;
                 emit onBombHit();
                 bombHit(m_bomb, building->position().x(), Building::BUILD_BASE_LOCATION - (building->height()));
-                m_bomb = Q_NULLPTR;
+                m_bomb = nullptr;
             } else if (m_bomb->position().y() >= Building::BUILD_BASE_LOCATION + 1) {
                 // Bomb hit the ground
                 bombHit(m_bomb, (unsigned int)m_bomb->position().x(), Building::BUILD_BASE_LOCATION);
-                m_bomb = Q_NULLPTR;
+                m_bomb = nullptr;
             }
         }
 
@@ -292,7 +289,7 @@ void BomberBoard::clear()
     m_buildings.clear();
 
     delete m_bomb;
-    m_bomb = Q_NULLPTR;
+    m_bomb = nullptr;
 
     resetPlane();
 }
