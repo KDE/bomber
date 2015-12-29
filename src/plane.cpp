@@ -49,7 +49,7 @@ void Plane::resetPosition()
 
 void Plane::advanceItem()
 {
-    if (state() == Moving) {
+    if (state() == State::Moving) {
         m_xPos += velocity();
         if (m_xPos > PLANE_MAX_POSITION_X) {
             m_xPos = 0;

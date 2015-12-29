@@ -43,7 +43,7 @@ Bomb::~Bomb()
 
 void Bomb::advanceItem()
 {
-    if (state() == Moving) {
+    if (state() == State::Moving) {
         m_yPos += velocity();
     }
     m_nextBoundingRect.moveTo(m_xPos, m_yPos + velocity());

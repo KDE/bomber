@@ -43,7 +43,7 @@ Explodable::Explodable(const QString &mainSvg, const QString &explosionSvg,
     m_relativeWidth = relativeWidth;
     m_relativeHeight = relativeHeight;
     resetPixmaps();
-    m_state = Moving;
+    m_state = State::Moving;
     m_nextBoundingRect.setSize(QSizeF(m_relativeWidth, m_relativeHeight));
     setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
 }
@@ -67,7 +67,7 @@ void Explodable::update()
 void Explodable::resize(const QSize &tileSize)
 {
     m_lastSize = tileSize;
-    if (m_state == Moving) {
+    if (m_state == State::Moving) {
         setRenderSize(QSize(
                           m_relativeWidth * tileSize.width(),
                           m_relativeHeight * tileSize.height()
@@ -104,7 +104,7 @@ void Explodable::setState(Explodable::State state)
 {
     m_state = state;
     setRandomFrame();
-    if (m_state == Moving) {
+    if (m_state == State::Moving) {
         m_nextBoundingRect.setSize(QSizeF(m_relativeWidth, m_relativeHeight));
         setSpriteKey(m_mainSvg);
     } else {

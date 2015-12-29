@@ -30,7 +30,7 @@ class Explodable: public KGameRenderedItem
 {
 public:
     /** The states that a bomb can be in */
-    enum State {
+    enum class State {
         Moving, Exploding, Exploded
     };
 
