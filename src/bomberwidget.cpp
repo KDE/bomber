@@ -169,8 +169,8 @@ void BomberGameWidget::onPlaneCrashed()
 void BomberGameWidget::onBombHit()
 {
     unsigned int bonus = SCORE_INCREMENT * m_level;
-    m_score += bonus; emit
-    scoreChanged(m_score);
+    m_score += bonus;
+    emit scoreChanged(m_score);
     m_scoreLeftBeforeNewLife -= bonus;
     if (m_scoreLeftBeforeNewLife <= 0) {
         m_scoreLeftBeforeNewLife = NEW_LIVE_AT_SCORE;
@@ -185,8 +185,8 @@ void BomberGameWidget::tick()
     static signed int ticks = TICKS_PER_SECOND;
     ticks--;
     if (ticks <= 0) {
-        m_time++; emit
-        timeChanged(m_time);
+        m_time++;
+        emit timeChanged(m_time);
         ticks = TICKS_PER_SECOND;
     }
 }
@@ -206,16 +206,15 @@ void BomberGameWidget::closeLevel()
 
 void BomberGameWidget::newLevel()
 {
-    m_state = State::Running; emit
-    stateChanged(m_state);
+    m_state = State::Running;
+    emit stateChanged(m_state);
 
     m_clock->start();
     m_board->newLevel(m_level);
     m_board->setPaused(false);
 
-    emit
-    livesChanged(m_lives); emit
-    timeChanged(m_time);
+    emit livesChanged(m_lives);
+    emit timeChanged(m_time);
 
     redraw();
 }
@@ -329,11 +328,9 @@ void BomberGameWidget::onLevelCleared()
     if (m_state == State::Running) {
         m_state = State::BetweenLevels;
         closeLevel();
-        m_level++; emit
-        levelChanged(m_level);
-
-        emit
-        stateChanged(m_state);
+        m_level++;
+        emit levelChanged(m_level);
+        emit stateChanged(m_state);
         redraw();
     }
 
