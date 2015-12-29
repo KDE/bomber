@@ -117,14 +117,12 @@ void BomberGameWidget::setPaused(bool val)
         m_clock->start();
         m_board->setPaused(false);
         m_state = State::Running;
-        emit stateChanged(m_state);
     } else if (m_state == State::Running && val == true) {
         m_clock->stop();
         m_board->setPaused(true);
         m_state = State::Paused;
-        emit stateChanged(m_state);
     }
-
+    emit stateChanged(m_state);
     redraw();
 }
 
@@ -134,14 +132,12 @@ void BomberGameWidget::setSuspended(bool val)
         m_clock->start();
         m_board->setPaused(false);
         m_state = State::Running;
-        emit stateChanged(m_state);
-    }
-    if (m_state == State::Running && val == true) {
+    } else if (m_state == State::Running && val == true) {
         m_clock->stop();
         m_board->setPaused(true);
         m_state = State::Suspended;
-        emit stateChanged(m_state);
     }
+    emit stateChanged(m_state);
     redraw();
 }
 
