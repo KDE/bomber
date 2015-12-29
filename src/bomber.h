@@ -39,17 +39,10 @@ class Bomber: public KXmlGuiWindow
 {
     Q_OBJECT
 public:
-    /**
-     * Default Constructor
-     */
     Bomber();
+    virtual ~Bomber();
 
     void readSettings();
-
-    /**
-     * Default Destructor
-     */
-    virtual ~Bomber();
 
 private slots:
     void closeGame();

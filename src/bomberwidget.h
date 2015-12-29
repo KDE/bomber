@@ -35,7 +35,9 @@ class BomberGameWidget: public QGraphicsView
     Q_OBJECT
 
 public:
-    /** The different states that the game can be in */
+    /**
+     * The different states that the game can be in
+     */
     enum class State
     {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver};
 
@@ -176,7 +178,9 @@ private:
     unsigned int m_score;
     unsigned int m_lives;
     unsigned int m_time;
-    /** Used to store the remaining score before a new life is given */
+    /**
+     * Used to store the remaining score before a new life is given
+     */
     unsigned int m_scoreLeftBeforeNewLife;
 
     KGameRenderer m_renderer;
@@ -184,7 +188,6 @@ private:
     BomberBoard *m_board;
 
     QGraphicsPixmapItem *m_overlay;
-
 };
 
 #endif

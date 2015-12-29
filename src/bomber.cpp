@@ -64,8 +64,6 @@ Bomber::Bomber()
 
     setFocus();
     setupGUI();
-
-    // readSettings();
 }
 
 Bomber::~Bomber()

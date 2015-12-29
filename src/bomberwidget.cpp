@@ -69,7 +69,6 @@ BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
 BomberGameWidget::~BomberGameWidget()
 {
     delete m_board;
-    //delete m_overlay; // m_overlay is implicitly deleted by m_board
 }
 
 unsigned int BomberGameWidget::level() const
@@ -173,7 +172,6 @@ void BomberGameWidget::onBombHit()
         ++m_lives;
         emit livesChanged(m_lives);
     }
-
 }
 
 void BomberGameWidget::tick()
@@ -329,7 +327,6 @@ void BomberGameWidget::onLevelCleared()
         emit stateChanged(m_state);
         redraw();
     }
-
 }
 
 BomberGameWidget::State BomberGameWidget::state() const

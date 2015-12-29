@@ -61,7 +61,9 @@ public:
      */
     void setFrame(unsigned int frame);
 
-    /** Show the building item on the game scene */
+    /**
+     * Show the building item on the game scene
+     */
     void show();
 
     /**

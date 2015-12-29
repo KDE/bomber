@@ -138,7 +138,9 @@ public slots:
     void settingsChanged();
 
 private slots:
-    /** This is called once a second to update and draw all the game objects */
+    /**
+     * This is called once a second to update and draw all the game objects
+     */
     void tick();
 
     /**
@@ -176,10 +178,14 @@ private:
      */
     void crashed();
 
-    /** This is the renderer used to render game objects */
+    /**
+     * This is the renderer used to render game objects
+     */
     KGameRenderer *m_renderer;
 
-    /** This is the size of a tiling block */
+    /**
+     * This is the size of a tiling block
+     */
     QSize m_tileSize;
     QTimer *m_clock;
 
@@ -187,22 +193,34 @@ private:
     bool m_playSounds;
     QDir m_soundPath;
 
-    /** If their is a bomb currently dropping then it is pointed to by this */
+    /**
+     * If their is a bomb currently dropping then it is pointed to by this
+     */
     Bomb *m_bomb;
 
-    /** This points to the plane object used in the level */
+    /**
+     * This points to the plane object used in the level
+     */
     Plane *m_plane;
 
-    /** This contains all the buildings in the current level */
+    /**
+     * This contains all the buildings in the current level
+     */
     QList<Building *> m_buildings;
 
-    /** This contains all the bombs that are currently exploding */
+    /**
+     * This contains all the bombs that are currently exploding
+     */
     QQueue<Bomb *> m_explodingBombs;
 
-    /** This is the number of blocks that make up the buildings */
+    /**
+     * This is the number of blocks that make up the buildings
+     */
     unsigned int m_buildingBlocks;
 
-    /** This is the graphics view object which this board is bound. */
+    /**
+     * This is the graphics view object which this board is bound.
+     */
     QGraphicsView *m_view;
 };
 

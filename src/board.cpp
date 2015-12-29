@@ -251,7 +251,6 @@ void BomberBoard::checkCollisions()
 
 void BomberBoard::bombHit(Bomb *bomb, qreal moveBombToX, qreal moveBombToY)
 {
-    // playSound(QString("explode.ogg"));
     bomb->setPosition(moveBombToX, moveBombToY);
     bomb->setState(Bomb::Exploding);
     m_explodingBombs.enqueue(bomb);
