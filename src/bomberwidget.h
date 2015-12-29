@@ -36,7 +36,7 @@ class BomberGameWidget: public QGraphicsView
 
 public:
     /** The different states that the game can be in */
-    enum State
+    enum class State
     {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver};
 
     explicit BomberGameWidget(KgThemeProvider *provider, QWidget *parent = Q_NULLPTR);

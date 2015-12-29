@@ -37,7 +37,7 @@ static const unsigned int TICKS_PER_SECOND = 1000 / GAME_TIME_DELAY;
 static const unsigned int OVERLAY_Z_VALUE = 1000;
 
 BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
-    QGraphicsView(parent), m_state(BeforeFirstGame), m_level(0), m_lives(0), m_time(0),
+    QGraphicsView(parent), m_state(State::BeforeFirstGame), m_level(0), m_lives(0), m_time(0),
     m_renderer(provider)
 {
     // Gameboard
@@ -84,10 +84,10 @@ unsigned int BomberGameWidget::score() const
 
 void BomberGameWidget::closeGame()
 {
-    if (m_state != BeforeFirstGame && m_state != GameOver) {
+    if (m_state != State::BeforeFirstGame && m_state != State::GameOver) {
         closeLevel();
 
-        m_state = GameOver;
+        m_state = State::GameOver;
         emit stateChanged(m_state);
         emit gameOver();
 
@@ -113,15 +113,15 @@ void BomberGameWidget::newGame()
 
 void BomberGameWidget::setPaused(bool val)
 {
-    if (m_state == Paused && val == false) {
+    if (m_state == State::Paused && val == false) {
         m_clock->start();
         m_board->setPaused(false);
-        m_state = Running;
+        m_state = State::Running;
         emit stateChanged(m_state);
-    } else if (m_state == Running && val == true) {
+    } else if (m_state == State::Running && val == true) {
         m_clock->stop();
         m_board->setPaused(true);
-        m_state = Paused;
+        m_state = State::Paused;
         emit stateChanged(m_state);
     }
 
@@ -130,16 +130,16 @@ void BomberGameWidget::setPaused(bool val)
 
 void BomberGameWidget::setSuspended(bool val)
 {
-    if (m_state == Suspended && val == false) {
+    if (m_state == State::Suspended && val == false) {
         m_clock->start();
         m_board->setPaused(false);
-        m_state = Running;
+        m_state = State::Running;
         emit stateChanged(m_state);
     }
-    if (m_state == Running && val == true) {
+    if (m_state == State::Running && val == true) {
         m_clock->stop();
         m_board->setPaused(true);
-        m_state = Suspended;
+        m_state = State::Suspended;
         emit stateChanged(m_state);
     }
     redraw();
@@ -206,7 +206,7 @@ void BomberGameWidget::closeLevel()
 
 void BomberGameWidget::newLevel()
 {
-    m_state = Running; emit
+    m_state = State::Running; emit
     stateChanged(m_state);
 
     m_clock->start();
@@ -229,11 +229,11 @@ void BomberGameWidget::mouseReleaseEvent(QMouseEvent *event)
 
 void BomberGameWidget::onDropBomb()
 {
-    if (m_state == Running) {
+    if (m_state == State::Running) {
         m_board->dropBomb();
-    } else if (m_state == BetweenLevels) {
+    } else if (m_state == State::BetweenLevels) {
         newLevel();
-    } else if (m_state == BeforeFirstGame) {
+    } else if (m_state == State::BeforeFirstGame) {
         newGame();
     }
 }
@@ -245,14 +245,14 @@ void BomberGameWidget::redraw()
     }
     QGraphicsItem *item;
     switch (m_state) {
-    case BeforeFirstGame:
+    case State::BeforeFirstGame:
         foreach (item, m_board->items()) {
             item->hide();
         }
         generateOverlay();
         m_overlay->show();
         break;
-    case Running:
+    case State::Running:
         foreach (item, m_board->items()) {
             item->show();
         }
@@ -286,17 +286,17 @@ void BomberGameWidget::generateOverlay()
 
     QString text;
     switch (m_state) {
-    case BeforeFirstGame:
+    case State::BeforeFirstGame:
         text = i18nc("Message show to the user when the game is loaded", "Welcome to Bomber.\nClick to start a game");
         break;
-    case Paused:
+    case State::Paused:
         text = i18nc("Message show to the user while the game is paused", "Paused");
         break;
-    case BetweenLevels:
+    case State::BetweenLevels:
         text = i18nc("Message telling user which level they just completed", "You have successfully cleared level %1\n", m_level - 1)
                + i18nc("Message telling user which level they are about to start", "On to level %1.", m_level);
         break;
-    case GameOver:
+    case State::GameOver:
         text = i18nc("Used to tell the user that the game is over", "Game over.");
         break;
     default:
@@ -326,8 +326,8 @@ void BomberGameWidget::generateOverlay()
 
 void BomberGameWidget::onLevelCleared()
 {
-    if (m_state == Running) {
-        m_state = BetweenLevels;
+    if (m_state == State::Running) {
+        m_state = State::BetweenLevels;
         closeLevel();
         m_level++; emit
         levelChanged(m_level);

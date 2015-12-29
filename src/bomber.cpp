@@ -111,15 +111,15 @@ void Bomber::newGame()
 {
     // Check for running game
     closeGame();
-    if (m_gameWidget->state() == BomberGameWidget::BeforeFirstGame
-            || m_gameWidget->state() == BomberGameWidget::GameOver) {
+    if (m_gameWidget->state() == BomberGameWidget::State::BeforeFirstGame
+            || m_gameWidget->state() == BomberGameWidget::State::GameOver) {
         m_gameWidget->newGame();
     }
 }
 
 void Bomber::pauseGame()
 {
-    if (m_gameWidget->state() == BomberGameWidget::Paused) {
+    if (m_gameWidget->state() == BomberGameWidget::State::Paused) {
         m_gameWidget->setPaused(false);
     } else {
         m_gameWidget->setPaused(true);
@@ -128,13 +128,13 @@ void Bomber::pauseGame()
 
 void Bomber::closeGame()
 {
-    if (m_gameWidget->state() == BomberGameWidget::BeforeFirstGame
-            || m_gameWidget->state() == BomberGameWidget::GameOver) {
+    if (m_gameWidget->state() == BomberGameWidget::State::BeforeFirstGame
+            || m_gameWidget->state() == BomberGameWidget::State::GameOver) {
         return;
     }
 
     BomberGameWidget::State old_state = m_gameWidget->state();
-    if (old_state == BomberGameWidget::Running) {
+    if (old_state == BomberGameWidget::State::Running) {
         m_gameWidget->setPaused(true);
     }
     int ret = KMessageBox::questionYesNo(this, i18nc("Message displayed when play tries to quit a game that is currently running",
@@ -142,7 +142,7 @@ void Bomber::closeGame()
                                          KStandardGuiItem::close(), KStandardGuiItem::cancel());
     if (ret == KMessageBox::Yes) {
         m_gameWidget->closeGame();
-    } else if (old_state == BomberGameWidget::Running) {
+    } else if (old_state == BomberGameWidget::State::Running) {
         m_gameWidget->setPaused(false);
     }
 }
@@ -199,16 +199,15 @@ void Bomber::displayLives(unsigned int lives)
 void Bomber::gameStateChanged(BomberGameWidget::State state)
 {
     switch (state) {
-
-    case BomberGameWidget::Paused:
+    case BomberGameWidget::State::Paused:
         m_pauseAction->setChecked(true);
         m_statusBar->clearMessage();
         break;
-    case BomberGameWidget::Running:
+    case BomberGameWidget::State::Running:
         m_pauseAction->setChecked(false);
         m_statusBar->clearMessage();
         break;
-    case BomberGameWidget::GameOver:
+    case BomberGameWidget::State::GameOver:
         m_statusBar->showMessage(i18nc("Game over messaged displayed in the status bar", "Game over. Press '%1' for a new game",
                                        m_newAction->shortcuts().first().toString(QKeySequence::NativeText)));
         highscore();
