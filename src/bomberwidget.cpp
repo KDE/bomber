@@ -303,7 +303,7 @@ void BomberGameWidget::generateOverlay()
     p.setFont(font);
     unsigned int textWidth = p.boundingRect(p.viewport(), Qt::AlignCenter | Qt::AlignVCenter, text).width();
     unsigned int fontSize = 28;
-    while ((textWidth > itemWidth * 0.95)) {
+    while (textWidth > itemWidth * 0.95) {
         --fontSize;
         font.setPointSize(fontSize);
         p.setFont(font);
