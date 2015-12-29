@@ -133,7 +133,7 @@ void BomberBoard::newLevel(unsigned int level)
     m_plane->setState(Explodable::Moving);
     m_buildingBlocks = 0;
     //Create the buildings
-    for (unsigned int i = 0; i < NUMBER_BUILDINGS; i++) {
+    for (unsigned int i = 0; i < NUMBER_BUILDINGS; ++i) {
         unsigned int min = level;
         if (min < 3) {
             min = 3;
@@ -223,7 +223,7 @@ void BomberBoard::checkCollisions()
                 == Explodable::Moving) {
             // Plane crashed into the building
             building->destoryTop();
-            m_buildingBlocks--;
+            --m_buildingBlocks;
             crashed();
         }
 
@@ -232,7 +232,7 @@ void BomberBoard::checkCollisions()
                     == Explodable::Moving) {
                 // Bomb hit a building
                 building->destoryTop();
-                m_buildingBlocks--;
+                --m_buildingBlocks;
                 emit onBombHit();
                 bombHit(m_bomb, building->position().x(), Building::BUILD_BASE_LOCATION - (building->height()));
                 m_bomb = Q_NULLPTR;

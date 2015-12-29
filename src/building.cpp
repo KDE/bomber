@@ -59,7 +59,7 @@ void Building::setHeight(unsigned int height)
 {
     if (height < m_height) {
         // Building getting smaller so remove the top
-        for (unsigned int i = 1; i <= m_height - height; i++) {
+        for (unsigned int i = 1; i <= m_height - height; ++i) {
             m_buildingTiles.at(m_height - i)->hide();
             m_board->removeItem(m_buildingTiles.at(m_height - i));
             delete m_buildingTiles.at(m_height - i);
@@ -86,7 +86,7 @@ void Building::setupBuildingTiles()
     unsigned int style = KRandom::random() % styleCount;
     unsigned int maxVarient = m_renderer->frameCount(QString::fromLatin1("building_%1").arg(style));
 
-    for (unsigned int heightIndex = 0; heightIndex < m_height - 1; heightIndex++) {
+    for (unsigned int heightIndex = 0; heightIndex < m_height - 1; ++heightIndex) {
         unsigned int varient = KRandom::random() % (maxVarient);
         const QString pixmap = QString::fromLatin1("building_%1_%2").arg(style).arg(varient);
         m_buildingTiles.append(createBuildingTile(pixmap));
@@ -118,7 +118,7 @@ void Building::resize(const QSize &size)
 {
     QSize tileSize(static_cast<unsigned int>(BUILDING_RELATIVE_WIDTH * size.width()),
                    static_cast<unsigned int>(BUILDING_RELATIVE_HEIGHT * size.height()));
-    for (int i = 0; i < m_buildingTiles.size(); i++) {
+    for (int i = 0; i < m_buildingTiles.size(); ++i) {
         KGameRenderedItem *tile = m_buildingTiles.at(i);
         tile->setRenderSize(tileSize);
         tile->setPos(m_board->mapPosition(QPointF(m_xPos, BUILD_BASE_LOCATION - i)));

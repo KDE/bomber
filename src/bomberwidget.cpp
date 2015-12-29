@@ -153,7 +153,7 @@ void BomberGameWidget::setSounds(bool val)
 
 void BomberGameWidget::onPlaneCrashed()
 {
-    m_lives--;
+    --m_lives;
     emit livesChanged(m_lives);
     if (m_lives <= 0) {
         closeGame();
@@ -170,7 +170,7 @@ void BomberGameWidget::onBombHit()
     m_scoreLeftBeforeNewLife -= bonus;
     if (m_scoreLeftBeforeNewLife <= 0) {
         m_scoreLeftBeforeNewLife = NEW_LIVE_AT_SCORE;
-        m_lives++;
+        ++m_lives;
         emit livesChanged(m_lives);
     }
 
@@ -179,9 +179,9 @@ void BomberGameWidget::onBombHit()
 void BomberGameWidget::tick()
 {
     static signed int ticks = TICKS_PER_SECOND;
-    ticks--;
+    --ticks;
     if (ticks <= 0) {
-        m_time++;
+        ++m_time;
         emit timeChanged(m_time);
         ticks = TICKS_PER_SECOND;
     }
@@ -304,7 +304,7 @@ void BomberGameWidget::generateOverlay()
     unsigned int textWidth = p.boundingRect(p.viewport(), Qt::AlignCenter | Qt::AlignVCenter, text).width();
     unsigned int fontSize = 28;
     while ((textWidth > itemWidth * 0.95)) {
-        fontSize--;
+        --fontSize;
         font.setPointSize(fontSize);
         p.setFont(font);
         textWidth = p.boundingRect(p.viewport(), Qt::AlignCenter | Qt::AlignVCenter, text).width();
@@ -324,7 +324,7 @@ void BomberGameWidget::onLevelCleared()
     if (m_state == State::Running) {
         m_state = State::BetweenLevels;
         closeLevel();
-        m_level++;
+        ++m_level;
         emit levelChanged(m_level);
         emit stateChanged(m_state);
         redraw();

@@ -53,7 +53,7 @@ void Plane::advanceItem()
         m_xPos += velocity();
         if (m_xPos > PLANE_MAX_POSITION_X) {
             m_xPos = 0;
-            m_yPos++;
+            ++m_yPos;
         }
     }
     m_nextBoundingRect.moveTo(m_xPos + velocity(), m_yPos);
