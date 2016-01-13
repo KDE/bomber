@@ -21,6 +21,7 @@
   <name xml:lang="ko">Bomber</name>
   <name xml:lang="nds">Bomber</name>
   <name xml:lang="nl">Bomber</name>
+  <name xml:lang="nn">Bombar</name>
   <name xml:lang="pl">Bombowiec</name>
   <name xml:lang="pt">Bomber</name>
   <name xml:lang="pt-BR">Bomber</name>
@@ -131,6 +132,7 @@
   <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nds">De KDE-Meenschap</developer_name>
   <developer_name xml:lang="nl">De KDE gemeenschap</developer_name>
+  <developer_name xml:lang="nn">KDE-fellesskapet</developer_name>
   <developer_name xml:lang="pl">Społeczność KDE</developer_name>
   <developer_name xml:lang="pt">A Comunidade do KDE</developer_name>
   <developer_name xml:lang="pt-BR">KDE Community</developer_name>
