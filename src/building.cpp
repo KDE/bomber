@@ -32,7 +32,6 @@ const qreal BUILDING_RELATIVE_WIDTH = 1.0;
  * 1.0 means it's the same size as the tile.
  */
 const qreal BUILDING_RELATIVE_HEIGHT = 1.0;
-const unsigned int MAX_STYLE = 1;
 
 /** The vertical tile number of the bottom tile in the building */
 const unsigned int Building::BUILD_BASE_LOCATION = 16;
