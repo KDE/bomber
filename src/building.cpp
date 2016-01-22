@@ -39,7 +39,7 @@ const unsigned int Building::BUILD_BASE_LOCATION = 16;
 
 Building::Building(KGameRenderer *renderer, BomberBoard *board, unsigned int position,
                    unsigned int height) :
-    m_renderer(renderer), m_board(board), m_height(0), m_xPos(position)
+    m_height(0), m_renderer(renderer), m_board(board), m_xPos(position)
 {
     setHeight(height);
     setupBuildingTiles();
