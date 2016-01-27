@@ -18,6 +18,7 @@
 #include "bomber.h"
 
 #include <KAboutData>
+#include <KCrash>
 
 #include <KLocalizedString>
 #include <QApplication>
@@ -48,6 +49,7 @@ int main(int argc, char **argv)
                     QLatin1Literal("maemre2@gmail.com"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
+    KCrash::initialize();
     parser.addVersionOption();
     parser.addHelpOption();
     about.setupCommandLine(&parser);
