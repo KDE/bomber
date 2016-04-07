@@ -63,7 +63,7 @@ BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *
     resetPlane();
     clear();
 
-    m_soundPath = QStandardPaths::locate(QStandardPaths::DataLocation, QLatin1Literal("sounds"), QStandardPaths::LocateDirectory);
+    m_soundPath = QStandardPaths::locate(QStandardPaths::AppDataLocation, QLatin1Literal("sounds"), QStandardPaths::LocateDirectory);
 }
 
 BomberBoard::~BomberBoard()
