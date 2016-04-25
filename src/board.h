@@ -103,6 +103,7 @@ signals:
      */
     void onPlaneCrash();
 
+    void playBombSound();
     void playCrashSound();
 
     /**

@@ -231,6 +231,7 @@ void BomberBoard::bombHit(Bomb *bomb, qreal moveBombToX, qreal moveBombToY)
     bomb->setState(Bomb::State::Exploding);
     m_explodingBombs.enqueue(bomb);
     QTimer::singleShot(BOMB_EXPLODE_TIME, this, SLOT(bombExploded()));
+    emit playBombSound();
 }
 
 void BomberBoard::bombExploded()

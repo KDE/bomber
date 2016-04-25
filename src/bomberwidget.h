@@ -175,6 +175,7 @@ private:
     void closeLevel();
     void newLevel();
 
+    void playBombSound();
     void playCrashSound();
 
     State m_state;
@@ -192,6 +193,8 @@ private:
     BomberBoard *m_board;
 
     QGraphicsPixmapItem *m_overlay;
+
+    KgSound m_soundBomb;
     KgSound m_soundCrash;
 };
 
