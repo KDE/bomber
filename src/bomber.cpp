@@ -156,17 +156,20 @@ void Bomber::showHighscore()
 
 void Bomber::highscore()
 {
-    if (m_gameWidget->score() == 0) {
-        showHighscore();
-        return;
-    }
+    const unsigned int score = m_gameWidget->score();
+
     QPointer<KScoreDialog> ksdialog = new KScoreDialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
 
     KScoreDialog::FieldInfo info;
-    info[KScoreDialog::Score].setNum(m_gameWidget->score());
+    info[KScoreDialog::Score].setNum(score);
     info[KScoreDialog::Level].setNum(m_gameWidget->level());
-    if (ksdialog->addScore(info)) {
+    if (score > 0 && ksdialog->addScore(info) > 0) {
+        QString const message = i18n("Congratulations!\nYou made it into the hall of fame.");
+        ksdialog->setComment(message);
         ksdialog->exec();
+    } else {
+        QString const message = i18n("You gained a score of %1 point.", score);
+        KMessageBox::information(this, message, i18n("End of Game"));
     }
     delete ksdialog;
 }
