@@ -174,9 +174,6 @@ private:
     QSize m_tileSize;
     QTimer *m_clock;
 
-    bool m_playSounds;
-    QDir m_soundPath;
-
     /**
      * If their is a bomb currently dropping then it is pointed to by this
      */
