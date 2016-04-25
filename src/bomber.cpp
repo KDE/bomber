@@ -135,7 +135,7 @@ void Bomber::closeGame()
     if (old_state == BomberGameWidget::State::Running) {
         m_gameWidget->setPaused(true);
     }
-    int ret = KMessageBox::questionYesNo(this, i18nc("Message displayed when play tries to quit a game that is currently running",
+    int ret = KMessageBox::questionYesNo(this, i18nc("Message displayed when player tries to quit a game that is currently running",
                                          "Do you really want to close the running game?"), QString(),
                                          KStandardGuiItem::close(), KStandardGuiItem::cancel());
     if (ret == KMessageBox::Yes) {
