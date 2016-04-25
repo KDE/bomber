@@ -258,6 +258,7 @@ void BomberBoard::crashed()
     m_plane->setPosition(pos.x() + 1, pos.y());
     m_plane->setState(Plane::State::Exploding);
     QTimer::singleShot(PLANE_EXPLODE_TIME, this, SLOT(planeExploded()));
+    emit playCrashSound();
 }
 
 void BomberBoard::clear()

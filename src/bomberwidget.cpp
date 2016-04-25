@@ -38,10 +38,11 @@ static const unsigned int OVERLAY_Z_VALUE = 1000;
 
 BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
     QGraphicsView(parent), m_state(State::BeforeFirstGame), m_level(0), m_lives(0), m_time(0),
-    m_renderer(provider)
+    m_renderer(provider), m_soundCrash((QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/crash.ogg"))))
 {
     // Gameboard
     m_board = new BomberBoard(&m_renderer, this, this);
+    connect(m_board, &BomberBoard::playCrashSound, this, &BomberGameWidget::playCrashSound);
     connect(m_board, &BomberBoard::onPlaneCrash, this, &BomberGameWidget::onPlaneCrashed);
     connect(m_board, &BomberBoard::onBombHit, this, &BomberGameWidget::onBombHit);
     connect(m_board, &BomberBoard::levelCleared, this, &BomberGameWidget::onLevelCleared);
@@ -145,6 +146,12 @@ void BomberGameWidget::settingsChanged()
     m_board->settingsChanged();
 }
 
+void BomberGameWidget::setSoundsEnabled(bool enable)
+{
+    BomberSettings::setPlaySounds(enable);
+    BomberSettings::self()->save();
+    m_board->settingsChanged();
+}
 
 void BomberGameWidget::onPlaneCrashed()
 {
@@ -154,6 +161,9 @@ void BomberGameWidget::onPlaneCrashed()
         closeGame();
     } else {
         m_board->resetPlane();
+    }
+    if (BomberSettings::playSounds() == true) {
+        m_soundCrash.stop();
     }
 }
 
@@ -167,6 +177,13 @@ void BomberGameWidget::onBombHit()
         m_scoreLeftBeforeNewLife = NEW_LIVE_AT_SCORE;
         ++m_lives;
         emit livesChanged(m_lives);
+    }
+}
+
+void BomberGameWidget::playCrashSound()
+{
+    if (BomberSettings::playSounds() == true) {
+        m_soundCrash.start();
     }
 }
 

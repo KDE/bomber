@@ -103,6 +103,8 @@ signals:
      */
     void onPlaneCrash();
 
+    void playCrashSound();
+
     /**
      * This signal is emitted when a bomb hits a building and before it's exploding
      * animation starts

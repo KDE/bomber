@@ -25,6 +25,8 @@
 #include <QGraphicsView>
 #include <QMouseEvent>
 
+#include <KgSound>
+
 class KgThemeProvider;
 
 /**
@@ -84,6 +86,11 @@ public slots:
      */
     void settingsChanged();
 
+    /**
+     * Enabled or disabled the sounds
+     * \param enable True to enable the sounds, false to disable
+     */
+    void setSoundsEnabled(bool enable);
 
     /**
      * Used to toggle the suspended game state. If val is true and the state is currently running,
@@ -168,6 +175,8 @@ private:
     void closeLevel();
     void newLevel();
 
+    void playCrashSound();
+
     State m_state;
     unsigned int m_level;
     unsigned int m_score;
@@ -183,6 +192,7 @@ private:
     BomberBoard *m_board;
 
     QGraphicsPixmapItem *m_overlay;
+    KgSound m_soundCrash;
 };
 
 #endif
