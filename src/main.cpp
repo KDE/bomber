@@ -28,7 +28,7 @@
 
 static const char description[] = I18N_NOOP("Arcade bombing game");
 
-static const char version[] = "0.2";
+static const char version[] = "0.3";
 
 int main(int argc, char **argv)
 {
