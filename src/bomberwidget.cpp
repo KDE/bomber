@@ -154,7 +154,7 @@ void BomberGameWidget::onPlaneCrashed()
 {
     --m_lives;
     emit livesChanged(m_lives);
-    if (m_lives <= 0) {
+    if (m_lives == 0) {
         closeGame();
     } else {
         m_board->resetPlane();
