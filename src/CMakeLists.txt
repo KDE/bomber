@@ -1,5 +1,3 @@
-project(bomber)
-
 set(bomber_SRCS
    bomber.cpp
    main.cpp
@@ -9,7 +7,7 @@ set(bomber_SRCS
    bomb.cpp
    building.cpp
    explodable.cpp
- )
+)
 
 kconfig_add_kcfg_files(bomber_SRCS settings.kcfgc)
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/*-apps-bomber.png")
