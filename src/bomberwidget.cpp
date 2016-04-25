@@ -145,10 +145,6 @@ void BomberGameWidget::settingsChanged()
     m_board->settingsChanged();
 }
 
-void BomberGameWidget::setSounds(bool val)
-{
-    m_board->setSounds(val);
-}
 
 void BomberGameWidget::onPlaneCrashed()
 {

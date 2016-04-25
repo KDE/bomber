@@ -26,11 +26,6 @@
 #include <QQueue>
 #include <QDir>
 
-namespace Phonon
-{
-class MediaObject;
-}
-
 class Plane;
 class Building;
 class Bomb;
@@ -77,18 +72,6 @@ public:
      * \param val True if paused, otherwise false
      */
     void setPaused(bool val);
-
-    /**
-     * Used to play a sound
-     * \param name The sound to play
-     */
-    void playSound(const QString &name);
-
-    /**
-     * Used to activate/deactivate sounds while playing
-     * \param val True to turn on the sounds, otherwise false
-     */
-    void setSounds(bool val);
 
     /**
      * This will convert the tile location to actual cords on the board
@@ -189,7 +172,6 @@ private:
     QSize m_tileSize;
     QTimer *m_clock;
 
-    Phonon::MediaObject *m_audioPlayer;
     bool m_playSounds;
     QDir m_soundPath;
 

@@ -87,7 +87,6 @@ void Bomber::initXMLUI()
     KStandardAction::preferences(m_selector, SLOT(showAsDialog()), actionCollection());
     m_soundAction = new KToggleAction(i18nc("Menu item used to disable or enable sound", "&Play Sounds"), this);
     actionCollection()->addAction(QLatin1String("toggle_sound"), m_soundAction);
-    connect(m_soundAction, &KToggleAction::triggered, this, &Bomber::setSounds);
 
     QAction *dropBombAction = actionCollection()->addAction(QLatin1String("drop_bomb"));
     dropBombAction->setText(i18nc("The name of the action used for dropping bombs", "&Drop bomb"));
@@ -172,12 +171,6 @@ void Bomber::highscore()
         KMessageBox::information(this, message, i18n("End of Game"));
     }
     delete ksdialog;
-}
-
-void Bomber::setSounds(bool val)
-{
-    BomberSettings::setPlaySounds(val);
-    m_gameWidget->settingsChanged();
 }
 
 void Bomber::displayLevel(unsigned int level)

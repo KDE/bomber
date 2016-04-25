@@ -50,7 +50,6 @@ private slots:
     void pauseGame();
     void showHighscore();
 
-    void setSounds(bool val);
     void displayLevel(unsigned int level);
     void displayScore(unsigned int score);
     void displayLives(unsigned int lives);

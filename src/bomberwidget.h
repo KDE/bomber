@@ -84,11 +84,6 @@ public slots:
      */
     void settingsChanged();
 
-    /**
-     * Enabled or disabled the sounds
-     * \param value True to enable the sounds, otherwise false
-     */
-    void setSounds(bool value);
 
     /**
      * Used to toggle the suspended game state. If val is true and the state is currently running,

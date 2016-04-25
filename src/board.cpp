@@ -24,7 +24,6 @@
 #include "settings.h"
 
 #include <KRandom>
-#include <Phonon/MediaObject>
 
 #include <QTimer>
 #include <QGraphicsScene>
@@ -51,7 +50,7 @@ const unsigned int PLANE_EXPLODE_TIME = 2000;
 const unsigned int BOMB_EXPLODE_TIME = 1000;
 
 BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *parent) :
-    QGraphicsScene(parent), m_renderer(renderer), m_audioPlayer(nullptr), m_bomb(nullptr), m_view(view)
+    QGraphicsScene(parent), m_renderer(renderer), m_bomb(nullptr), m_view(view)
 {
     m_clock = new QTimer(this);
     m_clock->setInterval(GAME_DELAY);
@@ -62,8 +61,6 @@ BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *
     m_plane->show();
     resetPlane();
     clear();
-
-    m_soundPath = QStandardPaths::locate(QStandardPaths::AppDataLocation, QLatin1Literal("sounds"), QStandardPaths::LocateDirectory);
 }
 
 BomberBoard::~BomberBoard()
@@ -72,7 +69,6 @@ BomberBoard::~BomberBoard()
     delete m_plane;
     qDeleteAll(m_buildings);
     qDeleteAll(m_explodingBombs);
-    delete m_audioPlayer;
 }
 
 void BomberBoard::resetPlane()
@@ -157,23 +153,6 @@ void BomberBoard::setPaused(bool val)
         m_clock->stop();
     } else {
         m_clock->start();
-    }
-}
-
-void BomberBoard::playSound(const QString &name)
-{
-    if (m_playSounds == true && !name.isEmpty()) {
-        QString file = m_soundPath.filePath(name);
-        m_audioPlayer->setCurrentSource(file);
-        m_audioPlayer->play();
-    }
-}
-
-void BomberBoard::setSounds(bool val)
-{
-    m_playSounds = val;
-    if (val == true && m_audioPlayer == nullptr) {
-        m_audioPlayer = Phonon::createPlayer(Phonon::GameCategory);
     }
 }
 
@@ -263,7 +242,6 @@ void BomberBoard::bombExploded()
 
 void BomberBoard::settingsChanged()
 {
-    setSounds(BomberSettings::playSounds());
     setBackgroundBrush(m_renderer->spritePixmap(QLatin1Literal("background"), m_view->size()));
     redraw();
 }
@@ -279,7 +257,6 @@ void BomberBoard::crashed()
     QPointF pos = m_plane->position();
     m_plane->setPosition(pos.x() + 1, pos.y());
     m_plane->setState(Plane::State::Exploding);
-    playSound(QLatin1Literal("explode.ogg"));
     QTimer::singleShot(PLANE_EXPLODE_TIME, this, SLOT(planeExploded()));
 }
 

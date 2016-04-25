@@ -18,7 +18,6 @@ add_executable(bomber ${bomber_SRCS})
 
 target_link_libraries(bomber
     KF5KDEGames
-    Phonon::phonon4qt5
     KF5::XmlGui
     KF5::I18n
     KF5::DBusAddons
