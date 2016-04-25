@@ -181,7 +181,7 @@ private:
     /**
      * Used to store the remaining score before a new life is given
      */
-    unsigned int m_scoreLeftBeforeNewLife;
+    int m_scoreLeftBeforeNewLife;
 
     KGameRenderer m_renderer;
     QTimer *m_clock;
