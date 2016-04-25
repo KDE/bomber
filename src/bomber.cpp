@@ -145,9 +145,6 @@ void Bomber::closeGame()
     }
 }
 
-/**
- * Bring up the standard kde high score dialog.
- */
 void Bomber::showHighscore()
 {
     KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
