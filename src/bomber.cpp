@@ -156,6 +156,10 @@ void Bomber::showHighscore()
 
 void Bomber::highscore()
 {
+    if (m_gameWidget->score() == 0) {
+        showHighscore();
+        return;
+    }
     QPointer<KScoreDialog> ksdialog = new KScoreDialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
 
     KScoreDialog::FieldInfo info;
