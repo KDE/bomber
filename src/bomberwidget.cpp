@@ -19,9 +19,9 @@
 #include "bomberwidget.h"
 #include "settings.h"
 
-#include <QTimer>
-#include <QGraphicsView>
 #include <QGraphicsItem>
+#include <QGraphicsView>
+#include <QTimer>
 
 #include <KLocalizedString>
 #include <sys/stat.h>
@@ -36,11 +36,15 @@ static const unsigned int TICKS_PER_SECOND = 1000 / GAME_TIME_DELAY;
 /** The z-value for overlays */
 static const unsigned int OVERLAY_Z_VALUE = 1000;
 
-BomberGameWidget::BomberGameWidget(KgThemeProvider *provider, QWidget *parent) :
-    QGraphicsView(parent), m_state(State::BeforeFirstGame), m_level(0), m_lives(0), m_time(0),
-    m_renderer(provider),
-    m_soundBomb((QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/bomb.ogg")))),
-    m_soundCrash((QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/crash.ogg"))))
+BomberGameWidget::BomberGameWidget(KgThemeProvider * provider, QWidget * parent)
+    : QGraphicsView(parent)
+    , m_state(State::BeforeFirstGame)
+    , m_level(0)
+    , m_lives(0)
+    , m_time(0)
+    , m_renderer(provider)
+    , m_soundBomb((QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/bomb.ogg"))))
+    , m_soundCrash((QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/crash.ogg"))))
 {
     // Gameboard
     m_board = new BomberBoard(&m_renderer, this, this);
@@ -211,7 +215,7 @@ void BomberGameWidget::tick()
     }
 }
 
-void BomberGameWidget::resizeEvent(QResizeEvent *ev)
+void BomberGameWidget::resizeEvent(QResizeEvent * ev)
 {
     QSize boardSize = ev->size();
     m_board->resize(boardSize);
@@ -239,7 +243,7 @@ void BomberGameWidget::newLevel()
     redraw();
 }
 
-void BomberGameWidget::mouseReleaseEvent(QMouseEvent *event)
+void BomberGameWidget::mouseReleaseEvent(QMouseEvent * event)
 {
     if (event->button() & Qt::LeftButton) {
         onDropBomb();
@@ -262,28 +266,28 @@ void BomberGameWidget::redraw()
     if (size().isEmpty()) {
         return;
     }
-    QGraphicsItem *item;
+    QGraphicsItem * item;
     switch (m_state) {
-    case State::BeforeFirstGame:
-        foreach (item, m_board->items()) {
-            item->hide();
-        }
-        generateOverlay();
-        m_overlay->show();
-        break;
-    case State::Running:
-        foreach (item, m_board->items()) {
-            item->show();
-        }
-        m_overlay->hide();
-        break;
-    default:
-        foreach (item, m_board->items()) {
-            item->show();
-        }
-        generateOverlay();
-        m_overlay->show();
-        break;
+        case State::BeforeFirstGame:
+            foreach (item, m_board->items()) {
+                item->hide();
+            }
+            generateOverlay();
+            m_overlay->show();
+            break;
+        case State::Running:
+            foreach (item, m_board->items()) {
+                item->show();
+            }
+            m_overlay->hide();
+            break;
+        default:
+            foreach (item, m_board->items()) {
+                item->show();
+            }
+            generateOverlay();
+            m_overlay->show();
+            break;
     }
     m_board->redraw();
     update();
@@ -305,21 +309,21 @@ void BomberGameWidget::generateOverlay()
 
     QString text;
     switch (m_state) {
-    case State::BeforeFirstGame:
-        text = i18nc("Message show to the user when the game is loaded", "Welcome to Bomber.\nClick to start a game");
-        break;
-    case State::Paused:
-        text = i18nc("Message show to the user while the game is paused", "Paused");
-        break;
-    case State::BetweenLevels:
-        text = i18nc("Message telling user which level they just completed", "You have successfully cleared level %1\n", m_level - 1)
-               + i18nc("Message telling user which level they are about to start", "On to level %1.", m_level);
-        break;
-    case State::GameOver:
-        text = i18nc("Used to tell the user that the game is over", "Game over.");
-        break;
-    default:
-        text.clear();
+        case State::BeforeFirstGame:
+            text = i18nc("Message show to the user when the game is loaded", "Welcome to Bomber.\nClick to start a game");
+            break;
+        case State::Paused:
+            text = i18nc("Message show to the user while the game is paused", "Paused");
+            break;
+        case State::BetweenLevels:
+            text = i18nc("Message telling user which level they just completed", "You have successfully cleared level %1\n", m_level - 1)
+                + i18nc("Message telling user which level they are about to start", "On to level %1.", m_level);
+            break;
+        case State::GameOver:
+            text = i18nc("Used to tell the user that the game is over", "Game over.");
+            break;
+        default:
+            text.clear();
     }
 
     QFont font;

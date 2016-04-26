@@ -18,13 +18,13 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <QGraphicsScene>
 #include <KGameRenderer>
+#include <QGraphicsScene>
 
-#include <QSize>
+#include <QDir>
 #include <QList>
 #include <QQueue>
-#include <QDir>
+#include <QSize>
 
 class Plane;
 class Building;
@@ -34,19 +34,18 @@ class Bomb;
  * This class used to represent the game board. This makes sure all the game objects
  * get moved and redrawn every second. It also checks for any collisions
  */
-class BomberBoard: public QGraphicsScene
+class BomberBoard : public QGraphicsScene
 {
     Q_OBJECT
 
 public:
-
     /**
      * The constructor used to create the board.
      * \param renderer The renderer used to render game objects
      * \param view The graphics view object which this board is bound to
      * \param parent The widget which the board is inserted into
      */
-    explicit BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *parent = nullptr);
+    explicit BomberBoard(KGameRenderer * renderer, QGraphicsView * view, QObject * parent = nullptr);
 
     ~BomberBoard();
 
@@ -54,7 +53,7 @@ public:
      * This is called when the game board is resized
      * \param size The new tile size used on the game board
      */
-    void resize(QSize &size);
+    void resize(QSize & size);
 
     /**
      * This will redraw the game board
@@ -78,14 +77,14 @@ public:
      * \param pos The cords relative to the tile
      * \return The cords relative to the widget
      */
-    QPoint mapPosition(const QPointF &pos) const;
+    QPoint mapPosition(const QPointF & pos) const;
 
     /**
      * This will convert the widget location to tile locations
      * \param pos The cords relative to the widget
      * \return The cords relative to the tile
      */
-    QPointF unmapPosition(const QPoint &pos) const;
+    QPointF unmapPosition(const QPoint & pos) const;
 
     /**
      * Used to set the plane state to flying and move it to the start position
@@ -146,7 +145,7 @@ private:
      * \param moveBombToX The x position to move the explosion too
      * \param moveBombToY The y position to move the explosion too
      */
-    void bombHit(Bomb *bomb, qreal moveBombToX, qreal moveBombToY);
+    void bombHit(Bomb * bomb, qreal moveBombToX, qreal moveBombToY);
 
     /**
      * This is used to remove all the current game objects, usually called before
@@ -167,23 +166,23 @@ private:
     /**
      * This is the renderer used to render game objects
      */
-    KGameRenderer *m_renderer;
+    KGameRenderer * m_renderer;
 
     /**
      * This is the size of a tiling block
      */
     QSize m_tileSize;
-    QTimer *m_clock;
+    QTimer * m_clock;
 
     /**
      * If their is a bomb currently dropping then it is pointed to by this
      */
-    Bomb *m_bomb;
+    Bomb * m_bomb;
 
     /**
      * This points to the plane object used in the level
      */
-    Plane *m_plane;
+    Plane * m_plane;
 
     /**
      * This contains all the buildings in the current level
@@ -203,7 +202,7 @@ private:
     /**
      * This is the graphics view object which this board is bound.
      */
-    QGraphicsView *m_view;
+    QGraphicsView * m_view;
 };
 
 #endif

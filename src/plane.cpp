@@ -29,9 +29,9 @@ const qreal Plane::PLANE_RELATIVE_SIZE = 1;
 /** This is the position before the plane goes off the screen */
 const qreal Plane::PLANE_MAX_POSITION_X = 12;
 
-Plane::Plane(KGameRenderer *renderer, BomberBoard *board) :
-    Explodable(QLatin1Literal("plane"), QLatin1Literal("plane_explode"), PLANE_RELATIVE_SIZE,
-               PLANE_RELATIVE_SIZE, renderer, board)
+Plane::Plane(KGameRenderer * renderer, BomberBoard * board)
+    : Explodable(QLatin1Literal("plane"), QLatin1Literal("plane_explode"), PLANE_RELATIVE_SIZE,
+                 PLANE_RELATIVE_SIZE, renderer, board)
 {
     setVelocity(DEFAULT_VELOCITY);
     resetPosition();

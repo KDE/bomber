@@ -17,18 +17,18 @@
  */
 #include "board.h"
 
-#include "plane.h"
-#include "building.h"
 #include "bomb.h"
+#include "building.h"
+#include "plane.h"
 
 #include "settings.h"
 
 #include <KRandom>
 
-#include <QTimer>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QStandardPaths>
+#include <QTimer>
 
 /** The value that the plane velocity increases by */
 const qreal PLANE_INC_VELOCITY = 0.0005;
@@ -49,8 +49,11 @@ const unsigned int PLANE_EXPLODE_TIME = 2000;
 /** This time in milliseconds that the bomb exploding animation is played for */
 const unsigned int BOMB_EXPLODE_TIME = 1000;
 
-BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *parent) :
-    QGraphicsScene(parent), m_renderer(renderer), m_bomb(nullptr), m_view(view)
+BomberBoard::BomberBoard(KGameRenderer * renderer, QGraphicsView * view, QObject * parent)
+    : QGraphicsScene(parent)
+    , m_renderer(renderer)
+    , m_bomb(nullptr)
+    , m_view(view)
 {
     m_clock = new QTimer(this);
     m_clock->setInterval(GAME_DELAY);
@@ -77,7 +80,7 @@ void BomberBoard::resetPlane()
     m_plane->resetPosition();
 }
 
-void BomberBoard::resize(QSize &size)
+void BomberBoard::resize(QSize & size)
 {
     setBackgroundBrush(m_renderer->spritePixmap(QLatin1Literal("background"), size));
 
@@ -86,7 +89,7 @@ void BomberBoard::resize(QSize &size)
 
     m_tileSize = QSize(minTileSizeWidth, minTileSizeHeight);
 
-    foreach (Building *building, m_buildings) {
+    foreach (Building * building, m_buildings) {
         building->resize(m_tileSize);
     }
 
@@ -166,7 +169,7 @@ void BomberBoard::tick()
         m_bomb->advanceItem();
     }
 
-    foreach (Bomb *bomb, m_explodingBombs) {
+    foreach (Bomb * bomb, m_explodingBombs) {
         bomb->advanceItem();
     }
 
@@ -177,7 +180,7 @@ void BomberBoard::tick()
         m_bomb->update();
     }
 
-    foreach (Bomb *bomb, m_explodingBombs) {
+    foreach (Bomb * bomb, m_explodingBombs) {
         bomb->update();
     }
 }
@@ -194,9 +197,8 @@ void BomberBoard::dropBomb()
 
 void BomberBoard::checkCollisions()
 {
-    foreach (Building *building, m_buildings) {
-        if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state()
-                == Explodable::State::Moving) {
+    foreach (Building * building, m_buildings) {
+        if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state() == Explodable::State::Moving) {
             // Plane crashed into the building
             building->destoryTop();
             --m_buildingBlocks;
@@ -204,8 +206,7 @@ void BomberBoard::checkCollisions()
         }
 
         if (m_bomb != nullptr) {
-            if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state()
-                    == Explodable::State::Moving) {
+            if (m_bomb->nextBoundingRect().intersects(building->boundingRect()) && m_bomb->state() == Explodable::State::Moving) {
                 // Bomb hit a building
                 building->destoryTop();
                 --m_buildingBlocks;
@@ -225,7 +226,7 @@ void BomberBoard::checkCollisions()
     }
 }
 
-void BomberBoard::bombHit(Bomb *bomb, qreal moveBombToX, qreal moveBombToY)
+void BomberBoard::bombHit(Bomb * bomb, qreal moveBombToX, qreal moveBombToY)
 {
     bomb->setPosition(moveBombToX, moveBombToY);
     bomb->setState(Bomb::State::Exploding);
@@ -236,7 +237,7 @@ void BomberBoard::bombHit(Bomb *bomb, qreal moveBombToX, qreal moveBombToY)
 
 void BomberBoard::bombExploded()
 {
-    Bomb *bomb = m_explodingBombs.dequeue();
+    Bomb * bomb = m_explodingBombs.dequeue();
     bomb->hide();
     delete bomb;
 }
@@ -273,14 +274,12 @@ void BomberBoard::clear()
     resetPlane();
 }
 
-QPoint BomberBoard::mapPosition(const QPointF &pos) const
+QPoint BomberBoard::mapPosition(const QPointF & pos) const
 {
-    return QPoint(static_cast<unsigned int>(m_tileSize.width() * pos.x()),
-                  static_cast<int>(m_tileSize.height() * pos.y()));
+    return QPoint(static_cast<unsigned int>(m_tileSize.width() * pos.x()), static_cast<int>(m_tileSize.height() * pos.y()));
 }
 
-QPointF BomberBoard::unmapPosition(const QPoint &pos) const
+QPointF BomberBoard::unmapPosition(const QPoint & pos) const
 {
-    return QPointF(1.0 * pos.x() / m_tileSize.width(), 1.0 * pos.y()
-                   / m_tileSize.height());
+    return QPointF(1.0 * pos.x() / m_tileSize.width(), 1.0 * pos.y() / m_tileSize.height());
 }

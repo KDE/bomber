@@ -20,8 +20,8 @@
 
 #include "bomberwidget.h"
 
-#include <kxmlguiwindow.h>
 #include <kgthemeprovider.h>
+#include <kxmlguiwindow.h>
 
 class QAction;
 class QStatusBar;
@@ -35,7 +35,7 @@ class QLabel;
  *
  * @short Main window class
  */
-class Bomber: public KXmlGuiWindow
+class Bomber : public KXmlGuiWindow
 {
     Q_OBJECT
 public:
@@ -61,13 +61,13 @@ private:
     void setupActions();
 
     KgThemeProvider m_provider;
-    KgThemeSelector *m_selector;
+    KgThemeSelector * m_selector;
 
-    BomberGameWidget *m_gameWidget;
-    QStatusBar *m_statusBar;
+    BomberGameWidget * m_gameWidget;
+    QStatusBar * m_statusBar;
 
     KToggleAction *m_pauseAction, *m_backgroundShowAction, *m_soundAction;
-    QAction *m_newAction;
+    QAction * m_newAction;
     QLabel *m_level, *m_score, *m_lives;
 };
 

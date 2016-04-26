@@ -32,7 +32,7 @@ class KgThemeProvider;
 /**
  * This is the main game widget class. It manages things like the lives, source counts and game states.
  */
-class BomberGameWidget: public QGraphicsView
+class BomberGameWidget : public QGraphicsView
 {
     Q_OBJECT
 
@@ -40,10 +40,14 @@ public:
     /**
      * The different states that the game can be in
      */
-    enum class State
-    {   BeforeFirstGame, Running, BetweenLevels, Paused, Suspended, GameOver};
+    enum class State { BeforeFirstGame,
+                       Running,
+                       BetweenLevels,
+                       Paused,
+                       Suspended,
+                       GameOver };
 
-    explicit BomberGameWidget(KgThemeProvider *provider, QWidget *parent = nullptr);
+    explicit BomberGameWidget(KgThemeProvider * provider, QWidget * parent = nullptr);
     ~BomberGameWidget();
 
     /**
@@ -162,8 +166,8 @@ private slots:
     void onPlaneCrashed();
 
 private:
-    virtual void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
-    virtual void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    virtual void resizeEvent(QResizeEvent * event) Q_DECL_OVERRIDE;
+    virtual void mouseReleaseEvent(QMouseEvent * event) Q_DECL_OVERRIDE;
 
     /**
      * Create the overlay used to display info to the user. The info will
@@ -183,16 +187,17 @@ private:
     unsigned int m_score;
     unsigned int m_lives;
     unsigned int m_time;
+
     /**
      * Used to store the remaining score before a new life is given
      */
     int m_scoreLeftBeforeNewLife;
 
     KGameRenderer m_renderer;
-    QTimer *m_clock;
-    BomberBoard *m_board;
+    QTimer * m_clock;
+    BomberBoard * m_board;
 
-    QGraphicsPixmapItem *m_overlay;
+    QGraphicsPixmapItem * m_overlay;
 
     KgSound m_soundBomb;
     KgSound m_soundCrash;

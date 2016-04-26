@@ -26,12 +26,14 @@ class BomberBoard;
 /**
  * This is a game object that can explode.
  */
-class Explodable: public KGameRenderedItem
+class Explodable : public KGameRenderedItem
 {
 public:
     /** The states that a bomb can be in */
     enum class State {
-        Moving, Exploding, Exploded
+        Moving,
+        Exploding,
+        Exploded
     };
 
     /** The width of the explosion relative to the tile */
@@ -39,9 +41,9 @@ public:
     /** The height of the explosion relative to the tile */
     static const qreal EXPLOSION_RELATIVE_SIZE_H;
 
-    explicit Explodable(const QString &mainSvg, const QString &explosionSvg,
+    explicit Explodable(const QString & mainSvg, const QString & explosionSvg,
                         qreal relativeWidth, qreal relativeHeight,
-                        KGameRenderer *renderer, BomberBoard *board);
+                        KGameRenderer * renderer, BomberBoard * board);
     virtual ~Explodable();
 
     /**
@@ -54,7 +56,7 @@ public:
      * Sets width and height of bomb. Using the current tile size.
      * \param tileSize The size of the tile
      */
-    void resize(const QSize &tileSize);
+    void resize(const QSize & tileSize);
 
     /**
      * Sets the velocity of the explodable object
@@ -117,7 +119,7 @@ protected:
     QRectF m_nextBoundingRect;
 
 private:
-    BomberBoard *m_board;
+    BomberBoard * m_board;
 
     qreal m_velocity;
 

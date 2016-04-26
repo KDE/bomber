@@ -20,17 +20,17 @@
 #include <KAboutData>
 #include <KCrash>
 
+#include <KDBusService>
 #include <KLocalizedString>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <kdelibs4configmigrator.h>
-#include <KDBusService>
 
 static const char description[] = I18N_NOOP("Arcade bombing game");
 
 static const char version[] = "0.4";
 
-int main(int argc, char **argv)
+int main(int argc, char ** argv)
 {
     QApplication app(argc, argv);
     Kdelibs4ConfigMigrator migrate(QStringLiteral("bomber"));

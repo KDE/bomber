@@ -26,9 +26,8 @@
  * flys from left to right and each time it goes off the side of the screen it
  * is repositioned back at the left side, one place lower than before.
  */
-class Plane: public Explodable
+class Plane : public Explodable
 {
-
 public:
     /** This is the planes size relative to the tile */
     static const qreal PLANE_RELATIVE_SIZE;
@@ -39,7 +38,7 @@ public:
     /** The speed the plane will fly at */
     static const qreal DEFAULT_VELOCITY;
 
-    Plane(KGameRenderer *renderer, BomberBoard *board);
+    Plane(KGameRenderer * renderer, BomberBoard * board);
     ~Plane();
 
     /**

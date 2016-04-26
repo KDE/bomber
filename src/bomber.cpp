@@ -20,24 +20,24 @@
 #include "bomberwidget.h"
 #include "settings.h"
 
-#include <QAction>
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <krandom.h>
-#include <KToggleAction>
-#include <QStatusBar>
-#include <QLabel>
-#include <kstandardgameaction.h>
 #include <KScoreDialog>
+#include <KToggleAction>
+#include <QAction>
+#include <QLabel>
+#include <QStatusBar>
 #include <kgthemeselector.h>
+#include <krandom.h>
+#include <kstandardgameaction.h>
 
 Bomber::Bomber()
 {
     m_provider.discoverThemes(
         "appdata", QLatin1String("themes"), //theme data location
-        QLatin1String("kbomber")            //default theme name
-    );
+        QLatin1String("kbomber")); //default theme name
+
     m_selector = new KgThemeSelector(&m_provider);
 
     m_statusBar = statusBar();
@@ -89,7 +89,7 @@ void Bomber::initXMLUI()
     actionCollection()->addAction(QLatin1String("toggle_sound"), m_soundAction);
     connect(m_soundAction, &KToggleAction::triggered, m_gameWidget, &BomberGameWidget::setSoundsEnabled);
 
-    QAction *dropBombAction = actionCollection()->addAction(QLatin1String("drop_bomb"));
+    QAction * dropBombAction = actionCollection()->addAction(QLatin1String("drop_bomb"));
     dropBombAction->setText(i18nc("The name of the action used for dropping bombs", "&Drop bomb"));
     dropBombAction->setToolTip(i18nc("The tool tip text for the action used to drop bombs", "Drop bomb"));
     dropBombAction->setWhatsThis(i18nc("Description of the action used to drop bombs",
@@ -110,7 +110,7 @@ void Bomber::newGame()
     // Check for running game
     closeGame();
     if (m_gameWidget->state() == BomberGameWidget::State::BeforeFirstGame
-            || m_gameWidget->state() == BomberGameWidget::State::GameOver) {
+        || m_gameWidget->state() == BomberGameWidget::State::GameOver) {
         m_gameWidget->newGame();
     }
 }
@@ -127,7 +127,7 @@ void Bomber::pauseGame()
 void Bomber::closeGame()
 {
     if (m_gameWidget->state() == BomberGameWidget::State::BeforeFirstGame
-            || m_gameWidget->state() == BomberGameWidget::State::GameOver) {
+        || m_gameWidget->state() == BomberGameWidget::State::GameOver) {
         return;
     }
 
@@ -136,7 +136,8 @@ void Bomber::closeGame()
         m_gameWidget->setPaused(true);
     }
     int ret = KMessageBox::questionYesNo(this, i18nc("Message displayed when player tries to quit a game that is currently running",
-                                         "Do you really want to close the running game?"), QString(),
+                                                     "Do you really want to close the running game?"),
+                                         QString(),
                                          KStandardGuiItem::close(), KStandardGuiItem::cancel());
     if (ret == KMessageBox::Yes) {
         m_gameWidget->closeGame();
@@ -174,41 +175,41 @@ void Bomber::highscore()
 void Bomber::displayLevel(unsigned int level)
 {
     m_level->setText(i18nc(
-                         "Used to display the current level of play to the user",
-                         "Level: %1", level));
+        "Used to display the current level of play to the user",
+        "Level: %1", level));
 }
 
 void Bomber::displayScore(unsigned int score)
 {
     m_score->setText(i18nc(
-                         "Used to inform the user of their current score", "Score: %1",
-                         score));
+        "Used to inform the user of their current score", "Score: %1",
+        score));
 }
 
 void Bomber::displayLives(unsigned int lives)
 {
     m_lives->setText(i18nc(
-                         "Used to tell the user how many lives they have left", "Lives: %1",
-                         lives));
+        "Used to tell the user how many lives they have left", "Lives: %1",
+        lives));
 }
 
 void Bomber::gameStateChanged(BomberGameWidget::State state)
 {
     switch (state) {
-    case BomberGameWidget::State::Paused:
-        m_pauseAction->setChecked(true);
-        m_statusBar->clearMessage();
-        break;
-    case BomberGameWidget::State::Running:
-        m_pauseAction->setChecked(false);
-        m_statusBar->clearMessage();
-        break;
-    case BomberGameWidget::State::GameOver:
-        m_statusBar->showMessage(i18nc("Game over messaged displayed in the status bar", "Game over. Press '%1' for a new game",
-                                       m_newAction->shortcuts().first().toString(QKeySequence::NativeText)));
-        highscore();
-        break;
-    default:
-        break;
+        case BomberGameWidget::State::Paused:
+            m_pauseAction->setChecked(true);
+            m_statusBar->clearMessage();
+            break;
+        case BomberGameWidget::State::Running:
+            m_pauseAction->setChecked(false);
+            m_statusBar->clearMessage();
+            break;
+        case BomberGameWidget::State::GameOver:
+            m_statusBar->showMessage(i18nc("Game over messaged displayed in the status bar", "Game over. Press '%1' for a new game",
+                                           m_newAction->shortcuts().first().toString(QKeySequence::NativeText)));
+            highscore();
+            break;
+        default:
+            break;
     }
 }

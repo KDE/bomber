@@ -33,11 +33,13 @@ const qreal Explodable::EXPLOSION_RELATIVE_SIZE_H = 1.0;
  */
 const qreal Explodable::EXPLOSION_RELATIVE_SIZE_W = 1.0;
 
-Explodable::Explodable(const QString &mainSvg, const QString &explosionSvg,
-                       qreal relativeWidth, qreal relativeHeight, KGameRenderer *renderer,
-                       BomberBoard *board) :
-    KGameRenderedItem(renderer, mainSvg), m_board(board), m_mainSvg(
-        mainSvg), m_explosionSvg(explosionSvg)
+Explodable::Explodable(const QString & mainSvg, const QString & explosionSvg,
+                       qreal relativeWidth, qreal relativeHeight, KGameRenderer * renderer,
+                       BomberBoard * board)
+    : KGameRenderedItem(renderer, mainSvg)
+    , m_board(board)
+    , m_mainSvg(mainSvg)
+    , m_explosionSvg(explosionSvg)
 {
     setRenderSize(QSize(32, 64));
     m_relativeWidth = relativeWidth;
@@ -64,19 +66,17 @@ void Explodable::update()
     setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
 }
 
-void Explodable::resize(const QSize &tileSize)
+void Explodable::resize(const QSize & tileSize)
 {
     m_lastSize = tileSize;
     if (m_state == State::Moving) {
         setRenderSize(QSize(
-                          m_relativeWidth * tileSize.width(),
-                          m_relativeHeight * tileSize.height()
-                      ));
+            m_relativeWidth * tileSize.width(),
+            m_relativeHeight * tileSize.height()));
     } else {
         setRenderSize(QSize(
-                          EXPLOSION_RELATIVE_SIZE_W * tileSize.width(),
-                          EXPLOSION_RELATIVE_SIZE_H * tileSize.height()
-                      ));
+            EXPLOSION_RELATIVE_SIZE_W * tileSize.width(),
+            EXPLOSION_RELATIVE_SIZE_H * tileSize.height()));
     }
     setPos(m_board->mapPosition(QPointF(m_xPos, m_yPos)));
 }
