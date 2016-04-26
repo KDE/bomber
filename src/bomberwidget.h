@@ -20,12 +20,15 @@
 #ifndef BOMBER_WIDGET_H
 #define BOMBER_WIDGET_H
 
-#include "board.h"
-
+// Qt
 #include <QGraphicsView>
 #include <QMouseEvent>
 
+// KDE
 #include <KgSound>
+
+// Bomber
+#include "board.h"
 
 class KgThemeProvider;
 

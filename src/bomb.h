@@ -18,6 +18,7 @@
 #ifndef BOMB_H
 #define BOMB_H
 
+// Bomber
 #include "explodable.h"
 
 /**

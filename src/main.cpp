@@ -15,16 +15,20 @@
  * License along with this program; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#include "bomber.h"
 
-#include <KAboutData>
-#include <KCrash>
-
-#include <KDBusService>
-#include <KLocalizedString>
+// Qt
 #include <QApplication>
 #include <QCommandLineParser>
-#include <kdelibs4configmigrator.h>
+
+// KDE
+#include <KAboutData>
+#include <KCrash>
+#include <KDBusService>
+#include <KLocalizedString>
+#include <Kdelibs4ConfigMigrator>
+
+// Bomber
+#include "bomber.h"
 
 static const char description[] = I18N_NOOP("Arcade bombing game");
 

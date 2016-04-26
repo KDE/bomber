@@ -18,10 +18,12 @@
 #ifndef BOMBER_H
 #define BOMBER_H
 
-#include "bomberwidget.h"
+// KDE
+#include <KXmlGuiWindow>
+#include <KgThemeProvider>
 
-#include <kgthemeprovider.h>
-#include <kxmlguiwindow.h>
+// Bomber
+#include "bomberwidget.h"
 
 class QAction;
 class QStatusBar;

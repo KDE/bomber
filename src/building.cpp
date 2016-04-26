@@ -16,11 +16,15 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+// own
 #include "building.h"
 
-#include "board.h"
+// KDE
 #include <KGameRenderedItem>
 #include <KRandom>
+
+// Bomber
+#include "board.h"
 
 /**
  * How big is a building in relation to the tiles width.

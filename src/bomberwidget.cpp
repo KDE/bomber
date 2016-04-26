@@ -16,15 +16,23 @@
  * License along with this program; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#include "bomberwidget.h"
-#include "settings.h"
 
+// own
+#include "bomberwidget.h"
+
+// STL
+#include <sys/stat.h>
+
+// Qt
 #include <QGraphicsItem>
 #include <QGraphicsView>
 #include <QTimer>
 
+// KDE
 #include <KLocalizedString>
-#include <sys/stat.h>
+
+// Bomber
+#include "settings.h"
 
 #define NEW_LIVE_AT_SCORE 10000;
 

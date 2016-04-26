@@ -16,11 +16,14 @@
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+// own
 #include "explodable.h"
 
-#include "board.h"
-
+// KDE
 #include <KRandom>
+
+// Bomber
+#include "board.h"
 
 /**
  * How big is the explosion in relation to the tiles height.

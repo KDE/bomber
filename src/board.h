@@ -18,13 +18,15 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <KGameRenderer>
-#include <QGraphicsScene>
-
+// Qt
 #include <QDir>
+#include <QGraphicsScene>
 #include <QList>
 #include <QQueue>
 #include <QSize>
+
+// KDE
+#include <KGameRenderer>
 
 class Plane;
 class Building;

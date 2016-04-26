@@ -15,20 +15,25 @@
  * License along with this program; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
+
+// own
 #include "board.h"
 
-#include "bomb.h"
-#include "building.h"
-#include "plane.h"
-
-#include "settings.h"
-
-#include <KRandom>
-
+// Qt
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QStandardPaths>
 #include <QTimer>
+
+// KDE
+#include <KRandom>
+
+// Bomber
+#include "bomb.h"
+#include "building.h"
+#include "plane.h"
+#include "settings.h"
+
 
 /** The value that the plane velocity increases by */
 const qreal PLANE_INC_VELOCITY = 0.0005;

@@ -19,6 +19,7 @@
 #ifndef BUILDING_H
 #define BUILDING_H
 
+// Qt
 #include <QList>
 #include <QRect>
 #include <QSize>

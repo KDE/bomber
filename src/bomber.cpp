@@ -15,22 +15,28 @@
  * License along with this program; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
+
+// own
 #include "bomber.h"
 
-#include "bomberwidget.h"
-#include "settings.h"
-
-#include <KActionCollection>
-#include <KLocalizedString>
-#include <KMessageBox>
-#include <KScoreDialog>
-#include <KToggleAction>
+// Qt
 #include <QAction>
 #include <QLabel>
 #include <QStatusBar>
-#include <kgthemeselector.h>
-#include <krandom.h>
-#include <kstandardgameaction.h>
+
+// KDE
+#include <KActionCollection>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KRandom>
+#include <KScoreDialog>
+#include <KStandardGameAction>
+#include <KToggleAction>
+#include <KgThemeSelector>
+
+// Bomber
+#include "bomberwidget.h"
+#include "settings.h"
 
 Bomber::Bomber()
 {
