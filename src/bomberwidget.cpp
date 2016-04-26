@@ -20,9 +20,6 @@
 // own
 #include "bomberwidget.h"
 
-// STL
-#include <sys/stat.h>
-
 // Qt
 #include <QGraphicsItem>
 #include <QGraphicsView>
