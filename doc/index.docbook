@@ -1,9 +1,5 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY bomber "<application>Bomber</application>">
-  <!ENTITY kappname "&bomber;">
-  <!ENTITY package "kdegames">
-  <!ENTITY kappversion "0.1"><!--Applicaion version. Use this variable everywhere it's needed.-->
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
@@ -32,14 +28,13 @@
 		<legalnotice>&FDLNotice;
 		</legalnotice>
 
-		<date>2012-08-06</date><!-- Date of (re)writing, or update.-->
-		<releaseinfo>&kappversion; (&kde; 4.9)
-		</releaseinfo><!-- Application version number. Use the variable definitions within header to change this value.-->
+		<date>2016-05-09</date>
+		<releaseinfo>0.4 (Applications 16.04)
+		</releaseinfo>
 
 		<abstract>
 			<para>
-				This documentation describes the game of &bomber; version
-				&kappversion;
+				This documentation describes the game of &bomber; version 0.4
 			</para>
 		</abstract>
 
@@ -79,6 +74,16 @@
 	</chapter>
 	<chapter id="how-to-play">
 		<title>How To Play</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>&bomber; main screen</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
 		<para>
 			The player is flying a plane in a city. The plane flies from
 			left to right. Every time it disappears off the side of the
@@ -151,15 +156,5 @@
 		&underGPL;
 
 	</chapter>
-
-	<appendix id="installation">
-		<title>Installation</title>
-
-		&install.intro.documentation;
-
-		&install.compile.documentation;
-
-	</appendix>
-
 
 </book>
