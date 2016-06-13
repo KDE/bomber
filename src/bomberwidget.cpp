@@ -48,8 +48,8 @@ BomberGameWidget::BomberGameWidget(KgThemeProvider * provider, QWidget * parent)
     , m_lives(0)
     , m_time(0)
     , m_renderer(provider)
-    , m_soundBomb((QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/bomb.ogg"))))
-    , m_soundCrash((QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/crash.ogg"))))
+    , m_soundBomb(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/bomb.ogg")))
+    , m_soundCrash(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("bomber/sounds/crash.ogg")))
 {
     // Gameboard
     m_board = new BomberBoard(&m_renderer, this, this);
