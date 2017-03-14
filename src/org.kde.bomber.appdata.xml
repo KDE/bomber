@@ -40,6 +40,7 @@
   <name xml:lang="x-test">xxBomberxx</name>
   <name xml:lang="zh-CN">Bomber</name>
   <name xml:lang="zh-TW">戰鬥機_Bomber</name>
+  <summary>Arcade Bombing Game</summary>
   <description>
     <p>
       Bomber is a single player arcade game. The player is invading various cities in a plane that is decreasing in height.
@@ -113,8 +114,9 @@
     <p xml:lang="x-test">xxThe goal of the game is to destroy all the buildings and advance to the next level. Each level gets a bit harder by increasing the speed of the plane and the height of the buildings.xx</p>
     <p xml:lang="zh-TW">遊戲的目的是要催毀所有的建築物，並進到下一關。每一關難度會越來越高，建築物也會越來越高。</p>
   </description>
+  <url type="homepage">https://www.kde.org/applications/games/bomber/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=bomber</url>
-  <url type="help">http://docs.kde.org/stable/en/kdegames/bomber/index.html</url>
+  <url type="help">https://docs.kde.org/?application=bomber&amp;branch=stable</url>
   <screenshots>
     <screenshot type="default">
       <image>http://kde.org/images/screenshots/bomber.png</image>
