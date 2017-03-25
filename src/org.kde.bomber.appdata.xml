@@ -29,7 +29,7 @@
   <name xml:lang="pt-BR">Bomber</name>
   <name xml:lang="ru">Bomber</name>
   <name xml:lang="sk">Bomber</name>
-  <name xml:lang="sl">Bombnik</name>
+  <name xml:lang="sl">Bomber</name>
   <name xml:lang="sr">Бомбардер</name>
   <name xml:lang="sr-Latn">Bombarder</name>
   <name xml:lang="sr-ijekavian">Бомбардер</name>
@@ -47,6 +47,7 @@
   <summary xml:lang="de">Fliegerbomben-Spiel</summary>
   <summary xml:lang="nl">Arcade-bommenwerpspel</summary>
   <summary xml:lang="pt">Jogo de Arcada de Bombardeamento</summary>
+  <summary xml:lang="sl">Arkadna igra bombardiranja</summary>
   <summary xml:lang="sv">Spelhallsbombspel</summary>
   <summary xml:lang="uk">Аркадна гра у бомбометання</summary>
   <summary xml:lang="x-test">xxArcade Bombing Gamexx</summary>
@@ -76,7 +77,7 @@
     <p xml:lang="pt-BR">Bomber é um jogo tipo arcade para um único jogador. O jogador está invadindo várias cidades com um avião que vai descendo em altitude.</p>
     <p xml:lang="ru">Bomber — аркадная игра для одного игрока. Игрок атакует различные города с бомбардировщика, и они уменьшаются по высоте.</p>
     <p xml:lang="sk">Bomber je arkádová hra pre jedného hráča. Hráč napáda rôzne mestá v lietadle, ktoré klesá.</p>
-    <p xml:lang="sl">Bombnik je enoigralska arkadna igra. Igralec napada raznolika mesta z letalom, ki se sčasoma spušča.</p>
+    <p xml:lang="sl">Bomber je enoigralska arkadna igra. Igralec napada raznolika mesta z letalom, ki se sčasoma spušča.</p>
     <p xml:lang="sr">Бомбардер је аркадна игра за једног играча. Нападајте градове авионом којем опада висина.</p>
     <p xml:lang="sr-Latn">Bombarder je arkadna igra za jednog igrača. Napadajte gradove avionom kojem opada visina.</p>
     <p xml:lang="sr-ijekavian">Бомбардер је аркадна игра за једног играча. Нападајте градове авионом којем опада висина.</p>
