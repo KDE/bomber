@@ -87,7 +87,7 @@ void BomberBoard::resetPlane()
 
 void BomberBoard::resize(QSize & size)
 {
-    setBackgroundBrush(m_renderer->spritePixmap(QLatin1Literal("background"), size));
+    setBackgroundBrush(m_renderer->spritePixmap(QStringLiteral("background"), size));
 
     unsigned int minTileSizeWidth = size.width() / TILE_NUM_W;
     unsigned int minTileSizeHeight = size.height() / TILE_NUM_H;
@@ -249,7 +249,7 @@ void BomberBoard::bombExploded()
 
 void BomberBoard::settingsChanged()
 {
-    setBackgroundBrush(m_renderer->spritePixmap(QLatin1Literal("background"), m_view->size()));
+    setBackgroundBrush(m_renderer->spritePixmap(QStringLiteral("background"), m_view->size()));
     redraw();
 }
 

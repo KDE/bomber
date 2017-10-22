@@ -44,13 +44,13 @@ int main(int argc, char ** argv)
 
     KLocalizedString::setApplicationDomain("bomber");
 
-    KAboutData about(QLatin1Literal("bomber"), i18n("Bomber"), QLatin1String(version), i18n(description),
+    KAboutData about(QStringLiteral("bomber"), i18n("Bomber"), QLatin1String(version), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
-                     QString(), QLatin1Literal("jp@stanwood.org.uk"));
+                     QString(), QStringLiteral("jp@stanwood.org.uk"));
     about.addAuthor(i18n("John-Paul Stanford"), QString(),
-                    QLatin1Literal("jp@stanwood.org.uk"));
+                    QStringLiteral("jp@stanwood.org.uk"));
     about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
-                    QLatin1Literal("maemre2@gmail.com"));
+                    QStringLiteral("maemre2@gmail.com"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     KCrash::initialize();

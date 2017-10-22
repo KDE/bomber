@@ -83,20 +83,20 @@ void Building::setupBuildingTiles()
     static signed int styleCount = -1;
     if (styleCount == -1) {
         styleCount = 0;
-        while (m_renderer->spriteExists(QString::fromLatin1("building_%1_0").arg(styleCount))) {
+        while (m_renderer->spriteExists(QStringLiteral("building_%1_0").arg(styleCount))) {
             ++styleCount;
         }
     }
     unsigned int style = KRandom::random() % styleCount;
-    unsigned int maxVarient = m_renderer->frameCount(QString::fromLatin1("building_%1").arg(style));
+    unsigned int maxVarient = m_renderer->frameCount(QStringLiteral("building_%1").arg(style));
 
     for (unsigned int heightIndex = 0; heightIndex < m_height - 1; ++heightIndex) {
         unsigned int varient = KRandom::random() % (maxVarient);
-        const QString pixmap = QString::fromLatin1("building_%1_%2").arg(style).arg(varient);
+        const QString pixmap = QStringLiteral("building_%1_%2").arg(style).arg(varient);
         m_buildingTiles.append(createBuildingTile(pixmap));
     }
 
-    const QString pixmap = QString::fromLatin1("roof_%1_0").arg(style);
+    const QString pixmap = QStringLiteral("roof_%1_0").arg(style);
     m_buildingTiles.append(createBuildingTile(pixmap));
     m_boundingRect.moveTo(m_xPos, BUILD_BASE_LOCATION - m_height + 1);
     foreach (KGameRenderedItem * tile, m_buildingTiles) {

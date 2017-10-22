@@ -33,7 +33,7 @@ const qreal Plane::PLANE_RELATIVE_SIZE = 1;
 const qreal Plane::PLANE_MAX_POSITION_X = 12;
 
 Plane::Plane(KGameRenderer * renderer, BomberBoard * board)
-    : Explodable(QLatin1Literal("plane"), QLatin1Literal("plane_explode"), PLANE_RELATIVE_SIZE,
+    : Explodable(QStringLiteral("plane"), QStringLiteral("plane_explode"), PLANE_RELATIVE_SIZE,
                  PLANE_RELATIVE_SIZE, renderer, board)
 {
     setVelocity(DEFAULT_VELOCITY);

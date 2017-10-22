@@ -41,8 +41,8 @@
 Bomber::Bomber()
 {
     m_provider.discoverThemes(
-        "appdata", QLatin1String("themes"), //theme data location
-        QLatin1String("kbomber")); //default theme name
+        "appdata", QStringLiteral("themes"), //theme data location
+        QStringLiteral("kbomber")); //default theme name
 
     m_selector = new KgThemeSelector(&m_provider);
 
@@ -92,10 +92,10 @@ void Bomber::initXMLUI()
     // Settings
     KStandardAction::preferences(m_selector, SLOT(showAsDialog()), actionCollection());
     m_soundAction = new KToggleAction(i18nc("Menu item used to disable or enable sound", "&Play Sounds"), this);
-    actionCollection()->addAction(QLatin1String("toggle_sound"), m_soundAction);
+    actionCollection()->addAction(QStringLiteral("toggle_sound"), m_soundAction);
     connect(m_soundAction, &KToggleAction::triggered, m_gameWidget, &BomberGameWidget::setSoundsEnabled);
 
-    QAction * dropBombAction = actionCollection()->addAction(QLatin1String("drop_bomb"));
+    QAction * dropBombAction = actionCollection()->addAction(QStringLiteral("drop_bomb"));
     dropBombAction->setText(i18nc("The name of the action used for dropping bombs", "&Drop bomb"));
     dropBombAction->setToolTip(i18nc("The tool tip text for the action used to drop bombs", "Drop bomb"));
     dropBombAction->setWhatsThis(i18nc("Description of the action used to drop bombs",
