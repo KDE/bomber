@@ -18,6 +18,7 @@
   <name xml:lang="fr">Bomber</name>
   <name xml:lang="gl">Bomber</name>
   <name xml:lang="hu">Bomber</name>
+  <name xml:lang="id">Bomber</name>
   <name xml:lang="it">Bomber</name>
   <name xml:lang="ko">Bomber</name>
   <name xml:lang="nds">Bomber</name>
@@ -49,6 +50,7 @@
   <summary xml:lang="fi">Arkadipommituspeli</summary>
   <summary xml:lang="fr">Jeu d'arcade de bombardement</summary>
   <summary xml:lang="gl">Xogo arcade de bombardeo</summary>
+  <summary xml:lang="id">Permainan Arkade Pengeboman</summary>
   <summary xml:lang="it">Gioco di bombardamento arcade</summary>
   <summary xml:lang="nl">Arcade-bommenwerpspel</summary>
   <summary xml:lang="nn">Bombespel</summary>
@@ -83,6 +85,7 @@
     <p xml:lang="fr">Bomber est un jeu d'arcade pour un seul joueur. Le joueur doit envahir des villes depuis un avion dont l'altitude décroît.</p>
     <p xml:lang="gl">Bomber é un xogo arcade para un único xogador, que montado nun avión invadirá varias cidades mentres o aparello vai reducindo a súa altitude.</p>
     <p xml:lang="hu">A Bomber egy egyjátékos arcade játék. A játékos különböző városokat igáz le egy repülővel, ami folyamatosan veszít magasságából.</p>
+    <p xml:lang="id">Bomber adalah sebuah permainan arkade pemain tunggal. Pemain adalah menyerang berbagai kota dalam sebuah pesawat yang menjatuhkan bom dari ketinggian.</p>
     <p xml:lang="it">Bomber è un semplice gioco arcade per un solo giocatore. Questi deve invadere delle città in una pianura inclinata.</p>
     <p xml:lang="ko">Bomber는 단일 플레이어 아케이드 게임입니다. 플레이어는 계속 하강하는 비행기를 타고 도시를 침략합니다.</p>
     <p xml:lang="nds">Bomber is en Enkelspeler-Speelhallenspeel. De Speler griept en Reeg Steder mit en Fleger an, dat jümmers wieder daal kummt.</p>
@@ -119,6 +122,7 @@
     <p xml:lang="fr">Le but du jeu est de détruire tous les bâtiments pour atteindre le niveau suivant. Chaque niveau devient plus difficile en augmentant la vitesse de l'avion et la hauteur des bâtiments.</p>
     <p xml:lang="gl">O obxectivo do xogo consiste en destruír os edificios e avanzar ao seguinte nivel. Cada novo nivel resultará máis difícil, pois aumentará a velocidade do avión, así como a altura dos edificios.</p>
     <p xml:lang="hu">A játék célja, hogy minden épületet elpusztítsunk, mielőtt továbbléphetnénk a következő szintre. Minden szint egyre nehezedik azzal, hogy a repülő sebessége növekszik, az épületek magassága pedig nő.</p>
+    <p xml:lang="id">Tujuan permainan ini adalah untuk meledakkan semua bangunan dan berlanjut ke level selanjutnya. Setiap level agak sedikit susah dengan meningkatnya kecepatan pada pesawat dan tingginya bangunan.</p>
     <p xml:lang="it">Lo scopo del gioco è di distruggere tutti gli edifici e raggiungere il livello successivo. Ogni livello è un po' più difficile perché aumenta la pendenza del piano e l'altezza degli edifici. </p>
     <p xml:lang="ko">게임 목표는 모든 건물을 파괴하고 다음 단계로 진행하는 것입니다. 각각 단계별로 비행기가 빨라지고 건물이 높아집니다.</p>
     <p xml:lang="nds">Dat Speel is, Du rietst all Hüüs daal un kummst so na de nakamen Speelstoop. Elkeen Stoop is sworer; de Fleger fliggt gauer un de Hüüs sünd höger.</p>
@@ -164,6 +168,7 @@
   <developer_name xml:lang="fr">La communauté KDE</developer_name>
   <developer_name xml:lang="gl">A comunidade de KDE</developer_name>
   <developer_name xml:lang="hu">A KDE közösség</developer_name>
+  <developer_name xml:lang="id">Komunitas KDE</developer_name>
   <developer_name xml:lang="it">La Comunità KDE</developer_name>
   <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nds">De KDE-Meenschap</developer_name>
