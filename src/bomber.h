@@ -46,7 +46,7 @@ public:
 
     void readSettings();
 
-private slots:
+private Q_SLOTS:
     void closeGame();
     void newGame();
     void pauseGame();

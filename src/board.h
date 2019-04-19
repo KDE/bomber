@@ -98,7 +98,7 @@ public:
      */
     void dropBomb();
 
-signals:
+Q_SIGNALS:
     /**
      * This is emitted when a plane crashes into a building
      */
@@ -118,13 +118,13 @@ signals:
      */
     void levelCleared();
 
-public slots:
+public Q_SLOTS:
     /**
      * This is called when the settings change to save the settings
      */
     void settingsChanged();
 
-private slots:
+private Q_SLOTS:
     /**
      * This is called once a second to update and draw all the game objects
      */

@@ -71,7 +71,7 @@ public:
      */
     BomberGameWidget::State state() const;
 
-public slots:
+public Q_SLOTS:
     /**
      * Used to end the game
      */
@@ -113,7 +113,7 @@ public slots:
      */
     void onDropBomb();
 
-signals:
+Q_SIGNALS:
     /**
      * This is emitted when the game is over
      */
@@ -149,7 +149,7 @@ signals:
      */
     void stateChanged(BomberGameWidget::State state);
 
-private slots:
+private Q_SLOTS:
     void tick();
 
     /**

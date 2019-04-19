@@ -310,7 +310,7 @@ void BomberGameWidget::generateOverlay()
     p.setPen(QColor(0, 0, 0, 0));
     p.setBrush(QBrush(QColor(188, 202, 222, 155)));
     p.setRenderHint(QPainter::Antialiasing);
-    p.drawRoundRect(0, 0, itemWidth, itemHeight, 25);
+    p.drawRoundedRect(0, 0, itemWidth, itemHeight, 25, Qt::RelativeSize);
 
     QString text;
     switch (m_state) {

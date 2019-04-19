@@ -7,8 +7,8 @@ set (KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATI
 cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
 project(bomber VERSION ${KDE_APPLICATIONS_VERSION})
 
-set (QT_MIN_VERSION "5.7.0")
-set (KF5_MIN_VERSION "5.30.0")
+set (QT_MIN_VERSION "5.10.0")
+set (KF5_MIN_VERSION "5.46.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
@@ -29,19 +29,16 @@ find_package(KF5KDEGames 4.9.0 REQUIRED)
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(KDEInstallDirs)
-include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMAddAppIcon)
 
-add_definitions(
-    -DQT_USE_FAST_CONCATENATION
-    -DQT_USE_FAST_OPERATOR_PLUS
-    -DQT_NO_CAST_FROM_ASCII
-    -DQT_NO_CAST_TO_ASCII
-    -DQT_NO_CAST_FROM_BYTEARRAY
-    -DQT_NO_URL_CAST_FROM_STRING
-)
-
+# workaround for https://bugreports.qt.io/browse/QTBUG-74665 (bug in qt5.13 reevaluate it)
+if (${Qt5Widgets_VERSION} STREQUAL "5.13.0")
+   MESSAGE(STATUS "Qt version: ${Qt5Widgets_VERSION} DISABLE compile without deprecated methods. bug QTBUG-74665")
+else()
+   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+endif()
 add_subdirectory(themes)
 add_subdirectory(sounds)
 add_subdirectory(icons)
