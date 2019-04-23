@@ -236,7 +236,7 @@ void BomberBoard::bombHit(Bomb * bomb, qreal moveBombToX, qreal moveBombToY)
     bomb->setPosition(moveBombToX, moveBombToY);
     bomb->setState(Bomb::State::Exploding);
     m_explodingBombs.enqueue(bomb);
-    QTimer::singleShot(BOMB_EXPLODE_TIME, this, SLOT(bombExploded()));
+    QTimer::singleShot(BOMB_EXPLODE_TIME, this, &BomberBoard::bombExploded);
     emit playBombSound();
 }
 
@@ -264,7 +264,7 @@ void BomberBoard::crashed()
     QPointF pos = m_plane->position();
     m_plane->setPosition(pos.x() + 1, pos.y());
     m_plane->setState(Plane::State::Exploding);
-    QTimer::singleShot(PLANE_EXPLODE_TIME, this, SLOT(planeExploded()));
+    QTimer::singleShot(PLANE_EXPLODE_TIME, this, &BomberBoard::planeExploded);
     emit playCrashSound();
 }
 
