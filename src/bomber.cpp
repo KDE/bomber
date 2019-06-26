@@ -28,7 +28,6 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KRandom>
 #include <KScoreDialog>
 #include <KStandardGameAction>
 #include <KToggleAction>

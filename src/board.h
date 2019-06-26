@@ -19,7 +19,6 @@
 #define BOARD_H
 
 // Qt
-#include <QDir>
 #include <QGraphicsScene>
 #include <QList>
 #include <QQueue>
