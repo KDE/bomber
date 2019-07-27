@@ -171,7 +171,7 @@ void Bomber::highscore()
         ksdialog->setComment(message);
         ksdialog->exec();
     } else {
-        QString const message = i18n("You gained a score of %1 point.", score);
+        QString const message = i18np("You gained a score of %1 point.", "You gained a score of %1 points.", score);
         KMessageBox::information(this, message, i18n("End of Game"));
     }
     delete ksdialog;
