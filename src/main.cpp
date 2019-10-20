@@ -63,7 +63,7 @@ int main(int argc, char ** argv)
 
     // see if we are starting with session management
     if (app.isSessionRestored()) {
-        kRestoreMainWindows<KMainWindow>();
+        kRestoreMainWindows<Bomber>();
     } else {
         auto widget = new Bomber;
         widget->setMinimumSize(320, 200);
