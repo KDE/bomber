@@ -153,11 +153,11 @@
   </description>
   <url type="homepage">https://www.kde.org/applications/games/bomber/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=bomber</url>
-  <url type="help">https://docs.kde.org/?application=bomber&amp;branch=stable</url>
+  <url type="help">https://docs.kde.org/?application=bomber</url>
   <url type="donation">https://www.kde.org/community/donations/?app=bomber&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
-      <image>http://kde.org/images/screenshots/bomber.png</image>
+      <image>https://cdn.kde.org/screenshots/bomber/bomber.png</image>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
