@@ -154,11 +154,11 @@
   </description>
   <url type="homepage">https://www.kde.org/applications/games/bomber/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=bomber</url>
-  <url type="help">https://docs.kde.org/?application=bomber&amp;branch=stable</url>
+  <url type="help">https://docs.kde.org/?application=bomber</url>
   <url type="donation">https://www.kde.org/community/donations/?app=bomber&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
-      <image>http://kde.org/images/screenshots/bomber.png</image>
+      <image>https://cdn.kde.org/screenshots/bomber/bomber.png</image>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
@@ -202,4 +202,9 @@
   <provides>
     <binary>bomber</binary>
   </provides>
+  <releases>
+    <release version="19.12.2" date="2020-02-06"/>
+    <release version="19.12.1" date="2020-01-09"/>
+    <release version="19.12.0" date="2019-12-12"/>
+  </releases>
 </component>
