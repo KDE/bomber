@@ -36,6 +36,8 @@ static const char version[] = "0.4";
 
 int main(int argc, char ** argv)
 {
+    // Fixes blurry icons with fractional scaling
+    QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication app(argc, argv);
     Kdelibs4ConfigMigrator migrate(QStringLiteral("bomber"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("bomberrc"));
