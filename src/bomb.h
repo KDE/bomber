@@ -34,7 +34,7 @@ public:
     static const qreal BOMB_RELATIVE_SIZE_H;
 
     Bomb(KGameRenderer * renderer, BomberBoard * board, qreal xPos, qreal yPos,
-         const QSize & tileSize);
+         QSize tileSize);
     ~Bomb();
 
     /**
