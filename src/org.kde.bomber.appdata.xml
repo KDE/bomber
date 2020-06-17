@@ -38,7 +38,6 @@
   <name xml:lang="sv">Bomber</name>
   <name xml:lang="tr">Bombacı</name>
   <name xml:lang="uk">Bomber</name>
-  <name xml:lang="x-test">xxBomberxx</name>
   <name xml:lang="zh-CN">Bomber</name>
   <name xml:lang="zh-TW">戰鬥機_Bomber</name>
   <summary>Arcade Bombing Game</summary>
@@ -70,7 +69,6 @@
   <summary xml:lang="sv">Spelhallsbombspel</summary>
   <summary xml:lang="tr">Bombalama Macera Oyunu</summary>
   <summary xml:lang="uk">Аркадна гра у бомбометання</summary>
-  <summary xml:lang="x-test">xxArcade Bombing Gamexx</summary>
   <summary xml:lang="zh-CN">街机上的投弹游戏</summary>
   <summary xml:lang="zh-TW">大型遊戲機的戰鬥機遊戲</summary>
   <description>
@@ -110,7 +108,6 @@
     <p xml:lang="sv">Bomber är ett spelhallsspel för en ensam spelare. Spelaren invaderar olika städer i ett flygplan som flyger på allt lägre höjd.</p>
     <p xml:lang="tr">Bombacı tek oyunculu bir makine oyunudur. Oyuncu yüksekliği azalan bir uçakla çeşitli şehirleri istila eder.</p>
     <p xml:lang="uk">Bomber — аркадна гра для одного гравця. Гравець бомбардує з літака міста, висота будинків у яких поступово зростає.</p>
-    <p xml:lang="x-test">xxBomber is a single player arcade game. The player is invading various cities in a plane that is decreasing in height.xx</p>
     <p xml:lang="zh-TW">Bomber 是個大型單玩家遊戲。玩家要侵略多個城市，由高到低。</p>
     <p>
       The goal of the game is to destroy all the buildings and advance to the next level. Each level gets a bit harder by increasing
@@ -149,7 +146,6 @@
     <p xml:lang="sv">Spelets mål är att förstöra alla byggnader och gå vidare till nästa nivå. Varje nivå blir lite svårare genom att planets hastighet och byggnadernas höjd ökar.</p>
     <p xml:lang="tr">Oyunun amacı şehirdeki bütün binaları yıkmak ve bir sonraki seviyeye geçmektir. Her seviyede uçağın hızı ve binaların yüksekliği arttırılarak zorluk arttırılır.</p>
     <p xml:lang="uk">Метою гри є зруйнувати всі будинки і перейти на наступний рівень. З кожним рівнем гра стає складнішою, оскільки зростає швидкість літака і висота будинків.</p>
-    <p xml:lang="x-test">xxThe goal of the game is to destroy all the buildings and advance to the next level. Each level gets a bit harder by increasing the speed of the plane and the height of the buildings.xx</p>
     <p xml:lang="zh-TW">遊戲的目的是要催毀所有的建築物，並進到下一關。每一關難度會越來越高，建築物也會越來越高。</p>
   </description>
   <url type="homepage">https://www.kde.org/applications/games/bomber/</url>
@@ -196,7 +192,6 @@
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="tr">KDE Topluluğu</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
-  <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
   <developer_name xml:lang="zh-CN">KDE 社区</developer_name>
   <developer_name xml:lang="zh-TW">KDE 社群</developer_name>
   <provides>
