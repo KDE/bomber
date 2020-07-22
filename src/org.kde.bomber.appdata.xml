@@ -45,6 +45,7 @@
   <summary xml:lang="ca">Joc arcade de bombardeig</summary>
   <summary xml:lang="ca-valencia">Joc arcade de bombardeig</summary>
   <summary xml:lang="cs">Arkádová bombardovací hra</summary>
+  <summary xml:lang="da">Arkade-bombespil</summary>
   <summary xml:lang="de">Fliegerbomben-Spiel</summary>
   <summary xml:lang="en-GB">Arcade Bombing Game</summary>
   <summary xml:lang="es">Juego recreativo de bombardeo</summary>
@@ -82,6 +83,7 @@
     <p xml:lang="ca">El Bomber és un joc arcade per a un sol jugador. El jugador està envaint diverses ciutats en un avió que va disminuint en alçada.</p>
     <p xml:lang="ca-valencia">El Bomber és un joc arcade per a un sol jugador. El jugador està envaint diverses ciutats en un avió que va disminuint en alçària.</p>
     <p xml:lang="cs">Bomber je arkádová hra pro jednoho hráče. Hráč napadá různá města, v letadle které klesá ve výšce.</p>
+    <p xml:lang="da">Bomber er et arkadespil for en enkelt spiller. Spilleren invaderer forskellige byer i et fly ved lavere og lavere højde.</p>
     <p xml:lang="de">Bomber ist ein Arcade-Spiel für einen Spieler, bei dem unterschiedliche und in der Höhe steigende Städte mit einem Flugzeug angegriffen werden.</p>
     <p xml:lang="el">Το Bomber είναι ένα ηλεκτρονικό παιχνίδι για έναν παίκτη. Ο παίκτης εισβάλλει σε διάφορες πόλεις με ένα μαχητικό το οποίο χάνει ύψος.</p>
     <p xml:lang="en-GB">Bomber is a single player arcade game. The player is invading various cities in a plane that is decreasing in height.</p>
@@ -121,6 +123,7 @@
     <p xml:lang="ca">L'objectiu del joc és destruir tots els edificis i avançar al següent nivell. Cada nivell es torna més difícil, incrementant la velocitat de l'avió i l'alçada dels edificis.</p>
     <p xml:lang="ca-valencia">L'objectiu del joc és destruir tots els edificis i avançar al següent nivell. Cada nivell es torna més difícil, incrementant la velocitat de l'avió i l'alçària dels edificis.</p>
     <p xml:lang="cs">Cíl hry je zničit všechny budovy a postoupit do další úrovně. Každá úroveň bude trochu těžší kvůli zvýšení rychlosti letadla a výšky budov.</p>
+    <p xml:lang="da">Målet med spillet er at ødelægge alle bygningerne og komme videre til næste niveau. Hvert niveau bliver lidt sværere ved at flyets hastighed og bygningernes højde øges.</p>
     <p xml:lang="de">Das Spielziel ist die Zerstörung aller Gebäude und der damit verbundene Aufstieg in die nächste Ebene. Die Ebenen werden durch die zunehmende Geschwindigkeit der Flugzeuge und Höhe der Gebäude immer schwieriger.</p>
     <p xml:lang="el">Ο στόχος του παιχνιδιού είναι να καταστραφούν όλα τα κτήρια και η προώθηση στο επόμενο επίπεδο. Σε κάθε επίπεδο η δυσκολία αυξάνεται με την αύξηση της ταχύτητας του μαχητικού και του ύψους των κτηρίων.</p>
     <p xml:lang="en-GB">The goal of the game is to destroy all the buildings and advance to the next level. Each level gets a bit harder by increasing the speed of the plane and the height of the buildings.</p>
@@ -168,6 +171,7 @@
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
   <developer_name xml:lang="cs">Komunita KDE</developer_name>
+  <developer_name xml:lang="da">KDE-fællesskabet</developer_name>
   <developer_name xml:lang="de">Die KDE-Gemeinschaft</developer_name>
   <developer_name xml:lang="el">Η Κοινότητα του KDE</developer_name>
   <developer_name xml:lang="en-GB">The KDE Community</developer_name>
