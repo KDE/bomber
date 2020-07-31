@@ -24,9 +24,8 @@
 #include <QGraphicsView>
 #include <QStandardPaths>
 #include <QTimer>
+#include <QRandomGenerator>
 
-// KDE
-#include <KRandom>
 
 // Bomber
 #include "bomb.h"
@@ -143,7 +142,7 @@ void BomberBoard::newLevel(unsigned int level)
         if (max < 5) {
             max = 5;
         }
-        unsigned int height = (KRandom::random() % (max - min)) + min;
+        unsigned int height = QRandomGenerator::global()->bounded(max - min) + min;
 
         m_buildingBlocks += height;
         auto building = new Building(m_renderer, this, i + 1, height);
