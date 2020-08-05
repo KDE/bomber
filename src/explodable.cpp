@@ -91,7 +91,7 @@ void Explodable::setVelocity(qreal vX)
 
 void Explodable::setRandomFrame()
 {
-    setFrame(KRandom::random());
+    setFrame(QRandomGenerator::global()->generate());
 }
 
 /**

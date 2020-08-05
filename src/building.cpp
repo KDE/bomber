@@ -21,8 +21,7 @@
 
 // KDE
 #include <KGameRenderedItem>
-#include <KRandom>
-
+#include <QRandomGenerator>
 // Bomber
 #include "board.h"
 
@@ -87,11 +86,11 @@ void Building::setupBuildingTiles()
             ++styleCount;
         }
     }
-    unsigned int style = KRandom::random() % styleCount;
+    unsigned int style = QRandomGenerator::global()->bounded(styleCount);
     unsigned int maxVarient = m_renderer->frameCount(QStringLiteral("building_%1").arg(style));
 
     for (unsigned int heightIndex = 0; heightIndex < m_height - 1; ++heightIndex) {
-        unsigned int varient = KRandom::random() % (maxVarient);
+        unsigned int varient = QRandomGenerator::global()->bounded(maxVarient);
         const QString pixmap = QStringLiteral("building_%1_%2").arg(style).arg(varient);
         m_buildingTiles.append(createBuildingTile(pixmap));
     }
