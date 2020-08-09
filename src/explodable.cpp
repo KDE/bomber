@@ -19,6 +19,9 @@
 // own
 #include "explodable.h"
 
+// Qt
+#include <QRandomGenerator>
+
 // KDE
 #include <KRandom>
 
