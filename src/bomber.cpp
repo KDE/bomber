@@ -34,7 +34,6 @@
 #include <KgThemeSelector>
 
 // Bomber
-#include "bomberwidget.h"
 #include "settings.h"
 
 Bomber::Bomber()

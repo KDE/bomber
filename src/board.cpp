@@ -20,7 +20,6 @@
 #include "board.h"
 
 // Qt
-#include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QStandardPaths>
 #include <QTimer>

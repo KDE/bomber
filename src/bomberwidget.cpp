@@ -22,7 +22,6 @@
 
 // Qt
 #include <QGraphicsItem>
-#include <QGraphicsView>
 #include <QTimer>
 
 // KDE

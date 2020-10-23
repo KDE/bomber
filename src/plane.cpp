@@ -21,7 +21,6 @@
 
 // Bomber
 #include "board.h"
-#include "explodable.h"
 
 /** The speed the plane will fly at */
 const qreal Plane::DEFAULT_VELOCITY = 0.08;

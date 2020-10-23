@@ -21,7 +21,6 @@
 
 // Bomber
 #include "board.h"
-#include "explodable.h"
 
 /** The speed the bomb will fall at */
 const qreal DEFAULT_VELOCITY = 0.2;
