@@ -60,7 +60,6 @@ private Q_SLOTS:
 private:
     void highscore();
     void initXMLUI();
-    void setupActions();
 
     KgThemeProvider m_provider;
     KgThemeSelector * m_selector;
