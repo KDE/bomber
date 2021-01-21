@@ -18,8 +18,6 @@
 // Bomber
 #include "bomber.h"
 
-static const char description[] = I18N_NOOP("Arcade bombing game");
-
 static const char version[] = "0.4";
 
 int main(int argc, char ** argv)
@@ -34,7 +32,8 @@ int main(int argc, char ** argv)
 
     KLocalizedString::setApplicationDomain("bomber");
 
-    KAboutData about(QStringLiteral("bomber"), i18n("Bomber"), QLatin1String(version), i18n(description),
+    KAboutData about(QStringLiteral("bomber"), i18n("Bomber"), QLatin1String(version),
+                     i18n("Arcade bombing game"),
                      KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
                      QString(), QStringLiteral("jp@stanwood.org.uk"));
     about.addAuthor(i18n("John-Paul Stanford"), QString(),
