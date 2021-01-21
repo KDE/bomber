@@ -33,7 +33,7 @@ public:
     explicit Explodable(const QString & mainSvg, const QString & explosionSvg,
                         qreal relativeWidth, qreal relativeHeight,
                         KGameRenderer * renderer, BomberBoard * board);
-    virtual ~Explodable();
+    ~Explodable() override;
 
     /**
      * Updates bomb position and pixmap.

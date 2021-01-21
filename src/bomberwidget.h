@@ -39,7 +39,7 @@ public:
                        GameOver };
 
     explicit BomberGameWidget(KgThemeProvider * provider, QWidget * parent = nullptr);
-    ~BomberGameWidget();
+    ~BomberGameWidget() override;
 
     /**
      * Used to find out the current level
@@ -157,8 +157,8 @@ private Q_SLOTS:
     void onPlaneCrashed();
 
 private:
-    virtual void resizeEvent(QResizeEvent * event) Q_DECL_OVERRIDE;
-    virtual void mouseReleaseEvent(QMouseEvent * event) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent * event) override;
+    void mouseReleaseEvent(QMouseEvent * event) override;
 
     /**
      * Create the overlay used to display info to the user. The info will

@@ -37,7 +37,7 @@ public:
      */
     explicit BomberBoard(KGameRenderer * renderer, QGraphicsView * view, QObject * parent = nullptr);
 
-    ~BomberBoard();
+    ~BomberBoard() override;
 
     /**
      * This is called when the game board is resized

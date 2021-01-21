@@ -33,7 +33,7 @@ class Bomber : public KXmlGuiWindow
     Q_OBJECT
 public:
     Bomber();
-    virtual ~Bomber();
+    ~Bomber() override;
 
     void readSettings();
 

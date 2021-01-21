@@ -28,7 +28,7 @@ public:
     static const qreal DEFAULT_VELOCITY;
 
     Plane(KGameRenderer * renderer, BomberBoard * board);
-    ~Plane();
+    ~Plane() override;
 
     /**
      * Performs move calculations

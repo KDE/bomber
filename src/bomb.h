@@ -24,7 +24,7 @@ public:
 
     Bomb(KGameRenderer * renderer, BomberBoard * board, qreal xPos, qreal yPos,
          QSize tileSize);
-    ~Bomb();
+    ~Bomb() override;
 
     /**
      * Performs move calculations
