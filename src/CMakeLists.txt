@@ -9,6 +9,11 @@ set(bomber_SRCS
    explodable.cpp
 )
 
+ecm_setup_version(${bomber_VERSION}
+    VARIABLE_PREFIX BOMBER
+    VERSION_HEADER bomber_version.h
+)
+
 kconfig_add_kcfg_files(bomber_SRCS settings.kcfgc)
 
 qt5_add_resources(bomber_SRCS

@@ -17,8 +17,7 @@
 
 // Bomber
 #include "bomber.h"
-
-static const char version[] = "0.4";
+#include "bomber_version.h"
 
 int main(int argc, char ** argv)
 {
@@ -32,7 +31,8 @@ int main(int argc, char ** argv)
 
     KLocalizedString::setApplicationDomain("bomber");
 
-    KAboutData about(QStringLiteral("bomber"), i18n("Bomber"), QLatin1String(version),
+    KAboutData about(QStringLiteral("bomber"), i18n("Bomber"),
+                     QStringLiteral(BOMBER_VERSION_STRING),
                      i18n("Arcade bombing game"),
                      KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
                      QString(), QStringLiteral("jp@stanwood.org.uk"));

@@ -1,10 +1,11 @@
-# KDE Application Version, managed by release script
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+
+# Release Service version, managed by release script
 set (RELEASE_SERVICE_VERSION_MAJOR "21")
 set (RELEASE_SERVICE_VERSION_MINOR "03")
 set (RELEASE_SERVICE_VERSION_MICRO "70")
 set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}.${RELEASE_SERVICE_VERSION_MICRO}")
 
-cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 project(bomber VERSION ${RELEASE_SERVICE_VERSION})
 
 set (QT_MIN_VERSION "5.10.0")
@@ -33,6 +34,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMAddAppIcon)
+include(ECMSetupVersion)
 
 add_definitions(
     -DQT_NO_FOREACH
