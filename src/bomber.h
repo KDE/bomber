@@ -42,6 +42,7 @@ private Q_SLOTS:
     void newGame();
     void pauseGame();
     void showHighscore();
+    void showPreferences();
 
     void displayLevel(unsigned int level);
     void displayScore(unsigned int score);

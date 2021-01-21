@@ -71,14 +71,14 @@ Bomber::~Bomber()
 void Bomber::initXMLUI()
 {
     // Game
-    m_newAction = KStandardGameAction::gameNew(this, SLOT(newGame()), actionCollection());
-    KStandardGameAction::end(this, SLOT(closeGame()), actionCollection());
-    m_pauseAction = KStandardGameAction::pause(this, SLOT(pauseGame()), actionCollection());
-    KStandardGameAction::highscores(this, SLOT(showHighscore()), actionCollection());
-    KStandardGameAction::quit(this, SLOT(close()), actionCollection());
+    m_newAction = KStandardGameAction::gameNew(this, &Bomber::newGame, actionCollection());
+    KStandardGameAction::end(this, &Bomber::closeGame, actionCollection());
+    m_pauseAction = KStandardGameAction::pause(this, &Bomber::pauseGame, actionCollection());
+    KStandardGameAction::highscores(this, &Bomber::showHighscore, actionCollection());
+    KStandardGameAction::quit(this, &QWidget::close, actionCollection());
 
     // Settings
-    KStandardAction::preferences(m_selector, SLOT(showAsDialog()), actionCollection());
+    KStandardAction::preferences(this, &Bomber::showPreferences, actionCollection());
     m_soundAction = new KToggleAction(i18nc("Menu item used to disable or enable sound", "&Play Sounds"), this);
     actionCollection()->addAction(QStringLiteral("toggle_sound"), m_soundAction);
     connect(m_soundAction, &KToggleAction::triggered, m_gameWidget, &BomberGameWidget::setSoundsEnabled);
@@ -144,6 +144,11 @@ void Bomber::showHighscore()
 {
     KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
     ksdialog.exec();
+}
+
+void Bomber::showPreferences()
+{
+    m_selector->showAsDialog();
 }
 
 void Bomber::highscore()
