@@ -10,6 +10,11 @@ set(bomber_SRCS
 )
 
 kconfig_add_kcfg_files(bomber_SRCS settings.kcfgc)
+
+qt5_add_resources(bomber_SRCS
+    bomber.qrc
+)
+
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/*-apps-bomber.png")
 ecm_add_app_icon(bomber_SRCS ICONS ${ICONS_SRCS})
 add_executable(bomber ${bomber_SRCS})
@@ -30,4 +35,3 @@ install(TARGETS bomber ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS org.kde.bomber.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.bomber.appdata.xml DESTINATION  ${CMAKE_INSTALL_METAINFODIR})
 install(FILES bomber.kcfg  DESTINATION  ${KDE_INSTALL_KCFGDIR})
-install(FILES bomberui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/bomber)
