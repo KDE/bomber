@@ -43,7 +43,7 @@ Building::Building(KGameRenderer * renderer, BomberBoard * board, unsigned int p
 
 Building::~Building()
 {
-    foreach (KGameRenderedItem * tile, m_buildingTiles) {
+    for (KGameRenderedItem * tile : qAsConst(m_buildingTiles)) {
         m_board->removeItem(tile);
     }
     qDeleteAll(m_buildingTiles);
@@ -89,7 +89,7 @@ void Building::setupBuildingTiles()
     const QString pixmap = QStringLiteral("roof_%1_0").arg(style);
     m_buildingTiles.append(createBuildingTile(pixmap));
     m_boundingRect.moveTo(m_xPos, BUILD_BASE_LOCATION - m_height + 1);
-    foreach (KGameRenderedItem * tile, m_buildingTiles) {
+    for (KGameRenderedItem * tile : qAsConst(m_buildingTiles)) {
         m_board->addItem(tile);
     }
 }
@@ -103,7 +103,7 @@ KGameRenderedItem * Building::createBuildingTile(const QString & pixmap)
 
 void Building::show()
 {
-    foreach (KGameRenderedItem * tile, m_buildingTiles) {
+    for (KGameRenderedItem * tile : qAsConst(m_buildingTiles)) {
         tile->show();
     }
 }

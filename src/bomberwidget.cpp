@@ -258,28 +258,33 @@ void BomberGameWidget::redraw()
     if (size().isEmpty()) {
         return;
     }
-    QGraphicsItem * item;
     switch (m_state) {
-        case State::BeforeFirstGame:
-            foreach (item, m_board->items()) {
+        case State::BeforeFirstGame: {
+            const auto items = m_board->items();
+            for (QGraphicsItem * item : items) {
                 item->hide();
             }
             generateOverlay();
             m_overlay->show();
             break;
-        case State::Running:
-            foreach (item, m_board->items()) {
+        }
+        case State::Running: {
+            const auto items = m_board->items();
+            for (QGraphicsItem * item : items) {
                 item->show();
             }
             m_overlay->hide();
             break;
-        default:
-            foreach (item, m_board->items()) {
+        }
+        default: {
+            const auto items = m_board->items();
+            for (QGraphicsItem * item : items) {
                 item->show();
             }
             generateOverlay();
             m_overlay->show();
             break;
+        }
     }
     m_board->redraw();
     update();

@@ -80,7 +80,7 @@ void BomberBoard::resize(QSize & size)
 
     m_tileSize = QSize(minTileSizeWidth, minTileSizeHeight);
 
-    foreach (Building * building, m_buildings) {
+    for (Building * building : qAsConst(m_buildings)) {
         building->resize(m_tileSize);
     }
 
@@ -160,7 +160,7 @@ void BomberBoard::tick()
         m_bomb->advanceItem();
     }
 
-    foreach (Bomb * bomb, m_explodingBombs) {
+    for (Bomb * bomb : qAsConst(m_explodingBombs)) {
         bomb->advanceItem();
     }
 
@@ -171,7 +171,7 @@ void BomberBoard::tick()
         m_bomb->update();
     }
 
-    foreach (Bomb * bomb, m_explodingBombs) {
+    for (Bomb * bomb : qAsConst(m_explodingBombs)) {
         bomb->update();
     }
 }
@@ -188,7 +188,8 @@ void BomberBoard::dropBomb()
 
 void BomberBoard::checkCollisions()
 {
-    foreach (Building * building, m_buildings) {
+    const auto currentBuildings = m_buildings;
+    for (Building * building : currentBuildings) {
         if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state() == Explodable::State::Moving) {
             // Plane crashed into the building
             building->destoryTop();
