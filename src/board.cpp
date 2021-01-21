@@ -202,7 +202,7 @@ void BomberBoard::checkCollisions()
                 // Bomb hit a building
                 building->destoryTop();
                 --m_buildingBlocks;
-                emit onBombHit();
+                Q_EMIT onBombHit();
                 bombHit(m_bomb, building->position().x(), Building::BUILD_BASE_LOCATION - (building->height()));
                 m_bomb = nullptr;
             } else if (m_bomb->position().y() >= Building::BUILD_BASE_LOCATION + 1) {
@@ -213,7 +213,7 @@ void BomberBoard::checkCollisions()
         }
 
         if (m_plane->state() == Explodable::State::Moving && m_buildingBlocks == 0) {
-            emit levelCleared();
+            Q_EMIT levelCleared();
         }
     }
 }
@@ -224,7 +224,7 @@ void BomberBoard::bombHit(Bomb * bomb, qreal moveBombToX, qreal moveBombToY)
     bomb->setState(Bomb::State::Exploding);
     m_explodingBombs.enqueue(bomb);
     QTimer::singleShot(BOMB_EXPLODE_TIME, this, &BomberBoard::bombExploded);
-    emit playBombSound();
+    Q_EMIT playBombSound();
 }
 
 void BomberBoard::bombExploded()
@@ -243,7 +243,7 @@ void BomberBoard::settingsChanged()
 void BomberBoard::planeExploded()
 {
     m_plane->setState(Plane::State::Exploded);
-    emit onPlaneCrash();
+    Q_EMIT onPlaneCrash();
 }
 
 void BomberBoard::crashed()
@@ -252,7 +252,7 @@ void BomberBoard::crashed()
     m_plane->setPosition(pos.x() + 1, pos.y());
     m_plane->setState(Plane::State::Exploding);
     QTimer::singleShot(PLANE_EXPLODE_TIME, this, &BomberBoard::planeExploded);
-    emit playCrashSound();
+    Q_EMIT playCrashSound();
 }
 
 void BomberBoard::clear()
