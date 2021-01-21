@@ -7,7 +7,7 @@
 #ifndef EXPLODABLE_H
 #define EXPLODABLE_H
 
-// KDE
+// KDEGames
 #include <KGameRenderedItem>
 
 class BomberBoard;

@@ -7,8 +7,10 @@
 #ifndef BOMBER_H
 #define BOMBER_H
 
-// KDE
+// KF
 #include <KXmlGuiWindow>
+
+// KDEGames
 #include <KgThemeProvider>
 
 // Bomber

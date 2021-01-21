@@ -10,9 +10,6 @@
 // Qt
 #include <QRandomGenerator>
 
-// KDE
-#include <KRandom>
-
 // Bomber
 #include "board.h"
 

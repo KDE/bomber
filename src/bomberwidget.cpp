@@ -12,7 +12,7 @@
 #include <QGraphicsItem>
 #include <QTimer>
 
-// KDE
+// KF
 #include <KLocalizedString>
 
 // Bomber

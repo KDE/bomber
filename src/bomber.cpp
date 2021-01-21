@@ -12,13 +12,15 @@
 #include <QLabel>
 #include <QStatusBar>
 
-// KDE
+// KF
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KToggleAction>
+
+// KDEGames
 #include <KScoreDialog>
 #include <KStandardGameAction>
-#include <KToggleAction>
 #include <KgThemeSelector>
 
 // Bomber

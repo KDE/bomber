@@ -7,9 +7,12 @@
 // own
 #include "building.h"
 
-// KDE
-#include <KGameRenderedItem>
+// Qt
 #include <QRandomGenerator>
+
+// KDEGames
+#include <KGameRenderedItem>
+
 // Bomber
 #include "board.h"
 

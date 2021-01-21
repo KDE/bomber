@@ -12,7 +12,7 @@
 #include <QGraphicsView>
 #include <QMouseEvent>
 
-// KDE
+// KDEGames
 #include <KgSound>
 
 // Bomber

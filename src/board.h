@@ -13,7 +13,7 @@
 #include <QQueue>
 #include <QSize>
 
-// KDE
+// KDEGames
 #include <KGameRenderer>
 
 class Plane;
