@@ -7,6 +7,7 @@ set(bomber_SRCS
    bomb.cpp
    building.cpp
    explodable.cpp
+   bomber.qrc
 )
 
 ecm_setup_version(${bomber_VERSION}
@@ -15,10 +16,6 @@ ecm_setup_version(${bomber_VERSION}
 )
 
 kconfig_add_kcfg_files(bomber_SRCS settings.kcfgc)
-
-qt5_add_resources(bomber_SRCS
-    bomber.qrc
-)
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/*-apps-bomber.png")
 ecm_add_app_icon(bomber_SRCS ICONS ${ICONS_SRCS})
