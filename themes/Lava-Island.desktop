@@ -1,6 +1,7 @@
 [KGameTheme]
 VersionFormat=1
 Name=Lava-Island
+Name[ar]=جزيرة الحمم
 Name[bs]=Lava-otok
 Name[ca]=Illa de Lava
 Name[ca@valencia]=Illa de Lava
@@ -51,6 +52,7 @@ Name[x-test]=xxLava-Islandxx
 Name[zh_CN]=熔岩岛
 Name[zh_TW]=火山島
 Description=Stop the lava and save the day
+Description[ar]=أوقف الحمم وانقذ اليوم
 Description[bs]=Zaustavi lavu i spasi dan
 Description[ca]=Atura la lava i salva el dia
 Description[ca@valencia]=Atura la lava i salva el dia
