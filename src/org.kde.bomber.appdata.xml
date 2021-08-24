@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>Bomber</name>
+  <name xml:lang="ar">القاصف</name>
   <name xml:lang="bs">Bomber</name>
   <name xml:lang="ca">Bomber</name>
   <name xml:lang="ca-valencia">Bomber</name>
@@ -42,6 +43,7 @@
   <name xml:lang="zh-CN">Bomber</name>
   <name xml:lang="zh-TW">戰鬥機_Bomber</name>
   <summary>Arcade Bombing Game</summary>
+  <summary xml:lang="ar">لعبة قصف الممرات</summary>
   <summary xml:lang="ca">Joc arcade de bombardeig</summary>
   <summary xml:lang="ca-valencia">Joc arcade de bombardeig</summary>
   <summary xml:lang="cs">Arkádová bombardovací hra</summary>
@@ -81,6 +83,7 @@
     <p>
       Bomber is a single player arcade game. The player is invading various cities in a plane that is decreasing in height.
     </p>
+    <p xml:lang="ar">القاصف هي لعبة أركيد للاعب واحد. يقوم اللاعب بغزو مدن مختلفة على طائرة يتناقص ارتفاعها بالتدريج.</p>
     <p xml:lang="bs">Bomber je arkadna igra za jednog igrača. Igrač napada razne gradove avionom koji smanjuje visinu.</p>
     <p xml:lang="ca">El Bomber és un joc arcade per a un sol jugador. El jugador està envaint diverses ciutats en un avió que va disminuint en alçada.</p>
     <p xml:lang="ca-valencia">El Bomber és un joc arcade per a un sol jugador. El jugador està envaint diverses ciutats en un avió que va disminuint en alçària.</p>
@@ -122,6 +125,7 @@
       The goal of the game is to destroy all the buildings and advance to the next level. Each level gets a bit harder by increasing
       the speed of the plane and the height of the buildings.
     </p>
+    <p xml:lang="ar">الهدف من اللعبة هو تدمير جميع المباني والتقدم إلى المستوى التالي، يصبح كل مستوى أصعب قليلاً عن طريق زيادة سرعة الطائرة وارتفاع المباني.</p>
     <p xml:lang="bs">Cilj igre je da uništite sve zgrade da bi prešli na sljedeći nivo. Svaki nivo postaje malo teži povećanjem brzine aviona i visine zgrade.</p>
     <p xml:lang="ca">L'objectiu del joc és destruir tots els edificis i avançar al següent nivell. Cada nivell es torna més difícil, incrementant la velocitat de l'avió i l'alçada dels edificis.</p>
     <p xml:lang="ca-valencia">L'objectiu del joc és destruir tots els edificis i avançar al següent nivell. Cada nivell es torna més difícil, incrementant la velocitat de l'avió i l'alçària dels edificis.</p>
@@ -171,6 +175,7 @@
   </screenshots>
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
+  <developer_name xml:lang="ar">مجتمع كدي</developer_name>
   <developer_name xml:lang="bs">KDE zajednica</developer_name>
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
