@@ -80,7 +80,7 @@ void BomberBoard::resize(QSize & size)
 
     m_tileSize = QSize(minTileSizeWidth, minTileSizeHeight);
 
-    for (Building * building : qAsConst(m_buildings)) {
+    for (Building * building : std::as_const(m_buildings)) {
         building->resize(m_tileSize);
     }
 
@@ -160,7 +160,7 @@ void BomberBoard::tick()
         m_bomb->advanceItem();
     }
 
-    for (Bomb * bomb : qAsConst(m_explodingBombs)) {
+    for (Bomb * bomb : std::as_const(m_explodingBombs)) {
         bomb->advanceItem();
     }
 
@@ -171,7 +171,7 @@ void BomberBoard::tick()
         m_bomb->update();
     }
 
-    for (Bomb * bomb : qAsConst(m_explodingBombs)) {
+    for (Bomb * bomb : std::as_const(m_explodingBombs)) {
         bomb->update();
     }
 }
