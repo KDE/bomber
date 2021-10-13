@@ -28,19 +28,17 @@
 		<legalnotice>&FDLNotice;
 		</legalnotice>
 
-		<date>2016-05-09</date>
-		<releaseinfo>0.4 (Applications 16.04)
-		</releaseinfo>
+		<date>2021-10-13</date>
+		<releaseinfo>KDE Gear 21.08</releaseinfo>
 
 		<abstract>
 			<para>
-				This documentation describes the game of &bomber; version 0.4
+				This documentation describes the game of &bomber; version 21.08
 			</para>
 		</abstract>
 
 		<keywordset>
 			<keyword>KDE</keyword><!-- do not change this! -->
-			<keyword>kdegames</keyword><!-- do not change this! -->
 			<keyword>game</keyword><!-- do not change this! -->
 			<keyword>arcade</keyword>
 			<keyword>bomber</keyword>
@@ -98,10 +96,7 @@
 		</para>
 		<para>
 			Buildings are destroyed by dropping bombs on them. This can
-			be done by clicking the
-			&LMB;
-			or pressing the
-			<quote>Space</quote>
+			be done by clicking the &LMB; or pressing the &Space;
 			key. The bomb will fall from the plane and hit anything
 			directly below it.
 		</para>
