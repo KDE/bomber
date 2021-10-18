@@ -51,7 +51,7 @@
   <summary xml:lang="de">Fliegerbomben-Spiel</summary>
   <summary xml:lang="el">Ηλεκτρονικό παιχνίδι βομβαρδισμού</summary>
   <summary xml:lang="en-GB">Arcade Bombing Game</summary>
-  <summary xml:lang="es">Juego recreativo de bombardeo</summary>
+  <summary xml:lang="es">Juego recreativo de bombas</summary>
   <summary xml:lang="et">Põnev pommitamisemäng</summary>
   <summary xml:lang="eu">Arkupeko bonbardaketa jokoa</summary>
   <summary xml:lang="fi">Arkadipommituspeli</summary>
@@ -134,7 +134,7 @@
     <p xml:lang="de">Das Spielziel ist die Zerstörung aller Gebäude und der damit verbundene Aufstieg in die nächste Ebene. Die Ebenen werden durch die zunehmende Geschwindigkeit der Flugzeuge und Höhe der Gebäude immer schwieriger.</p>
     <p xml:lang="el">Ο στόχος του παιχνιδιού είναι να καταστραφούν όλα τα κτήρια και η προώθηση στο επόμενο επίπεδο. Σε κάθε επίπεδο η δυσκολία αυξάνεται με την αύξηση της ταχύτητας του μαχητικού και του ύψους των κτηρίων.</p>
     <p xml:lang="en-GB">The goal of the game is to destroy all the buildings and advance to the next level. Each level gets a bit harder by increasing the speed of the plane and the height of the buildings.</p>
-    <p xml:lang="es">El objetivo del juego consiste en destruir todos los edificios para avanzar hasta el siguiente nivel. Cada nivel se va haciendo más difícil al aumentarse la velocidad del avión y la altura de los edificios.</p>
+    <p xml:lang="es">El objetivo del juego consiste en destruir todos los edificios para avanzar hasta el siguiente nivel. Cada nivel se va haciendo más difícil a medida que aumenta la velocidad del avión y la altura de los edificios.</p>
     <p xml:lang="et">Mängu eesmärk on hävitada kõik ehitised ja jõuda järgmisele tasemele. Iga tase muutub aina raskemaks: suureneb lennuki kiirus ning kasvab ehitiste kõrgus.</p>
     <p xml:lang="eu">Jokoaren helburua eraikin guztiak suntsitu eta hurrengo mailara aurreratzea da. Maila bakoitza zailxeagoa bilakatzen da hegazkinaren abiadura eta eraikinen garaiera handiagotuz.</p>
     <p xml:lang="fi">Pelin tavoitteena on tuhota kaikki rakennukset ja edetä seuraavalle tasolle. Kukin taso on edellistä vaikeampi; lentokone on nopeampi ja rakennukset ovat korkeampia.</p>
@@ -184,7 +184,7 @@
   <developer_name xml:lang="de">Die KDE-Gemeinschaft</developer_name>
   <developer_name xml:lang="el">Η Κοινότητα του KDE</developer_name>
   <developer_name xml:lang="en-GB">The KDE Community</developer_name>
-  <developer_name xml:lang="es">La comunidad KDE</developer_name>
+  <developer_name xml:lang="es">La Comunidad KDE</developer_name>
   <developer_name xml:lang="et">KDE kogukond</developer_name>
   <developer_name xml:lang="eu">KDE komunitatea</developer_name>
   <developer_name xml:lang="fi">KDE-yhteisö</developer_name>
