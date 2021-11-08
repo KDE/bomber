@@ -6,14 +6,20 @@ ecm_setup_version(${bomber_VERSION}
 add_executable(bomber)
 
 target_sources(bomber PRIVATE
-    bomber.cpp
-    main.cpp
-    bomberwidget.cpp
     board.cpp
-    plane.cpp
+    board.h
     bomb.cpp
+    bomber.cpp
+    bomber.h
+    bomberwidget.cpp
+    bomberwidget.h
     building.cpp
+    bomb.h
     explodable.cpp
+    explodable.h
+    main.cpp
+    plane.cpp
+    plane.h
 
     bomber.qrc
 )
