@@ -13,7 +13,9 @@
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
+#endif
 
 // Bomber
 #include "bomber.h"
@@ -22,13 +24,16 @@
 int main(int argc, char ** argv)
 {
     // Fixes blurry icons with fractional scaling
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+#endif
     QApplication app(argc, argv);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Kdelibs4ConfigMigrator migrate(QStringLiteral("bomber"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("bomberrc"));
     migrate.setUiFiles(QStringList() << QStringLiteral("bomberui.rc"));
     migrate.migrate();
-
+#endif
     KLocalizedString::setApplicationDomain("bomber");
 
     KAboutData about(QStringLiteral("bomber"), i18n("Bomber"),
