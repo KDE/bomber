@@ -19,6 +19,7 @@
 #include <KToggleAction>
 
 // KDEGames
+#include <kdegames_version.h>
 #include <KScoreDialog>
 #include <KStandardGameAction>
 #include <KgThemeSelector>
@@ -29,7 +30,10 @@
 Bomber::Bomber()
 {
     m_provider.discoverThemes(
-        "appdata", QStringLiteral("themes"), //theme data location
+#if KDEGAMES_VERSION < QT_VERSION_CHECK(7, 4, 0)
+        "appdata",
+#endif
+        QStringLiteral("themes"),   //theme data location
         QStringLiteral("kbomber")); //default theme name
 
     m_selector = new KgThemeSelector(&m_provider);
