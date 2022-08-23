@@ -2,7 +2,6 @@
 Type=Application
 Exec=bomber -qwindowtitle %c
 Icon=bomber
-Terminal=false
 StartupNotify=true
 X-DBUS-StartupType=Multi
 X-DBUS-ServiceName=org.kde.bomber
