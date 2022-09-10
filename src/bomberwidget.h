@@ -31,14 +31,16 @@ public:
     /**
      * The different states that the game can be in
      */
-    enum class State { BeforeFirstGame,
-                       Running,
-                       BetweenLevels,
-                       Paused,
-                       Suspended,
-                       GameOver };
+    enum class State {
+        BeforeFirstGame,
+        Running,
+        BetweenLevels,
+        Paused,
+        Suspended,
+        GameOver,
+    };
 
-    explicit BomberGameWidget(KgThemeProvider * provider, QWidget * parent = nullptr);
+    explicit BomberGameWidget(KgThemeProvider *provider, QWidget *parent = nullptr);
     ~BomberGameWidget() override;
 
     /**
@@ -157,8 +159,8 @@ private Q_SLOTS:
     void onPlaneCrashed();
 
 private:
-    void resizeEvent(QResizeEvent * event) override;
-    void mouseReleaseEvent(QMouseEvent * event) override;
+    void resizeEvent(QResizeEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 
     /**
      * Create the overlay used to display info to the user. The info will
@@ -185,10 +187,10 @@ private:
     int m_scoreLeftBeforeNewLife;
 
     KGameRenderer m_renderer;
-    QTimer * m_clock;
-    BomberBoard * m_board;
+    QTimer *m_clock;
+    BomberBoard *m_board;
 
-    QGraphicsPixmapItem * m_overlay;
+    QGraphicsPixmapItem *m_overlay;
 
     KgSound m_soundBomb;
     KgSound m_soundCrash;

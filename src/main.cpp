@@ -21,7 +21,7 @@
 #include "bomber.h"
 #include "bomber_version.h"
 
-int main(int argc, char ** argv)
+int main(int argc, char **argv)
 {
     // Fixes blurry icons with fractional scaling
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -36,15 +36,16 @@ int main(int argc, char ** argv)
 #endif
     KLocalizedString::setApplicationDomain("bomber");
 
-    KAboutData about(QStringLiteral("bomber"), i18n("Bomber"),
+    KAboutData about(QStringLiteral("bomber"),
+                     i18n("Bomber"),
                      QStringLiteral(BOMBER_VERSION_STRING),
                      i18n("Arcade bombing game"),
-                     KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
-                     QString(), QStringLiteral("jp@stanwood.org.uk"));
-    about.addAuthor(i18n("John-Paul Stanford"), QString(),
-                    QStringLiteral("jp@stanwood.org.uk"));
-    about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
-                    QStringLiteral("maemre2@gmail.com"));
+                     KAboutLicense::GPL,
+                     i18n("(C) 2007 John-Paul Stanford"),
+                     QString(),
+                     QStringLiteral("jp@stanwood.org.uk"));
+    about.addAuthor(i18n("John-Paul Stanford"), QString(), QStringLiteral("jp@stanwood.org.uk"));
+    about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."), QStringLiteral("maemre2@gmail.com"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     KCrash::initialize();

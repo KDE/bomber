@@ -16,9 +16,8 @@ const qreal DEFAULT_VELOCITY = 0.2;
 const qreal Bomb::BOMB_RELATIVE_SIZE_H = 0.7;
 const qreal Bomb::BOMB_RELATIVE_SIZE_W = 0.2;
 
-Bomb::Bomb(KGameRenderer * renderer, BomberBoard * board, qreal xPos, qreal yPos, QSize tileSize)
-    : Explodable(QStringLiteral("bomb"), QStringLiteral("bomb_explode"), BOMB_RELATIVE_SIZE_W,
-                 BOMB_RELATIVE_SIZE_H, renderer, board)
+Bomb::Bomb(KGameRenderer *renderer, BomberBoard *board, qreal xPos, qreal yPos, QSize tileSize)
+    : Explodable(QStringLiteral("bomb"), QStringLiteral("bomb_explode"), BOMB_RELATIVE_SIZE_W, BOMB_RELATIVE_SIZE_H, renderer, board)
 {
     setVelocity(DEFAULT_VELOCITY);
     setPosition(xPos, yPos);

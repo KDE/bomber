@@ -27,7 +27,7 @@ public:
     /** The speed the plane will fly at */
     static const qreal DEFAULT_VELOCITY;
 
-    Plane(KGameRenderer * renderer, BomberBoard * board);
+    Plane(KGameRenderer *renderer, BomberBoard *board);
     ~Plane() override;
 
     /**
