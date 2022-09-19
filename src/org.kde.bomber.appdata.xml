@@ -164,7 +164,7 @@
     <p xml:lang="zh-CN">游戏的目标是摧毁所有建筑物，达成目标后可以进入下一关。每过一关，轰炸机的速度和建筑物的高度都会比前一关有所提高，游戏的难度也因此越来越高。</p>
     <p xml:lang="zh-TW">遊戲的目的是要催毀所有的建築物，並進到下一關。每一關難度會越來越高，建築物也會越來越高。</p>
   </description>
-  <url type="homepage">https://www.kde.org/applications/games/bomber/</url>
+  <url type="homepage">https://apps.kde.org//bomber</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=bomber</url>
   <url type="help">https://docs.kde.org/?application=bomber</url>
   <url type="donation">https://www.kde.org/community/donations/?app=bomber&amp;source=appdata</url>
