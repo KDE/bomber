@@ -213,6 +213,7 @@
   <developer_name xml:lang="x-test">xxThe KDE Communityxx</developer_name>
   <developer_name xml:lang="zh-CN">KDE 社区</developer_name>
   <developer_name xml:lang="zh-TW">KDE 社群</developer_name>
+  <launchable type="desktop-id">org.kde.bomber.desktop</launchable>
   <provides>
     <binary>bomber</binary>
   </provides>
