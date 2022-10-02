@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>El manual del &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Manuel</firstname
+><surname
+>Tortosa</surname
+><affiliation
+><address
+><email
+>manutortosa@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>13 d'octubre de 2021</date>
+		<releaseinfo
+>KDE Gear 21.08</releaseinfo>
+
+		<abstract>
+			<para
+>Aquesta documentació descriu el joc &bomber; versió 21.08 </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>joc</keyword
+><!-- do not change this! -->
+			<keyword
+>arcade</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introducció</title>
+		<note>
+			<title
+>Tipus de joc:</title>
+			<para
+>Arcade</para>
+		</note>
+		<note>
+			<title
+>Nombre de possibles jugadors:</title>
+			<para
+>Un</para>
+		</note>
+
+		<para
+>&bomber; és un joc arcade d'un sol jugador. El jugador està envaint diverses ciutats en un avió que va disminuint en alçada. </para>
+		<para
+>L'objectiu del joc és destruir tots els edificis i avançar al següent nivell. Cada nivell es torna més difícil, incrementant la velocitat de l'avió i l'alçada dels edificis. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Com jugar</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Pantalla principal del &bomber;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>El jugador està volant en un avió en una ciutat. L'avió vola des de l'esquerra cap a la dreta. Cada vegada que desapareix de l'àrea de joc, reapareix per l'esquerra una altra vegada, però més avall que abans. </para>
+		<para
+>El jugador ha de destruir tots els edificis per completar el nivell. Si l'avió xoca contra un edifici, el jugador perd una vida i l'avió es desplaça a la part superior esquerra de l'àrea de joc una altra vegada. </para>
+		<para
+>Els edificis es destrueixen llançant bombes sobre ells. Això es pot fer clicant el &BER; o prement la tecla &Space;. La bomba caurà des de l'avió i tocarà qualsevol cosa que estigui directament a sota. </para>
+		<para
+>Després de completar un nivell, el jugador avança cap al següent nivell. Cada nivell és lleugerament més difícil que l'anterior, ja que els edificis són més alts i l'avió vola més de pressa. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Configuració del joc</title
+><!-- do not change this! -->
+		<para
+>El diàleg de configuració del &bomber; permet seleccionar els temes visuals pel &bomber;. </para>
+		<para
+>Per a seleccionar un tema nou, senzillament escolliu-lo des de la llista de selecció. Cada element de la llista mostra una petita vista prèvia a l'esquerra del nom del tema. Una selecció s'aplicarà immediatament. </para>
+		<para
+>Una vegada esteu satisfet amb el tema que heu seleccionat podeu clicar el botó <guibutton
+>Tanca</guibutton
+>, localitzat a la part inferior d'aquest diàleg. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Crèdits i llicència</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Autor original </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Copyright de la documentació 2008, John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Traductor/Revisor de la documentació: Manuel Tortosa <email
+>manutortosa@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+</book>

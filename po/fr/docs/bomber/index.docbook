@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % French "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>Manuel de &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			&traducteurStanislasZeller; &traducteurXavierBesnard; 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>13-10-2021</date>
+		<releaseinfo
+>KDE Gear 21.08</releaseinfo>
+
+		<abstract>
+			<para
+>Cette documentation décrit le jeu &bomber; en version 21.08 </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>jeu</keyword
+><!-- do not change this! -->
+			<keyword
+>arcade</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introduction</title>
+		<note>
+			<title
+>Type de jeu : </title>
+			<para
+>Arcade</para>
+		</note>
+		<note>
+			<title
+>Nombre possible de joueurs : </title>
+			<para
+>Un</para>
+		</note>
+
+		<para
+>&bomber; es un jeu d'arcade à un joueur. Le joueur envahit diverses villes dans un avion qui descend vers des immeubles. </para>
+		<para
+>Le but du jeu est de détruire tous les immeubles et d'avancer au niveau suivant. Chaque niveau devient plus dur en augmentant la vitesse de l'avion et la hauteur des immeubles. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Comment jouer</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Écran principal de &bomber; </phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>Le joueur vole dans un avion à travers une ville. L'avion vole de gauche à droite. Chaque fois qu'il disparaît de l'aire de jeu, il ré-apparaît de nouveau sur le coté gauche, mais à une altitude plus basse qu'avant. </para>
+		<para
+>Le joueur doit détruire tous les immeubles pour compléter le niveau. Si l'avion s'écrase sur un immeuble, le joueur perd une vie et l'avion est de nouveau placé en haut à gauche de l'aire de jeu. </para>
+		<para
+>Les immeubles sont détruits en lançant des bombes dessus. Ceci est réalisé en cliquant avec le &BGS; ou en appuyant sur la touche &Space;. La bombe tombera depuis l'avion et frappera directement ce qui se trouve en dessous. </para>
+		<para
+>Après avoir terminé le niveau, le joueur avance au niveau suivant. Chaque niveau devient légèrement plus dur que le niveau précédent : les immeubles deviennent plus grands et l'avion va plus vite. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Configuration du jeu</title
+><!-- do not change this! -->
+		<para
+>La boîte de dialogue de configuration de &bomber; vous permet de sélectionner des thèmes visuels pour &bomber;. </para>
+		<para
+>Pour sélectionner un nouveau thème, le choisir simplement dans la liste de sélection. Chaque élément dans la liste affiche un petit aperçu à gauche du nom du thème. La sélection est appliquée immédiatement. </para>
+		<para
+>Une fois que vous êtes satisfait du thème que vous avez sélectionné, vous pouvez cliquer sur le bouton <guibutton
+>Fermer</guibutton
+>, situé en bas de cette boîte de dialogue. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Remerciements et licence</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Auteur original </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Copyright de la documentation 2008, John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Traduction française par &StanislasZeller; et &XavierBesnard;.</para
+> &underFDL; &underGPL; </chapter>
+
+</book>

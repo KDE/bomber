@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY bomber "<application
+>Bomber</application
+>">
+  <!ENTITY kappname "&bomber;">
+  <!ENTITY package "kdegames">
+  <!ENTITY kappversion "0.1"
+><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Galician  "INCLUDE">
+]>
+<book lang="&language;">
+	<bookinfo>
+		<title
+>Manual do &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Chaves Fernández</firstname
+><surname
+>Adrián</surname
+><affiliation
+><address
+><email
+>adriyetichaves@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradución</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>2008-10-07</date
+><!-- Date of (re)writing, or update.-->
+		<releaseinfo
+>&kappversion; </releaseinfo
+><!-- Application version number. Use the variable definitions within header to change this value.-->
+
+		<abstract>
+			<para
+>Esta documentación trata sobre a versión &kappversion; do &bomber;. </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+			<keyword
+>xogo</keyword
+><!-- do not change this! -->
+			<keyword
+>arcade</keyword>
+			<keyword
+>bomba</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introdución</title>
+		<note>
+			<title
+>Tipo de xogo:</title>
+			<para
+>Arcade</para>
+		</note>
+		<note>
+			<title
+>Cantidade máxima de xogadores:</title>
+			<para
+>Un</para>
+		</note>
+
+		<para
+>O &bomber; é un xogo arcade para un único xogador, que montado nun avión invadirá varias cidades mentres o aparello vai reducindo a súa altitude. </para>
+		<para
+>O obxectivo do xogo consiste en destruír os edificios e avanzar ao seguinte nivel. Cada novo nivel resultará máis difícil, pois aumentará a velocidade do avión, así como a altura dos edificios. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Xogar</title>
+		<para
+>The player is flying a plane in a city. The plane flies from left to right. Everytime it disappears off the side of the play area, it reappears on the left side again, but lower than it was before. </para>
+		<para
+>O xogador debe destruír todos os edificios para superar o nivel. Se o avión choca cun edificio, o xogador perde unha vida e o avión volve situarse na parte superior esquerda da zona de xogo. </para>
+		<para
+>Para destruír os edificios sóltanse bombas sobre eles. Para facelo pódese premer o &LMB; ou a barra espaciadora. A bomba caerá entón do avión e atinaralle ao que sexa que este tivera debaixo no momento de soltala. </para>
+		<para
+>Tras superar un nivel, o xogador avanza ao seguinte. Cada novo nivel aumenta un pouco en dificultade con respecto ao anterior: os edificios vólvense máis altos e o avión vai máis rápido. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Configuración do xogo</title
+><!-- do not change this! -->
+		<para
+>O diálogo de configuración do &bomber; permite escoller entre os distintos temas visuais dispoñibles para o xogo. </para>
+		<para
+>Para escoller un novo tema visual abonda con seleccionar o nome do tema da lista. </para>
+		<note>
+			<title
+>Nota:</title>
+			<para
+>Para maior comodidade, ao seleccionar un tema visual da lista aparecerá á dereita da mesma unha captura de pantalla do tema. </para>
+		</note>
+		<para
+>Unha vez seleccionado o tema visual a usar pode premerse en <guibutton
+>Aplicar</guibutton
+> ou <guibutton
+>Aceptar</guibutton
+>, ambos os dous botóns situados na parte inferior da caixa de diálogo. </para>
+		<para
+>Se pola contra non se está satisfeito coa escolla, poden cancelarse os cambios premendo en <guimenu
+>Cancelar</guimenu
+>. </para>
+	</chapter>
+
+	<chapter id="credits-and-licenses">
+		<title
+>Créditos e licenzas</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+>. Autor orixinal. </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Esta documentación escribiuna John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> no ano 2008. </para>
+		
+		<para
+>Adrián Chaves Fernández (Gallaecio)<email
+>adriyetichaves@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+	<appendix id="installation">
+		<title
+>Instalación</title>
+
+		&install.intro.documentation;
+
+		&install.compile.documentation;
+
+	</appendix>
+
+
+</book>

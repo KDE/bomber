@@ -1,0 +1,182 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Continental-Chinese "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>&bomber; 手册</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Zonglin</firstname
+><surname
+>Yang</surname
+><affiliation
+><address
+><email
+>zonglin@nowhere.net</email
+></address
+></affiliation
+><contrib
+>中文翻译</contrib
+></othercredit>
+<othercredit role="translator"
+><firstname
+>Pani</firstname
+><surname
+>Ram</surname
+><affiliation
+><address
+><email
+>realducksoft@gmail.com</email
+></address
+></affiliation
+><contrib
+>中文翻译</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>2016-05-09</date>
+		<releaseinfo
+>0.4 (应用程序版本16.04) </releaseinfo>
+
+		<abstract>
+			<para
+>此文档介绍游戏 &bomber; 0.4 版本 </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+			<keyword
+>游戏</keyword
+><!-- do not change this! -->
+			<keyword
+>街机</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>介绍</title>
+		<note>
+			<title
+>游戏类型：</title>
+			<para
+>街机</para>
+		</note>
+		<note>
+			<title
+>可参与玩家数：</title>
+			<para
+>单人游戏</para>
+		</note>
+
+		<para
+>&bomber; 是一个街机风格的单人游戏。玩家将乘坐一架高度正在徐徐降低的轰炸机入侵不同城市的领空。 </para>
+		<para
+>游戏的目标是摧毁所有建筑物，达成目标后可以进入下一关。每过一关，轰炸机的速度和建筑物的高度都会比前一关有所提高，游戏的难度也因此越来越高。 </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>游戏玩法</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&bomber; 主屏幕</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>玩家在城市上空开飞机。飞机从左到右飞行。飞机每次从游戏区的一侧消失时，都会重新出现在左侧，但比之前的高度更低。 </para>
+		<para
+>玩家必须摧毁所有建筑物才能通关。 如果飞机撞到建筑物，玩家会丢一条命，飞机则重置到游戏区域左上角。 </para>
+		<para
+>建筑物需要通过投掷炸弹来摧毁，这可以通过点击 &LMB; 或者按<quote
+>空格</quote
+>键来做到。炸弹会从飞机上掉下来并击中其下方的东西。 </para>
+		<para
+>通关后，玩家会升到下一关。每一关都会比上一关略难，因为越往后建筑物越高、飞机移动得越快。 </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>游戏配置</title
+><!-- do not change this! -->
+		<para
+>&bomber;配置对话框能让你选择&bomber;的视觉主题。 </para>
+		<para
+>只需从可选列表中挑选即可选择一个新主题。列表中的每项都会在主题名称左侧显示一个小的预览。所选项目将会立刻生效。 </para>
+		<para
+>满意选择的主题后，您就可以点击位于对话框下部的 <guibutton
+>关闭</guibutton
+> 按钮了。 </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>致谢和许可</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - 原作者 </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>文档版权所有 2008, John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>本文档由 KDE 中国团队翻译。</para
+> &underFDL; &underGPL; </chapter>
+
+</book>

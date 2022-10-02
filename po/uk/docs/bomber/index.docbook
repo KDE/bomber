@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>Підручник з &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>13 жовтня 2021 року</date>
+		<releaseinfo
+>KDE Gear 21.08</releaseinfo>
+
+		<abstract>
+			<para
+>У цій документації описано гру &bomber; версії 21.08. </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>гра</keyword
+><!-- do not change this! -->
+			<keyword
+>аркада</keyword>
+			<keyword
+>бомбардувальник</keyword>
+			<keyword
+>Бомбардувальник</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Вступ</title>
+		<note>
+			<title
+>Тип гри:</title>
+			<para
+>Аркада</para>
+		</note>
+		<note>
+			<title
+>Можлива кількість гравців:</title>
+			<para
+>Один</para>
+		</note>
+
+		<para
+>&bomber; — це аркадна гра для одного гравця. Гравець бомбардує з літака міста, висота будинків у яких поступово зростає. </para>
+		<para
+>Метою гри є зруйнувати всі будинки і перейти на наступний рівень. З кожним рівнем гра стає складнішою, оскільки зростає швидкість літака і висота будинків. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Як грати</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Головне вікно &bomber;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>Гравець пролітає на літаку над містом. Літак летить у напрямку зліва праворуч. Після кожного повного прольоту ігрового поля літак знову з’являється на лівому боці ігрової області, але на нижчий висоті ніж попереднього разу. </para>
+		<para
+>Гравець має знищити всі будинки на поточному рівні. Якщо літак вріжеться у будинок, гравець втратить одне умовне життя, а літак буде знову пересунуто у верхню ліву частину ігрового поля. </para>
+		<para
+>Знищити будинок можна скиданням на нього бомб. Кидати бомби можна клацання лівою кнопкою миші &LMB; або натисканням клавіші &Space; на клавіатурі. Бомба відлетить з літака і вразить ціль безпосередньо перед літаком. </para>
+		<para
+>Після знищення всіх будинків на рівні гравець переходить на наступний рівень. З кожним рівнем гра стає трохи складнішою, ніж на попередньому рівні, оскільки будинки стають вищими, а літак летить швидше. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Налаштування гри</title
+><!-- do not change this! -->
+		<para
+>За допомогою діалогового вікна налаштування &bomber; ви можете обрати візуальну тему для &bomber;. </para>
+		<para
+>Щоб обрати нову тему, просто позначте назву теми у списку для вибору. Ліворуч від кожного з пунктів у списку буде показано невеличке зображення попереднього перегляду. Вибрану тему буде негайно застосовано. </para>
+		<para
+>Після того, як ви виберете бажаний для вас варіант, ви можете натиснути кнопку <guibutton
+>Закрити</guibutton
+>. Цю кнопки розташовано у нижній частині відповідного діалогового вікна. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Подяки і ліцензування</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> — початковий автор </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Авторські права на документацію до програми належать John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+>, ©2008 </para>
+		
+		<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+</book>

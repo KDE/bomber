@@ -1,0 +1,188 @@
+# translation of bomber.po to Arabic
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# zayed <zayed.alsaidi@gmail.com>, 2009, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: bomber\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"PO-Revision-Date: 2021-07-27 23:37+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "إبراهيم على"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "iali@fcih.net"
+
+#: src/bomber.cpp:42 src/bomber.cpp:182
+#, kde-format
+msgctxt "Used to display the current level of play to the user"
+msgid "Level: %1"
+msgstr "المرحلة: %1"
+
+#: src/bomber.cpp:44 src/bomber.cpp:188
+#, kde-format
+msgctxt "Used to inform the user of their current score"
+msgid "Score: %1"
+msgstr "النتيجة: %1"
+
+#: src/bomber.cpp:46 src/bomber.cpp:195
+#, kde-format
+msgctxt "Used to tell the user how many lives they have left"
+msgid "Lives: %1"
+msgstr "المحاولات: %1"
+
+#: src/bomber.cpp:86
+#, kde-format
+msgctxt "Menu item used to disable or enable sound"
+msgid "&Play Sounds"
+msgstr "شغّل الأ&صوات"
+
+#: src/bomber.cpp:91
+#, kde-format
+msgctxt "The name of the action used for dropping bombs"
+msgid "&Drop bomb"
+msgstr "أس&قط قنبلة"
+
+#: src/bomber.cpp:92
+#, kde-format
+msgctxt "The tool tip text for the action used to drop bombs"
+msgid "Drop bomb"
+msgstr "أسقط قنبلة"
+
+#: src/bomber.cpp:94
+#, kde-format
+msgctxt "Description of the action used to drop bombs"
+msgid "Makes the plane drop a bomb while flying"
+msgstr "اجعل الطائرة تسقط قنبلة أثناء الطيران."
+
+#: src/bomber.cpp:137
+#, kde-format
+msgctxt ""
+"Message displayed when player tries to quit a game that is currently running"
+msgid "Do you really want to close the running game?"
+msgstr "هل تريد حقا إغلاق اللعبة الحالية؟"
+
+#: src/bomber.cpp:168
+#, kde-format
+msgid ""
+"Congratulations!\n"
+"You made it into the hall of fame."
+msgstr ""
+"تهانينا!\n"
+"لقد وصلت إلى قاعة الشهرة."
+
+#: src/bomber.cpp:172
+#, kde-format
+msgid "You gained a score of %1 point."
+msgid_plural "You gained a score of %1 points."
+msgstr[0] "نتيجتك هي نقطة واحدة"
+msgstr[1] "نتيجتك هي نقطة واحدة"
+msgstr[2] "نتيجتك هي نقطتين"
+msgstr[3] "نتيجتك هي %1 نقاط"
+msgstr[4] "نتيجتك هي %1 نقطة"
+msgstr[5] "نتيجتك هي %1 نقطة"
+
+#: src/bomber.cpp:173
+#, kde-format
+msgid "End of Game"
+msgstr "انتهت اللعبة"
+
+#: src/bomber.cpp:211
+#, kde-format
+msgctxt "Game over messaged displayed in the status bar"
+msgid "Game over. Press '%1' for a new game"
+msgstr "انتهت اللعبة. اضغط '%1' للعبة جديدة"
+
+#. i18n: ectx: label, entry (PlaySounds), group (Sound)
+#: src/bomber.kcfg:9
+#, kde-format
+msgid "Whether game sounds are played."
+msgstr "إذا كان يمكن تشغيل المؤثرات الصوتية"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: src/bomberui.rc:14
+#, kde-format
+msgid "Main Toolbar"
+msgstr "قائمة الأدوات الرئيسية"
+
+#: src/bomberwidget.cpp:310
+#, kde-format
+msgctxt "Message show to the user when the game is loaded"
+msgid ""
+"Welcome to Bomber.\n"
+"Click to start a game"
+msgstr ""
+"مرحبا بك في Bomber.\n"
+"انقر لبدء اللعبة"
+
+#: src/bomberwidget.cpp:313
+#, kde-format
+msgctxt "Message show to the user while the game is paused"
+msgid "Paused"
+msgstr "متوقف مؤقتا"
+
+#: src/bomberwidget.cpp:316
+#, kde-format
+msgctxt "Message telling user which level they just completed"
+msgid "You have successfully cleared level %1\n"
+msgstr "لقد تخطيت بنجاح المستوى %1\n"
+
+#: src/bomberwidget.cpp:317
+#, kde-format
+msgctxt "Message telling user which level they are about to start"
+msgid "On to level %1."
+msgstr "إلى المستوى %1."
+
+#: src/bomberwidget.cpp:320
+#, kde-format
+msgctxt "Used to tell the user that the game is over"
+msgid "Game over."
+msgstr "انتهت اللعبة."
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Bomber"
+msgstr "Bomber"
+
+#: src/main.cpp:41
+#, kde-format
+msgid "Arcade bombing game"
+msgstr "لعبة التفجير"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "(C) 2007 John-Paul Stanford"
+msgstr "حقوق النسخ 2007 John-Paul Stanford"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "John-Paul Stanford"
+msgstr "John-Paul Stanford"
+
+#: src/main.cpp:47
+#, kde-format
+msgid "Mehmet Emre"
+msgstr "Mehmet Emre"
+
+#: src/main.cpp:47
+#, kde-format
+msgid "Porting to QGraphicsView."
+msgstr "نقل إلى إطار العمل QGraphicsView."
+
+#~ msgid "Theme"
+#~ msgstr "السمة"

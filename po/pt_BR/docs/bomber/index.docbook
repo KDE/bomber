@@ -1,0 +1,170 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>Manual do &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Luiz Fernando</firstname
+><surname
+>Ranghetti</surname
+><affiliation
+><address
+><email
+>elchevive@opensuse.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>09/05/2016</date>
+		<releaseinfo
+>0.4 (Applications 16.04) </releaseinfo>
+
+		<abstract>
+			<para
+>Esta documentação descreve a versão 0.4 do jogo &bomber; </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+			<keyword
+>jogo</keyword
+><!-- do not change this! -->
+			<keyword
+>arcade</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introdução</title>
+		<note>
+			<title
+>Tipo do jogo:</title>
+			<para
+>Arcade</para>
+		</note>
+		<note>
+			<title
+>Número de possíveis jogadores:</title>
+			<para
+>Um</para>
+		</note>
+
+		<para
+>O &bomber; é um jogo tipo arcade para um único jogador. O jogador está invadindo várias cidades com um avião que vai descendo em altitude. </para>
+		<para
+>O objetivo do jogo é destruir todos os edifícios e passar ao nível seguinte. Cada nível vai ficando um pouco mais difícil ao aumentar a velocidade do avião e a altura dos edifícios. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Como jogar</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Tela principal do &bomber;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>O jogador está pilotando um avião numa cidade. Este avião voa da esquerda para a direita. Sempre que desaparecer no extremo da área de jogo, volta a aparecer do lado esquerdo, mas um pouco mais abaixo do local onde estava antes. </para>
+		<para
+>O jogador terá que destruir todos os edifícios para limpar o nível. Se o avião bater num prédio, o jogador perderá uma vida e o avião irá para o canto superior esquerdo da área de jogo novamente. </para>
+		<para
+>Os edifícios são destruídos ao lançar bombas sobre os mesmos. Isto pode ser feito clicando com o &LMB; ou pressionando a tecla de <quote
+>Espaço</quote
+>. A bomba irá cair do avião e atingir tudo o que estiver diretamente abaixo dela. </para>
+		<para
+>Depois de limpar um nível, o jogador passa para o nível seguinte. Cada nível vai ficando um pouco mais difícil que o anterior, à medida que os edifícios vão ficando mais altos e o avião vai voando mais depressa. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Configuração do jogo</title
+><!-- do not change this! -->
+		<para
+>A janela de configuração do &bomber; permite-lhe selecionar os temas visuais do &bomber;. </para>
+		<para
+>Para selecionar um novo tema, basta escolhê-lo a partir da lista. Cada item da lista mostra uma pequena imagem à esquerda do nome do tema. A seleção é imediatamente aplicada. </para>
+		<para
+>Assim que estiver satisfeito com o tema selecionado, você poderá clicar no botão <guibutton
+>Fechar</guibutton
+>, localizado na parte inferior desta janela. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Créditos e licença</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Autor original </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Documentação com 'copyright' 2008 de John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Tradução de Luiz Fernando Ranghetti <email
+>elchevive@opensuse.org</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+</book>

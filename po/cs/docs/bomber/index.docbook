@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Czech "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>Příručka aplikace &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Lukáš</firstname
+><surname
+>Vlček</surname
+><affiliation
+><address
+><email
+>lukas.vlcek777@gmail.com</email
+></address
+></affiliation
+><contrib
+>Překlad</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>9.5.2016</date>
+		<releaseinfo
+>0.4 (Aplikace 16.04) </releaseinfo>
+
+		<abstract>
+			<para
+>Tato dokumentace popisuje hru &bomber; ve verzi 0.4. </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+			<keyword
+>hra</keyword
+><!-- do not change this! -->
+			<keyword
+>arkáda</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Úvod</title>
+		<note>
+			<title
+>Typ hry:</title>
+			<para
+>Arkáda</para>
+		</note>
+		<note>
+			<title
+>Počet možných hráčů:</title>
+			<para
+>Jeden</para>
+		</note>
+
+		<para
+>&bomber; je arkádová hra pro jednoho hráče. Hráč napadá různá města v letadle, které klesá ve výšce. </para>
+		<para
+>Cílem hry je zničit všechny budovy a postoupit do další úrovně. Každá obtížnost ztěžuje hraní zvyšováním rychlosti letadla a zvyšováním výšky budov. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Jak hrát</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Hlavní obrazovka hry &bomber;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>Hráč létá letadlem ve městě. Letadlo létá zleva doprava. Vždy zmizí z hrací plochy a znovu se objeví na levé straně, ale níž než před tím. </para>
+		<para
+>Hráč musí zničit všechny budovy, aby úroveň vyčistil. Havaruje-li letadlo do budovy, pak hráč ztrácí život a letadlo je na herní desce opět přesunuto doleva nahoru. </para>
+		<para
+>Budovy jsou zničeny shozením bomby. To může být provedeno kliknutím <mousebutton
+>levého tlačítka myši</mousebutton
+> nebo stisknutím klávesy <quote
+>Mezerník</quote
+>. Bomba spadne z letadla a zasáhne něco přesně pod ním. </para>
+		<para
+>Po vyčištění úrovně hráč postupuje do další úrovně. Každá úroveň je trochu obtížnější než předchozí úroveň, protože stavení jsou vyšší a letadlo je rychlejší. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Nastavení hry</title
+><!-- do not change this! -->
+		<para
+>Konfigurační dialogové okno aplikace &bomber; umožňuje vybrat motiv pro &bomber;. </para>
+		<para
+>Chcete-li vybrat nový motiv, jednoduše vyberte motiv ze seznamu. Každá položka v seznamu má vlevo od svého názvu zobrazen malý náhled. Výběr je použit ihned. </para>
+		<para
+>Jakmile jste spokojeni s motivem, který jste vybrali, můžete kliknout na tlačítko <guibutton
+>Zavřít</guibutton
+> umístěné v dolní části dialogového okna. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Informace o autorech a licenční ujednání</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Původní autor </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Documentation copyright 2008, John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Překlad dokumentace Lukáš Vlček <email
+>lukas.vlcek777@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+</book>

@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Portuguese "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>O Manual do &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>2016-05-09</date>
+		<releaseinfo
+>0.4 (Aplicações 16.04) </releaseinfo>
+
+		<abstract>
+			<para
+>Esta documentação descreve o jogo &bomber; na versão 0.4 </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+			<keyword
+>jogo</keyword
+><!-- do not change this! -->
+			<keyword
+>arcada</keyword>
+			<keyword
+>bombardeiro</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introdução</title>
+		<note>
+			<title
+>Tipo de jogo:</title>
+			<para
+>Arcada</para>
+		</note>
+		<note>
+			<title
+>Número de jogadores possíveis:</title>
+			<para
+>Um</para>
+		</note>
+
+		<para
+>O &bomber; é um jogo de arcada para um único jogador. Este está a invadir várias cidades com um avião que vai descendo em altitude. </para>
+		<para
+>O objectivo do jogo é destruir todos os edifícios e passar ao nível seguinte. Cada nível vai ficando um pouco mais difícil ao aumentar a velocidade do avião e a altura dos edifícios. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Como Jogar</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ecrã principal do &bomber;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>O jogador está a pilotar um avião numa cidade. Este avião voa da esquerda para a direita. Sempre que desaparecer no extremo da área de jogo, volta a aparecer do lado esquerdo, mas um pouco mais abaixo do local onde estava antes. </para>
+		<para
+>O jogador terá de destruir todos os edifícios para limpar o nível. Se o avião embater num prédio, o jogador perderá uma vida e o avião irá para o canto superior esquerdo da área de jogo de novo. </para>
+		<para
+>Os edifícios são destruídos ao largar bombas sobre os mesmos. Isto pode ser feito se carregar com o &LMB; ou se carregar na tecla de <quote
+>Espaço</quote
+>. A bomba irá cair do avião e atingir tudo o que estiver directamente abaixo dela. </para>
+		<para
+>Depois de limpar um nível, o jogador passa para o nível seguinte. Cada nível vai ficando um pouco mais difícil que o anterior, à medida que os edifícios vão ficando mais altos e o avião vai voando mais depressa. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Configuração do Jogo</title
+><!-- do not change this! -->
+		<para
+>A janela de configuração do &bomber; permite-lhe seleccionar os temas visuais do &bomber;. </para>
+		<para
+>Para seleccionar um novo tema, basta escolher o tema na lista de selecções. Cada item na lista mostra uma pequena antevisão à esquerda do nome do tema. É aplicada imediatamente uma selecção. </para>
+		<para
+>Logo que esteja satisfeito com o tema seleccionado, tanto poderá seleccionar <guibutton
+>Fechar</guibutton
+>, localizado na parte inferior desta janela. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Créditos e Licença</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Autor Original </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Documentação com 'copyright' 2008 de John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Tradução de José Nuno Pires <email
+>zepires@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+</book>

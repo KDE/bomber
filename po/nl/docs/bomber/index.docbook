@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>Het handboek van &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			&Freek.de.Kruijf; 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>2021-10-13</date>
+		<releaseinfo
+>KDE Gear 21.08</releaseinfo>
+
+		<abstract>
+			<para
+>Deze documentatie beschrijft het spel &bomber; versie 21.08 </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>game</keyword
+><!-- do not change this! -->
+			<keyword
+>arcade</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Inleiding</title>
+		<note>
+			<title
+>Speltype:</title>
+			<para
+>Arcade</para>
+		</note>
+		<note>
+			<title
+>Aantal mogelijke spelers:</title>
+			<para
+>Eén</para>
+		</note>
+
+		<para
+>&bomber; is een arcade spel voor een enkele speler. De speler is bezoekt verschillende steden in een vliegtuig dat dat steeds lager gaat. </para>
+		<para
+>Het doel van het spel is om alle gebouwen te vernietigen en verder te gaan naar het volgende niveau. Elk niveau wordt moeilijker door de snelheid van het vliegtuig te verhogen en de hoogte van de gebouwen. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Hoe te spelen</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&bomber; hoofdscherm</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>De speler vliegt een vliegtuig in een stad. Het vliegtuig vliegt van links naar rechts. Telkens als het aan de zijkant van het speelgebied verdwijnt, verschijnt het weer aan de linkerkant, maar lager dan eerder. </para>
+		<para
+>De speler moet alle gebouwen vernietigen om op het niveau te kunnen verlaten. Als het vliegtuig gecrasht is tegen een gebouw, dan verliest de speler een leven en het vliegtuig wordt weer linksboven op het speelveld geplaatst. </para>
+		<para
+>Gebouwen worden vernietigd door er bommen op telaten vallen. Dit kan gedaan worden door op de &LMB; te klikken of de toets &Space; in te drukken. De bom valt uit het vliegtuig en raakt iets wat er direct onder is. </para>
+		<para
+>Na het beëindigen van een niveau gaat de speler door naar het volgende niveau. Elk niveau is een beetje moeilijker dan het vorige niveau, omdat de gebouwen hoger worden het vliegtuig gaat sneller. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Spelconfiguratie</title
+><!-- do not change this! -->
+		<para
+>De instellingendialoog van &bomber; stelt u in staat visuele thema's voor &bomber; te selecteren. </para>
+		<para
+>Om een nieuwe thema te selecteren kiest u de naam van het thema uit de lijst. Elk item in de lijst toont een klein voorbeeld links van de naam van het thema. Een selectie wordt onmiddellijk toegepast. </para>
+		<para
+>Nadat u tevreden bent met het thema dat u hebt geselecteerd kunt u op de knop <guibutton
+>Sluiten</guibutton
+> klikken onderaan deze dialoog. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Dankbetuigingen en licentie</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Originele auteur </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Documentatie copyright 2008, John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		&meld.fouten;&vertaling.freek; &underFDL; &underGPL; </chapter>
+
+</book>

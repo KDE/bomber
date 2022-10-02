@@ -1,0 +1,167 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>Handbok &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>2021-10-13</date>
+		<releaseinfo
+>KDE Gear 21.08</releaseinfo>
+
+		<abstract>
+			<para
+>Den här dokumentationen beskriver &bomber; version 21.08 </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>spel</keyword
+><!-- do not change this! -->
+			<keyword
+>spelhall</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Inledning</title>
+		<note>
+			<title
+>Speltyp:</title>
+			<para
+>Spelhall</para>
+		</note>
+		<note>
+			<title
+>Antal möjliga spelare:</title>
+			<para
+>En</para>
+		</note>
+
+		<para
+>&bomber; är ett spelhallsspel för en ensam spelare. Spelaren invaderar olika städer i ett flygplan som flyger på allt lägre höjd. </para>
+		<para
+>Spelets mål är att förstöra alla byggnader och gå vidare till nästa nivå. Varje nivå blir svårare genom att planets hastighet och byggnadernas höjd ökar. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Hur man spelar</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Huvudskärmen i &bomber;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>Spelaren flyger ett plan i en stad. Planet flyger från vänster till höger. Varje gång det försvinner utanför spelområdets kant, dyker det upp igen på vänster sida, men lägre än det var tidigare. </para>
+		<para
+>Spelaren måste förstöra alla byggnader för att rensa nivån. Om planet kraschar mot en byggnad, förlorar spelaren ett liv och planet flyttas längst upp till vänster i spelområdet igen. </para>
+		<para
+>Byggnader förstörs genom att släppa bomber på dem. Det kan göras genom att klicka med vänster musknapp eller trycka på tangenten <quote
+>mellanslag</quote
+>. Bomben faller från planet och träffar vad som än finns rakt under den. </para>
+		<para
+>Efter att ha rensat en nivå, går spelaren vidare till nästa nivå. Varje nivå blir något svårare än den tidigare, eftersom byggnaderna blir högre och planet blir snabbare. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Spelanpassning</title
+><!-- do not change this! -->
+		<para
+>Inställningsdialogrutan i &bomber; låter dig välja &bomber;s visuella tema. </para>
+		<para
+>Markera helt enkelt temat i urvalslistan för att välja ett nytt tema. Varje objekt i listan visar en liten förhandsgranskning till vänster om temats namn. En markering verkställs omedelbart. </para>
+		<para
+>När du väl är nöjd med temat du har valt, kan du antingen klicka på knappen <guibutton
+>Stäng</guibutton
+>, som finns i längst ner i dialogrutan. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Tack till och licens</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Ursprunglig upphovsman </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Dokumentation copyright 2008, John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+</book>

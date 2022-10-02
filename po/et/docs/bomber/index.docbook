@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY bomber "<application
+>Bomber</application
+>">
+  <!ENTITY kappname "&bomber;">
+  <!ENTITY package "kdegames">
+  <!ENTITY kappversion "0.1"
+><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Estonian  "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>&bomber;i käsiraamat</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Marek</firstname
+> <surname
+>Laane</surname
+> <affiliation
+><address
+><email
+>bald@smail.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>2012-08-06</date
+><!-- Date of (re)writing, or update.-->
+		<releaseinfo
+>&kappversion; (&kde; 4.9) </releaseinfo
+><!-- Application version number. Use the variable definitions within header to change this value.-->
+
+		<abstract>
+			<para
+>See käsiraamat kirjeldab mängu &bomber; versiooni &kappversion;. </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+			<keyword
+>mäng</keyword
+><!-- do not change this! -->
+			<keyword
+>seiklus</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Sissejuhatus</title>
+		<note>
+			<title
+>Mängu tüüp:</title>
+			<para
+>arkaadmäng</para>
+		</note>
+		<note>
+			<title
+>Mängijate arv:</title>
+			<para
+>Üks</para>
+		</note>
+
+		<para
+>&bomber; on üksikmängija arkaadmäng. Mängija peab ründama erinevaid linnu lennukil, mis laskub aina madalamale. </para>
+		<para
+>Mängu eesmärk on hävitada kõik ehitised ja jõuda järgmisele tasemele. Iga tase muutub aina raskemaks: suureneb lennuki kiirus ning kasvab ehitiste kõrgus. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Kuidas mängida</title>
+		<para
+>Mängija lendab lennukiga linna kohal. Lennuk lendab vasakult paremale. Iga kord, kui lennuk kaob mängualalt, ilmub see vasakul taas nähtavale, aga juba madalamal kui varem. </para>
+		<para
+>Mängija peab taseme lõpetamiseks hävitama kõik ehitised. Kui lennuk põrkab ehitisega kokku, kaotab mängija elu ning lennuk alustab taas teekonda mänguala ülemisest vasakust nurgast. </para>
+		<para
+>Ehitis saab hävitada neile pommi heites. Selleks tuleb kas klõpsata &HVNga; või vajutada <quote
+>tühikuklahvi</quote
+>. Pomm eraldub lennukist ja langeb otse alla. </para>
+		<para
+>Pärast taseme lõpetamist liigub mängija edasi järgmisele tasemele. Iga tase on eelnevast veidi raskem: hooned muutuvad kõrgemaks ning lennuk lendab kiiremini. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Mängu seadistused</title
+><!-- do not change this! -->
+		<para
+>&bomber;i seadistustedialoog võimaldab valida &bomber;i visuaalse teema. </para>
+		<para
+>Uue teema valimiseks vali see lihtsalt loendist. Kõigi nimekirja elementide juures on teena nimest vasakul näha väike eelvaatlus. Valik rakendatakse kohe. </para>
+		<para
+>Kui oled valitud teemaga rahul, klõpsa nupule <guibutton
+>Sulge</guibutton
+>, mis asub dialoogi allosas. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Autorid ja litsents</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - algne autor </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Dokumentatsiooni autoriõigus 2008: John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Tõlge eesti keelde: Marek Laane <email
+>bald@smail.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+	<appendix id="installation">
+		<title
+>Paigaldamine</title>
+
+		&install.intro.documentation;
+
+		&install.compile.documentation;
+
+	</appendix>
+
+
+</book>

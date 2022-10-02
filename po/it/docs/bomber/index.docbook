@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>Manuale di &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Antonino</firstname
+><surname
+>Arcudi</surname
+><affiliation
+><address
+><email
+></email
+></address
+></affiliation
+><contrib
+>traduzione dell'interfaccia grafica</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Andrea</firstname
+><surname
+>Celli</surname
+><affiliation
+><address
+><email
+>andrea.celli@libero.it</email
+></address
+></affiliation
+><contrib
+>traduzione della documentazione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Aggiornamento della traduzione</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>13/10/2021</date>
+		<releaseinfo
+>KDE Gear 21.08</releaseinfo>
+
+		<abstract>
+			<para
+>Questa documentazione descrive il gioco &bomber; versione 21.08 </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>gioco</keyword
+><!-- do not change this! -->
+			<keyword
+>arcade</keyword>
+			<keyword
+>bombardiere</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introduzione</title>
+		<note>
+			<title
+>Tipo di gioco:</title>
+			<para
+>Arcade</para>
+		</note>
+		<note>
+			<title
+>Numero di giocatori ammessi:</title>
+			<para
+>Uno</para>
+		</note>
+
+		<para
+>&bomber; è un gioco arcade per un solo giocatore. Costui deve attaccare diverse città con un aereo che si abbassa sempre più. </para>
+		<para
+>Lo scopo del gioco è distruggere tutti gli edifici per avanzare al livello successivo. Ogni nuovo livello sarà più difficile, perché aumenta la velocità dell'aereo e l'altezza degli edifici. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Come si gioca</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>La schermata principale di &bomber;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>Il giocatore sorvola una città con un aereo che vola da sinistra a destra. Ogni volta che esce da un lato dell'area di gioco riappare dal lato sinistro, ma più in basso di prima. </para>
+		<para
+>Il giocatore deve distruggere tutti gli edifici per completare un livello. Se l'aereo si schianta contro un edificio, il giocatore perde una vita e l'aereo viene ricollocato nell'angolo superiore sinistro dell'area di gioco. </para>
+		<para
+>Gli edifici vengono distrutti facendovi cadere sopra una bomba. Per sganciarla basta premere il &LMB; o la barra &Space;. La bomba cadrà dall'aereo e colpirà qualsiasi cosa che si trovi sotto di essa. </para>
+		<para
+>Dopo aver terminato un livello, il giocatore avanza al successivo. Ogni livello si presenta un po' più difficile del precedente, in quanto gli edifici sono più alti e l'aereo vola più velocemente. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Configurazione del gioco</title
+><!-- do not change this! -->
+		<para
+>La finestra di configurazione di &bomber;  ti permette di scegliere diversi temi grafici per il gioco. </para>
+		<para
+>Per scegliere un nuovo tema, selezionalo nella lista. Ciascun elemento nella lista mostra una piccola anteprima a sinistra del nome del tema. La scelta viene immediatamente applicata. </para>
+		<para
+>Quando sarai soddisfatto della tua scelta, premi il pulsante <guibutton
+>Chiudi</guibutton
+> che si trova nella parte bassa della finestra. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Riconoscimenti e licenza</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Autore originale </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>La documentazione è copyright 2008 di John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Antonino Arcudi<email
+></email
+> (traduzione dell'interfaccia grafica)</para
+><para
+>Andrea Celli<email
+></email
+> (traduzione della documentazione</para
+><para
+>Paolo Zamponi<email
+>zapaolo@email.it</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+</book>

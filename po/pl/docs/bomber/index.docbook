@@ -1,0 +1,193 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY bomber "<application
+>Bomber</application
+>">
+  <!ENTITY kappname "&bomber;">
+  <!ENTITY package "kdegames">
+  <!ENTITY kappversion "0.1"
+><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Polish "INCLUDE">
+]>
+<book lang="&language;">
+	<bookinfo>
+		<title
+>Podręcznik gry &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+> <firstname
+>Krzysztof</firstname
+><surname
+>Woźniak</surname
+><affiliation
+><address
+><email
+>wozniakk@ceti.pl</email
+></address
+></affiliation
+><contrib
+>Polskie tłumaczenie</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>2008-10-07</date
+><!-- Date of (re)writing, or update.-->
+		<releaseinfo
+>&kappversion;
+		</releaseinfo
+><!-- Application version number. Use the variable definitions within header to change this value.-->
+
+		<abstract>
+			<para
+>Ten podręcznik dotyczy gry &bomber; w wersji &kappversion; </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+			<keyword
+>gra</keyword
+><!-- do not change this! -->
+			<keyword
+>zręcznościowa</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Wprowadzenie</title>
+		<note>
+			<title
+>Rodzaj gry:</title>
+			<para
+>Gra zręcznościowa</para>
+		</note>
+		<note>
+			<title
+>Liczba graczy:</title>
+			<para
+>Jeden</para>
+		</note>
+
+		<para
+>&bomber; jest zręcznościową grą przeznaczoną dla jednego gracza. Polega na atakowaniu różnych miast z samolotu, który stopniowo obniża wysokość lotu. </para>
+		<para
+>Celem gry jest zniszczenie wszystkich budynków i przejście do następnego poziomu. Każdy kolejny poziom jest trudniejszy, gdyż zwiększa się szybkość samolotu i wysokość budynków. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Jak grać</title>
+		<para
+>Gracz leci samolotem przez miast. Samolot leci od lewej do prawej. Za każdym razem, gdy samolot znika po prawej stronie obszaru gry, pojawia się znowu po lewej stronie, ale na niższej wysokości niż poprzednio. </para>
+		<para
+>Gracz musi zniszczyć wszystkie budynki, aby zakończyć poziom. Jeżeli samolot uderzy w budynek, gracz traci życie a samolot jest przesuwany do lewego górnego rogu i gra zaczyna się od nowa. </para>
+		<para
+>Budynki są niszczone za pomocą opuszczanych na nie bomb. Bomby można zrzucać klikając lewym przyciskiem myszy lub klawiszem <quote
+>Spacji</quote
+>. Bomba spada z samolotu i uderza we wszystko co znajduje się bezpośrednio pod nią. </para>
+		<para
+>Po zniszczeniu wszystkich budynków i zakończeniu poziomu, gracz przechodzi do następnego poziomu. Każdy z nich staje się troszkę trudniejszy od poprzedniego, gdyż budynki stają się wyższe, a samolot lata szybciej. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Konfiguracja gry</title
+><!-- do not change this! -->
+		<para
+>Okno dialogowe konfiguracji &bomber; pozwala na wybranie motywu graficznego dla gry &bomber;. </para>
+		<para
+>Aby wybrać nowy temat po prostu wybierz nazwę tematu z listy wyboru. </para>
+		<note>
+			<title
+>Uwaga:</title>
+			<para
+>Dla ułatwienia podczas wyboru tematu graficznego, po prawej stronie zostanie wyświetlony podgląd jak tylko zaznaczysz temat który chcesz sprawdzić. </para>
+		</note>
+		<para
+>Jak tylko będziesz zadowolony z tematu, który wybrałeś możesz albo wcisnąć przycisk <guibutton
+>Zastosuj</guibutton
+> lub po prostu wcisnąć klawisz <guibutton
+>Ok</guibutton
+>, znajdujące się na dole okna. </para>
+		<para
+>Jeśli nie jesteś zadowolony z wyboru po prostu wciśnij przycisk <guibutton
+>Anuluj</guibutton
+> aby porzucić zmiany. </para>
+	</chapter>
+
+	<chapter id="credits-and-licenses">
+		<title
+>Zasługi i licencje</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> - Autor </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>Prawa autorskie do dokumentacji (c) 2008, John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> </para>
+		
+		<para
+>Polskie tłumaczenie: Krzysztof Woźniak<email
+>wozniakk@ceti.pl</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+	<appendix id="installation">
+		<title
+>Instalacja</title>
+
+		&install.intro.documentation;
+
+		&install.compile.documentation;
+
+	</appendix>
+
+
+</book>

@@ -1,0 +1,273 @@
+# Translation of bomber.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Manfred Wiese <m.j.wiese@web.de>, 2008, 2011.
+# Sönke Dibbern <s_dibbern@web.de>, 2008, 2009, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bomber\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"PO-Revision-Date: 2014-04-24 01:00+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Manfred Wiese"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "m.j.wiese@web.de"
+
+#: src/bomber.cpp:42 src/bomber.cpp:182
+#, kde-format
+msgctxt "Used to display the current level of play to the user"
+msgid "Level: %1"
+msgstr "Stoop: %1"
+
+#: src/bomber.cpp:44 src/bomber.cpp:188
+#, kde-format
+msgctxt "Used to inform the user of their current score"
+msgid "Score: %1"
+msgstr "Pünkt: %1"
+
+#: src/bomber.cpp:46 src/bomber.cpp:195
+#, kde-format
+msgctxt "Used to tell the user how many lives they have left"
+msgid "Lives: %1"
+msgstr "Leven: %1"
+
+#: src/bomber.cpp:86
+#, kde-format
+msgctxt "Menu item used to disable or enable sound"
+msgid "&Play Sounds"
+msgstr "Kläng &afspelen"
+
+#: src/bomber.cpp:91
+#, kde-format
+msgctxt "The name of the action used for dropping bombs"
+msgid "&Drop bomb"
+msgstr "Bomb &afsmieten"
+
+#: src/bomber.cpp:92
+#, kde-format
+msgctxt "The tool tip text for the action used to drop bombs"
+msgid "Drop bomb"
+msgstr "Bomb afsmieten"
+
+#: src/bomber.cpp:94
+#, kde-format
+msgctxt "Description of the action used to drop bombs"
+msgid "Makes the plane drop a bomb while flying"
+msgstr "Smitt bi't Flegen en Bomb af"
+
+#: src/bomber.cpp:137
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Message displayed when play tries to quit a game that is currently running"
+#| msgid "Do you really want to close the running game?"
+msgctxt ""
+"Message displayed when player tries to quit a game that is currently running"
+msgid "Do you really want to close the running game?"
+msgstr "Wullt Du dat lopen Speel redig utmaken?"
+
+#: src/bomber.cpp:168
+#, kde-format
+msgid ""
+"Congratulations!\n"
+"You made it into the hall of fame."
+msgstr ""
+
+#: src/bomber.cpp:172
+#, kde-format
+msgid "You gained a score of %1 point."
+msgid_plural "You gained a score of %1 points."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/bomber.cpp:173
+#, kde-format
+msgid "End of Game"
+msgstr ""
+
+#: src/bomber.cpp:211
+#, kde-format
+msgctxt "Game over messaged displayed in the status bar"
+msgid "Game over. Press '%1' for a new game"
+msgstr "Speel vörbi. Mit \"%1\" fangt en nieg Speel an"
+
+#. i18n: ectx: label, entry (PlaySounds), group (Sound)
+#: src/bomber.kcfg:9
+#, kde-format
+msgid "Whether game sounds are played."
+msgstr "Kläng afspelen"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: src/bomberui.rc:14
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Hööft-Warktüüchbalken"
+
+#: src/bomberwidget.cpp:310
+#, kde-format
+msgctxt "Message show to the user when the game is loaded"
+msgid ""
+"Welcome to Bomber.\n"
+"Click to start a game"
+msgstr ""
+"Willkamen bi Bomber.\n"
+"Klick, wenn Du en Speel starten wullt"
+
+#: src/bomberwidget.cpp:313
+#, kde-format
+msgctxt "Message show to the user while the game is paused"
+msgid "Paused"
+msgstr "Anhollen"
+
+#: src/bomberwidget.cpp:316
+#, kde-format
+msgctxt "Message telling user which level they just completed"
+msgid "You have successfully cleared level %1\n"
+msgstr "Du hest Stoop %1 mit Spood afslaten.\n"
+
+#: src/bomberwidget.cpp:317
+#, kde-format
+msgctxt "Message telling user which level they are about to start"
+msgid "On to level %1."
+msgstr "Wieder na Stoop %1"
+
+#: src/bomberwidget.cpp:320
+#, kde-format
+msgctxt "Used to tell the user that the game is over"
+msgid "Game over."
+msgstr "Speel vörbi."
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Bomber"
+msgstr "Bomber"
+
+#: src/main.cpp:41
+#, kde-format
+msgid "Arcade bombing game"
+msgstr "Speelhall-Bomberspeel"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "(C) 2007 John-Paul Stanford"
+msgstr "(C) 2007, John-Paul Stanford"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "John-Paul Stanford"
+msgstr "John-Paul Stanford"
+
+#: src/main.cpp:47
+#, kde-format
+msgid "Mehmet Emre"
+msgstr "Mehmet Emre"
+
+#: src/main.cpp:47
+#, kde-format
+msgid "Porting to QGraphicsView."
+msgstr "Porteren na QGraphicsView."
+
+#~ msgid "The graphical theme to be used."
+#~ msgstr "Dat Grafikmuster, dat Du bruken wullt."
+
+#~ msgid "Theme"
+#~ msgstr "Muster"
+
+#~ msgid "Background color:"
+#~ msgstr "Achtergrundklöör:"
+
+#~ msgid "Choose a new background color"
+#~ msgstr "En nieg Achtergrundklöör utsöken"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Change the <span style="
+#~ "\" font-weight:600;\">background</span> color by clicking here and choose "
+#~ "the new <span style=\" color:#ff0000;\">color</span> in the <span style="
+#~ "\" font-style:italic;\">color dialog</span>.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Du kannst de <span "
+#~ "style=\" font-weight:600;\">Achtergrundklöör</span> wesseln, wenn Du hier "
+#~ "klickst un de niege <span style=\" color:#ff0000;\">Klöör</span> binnen "
+#~ "den <span style=\" font-style:italic;\">Klöördialoog</span> utsöchst.</"
+#~ "p></body></html>"
+
+#~ msgid "Project age:"
+#~ msgstr "Projektöller:"
+
+#~ msgid "Foreground color:"
+#~ msgstr "Vörgrundklöör:"
+
+#~ msgid "Choose a new foreground color"
+#~ msgstr "En nieg Vörgrundklöör utsöken"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Change the <span style="
+#~ "\" font-weight:600;\">foreground</span> color by clicking here and choose "
+#~ "the new <span style=\" color:#ff0000;\">color</span> in the <span style="
+#~ "\" font-style:italic;\">color dialog</span>.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Du kannst de <span "
+#~ "style=\" font-weight:600;\">Vörgrundklöör</span> wesseln, wenn Du hier "
+#~ "klickst un de niege <span style=\" color:#ff0000;\">Klöör</span> binnen "
+#~ "den <span style=\" font-style:italic;\">Klöördialoog</span> utsöchst.</"
+#~ "p></body></html>"
+
+#~ msgid "Set the project age (in days)"
+#~ msgstr "Projektöller in Daag fastleggen"
+
+#~ msgid "Change the project age (in days) by choosing a new number of days."
+#~ msgstr "Hier kannst Du dat Öller vun't Projekt, meten in Daag, ännern."
+
+#~ msgctxt ""
+#~ "Default text shown to the user before the level is known at game start"
+#~ msgid "Level: 0"
+#~ msgstr "Stoop: 0"
+
+#~ msgctxt ""
+#~ "Default text shown to the user before the score is known at game start"
+#~ msgid "Score: 0"
+#~ msgstr "Pünkt: 0"
+
+#~ msgctxt ""
+#~ "Default text shown to the user before the lives are known at game start"
+#~ msgid "Lives: 3"
+#~ msgstr "Leven: 3"

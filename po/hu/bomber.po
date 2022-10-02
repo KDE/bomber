@@ -1,0 +1,189 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2009.
+# Balázs Úr <urbalazs@gmail.com>, 2012.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2015.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.3\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"PO-Revision-Date: 2020-11-29 20:52+0100\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf,Szántó Tamás"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kiszel.kristof@gmail.com,taszanto@gmail.com"
+
+#: src/bomber.cpp:42 src/bomber.cpp:182
+#, kde-format
+msgctxt "Used to display the current level of play to the user"
+msgid "Level: %1"
+msgstr "Szint: %1"
+
+#: src/bomber.cpp:44 src/bomber.cpp:188
+#, kde-format
+msgctxt "Used to inform the user of their current score"
+msgid "Score: %1"
+msgstr "Pontszám: %1"
+
+#: src/bomber.cpp:46 src/bomber.cpp:195
+#, kde-format
+msgctxt "Used to tell the user how many lives they have left"
+msgid "Lives: %1"
+msgstr "Élet: %1"
+
+#: src/bomber.cpp:86
+#, kde-format
+msgctxt "Menu item used to disable or enable sound"
+msgid "&Play Sounds"
+msgstr "&Hangok"
+
+#: src/bomber.cpp:91
+#, kde-format
+msgctxt "The name of the action used for dropping bombs"
+msgid "&Drop bomb"
+msgstr "Bomba&dobás"
+
+#: src/bomber.cpp:92
+#, kde-format
+msgctxt "The tool tip text for the action used to drop bombs"
+msgid "Drop bomb"
+msgstr "Bombadobás"
+
+#: src/bomber.cpp:94
+#, kde-format
+msgctxt "Description of the action used to drop bombs"
+msgid "Makes the plane drop a bomb while flying"
+msgstr "Repülés közben ledob egy bombát"
+
+#: src/bomber.cpp:137
+#, kde-format
+msgctxt ""
+"Message displayed when player tries to quit a game that is currently running"
+msgid "Do you really want to close the running game?"
+msgstr "Biztosan be szeretné fejezni a futó játékot?"
+
+#: src/bomber.cpp:168
+#, kde-format
+msgid ""
+"Congratulations!\n"
+"You made it into the hall of fame."
+msgstr ""
+"Gratulálunk!\n"
+"Bekerült a dicsőségcsarnokba."
+
+#: src/bomber.cpp:172
+#, kde-format
+msgid "You gained a score of %1 point."
+msgid_plural "You gained a score of %1 points."
+msgstr[0] "%1 pontot szerzett."
+msgstr[1] "%1 pontot szerzett."
+
+#: src/bomber.cpp:173
+#, kde-format
+msgid "End of Game"
+msgstr "Vége a játéknak"
+
+#: src/bomber.cpp:211
+#, kde-format
+msgctxt "Game over messaged displayed in the status bar"
+msgid "Game over. Press '%1' for a new game"
+msgstr "Vége a játéknak. Új játék kezdése: %1"
+
+#. i18n: ectx: label, entry (PlaySounds), group (Sound)
+#: src/bomber.kcfg:9
+#, kde-format
+msgid "Whether game sounds are played."
+msgstr "A játék hanghatásainak ki- vagy bekapcsolása."
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: src/bomberui.rc:14
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Alap eszköztár"
+
+#: src/bomberwidget.cpp:310
+#, kde-format
+msgctxt "Message show to the user when the game is loaded"
+msgid ""
+"Welcome to Bomber.\n"
+"Click to start a game"
+msgstr ""
+"Üdvözöljük a Bomber játékban!\n"
+"Új játék kezdéséhez kattintson ide"
+
+#: src/bomberwidget.cpp:313
+#, kde-format
+msgctxt "Message show to the user while the game is paused"
+msgid "Paused"
+msgstr "Szünet"
+
+#: src/bomberwidget.cpp:316
+#, kde-format
+msgctxt "Message telling user which level they just completed"
+msgid "You have successfully cleared level %1\n"
+msgstr "Sikerült befejezni: %1. szint!\n"
+
+#: src/bomberwidget.cpp:317
+#, kde-format
+msgctxt "Message telling user which level they are about to start"
+msgid "On to level %1."
+msgstr "Következik: %1. szint"
+
+#: src/bomberwidget.cpp:320
+#, kde-format
+msgctxt "Used to tell the user that the game is over"
+msgid "Game over."
+msgstr "Vége a játéknak."
+
+#: src/main.cpp:39
+#, kde-format
+msgid "Bomber"
+msgstr "Bomber"
+
+#: src/main.cpp:41
+#, kde-format
+msgid "Arcade bombing game"
+msgstr "Bombázós játék"
+
+#: src/main.cpp:42
+#, kde-format
+msgid "(C) 2007 John-Paul Stanford"
+msgstr "(c) John-Paul Stanford, 2007."
+
+#: src/main.cpp:45
+#, kde-format
+msgid "John-Paul Stanford"
+msgstr "John-Paul Stanford"
+
+#: src/main.cpp:47
+#, kde-format
+msgid "Mehmet Emre"
+msgstr "Mehmet Emre"
+
+#: src/main.cpp:47
+#, kde-format
+msgid "Porting to QGraphicsView."
+msgstr "Portolás QGraphicsView-ra."
+
+#~ msgid "The graphical theme to be used."
+#~ msgstr "A használandó grafikai téma."
+
+#~ msgid "Theme"
+#~ msgstr "Téma"
