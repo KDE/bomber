@@ -13,6 +13,7 @@
 #include <QStatusBar>
 
 // KF
+#include <kwidgetsaddons_version.h>
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -133,11 +134,20 @@ void Bomber::closeGame()
     if (old_state == BomberGameWidget::State::Running) {
         m_gameWidget->setPaused(true);
     }
-    int ret = KMessageBox::questionYesNo(this, i18nc("Message displayed when player tries to quit a game that is currently running",
-                                                     "Do you really want to close the running game?"),
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    int ret = KMessageBox::questionTwoActions(this,
+#else
+    int ret = KMessageBox::questionYesNo(this,
+#endif
+                                         i18nc("Message displayed when player tries to quit a game that is currently running",
+                                               "Do you really want to close the running game?"),
                                          QString(),
                                          KStandardGuiItem::close(), KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (ret == KMessageBox::PrimaryAction) {
+#else
     if (ret == KMessageBox::Yes) {
+#endif
         m_gameWidget->closeGame();
     } else if (old_state == BomberGameWidget::State::Running) {
         m_gameWidget->setPaused(false);
