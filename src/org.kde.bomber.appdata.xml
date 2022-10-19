@@ -22,6 +22,7 @@
   <name xml:lang="hu">Bomber</name>
   <name xml:lang="id">Bomber</name>
   <name xml:lang="it">Bomber</name>
+  <name xml:lang="ka">ბომბდამშენი</name>
   <name xml:lang="ko">Bomber</name>
   <name xml:lang="nds">Bomber</name>
   <name xml:lang="nl">Bomber</name>
@@ -60,6 +61,7 @@
   <summary xml:lang="hu">Bombázós játék</summary>
   <summary xml:lang="id">Permainan Pengeboman Gedung</summary>
   <summary xml:lang="it">Gioco di bombardamento arcade</summary>
+  <summary xml:lang="ka">არკადული დაბომბვის თამაში</summary>
   <summary xml:lang="ko">아케이드 폭격 게임</summary>
   <summary xml:lang="nl">Arcade-bommenwerpspel</summary>
   <summary xml:lang="nn">Bombespel</summary>
@@ -193,6 +195,7 @@
   <developer_name xml:lang="hu">A KDE közösség</developer_name>
   <developer_name xml:lang="id">Komunitas KDE</developer_name>
   <developer_name xml:lang="it">La Comunità KDE</developer_name>
+  <developer_name xml:lang="ka">KDE-ის საზოგადოება</developer_name>
   <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nds">De KDE-Meenschap</developer_name>
   <developer_name xml:lang="nl">De KDE gemeenschap</developer_name>
