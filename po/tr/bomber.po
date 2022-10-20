@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:42+0000\n"
+"POT-Creation-Date: 2022-10-20 00:43+0000\n"
 "PO-Revision-Date: 2022-05-06 12:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -30,56 +30,56 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tulliana@gmail.com, emir_sari@icloud.com"
 
-#: src/bomber.cpp:42 src/bomber.cpp:182
+#: src/bomber.cpp:43 src/bomber.cpp:192
 #, kde-format
 msgctxt "Used to display the current level of play to the user"
 msgid "Level: %1"
 msgstr "Düzey: %1"
 
-#: src/bomber.cpp:44 src/bomber.cpp:188
+#: src/bomber.cpp:45 src/bomber.cpp:198
 #, kde-format
 msgctxt "Used to inform the user of their current score"
 msgid "Score: %1"
 msgstr "Puan: %1"
 
-#: src/bomber.cpp:46 src/bomber.cpp:195
+#: src/bomber.cpp:47 src/bomber.cpp:205
 #, kde-format
 msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "Haklar: %1"
 
-#: src/bomber.cpp:86
+#: src/bomber.cpp:87
 #, kde-format
 msgctxt "Menu item used to disable or enable sound"
 msgid "&Play Sounds"
 msgstr "&Sesleri Çal"
 
-#: src/bomber.cpp:91
+#: src/bomber.cpp:92
 #, kde-format
 msgctxt "The name of the action used for dropping bombs"
 msgid "&Drop bomb"
 msgstr "&Bomba at"
 
-#: src/bomber.cpp:92
+#: src/bomber.cpp:93
 #, kde-format
 msgctxt "The tool tip text for the action used to drop bombs"
 msgid "Drop bomb"
 msgstr "Bomba at"
 
-#: src/bomber.cpp:94
+#: src/bomber.cpp:95
 #, kde-format
 msgctxt "Description of the action used to drop bombs"
 msgid "Makes the plane drop a bomb while flying"
 msgstr "Bir uçağın uçarken bomba atmasını sağlar"
 
-#: src/bomber.cpp:137
+#: src/bomber.cpp:143
 #, kde-format
 msgctxt ""
 "Message displayed when player tries to quit a game that is currently running"
 msgid "Do you really want to close the running game?"
 msgstr "Gerçekten çalışan oyunu kapatmak istiyor musunuz?"
 
-#: src/bomber.cpp:168
+#: src/bomber.cpp:178
 #, kde-format
 msgid ""
 "Congratulations!\n"
@@ -88,19 +88,19 @@ msgstr ""
 "Tebrikler!\n"
 "Puan tablosunda yerinizi aldınız."
 
-#: src/bomber.cpp:172
+#: src/bomber.cpp:182
 #, kde-format
 msgid "You gained a score of %1 point."
 msgid_plural "You gained a score of %1 points."
 msgstr[0] "%1 puan kazandınız."
 msgstr[1] "%1 puan kazandınız."
 
-#: src/bomber.cpp:173
+#: src/bomber.cpp:183
 #, kde-format
 msgid "End of Game"
 msgstr "Oyun Sonu"
 
-#: src/bomber.cpp:211
+#: src/bomber.cpp:221
 #, kde-format
 msgctxt "Game over messaged displayed in the status bar"
 msgid "Game over. Press '%1' for a new game"
