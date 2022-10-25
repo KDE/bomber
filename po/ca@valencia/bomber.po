@@ -183,4 +183,4 @@ msgstr "Mehmet Emre"
 #: src/main.cpp:47
 #, kde-format
 msgid "Porting to QGraphicsView."
-msgstr "Adaptació al QGraphicsView."
+msgstr "Adaptació a QGraphicsView."
