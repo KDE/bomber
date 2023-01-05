@@ -2,14 +2,15 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Emmanuelle Richard <emmanuelle@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:43+0000\n"
-"PO-Revision-Date: 2009-11-14 13:14+0100\n"
-"Last-Translator: Emmanuelle Richard <emmrichard@gmail.com>\n"
+"PO-Revision-Date: 2023-01-04 22:00+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -71,14 +72,11 @@ msgid "Makes the plane drop a bomb while flying"
 msgstr "Pafigi bombon de la aviadilo flugante"
 
 #: src/bomber.cpp:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Message displayed when play tries to quit a game that is currently running"
-#| msgid "Do you really want to close the running game?"
+#, kde-format
 msgctxt ""
 "Message displayed when player tries to quit a game that is currently running"
 msgid "Do you really want to close the running game?"
-msgstr "Ĉu vi ja volas fermi la ludon?"
+msgstr "Ĉu vi ja volas fermi la rulantan ludon?"
 
 #: src/bomber.cpp:178
 #, kde-format
@@ -86,6 +84,8 @@ msgid ""
 "Congratulations!\n"
 "You made it into the hall of fame."
 msgstr ""
+"Gratulojn!\n"
+"Vi atingis la halon de famo."
 
 #: src/bomber.cpp:182
 #, kde-format
@@ -97,7 +97,7 @@ msgstr[1] ""
 #: src/bomber.cpp:183
 #, kde-format
 msgid "End of Game"
-msgstr ""
+msgstr "Fino de Ludo"
 
 #: src/bomber.cpp:221
 #, kde-format
@@ -180,9 +180,3 @@ msgstr ""
 #, kde-format
 msgid "Porting to QGraphicsView."
 msgstr ""
-
-#~ msgid "The graphical theme to be used."
-#~ msgstr "Grafika etoso uzinda"
-
-#~ msgid "Theme"
-#~ msgstr "Etoso"
