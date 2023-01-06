@@ -1,169 +1,155 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % German "INCLUDE">
+  <!ENTITY % English "INCLUDE">
 ]>
 <book id="bomber" lang="&language;">
 	<bookinfo>
-		<title
->Das Handbuch zu &bomber;</title>
+		<title>The &bomber; Handbook</title>
 
 		<authorgroup>
-			<author
-><firstname
->John-Paul</firstname
-><surname
->Stanford</surname
-> <affiliation
-> <address
-> <email
->jp@stanwood.org.uk</email>
+			<author>
+				<firstname>John-Paul</firstname>
+				<surname>Stanford</surname>
+				<affiliation>
+					<address>
+						<email>jp@stanwood.org.uk</email>
 					</address>
 				</affiliation>
 			</author>
-			<othercredit role="translator"
-><firstname
->Johannes</firstname
-><surname
->Obermayr</surname
-><affiliation
-><address
-><email
->johannesobermayr@gmx.de</email
-></address
-></affiliation
-><contrib
->Übersetzung</contrib
-></othercredit
-> 
+			<!-- TRANS:ROLES_OF_TRANSLATORS -->
 
 		</authorgroup>
 		<copyright>
-			<year
->2008</year>
-			<holder
->John-Paul Stanford</holder>
+			<year>2008</year>
+			<holder>John-Paul Stanford</holder>
 		</copyright>
 
-		<legalnotice
->&FDLNotice;
+		<legalnotice>&FDLNotice;
 		</legalnotice>
 
-		<date
->2021-10-13</date>
-		<releaseinfo
->KDE Gear 21.08</releaseinfo>
+		<date>2021-10-13</date>
+		<releaseinfo>KDE Gear 21.08</releaseinfo>
 
 		<abstract>
-			<para
->Diese Dokumentation beschreibt die Version 21.08 von &bomber; </para>
+			<para>
+				This documentation describes the game of &bomber; version 21.08
+			</para>
 		</abstract>
 
 		<keywordset>
-			<keyword
->KDE</keyword
-><!-- do not change this! -->
-			<keyword
->Spiel</keyword
-><!-- do not change this! -->
-			<keyword
->Arcade</keyword>
-			<keyword
->Bomber</keyword>
-			<keyword
->Bomber</keyword>
+			<keyword>KDE</keyword><!-- do not change this! -->
+			<keyword>game</keyword><!-- do not change this! -->
+			<keyword>arcade</keyword>
+			<keyword>bomber</keyword>
+			<keyword>Bomber</keyword>
 		</keywordset>
 
 	</bookinfo>
 
 	<chapter id="introduction">
-		<title
->Einleitung</title>
+		<title>Introduction</title>
 		<note>
-			<title
->Spieltyp:</title>
-			<para
->Arcade</para>
+			<title>Gametype:</title>
+			<para>Arcade</para>
 		</note>
 		<note>
-			<title
->Anzahl der Spieler:</title>
-			<para
->Einer</para>
+			<title>Number of possible players:</title>
+			<para>One</para>
 		</note>
 
-		<para
->&bomber; ist ein Arcade-Spiel für einen Spieler, bei dem unterschiedliche und in der Höhe steigende Städte mit einem Flugzeug angegriffen werden. </para>
-		<para
->Das Spielziel ist die Zerstörung aller Gebäude und der damit verbundene Aufstieg in die nächste Ebene. Die Ebenen werden durch die zunehmende Geschwindigkeit der Flugzeuge und Höhe der Gebäude immer schwieriger. </para>
+		<para>
+			&bomber; is a single player arcade game. The player is
+			invading various cities in a plane that is decreasing in
+			height.
+		</para>
+		<para>
+			The goal of the game is to destroy all the buildings and
+			advance to the next level. Each level gets a harder by
+			increasing the speed of the plane and the height of the
+			buildings.
+		</para>
 	</chapter>
 	<chapter id="how-to-play">
-		<title
->Spielanleitung</title>
+		<title>How To Play</title>
 <screenshot>
 <mediaobject>
 <imageobject>
 <imagedata fileref="mainscreen.png" format="PNG"/>
 </imageobject>
 <textobject>
-<phrase
->&bomber;-Hauptfenster</phrase>
+<phrase>&bomber; main screen</phrase>
 </textobject>
 </mediaobject>
 </screenshot>
-		<para
->Der Spieler fliegt in seinem Flugzeug über der Stadt von der linken zur rechten Seite. Jedes mal wenn das Flugzeug das Spielfeld auf der rechten Seite verlässt erscheint es in geringerer Höhe auf der linken Seite erneut. </para>
-		<para
->Der Spieler hat alle Gebäude zu zerstören, um die Ebene zu <emphasis
->säubern.</emphasis
-> Falls das Flugzeug - aufgrund der geringen Höhe - in ein Gebäude fliegt, werden sowohl das Flugzeug als auch das Gebäude zerstört, ein Leben geht verloren und das Flugzeug beginnt wieder links-oben zu fliegen. </para>
-		<para
->Die Gebäude werden durch die abgeworfenen Bomben zerstört. Die Bomben werden mittels der &LMBn; oder der &Space; vom Flugzeug abgeworfen und fallen dann gerade (senkrecht) nach unten. </para>
-		<para
->Nach der <emphasis
->Säuberung</emphasis
-> der Ebene wird die nächste Ebene erreicht. Jede Ebene wird durch die steigende Geschwindigkeit des Flugzeug und Höhe der Gebäude langsam schwieriger. </para>
-	</chapter
->	
+		<para>
+			The player is flying a plane in a city. The plane flies from
+			left to right. Every time it disappears off the side of the
+			play area, it reappears on the left side again, but lower
+			than it was before.
+		</para>
+		<para>
+			The player has to destroy all the buildings to clear the
+			level. If the plane crashes into a building, then the player loses a life
+			and the plane is moved to the top left of the play area
+			again.
+		</para>
+		<para>
+			Buildings are destroyed by dropping bombs on them. This can
+			be done by clicking the &LMB; or pressing the &Space;
+			key. The bomb will fall from the plane and hit anything
+			directly below it.
+		</para>
+		<para>
+			After clearing a level, the player advances to the next
+			level. Each level gets slightly harder than the previous
+			level as the buildings get taller and the plane gets faster.
+		</para>
+	</chapter>	
 
 	<chapter id="configuration">
-		<title
->Spieleinstellung</title
-><!-- do not change this! -->
-		<para
->Im Einrichtungsdialog von &bomber; können die Designs ausgewählt werden. </para>
-		<para
->Um ein Design einzustellen, wählen Sie es aus der Auswahlliste. Für jeden Eintrag in der Liste wird eine kleine Vorschau links vom Namen des Designs angezeigt. Eine Auswahl wird sofort angewendet, </para>
-		<para
->Um Ihre Auswahl zu übernehmen, klicken Sie auf den Knopf <guibutton
->Schließen</guibutton
-> im unteren Bereich dieses Dialogs. </para>
+		<title>Game Configuration</title><!-- do not change this! -->
+		<para>
+			The &bomber; configuration dialog allows you to select visual
+			themes for &bomber;.
+		</para>
+		<para>
+			To select a new theme simply choose the theme from
+			the selection list. Each item in the list shows a small
+			preview left to the theme name. A selection is immediately applied.
+		</para>
+		<para>
+			Once you are satisfied with the theme you have selected you
+			can click the <guibutton>Close</guibutton>
+			button, located at the bottom part of this dialog.
+		</para>
 	</chapter>
 
 	<chapter id="credits-and-license">
-		<title
->Danksagungen und Lizenz</title>
+		<title>Credits and License</title>
 
 
-		<para
->&bomber;</para>
+		<para>&bomber;</para>
 		<itemizedlist>
 			<listitem>
-				<para
->John-Paul Stanford <email
->jp@stanwood.org.uk</email
-> - Ursprünglicher Programmierer </para>
+				<para>
+					John-Paul Stanford
+					<email>jp@stanwood.org.uk</email>
+					- Original Author
+				</para>
 			</listitem>
 		</itemizedlist>
-		<para
->Dokumentation © 2008 John-Paul Stanford <email
->jp@stanwood.org.uk</email
-> </para>
+		<para>
+			Documentation copyright 2008, John-Paul Stanford
+			<email>jp@stanwood.org.uk</email>
+		</para>
 		
-		<para
->Übersetzung: Johannes Obermayr <email
->johannesobermayr@gmx.de</email
-></para
-> &underFDL; &underGPL; </chapter>
+		<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+		&underFDL;
+
+		&underGPL;
+
+	</chapter>
 
 </book>
