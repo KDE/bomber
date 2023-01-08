@@ -5,6 +5,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>Bomber</name>
   <name xml:lang="ar">القاصف</name>
+  <name xml:lang="bg">Бомбардировач</name>
   <name xml:lang="bs">Bomber</name>
   <name xml:lang="ca">Bomber</name>
   <name xml:lang="ca-valencia">Bomber</name>
@@ -45,6 +46,7 @@
   <name xml:lang="zh-TW">戰鬥機_Bomber</name>
   <summary>Arcade Bombing Game</summary>
   <summary xml:lang="ar">لعبة قصف الممرات</summary>
+  <summary xml:lang="bg">Аркадна игра с борбардиране</summary>
   <summary xml:lang="ca">Joc arcade de bombardeig</summary>
   <summary xml:lang="ca-valencia">Joc arcade de bombardeig</summary>
   <summary xml:lang="cs">Arkádová bombardovací hra</summary>
@@ -180,6 +182,7 @@
   <project_group>KDE</project_group>
   <developer_name>The KDE Community</developer_name>
   <developer_name xml:lang="ar">مجتمع كدي</developer_name>
+  <developer_name xml:lang="bg">Общността на KDE</developer_name>
   <developer_name xml:lang="bs">KDE zajednica</developer_name>
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
