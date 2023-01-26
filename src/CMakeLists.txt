@@ -31,11 +31,11 @@ ecm_add_app_icon(bomber ICONS ${ICONS_SRCS})
 
 target_link_libraries(bomber
     KF5KDEGames
-    KF5::CoreAddons
-    KF5::XmlGui
-    KF5::I18n
-    KF5::DBusAddons
-    KF5::Crash
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::DBusAddons
+    KF${KF_MAJOR_VERSION}::Crash
 )
 
 install(TARGETS bomber ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
