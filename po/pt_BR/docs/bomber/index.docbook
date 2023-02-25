@@ -50,21 +50,18 @@
 		</legalnotice>
 
 		<date
->09/05/2016</date>
+>13/10/2021</date>
 		<releaseinfo
->0.4 (Applications 16.04) </releaseinfo>
+>KDE Gear 21.08</releaseinfo>
 
 		<abstract>
 			<para
->Esta documentação descreve a versão 0.4 do jogo &bomber; </para>
+>Esta documentação descreve a versão 21.08 do jogo &bomber; </para>
 		</abstract>
 
 		<keywordset>
 			<keyword
 >KDE</keyword
-><!-- do not change this! -->
-			<keyword
->kdegames</keyword
 ><!-- do not change this! -->
 			<keyword
 >jogo</keyword
@@ -119,9 +116,7 @@
 		<para
 >O jogador terá que destruir todos os edifícios para limpar o nível. Se o avião bater num prédio, o jogador perderá uma vida e o avião irá para o canto superior esquerdo da área de jogo novamente. </para>
 		<para
->Os edifícios são destruídos ao lançar bombas sobre os mesmos. Isto pode ser feito clicando com o &LMB; ou pressionando a tecla de <quote
->Espaço</quote
->. A bomba irá cair do avião e atingir tudo o que estiver diretamente abaixo dela. </para>
+>Os edifícios são destruídos ao lançar bombas sobre os mesmos. Isto pode ser feito clicando com o &LMB; ou pressionando a tecla &Space;. A bomba irá cair do avião e atingir tudo o que estiver diretamente abaixo dela. </para>
 		<para
 >Depois de limpar um nível, o jogador passa para o nível seguinte. Cada nível vai ficando um pouco mais difícil que o anterior, à medida que os edifícios vão ficando mais altos e o avião vai voando mais depressa. </para>
 	</chapter
