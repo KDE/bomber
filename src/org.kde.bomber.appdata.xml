@@ -14,6 +14,7 @@
   <name xml:lang="de">Bomber</name>
   <name xml:lang="el">Bomber</name>
   <name xml:lang="en-GB">Bomber</name>
+  <name xml:lang="eo">Bomber</name>
   <name xml:lang="es">Bomber</name>
   <name xml:lang="et">Bomber</name>
   <name xml:lang="eu">Bonbaketaria</name>
@@ -54,6 +55,7 @@
   <summary xml:lang="de">Fliegerbomben-Spiel</summary>
   <summary xml:lang="el">Ηλεκτρονικό παιχνίδι βομβαρδισμού</summary>
   <summary xml:lang="en-GB">Arcade Bombing Game</summary>
+  <summary xml:lang="eo">Arkada bombadoludo</summary>
   <summary xml:lang="es">Juego recreativo de bombas</summary>
   <summary xml:lang="et">Põnev pommitamisemäng</summary>
   <summary xml:lang="eu">Arkupeko bonbardaketa jokoa</summary>
@@ -193,6 +195,7 @@
   <developer_name xml:lang="de">Die KDE-Gemeinschaft</developer_name>
   <developer_name xml:lang="el">Η Κοινότητα του KDE</developer_name>
   <developer_name xml:lang="en-GB">The KDE Community</developer_name>
+  <developer_name xml:lang="eo">La KDE-Komunumo</developer_name>
   <developer_name xml:lang="es">La Comunidad KDE</developer_name>
   <developer_name xml:lang="et">KDE kogukond</developer_name>
   <developer_name xml:lang="eu">KDE komunitatea</developer_name>
