@@ -226,3 +226,5 @@ void Bomber::gameStateChanged(BomberGameWidget::State state)
             break;
     }
 }
+
+#include "moc_bomber.cpp"

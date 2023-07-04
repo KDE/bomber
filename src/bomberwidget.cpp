@@ -360,3 +360,5 @@ BomberGameWidget::State BomberGameWidget::state() const
 {
     return m_state;
 }
+
+#include "moc_bomberwidget.cpp"

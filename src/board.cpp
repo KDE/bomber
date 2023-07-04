@@ -275,3 +275,5 @@ QPointF BomberBoard::unmapPosition(const QPoint & pos) const
 {
     return QPointF(1.0 * pos.x() / m_tileSize.width(), 1.0 * pos.y() / m_tileSize.height());
 }
+
+#include "moc_board.cpp"
