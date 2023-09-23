@@ -13,14 +13,12 @@
 #include <QStatusBar>
 
 // KF
-#include <kwidgetsaddons_version.h>
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KToggleAction>
 
 // KDEGames
-#include <kdegames_version.h>
 #include <KScoreDialog>
 #include <KStandardGameAction>
 #include <KgThemeSelector>
@@ -31,9 +29,6 @@
 Bomber::Bomber()
 {
     m_provider.discoverThemes(
-#if KDEGAMES_VERSION < QT_VERSION_CHECK(7, 4, 0)
-        "appdata",
-#endif
         QStringLiteral("themes"),   //theme data location
         QStringLiteral("kbomber")); //default theme name
 
@@ -134,20 +129,12 @@ void Bomber::closeGame()
     if (old_state == BomberGameWidget::State::Running) {
         m_gameWidget->setPaused(true);
     }
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     int ret = KMessageBox::questionTwoActions(this,
-#else
-    int ret = KMessageBox::questionYesNo(this,
-#endif
                                          i18nc("Message displayed when player tries to quit a game that is currently running",
                                                "Do you really want to close the running game?"),
                                          QString(),
                                          KStandardGuiItem::close(), KStandardGuiItem::cancel());
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     if (ret == KMessageBox::PrimaryAction) {
-#else
-    if (ret == KMessageBox::Yes) {
-#endif
         m_gameWidget->closeGame();
     } else if (old_state == BomberGameWidget::State::Running) {
         m_gameWidget->setPaused(false);

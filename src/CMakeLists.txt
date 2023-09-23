@@ -29,18 +29,13 @@ kconfig_add_kcfg_files(bomber settings.kcfgc)
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/../icons/*-apps-bomber.png")
 ecm_add_app_icon(bomber ICONS ${ICONS_SRCS})
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    target_link_libraries(bomber KDEGames6)
-else()
-    target_link_libraries(bomber KF5KDEGames)
-endif()
-
 target_link_libraries(bomber
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::DBusAddons
-    KF${KF_MAJOR_VERSION}::Crash
+    KDEGames6
+    KF6::CoreAddons
+    KF6::XmlGui
+    KF6::I18n
+    KF6::DBusAddons
+    KF6::Crash
 )
 
 install(TARGETS bomber ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
