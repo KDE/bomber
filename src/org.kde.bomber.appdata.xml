@@ -22,6 +22,7 @@
   <name xml:lang="fr">Bomber</name>
   <name xml:lang="gl">Bomber</name>
   <name xml:lang="hu">Bomber</name>
+  <name xml:lang="ia">Bomber</name>
   <name xml:lang="id">Bomber</name>
   <name xml:lang="it">Bomber</name>
   <name xml:lang="ka">ბომბდამშენი</name>
@@ -205,6 +206,7 @@
   <developer_name xml:lang="fr">La communauté KDE</developer_name>
   <developer_name xml:lang="gl">A comunidade de KDE</developer_name>
   <developer_name xml:lang="hu">A KDE közösség</developer_name>
+  <developer_name xml:lang="ia">Le communitate de KDE</developer_name>
   <developer_name xml:lang="id">Komunitas KDE</developer_name>
   <developer_name xml:lang="it">La Comunità KDE</developer_name>
   <developer_name xml:lang="ka">KDE-ის საზოგადოება</developer_name>
