@@ -114,7 +114,7 @@
 		<para
 >El jugador està volant en un avió en una ciutat. L'avió vola des de l'esquerra cap a la dreta. Cada vegada que desapareix de l'àrea de joc, reapareix per l'esquerra una altra vegada, però més avall que abans. </para>
 		<para
->El jugador ha de destruir tots els edificis per completar el nivell. Si l'avió xoca contra un edifici, el jugador perd una vida i l'avió es desplaça a la part superior esquerra de l'àrea de joc una altra vegada. </para>
+>El jugador ha de destruir tots els edificis per a completar el nivell. Si l'avió xoca contra un edifici, el jugador perd una vida i l'avió es desplaça a la part superior esquerra de l'àrea de joc una altra vegada. </para>
 		<para
 >Els edificis es destrueixen llançant bombes sobre ells. Això es pot fer clicant el &BER; o prement la tecla &Space;. La bomba caurà des de l'avió i tocarà qualsevol cosa que estigui directament a sota. </para>
 		<para
