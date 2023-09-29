@@ -28,7 +28,7 @@ static const unsigned int TICKS_PER_SECOND = 1000 / GAME_TIME_DELAY;
 /** The z-value for overlays */
 static const unsigned int OVERLAY_Z_VALUE = 1000;
 
-BomberGameWidget::BomberGameWidget(KgThemeProvider * provider, QWidget * parent)
+BomberGameWidget::BomberGameWidget(KGameThemeProvider * provider, QWidget * parent)
     : QGraphicsView(parent)
     , m_state(State::BeforeFirstGame)
     , m_level(0)

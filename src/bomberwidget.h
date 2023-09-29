@@ -18,7 +18,7 @@
 // Bomber
 #include "board.h"
 
-class KgThemeProvider;
+class KGameThemeProvider;
 
 /**
  * This is the main game widget class. It manages things like the lives, source counts and game states.
@@ -38,7 +38,7 @@ public:
                        Suspended,
                        GameOver };
 
-    explicit BomberGameWidget(KgThemeProvider * provider, QWidget * parent = nullptr);
+    explicit BomberGameWidget(KGameThemeProvider * provider, QWidget * parent = nullptr);
     ~BomberGameWidget() override;
 
     /**

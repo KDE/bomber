@@ -11,7 +11,7 @@
 #include <KXmlGuiWindow>
 
 // KDEGames
-#include <KgThemeProvider>
+#include <KGameThemeProvider>
 
 // Bomber
 #include "bomberwidget.h"
@@ -19,7 +19,7 @@
 class QAction;
 class QStatusBar;
 class KToggleAction;
-class KgThemeSelector;
+class KGameThemeSelector;
 class QLabel;
 
 /**
@@ -53,8 +53,8 @@ private:
     void highscore();
     void initXMLUI();
 
-    KgThemeProvider m_provider;
-    KgThemeSelector * m_selector;
+    KGameThemeProvider m_provider;
+    KGameThemeSelector * m_selector;
 
     BomberGameWidget * m_gameWidget;
     QStatusBar * m_statusBar;

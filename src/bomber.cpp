@@ -19,9 +19,9 @@
 #include <KToggleAction>
 
 // KDEGames
+#include <KGameThemeSelector>
 #include <KScoreDialog>
 #include <KStandardGameAction>
-#include <KgThemeSelector>
 
 // Bomber
 #include "settings.h"
@@ -32,7 +32,7 @@ Bomber::Bomber()
         QStringLiteral("themes"),   //theme data location
         QStringLiteral("kbomber")); //default theme name
 
-    m_selector = new KgThemeSelector(&m_provider);
+    m_selector = new KGameThemeSelector(&m_provider);
 
     m_statusBar = statusBar();
     m_level = new QLabel(i18nc("Used to display the current level of play to the user", "Level: %1", 0));
@@ -43,7 +43,7 @@ Bomber::Bomber()
     m_statusBar->addPermanentWidget(m_lives);
 
     m_gameWidget = new BomberGameWidget(&m_provider, this);
-    connect(&m_provider, &KgThemeProvider::currentThemeChanged, m_gameWidget, &BomberGameWidget::settingsChanged);
+    connect(&m_provider, &KGameThemeProvider::currentThemeChanged, m_gameWidget, &BomberGameWidget::settingsChanged);
 
     connect(m_gameWidget, &BomberGameWidget::levelChanged, this, &Bomber::displayLevel);
     connect(m_gameWidget, &BomberGameWidget::scoreChanged, this, &Bomber::displayScore);
