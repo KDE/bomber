@@ -13,7 +13,7 @@
 #include <QMouseEvent>
 
 // KDEGames
-#include <KgSound>
+#include <KGameSound>
 
 // Bomber
 #include "board.h"
@@ -190,8 +190,8 @@ private:
 
     QGraphicsPixmapItem * m_overlay;
 
-    KgSound m_soundBomb;
-    KgSound m_soundCrash;
+    KGameSound m_soundBomb;
+    KGameSound m_soundCrash;
 };
 
 #endif
