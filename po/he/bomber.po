@@ -3,30 +3,31 @@
 #
 # shalva, 2011.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:39+0000\n"
-"PO-Revision-Date: 2017-05-16 07:00-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-01 21:57+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde-l10n-he@kde.org"
 
 #: src/bomber.cpp:38 src/bomber.cpp:179
 #, kde-format
@@ -50,19 +51,19 @@ msgstr "חיים: %1"
 #, kde-format
 msgctxt "Menu item used to disable or enable sound"
 msgid "&Play Sounds"
-msgstr "&נגן צלילים"
+msgstr "ה&שמעת צלילים"
 
 #: src/bomber.cpp:87
 #, kde-format
 msgctxt "The name of the action used for dropping bombs"
 msgid "&Drop bomb"
-msgstr "השלך פ&צצה"
+msgstr "השלכת פ&צצה"
 
 #: src/bomber.cpp:88
 #, kde-format
 msgctxt "The tool tip text for the action used to drop bombs"
 msgid "Drop bomb"
-msgstr "השלך פצצה"
+msgstr "השלכת פצצה"
 
 #: src/bomber.cpp:90
 #, kde-format
@@ -75,7 +76,7 @@ msgstr "גורם למטוס להשליך פצצה תוך כדי טיסה"
 msgctxt ""
 "Message displayed when player tries to quit a game that is currently running"
 msgid "Do you really want to close the running game?"
-msgstr ""
+msgstr "לסגור את המשחק הפעיל?"
 
 #: src/bomber.cpp:165
 #, kde-format
@@ -83,30 +84,32 @@ msgid ""
 "Congratulations!\n"
 "You made it into the hall of fame."
 msgstr ""
+"כל הכבוד!\n"
+"הגעת להיכל התהילה."
 
 #: src/bomber.cpp:169
 #, kde-format
 msgid "You gained a score of %1 point."
 msgid_plural "You gained a score of %1 points."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "הניקוד שהרווחת הוא נקודה."
+msgstr[1] "הניקוד שהרווחת הוא %1 נקודות."
 
 #: src/bomber.cpp:170
 #, kde-format
 msgid "End of Game"
-msgstr ""
+msgstr "סוף המשחק"
 
 #: src/bomber.cpp:208
 #, kde-format
 msgctxt "Game over messaged displayed in the status bar"
 msgid "Game over. Press '%1' for a new game"
-msgstr "המשחק הסתיים. לחץ '%1' בשביל משחק חדש"
+msgstr "המשחק הסתיים. נא ללחוץ ‚%1’ למשחק חדש"
 
 #. i18n: ectx: label, entry (PlaySounds), group (Sound)
 #: src/bomber.kcfg:9
 #, kde-format
 msgid "Whether game sounds are played."
-msgstr ""
+msgstr "האם צלילי המשחק יושמעו."
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: src/bomberui.rc:14
@@ -121,6 +124,8 @@ msgid ""
 "Welcome to Bomber.\n"
 "Click to start a game"
 msgstr ""
+"ברוך בואך למפציץ.\n"
+"נא ללחוץ כדי להתחיל במשחק"
 
 #: src/bomberwidget.cpp:313
 #, kde-format
@@ -138,40 +143,40 @@ msgstr "סיימת בהצלחה את שלב %1\n"
 #, kde-format
 msgctxt "Message telling user which level they are about to start"
 msgid "On to level %1."
-msgstr "עלה לשלב %1."
+msgstr "עלייה לשלב %1."
 
 #: src/bomberwidget.cpp:320
 #, kde-format
 msgctxt "Used to tell the user that the game is over"
 msgid "Game over."
-msgstr ""
+msgstr "משחק נגמר."
 
 #: src/main.cpp:27
 #, kde-format
 msgid "Bomber"
-msgstr ""
+msgstr "מפציץ"
 
 #: src/main.cpp:29
 #, kde-format
 msgid "Arcade bombing game"
-msgstr ""
+msgstr "משחק ארקייד להפצצה"
 
 #: src/main.cpp:30
 #, kde-format
 msgid "(C) 2007 John-Paul Stanford"
-msgstr ""
+msgstr "(C) 2007 ג׳ון-פול סטנפורד"
 
 #: src/main.cpp:33
 #, kde-format
 msgid "John-Paul Stanford"
-msgstr ""
+msgstr "ג׳ון פול סטנפורד"
 
 #: src/main.cpp:35
 #, kde-format
 msgid "Mehmet Emre"
-msgstr ""
+msgstr "מהמט אמרה"
 
 #: src/main.cpp:35
 #, kde-format
 msgid "Porting to QGraphicsView."
-msgstr ""
+msgstr "הסבה ל־QGraphicsView."
