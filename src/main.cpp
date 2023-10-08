@@ -34,12 +34,15 @@ int main(int argc, char ** argv)
                     QStringLiteral("jp@stanwood.org.uk"));
     about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
                     QStringLiteral("maemre2@gmail.com"));
-    QCommandLineParser parser;
     KAboutData::setApplicationData(about);
+
     KCrash::initialize();
+
+    QCommandLineParser parser;
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
+
     KDBusService service;
 
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("bomber")));
