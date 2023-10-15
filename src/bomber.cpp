@@ -88,7 +88,7 @@ void Bomber::initXMLUI()
     dropBombAction->setToolTip(i18nc("The tool tip text for the action used to drop bombs", "Drop bomb"));
     dropBombAction->setWhatsThis(i18nc("Description of the action used to drop bombs",
                                        "Makes the plane drop a bomb while flying"));
-    actionCollection()->setDefaultShortcut(dropBombAction, Qt::Key_Space);
+    KActionCollection::setDefaultShortcut(dropBombAction, Qt::Key_Space);
     dropBombAction->setEnabled(true);
     connect(dropBombAction, &QAction::triggered, m_gameWidget, &BomberGameWidget::onDropBomb);
 }
