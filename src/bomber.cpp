@@ -21,7 +21,7 @@
 // KDEGames
 #include <KGameThemeSelector>
 #include <KScoreDialog>
-#include <KStandardGameAction>
+#include <KGameStandardAction>
 
 // Bomber
 #include "settings.h"
@@ -71,11 +71,11 @@ Bomber::~Bomber()
 void Bomber::initXMLUI()
 {
     // Game
-    m_newAction = KStandardGameAction::gameNew(this, &Bomber::newGame, actionCollection());
-    KStandardGameAction::end(this, &Bomber::closeGame, actionCollection());
-    m_pauseAction = KStandardGameAction::pause(this, &Bomber::pauseGame, actionCollection());
-    KStandardGameAction::highscores(this, &Bomber::showHighscore, actionCollection());
-    KStandardGameAction::quit(this, &QWidget::close, actionCollection());
+    m_newAction = KGameStandardAction::gameNew(this, &Bomber::newGame, actionCollection());
+    KGameStandardAction::end(this, &Bomber::closeGame, actionCollection());
+    m_pauseAction = KGameStandardAction::pause(this, &Bomber::pauseGame, actionCollection());
+    KGameStandardAction::highscores(this, &Bomber::showHighscore, actionCollection());
+    KGameStandardAction::quit(this, &QWidget::close, actionCollection());
 
     // Settings
     KStandardAction::preferences(this, &Bomber::showPreferences, actionCollection());
