@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:39+0000\n"
-"PO-Revision-Date: 2023-10-01 21:57+0300\n"
+"PO-Revision-Date: 2023-10-21 15:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -89,13 +89,13 @@ msgstr ""
 "הגעת להיכל התהילה."
 
 #: src/bomber.cpp:169
-#, fuzzy, kde-format
+#, kde-format
 msgid "You gained a score of %1 point."
 msgid_plural "You gained a score of %1 points."
-msgstr[0] "הניקוד שהרווחת הוא נקודה."
-msgstr[1] "הניקוד שהרווחת הוא %1 נקודות."
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "הניקוד שצברת הוא נקודה."
+msgstr[1] "הניקוד שצברת הוא שתי נקודות."
+msgstr[2] "הניקוד שצברת הוא %1 נקודות."
+msgstr[3] "הניקוד שצברת הוא %1 נקודות."
 
 #: src/bomber.cpp:170
 #, kde-format
