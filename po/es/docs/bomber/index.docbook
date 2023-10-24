@@ -81,7 +81,7 @@
 >juego</keyword
 ><!-- do not change this! -->
 			<keyword
->arcade</keyword>
+>recreativo</keyword>
 			<keyword
 >bomber</keyword>
 			<keyword
@@ -97,7 +97,7 @@
 			<title
 >Tipo de juego:</title>
 			<para
->Arcade</para>
+>Recreativo</para>
 		</note>
 		<note>
 			<title
@@ -107,7 +107,7 @@
 		</note>
 
 		<para
->&bomber; es un juego arcade para un jugador. El jugador invade varias ciudades en un avión que va decreciendo en altura. </para>
+>&bomber; es un juego arcade para un jugador. El jugador invade varias ciudades en un avión que va decreciendo. </para>
 		<para
 >El objetivo del juego es destruir todos los edificios y avanzar al siguiente nivel. Cada nivel se hace más difícil al aumentar la velocidad del avión y la altura de los edificios. </para>
 	</chapter>
@@ -126,11 +126,11 @@
 </mediaobject>
 </screenshot>
 		<para
->El jugador maneja un avión por una ciudad. El avión vuela de izquierda a derecha. Cada vez que desparece por el lado del área de juego, reaparece a la izquierda de nuevo, pero más bajo de lo que estaba antes. </para>
+>El jugador pilota un avión por una ciudad. El avión vuela de izquierda a derecha. Cada vez que desparece por el lado derecho, vuelve a aparecer por la izquierda, pero más bajo de lo que estaba antes. </para>
 		<para
->El jugador debe destruir todos los edificios para superar el nivel. Si el avión se estrella contra un edificio, entonces el jugador pierde una vida y el avión se mueve hacia el área superior izquierda del área de juego otra vez. </para>
+>El jugador debe destruir todos los edificios para superar el nivel. Si el avión se estrella contra un edificio, el jugador pierde una vida y el avión vuelve a la parte superior izquierda del área de juego. </para>
 		<para
->Los edificios se destruyen dejando caer bombas sobre ellos. Esto se puede hacer con un clic del &LMB; o pulsando la tecla &Space;. La bomba caerá del avión e impactará en cualquier cosa que esté justo debajo. </para>
+>Los edificios se destruyen dejando caer bombas sobre ellos. Esto se puede hacer con un clic del &LMB; o pulsando la tecla &Space;. La bomba caerá del avión e impactará sobre lo que esté justo debajo. </para>
 		<para
 >Después de limpiar un nivel, el jugador avanza al siguiente nivel. Cada nivel se vuelve un poco más difícil que el anterior, ya que los edificios se hacen más altos y el avión va más rápido. </para>
 	</chapter
@@ -141,13 +141,13 @@
 >Configuración del juego</title
 ><!-- do not change this! -->
 		<para
->El diálogo de configuración de &bomber; le permite seleccionar temas visuales para &bomber;. </para>
+>El diálogo de configuración de &bomber; permite seleccionar temas visuales para &bomber;. </para>
 		<para
 >Para seleccionar un nuevo tema, basta con elegirlo en la lista de selección. Cada uno de los elementos de la lista tiene una pequeña vista previa a la izquierda del nombre del tema. El tema seleccionado se aplica inmediatamente. </para>
 		<para
->Cuando esté satisfecho con el tema que ha seleccionado, pulse el botón <guibutton
+>Cuando estés satisfecho con el tema seleccionado, pulsa el botón <guibutton
 >Cerrar</guibutton
-> situado en la parte inferior del cuadro de diálogo. </para>
+> que hay en la parte inferior del diálogo. </para>
 	</chapter>
 
 	<chapter id="credits-and-license">
@@ -162,19 +162,21 @@
 				<para
 >John-Paul Stanford <email
 >jp@stanwood.org.uk</email
-> - Original Author </para>
+>: autor original </para>
 			</listitem>
 		</itemizedlist>
 		<para
->Copyright de la documentación de 2008, John-Paul Stanford <email
+>Copyright de la documentación 2008, John-Paul Stanford <email
 >jp@stanwood.org.uk</email
 > </para>
 		
 		<para
->Traducido por Rocío Gallego <email
+>Documentación traducida por Rocío Gallego <email
 >traducciones@rociogallego.com</email
-> yKira J. Fernández <email
+> y Kira J. Fernández <email
 >kirajfdez@gmail.com</email
+>. Corregida por Eloy Cuadra <email
+>ecuadra@eloihr.net</email
 >.</para
 > &underFDL; &underGPL; </chapter>
 
