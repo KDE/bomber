@@ -19,8 +19,8 @@
 #include <KToggleAction>
 
 // KDEGames
+#include <KGameHighScoreDialog>
 #include <KGameThemeSelector>
-#include <KScoreDialog>
 #include <KGameStandardAction>
 
 // Bomber
@@ -143,7 +143,7 @@ void Bomber::closeGame()
 
 void Bomber::showHighscore()
 {
-    KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
+    KGameHighScoreDialog ksdialog(KGameHighScoreDialog::Name | KGameHighScoreDialog::Score | KGameHighScoreDialog::Level, this);
     ksdialog.exec();
 }
 
@@ -156,11 +156,11 @@ void Bomber::highscore()
 {
     const unsigned int score = m_gameWidget->score();
 
-    QPointer<KScoreDialog> ksdialog = new KScoreDialog(KScoreDialog::Name | KScoreDialog::Score | KScoreDialog::Level, this);
+    QPointer<KGameHighScoreDialog> ksdialog = new KGameHighScoreDialog(KGameHighScoreDialog::Name | KGameHighScoreDialog::Score | KGameHighScoreDialog::Level, this);
 
-    KScoreDialog::FieldInfo info;
-    info[KScoreDialog::Score].setNum(score);
-    info[KScoreDialog::Level].setNum(m_gameWidget->level());
+    KGameHighScoreDialog::FieldInfo info;
+    info[KGameHighScoreDialog::Score].setNum(score);
+    info[KGameHighScoreDialog::Level].setNum(m_gameWidget->level());
     if (score > 0 && ksdialog->addScore(info) > 0) {
         QString const message = i18n("Congratulations!\nYou made it into the hall of fame.");
         ksdialog->setComment(message);
