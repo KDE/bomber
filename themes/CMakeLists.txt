@@ -1,4 +1,25 @@
+# SPDX-FileCopyrightText: 2023 Friedrich W. H. Kossebau <kossebau@kde.org>
+#
+# SPDX-License-Identifier: BSD-3-Clause
 
-install( FILES kbomber.desktop kbomber.png kbomber.svgz DESTINATION  ${KDE_INSTALL_DATADIR}/bomber/themes )
-install( FILES Lava-Island.desktop lava-Island.png Lava-Island.svgz DESTINATION  ${KDE_INSTALL_DATADIR}/bomber/themes )
+function(install_theme name)
+    cmake_parse_arguments(ARG "" "SVG;PREVIEW" "" ${ARGN})
+    if (NOT ARG_SVG)
+        set(ARG_SVG "${name}.svg")
+    endif()
+    if (NOT ARG_PREVIEW)
+        set(ARG_PREVIEW "${name}.png")
+    endif()
+    set(svgz "${CMAKE_CURRENT_BINARY_DIR}/${ARG_SVG}z")
+    generate_svgz(${ARG_SVG} ${svgz} "theme-")
+    install(
+        FILES
+            ${name}.desktop
+            ${ARG_PREVIEW}
+            ${svgz}
+        DESTINATION ${KDE_INSTALL_DATADIR}/bomber/themes
+    )
+endfunction()
 
+install_theme(kbomber)
+install_theme(Lava-Island PREVIEW lava-Island.png)
