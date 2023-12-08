@@ -21,6 +21,7 @@
   <name xml:lang="fi">Bomber</name>
   <name xml:lang="fr">Bomber</name>
   <name xml:lang="gl">Bomber</name>
+  <name xml:lang="he">Bomber</name>
   <name xml:lang="hu">Bomber</name>
   <name xml:lang="ia">Bomber</name>
   <name xml:lang="id">Bomber</name>
@@ -63,6 +64,7 @@
   <summary xml:lang="fi">Arkadipommituspeli</summary>
   <summary xml:lang="fr">Jeu d'arcade de bombardement</summary>
   <summary xml:lang="gl">Xogo arcade de bombardeo.</summary>
+  <summary xml:lang="he">משחק הרפתקה מפציץ</summary>
   <summary xml:lang="hu">Bombázós játék</summary>
   <summary xml:lang="id">Permainan Pengeboman Gedung</summary>
   <summary xml:lang="it">Gioco di bombardamento arcade</summary>
@@ -107,6 +109,7 @@
     <p xml:lang="fi">Bomber on yhden pelaajan pelihallipeli, jossa pelaaja hyökkää kaupunkeihin lentokoneella, jonka korkeus vähenee vähitellen.</p>
     <p xml:lang="fr">Bomber est un jeu d'arcade pour un seul joueur. Le joueur doit envahir des villes depuis un avion dont l'altitude décroît.</p>
     <p xml:lang="gl">Bomber é un xogo arcade para un único xogador, que montado nun avión invadirá varias cidades mentres o aparello vai reducindo a súa altitude.</p>
+    <p xml:lang="he">Bomber הוא משחק הרפתקה לשחקן יחיד. השחר פולש למגוון ערים עם מטוס שהטיסה שלו הולכת ונוטה לכיוון הקרקע.</p>
     <p xml:lang="hu">A Bomber egy egyjátékos arcade játék. A játékos különböző városokat igáz le egy repülővel, ami folyamatosan veszít magasságából.</p>
     <p xml:lang="id">Bomber adalah sebuah permainan arkade pemain tunggal. Pemain adalah menyerang berbagai kota dalam sebuah pesawat yang menjatuhkan bom dari ketinggian.</p>
     <p xml:lang="it">Bomber è un semplice gioco arcade per un solo giocatore. Questi deve invadere delle città in una pianura inclinata.</p>
@@ -152,6 +155,7 @@
     <p xml:lang="fi">Pelin tavoitteena on tuhota kaikki rakennukset ja edetä seuraavalle tasolle. Kukin taso on edellistä vaikeampi; lentokone on nopeampi ja rakennukset ovat korkeampia.</p>
     <p xml:lang="fr">Le but du jeu est de détruire tous les bâtiments pour atteindre le niveau suivant. Chaque niveau devient plus difficile en augmentant la vitesse de l'avion et la hauteur des bâtiments.</p>
     <p xml:lang="gl">O obxectivo do xogo consiste en destruír os edificios e avanzar ao seguinte nivel. Cada novo nivel resultará máis difícil, pois aumentará a velocidade do avión, así como a altura dos edificios.</p>
+    <p xml:lang="he">מטרת המשחק היא להשמיד את כל המבנים ולהתקדם לשלב הבא. כל שלב עולה בדרגת הקושי על ידי האצת מהירות המטוס והגבהת הבניינים.</p>
     <p xml:lang="hu">A játék célja, hogy minden épületet elpusztítsunk, mielőtt továbbléphetnénk a következő szintre. Minden szint egyre nehezedik azzal, hogy a repülő sebessége növekszik, az épületek magassága pedig nő.</p>
     <p xml:lang="id">Tujuan permainan ini adalah untuk meledakkan semua bangunan dan berlanjut ke level selanjutnya. Setiap level agak sedikit susah dengan meningkatnya kecepatan pada pesawat dan tingginya bangunan.</p>
     <p xml:lang="it">Lo scopo del gioco è di distruggere tutti gli edifici e raggiungere il livello successivo. Ogni livello è un po' più difficile perché aumenta la pendenza del piano e l'altezza degli edifici. </p>
@@ -206,6 +210,7 @@
   <developer_name xml:lang="fi">KDE-yhteisö</developer_name>
   <developer_name xml:lang="fr">La communauté KDE</developer_name>
   <developer_name xml:lang="gl">A comunidade de KDE</developer_name>
+  <developer_name xml:lang="he">קהילת KDE</developer_name>
   <developer_name xml:lang="hu">A KDE közösség</developer_name>
   <developer_name xml:lang="ia">Le communitate de KDE</developer_name>
   <developer_name xml:lang="id">Komunitas KDE</developer_name>
