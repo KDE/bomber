@@ -22,7 +22,7 @@ int main(int argc, char ** argv)
 {
     QApplication app(argc, argv);
 
-    KLocalizedString::setApplicationDomain("bomber");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("bomber"));
 
     KAboutData about(QStringLiteral("bomber"), i18n("Bomber"),
                      QStringLiteral(BOMBER_VERSION_STRING),
