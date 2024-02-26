@@ -4,31 +4,32 @@
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2009.
 # Einars Sprugis <einars8@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:39+0000\n"
-"PO-Revision-Date: 2012-06-29 19:33+0300\n"
-"Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-02-23 15:54+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Māris Nartišs"
+msgstr "Māris Nartišs, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "maris.kde@gmail.com"
+msgstr "maris.kde@gmail.com, toms.trasuns@posteo.net"
 
 #: src/bomber.cpp:38 src/bomber.cpp:179
 #, kde-format
@@ -73,14 +74,11 @@ msgid "Makes the plane drop a bomb while flying"
 msgstr "Liek lidmašīnai nomest bumbu lidojuma laikā"
 
 #: src/bomber.cpp:134
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Message displayed when play tries to quit a game that is currently running"
-#| msgid "Do you really want to close the running game?"
+#, kde-format
 msgctxt ""
 "Message displayed when player tries to quit a game that is currently running"
 msgid "Do you really want to close the running game?"
-msgstr "Vai tiešām vēlaties aizvērt spēli, kas tiek spēlēta?"
+msgstr "Vai tiešām vēlaties aizvērt spēlēto spēli?"
 
 #: src/bomber.cpp:165
 #, kde-format
@@ -88,25 +86,27 @@ msgid ""
 "Congratulations!\n"
 "You made it into the hall of fame."
 msgstr ""
+"Apsveicu!\n"
+"Tavs rezultāts ir starp labākajiem."
 
 #: src/bomber.cpp:169
 #, kde-format
 msgid "You gained a score of %1 point."
 msgid_plural "You gained a score of %1 points."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Jūsu rezultāts ir %1 punkts."
+msgstr[1] "Jūsu rezultāts ir %1 punkti."
+msgstr[2] "Jūsu rezultāts ir %1 punktu."
 
 #: src/bomber.cpp:170
 #, kde-format
 msgid "End of Game"
-msgstr ""
+msgstr "Spēles beigas"
 
 #: src/bomber.cpp:208
 #, kde-format
 msgctxt "Game over messaged displayed in the status bar"
 msgid "Game over. Press '%1' for a new game"
-msgstr "Spēles beigas. Spiediet '%1', lai sāktu jaunu spēli"
+msgstr "Spēles beigas. Spiediet „%1“, lai sāktu jaunu spēli"
 
 #. i18n: ectx: label, entry (PlaySounds), group (Sound)
 #: src/bomber.kcfg:9
@@ -127,7 +127,7 @@ msgid ""
 "Welcome to Bomber.\n"
 "Click to start a game"
 msgstr ""
-"Laipni lūdzam iekš Bomber.\n"
+"Laipni lūdzam spēlē „Bomber“.\n"
 "Klikšķiniet, lai sāktu spēli."
 
 #: src/bomberwidget.cpp:313
@@ -140,13 +140,13 @@ msgstr "Pauzēts"
 #, kde-format
 msgctxt "Message telling user which level they just completed"
 msgid "You have successfully cleared level %1\n"
-msgstr "Jūs esat veiksmīgi pieveicis %1 līmeni\n"
+msgstr "Jūs veiksmīgi izgājāt %1. līmeni\n"
 
 #: src/bomberwidget.cpp:317
 #, kde-format
 msgctxt "Message telling user which level they are about to start"
 msgid "On to level %1."
-msgstr "Uz %1 līmeni."
+msgstr "Uz %1. līmeni."
 
 #: src/bomberwidget.cpp:320
 #, kde-format
@@ -182,7 +182,7 @@ msgstr "Mehmet Emre"
 #: src/main.cpp:35
 #, kde-format
 msgid "Porting to QGraphicsView."
-msgstr "Portēšana uz QGraphicsView."
+msgstr "Portēšana uz „QGraphicsView“."
 
 #~ msgid "The graphical theme to be used."
 #~ msgstr "Izmantotā grafiskā tēma."
