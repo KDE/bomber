@@ -79,15 +79,14 @@ void Bomber::initXMLUI()
 
     // Settings
     KStandardAction::preferences(this, &Bomber::showPreferences, actionCollection());
-    m_soundAction = new KToggleAction(i18nc("Menu item used to disable or enable sound", "&Play Sounds"), this);
+    m_soundAction = new KToggleAction(i18nc("@option:check", "Play Sounds"), this);
     actionCollection()->addAction(QStringLiteral("toggle_sound"), m_soundAction);
     connect(m_soundAction, &KToggleAction::triggered, m_gameWidget, &BomberGameWidget::setSoundsEnabled);
 
     QAction * dropBombAction = actionCollection()->addAction(QStringLiteral("drop_bomb"));
-    dropBombAction->setText(i18nc("The name of the action used for dropping bombs", "&Drop bomb"));
-    dropBombAction->setToolTip(i18nc("The tool tip text for the action used to drop bombs", "Drop bomb"));
-    dropBombAction->setWhatsThis(i18nc("Description of the action used to drop bombs",
-                                       "Makes the plane drop a bomb while flying"));
+    dropBombAction->setText(i18nc("@action", "&Drop Bomb"));
+    dropBombAction->setToolTip(i18nc("@info:tooltip", "Drop bomb"));
+    dropBombAction->setWhatsThis(i18nc("@info:whatsthis", "Makes the plane drop a bomb while flying."));
     KActionCollection::setDefaultShortcut(dropBombAction, Qt::Key_Space);
     dropBombAction->setEnabled(true);
     connect(dropBombAction, &QAction::triggered, m_gameWidget, &BomberGameWidget::onDropBomb);
@@ -167,7 +166,7 @@ void Bomber::highscore()
         ksdialog->exec();
     } else {
         QString const message = i18np("You gained a score of %1 point.", "You gained a score of %1 points.", score);
-        KMessageBox::information(this, message, i18n("End of Game"));
+        KMessageBox::information(this, message, i18nc("@title:window", "End of Game"));
     }
     delete ksdialog;
 }
