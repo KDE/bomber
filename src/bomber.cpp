@@ -79,7 +79,8 @@ void Bomber::initXMLUI()
 
     // Settings
     KStandardAction::preferences(this, &Bomber::showPreferences, actionCollection());
-    m_soundAction = new KToggleAction(i18nc("@option:check", "Play Sounds"), this);
+    m_soundAction = new KToggleAction(QIcon::fromTheme(QStringLiteral("speaker")),
+                                      i18nc("@option:check", "Play Sounds"), this);
     actionCollection()->addAction(QStringLiteral("toggle_sound"), m_soundAction);
     connect(m_soundAction, &KToggleAction::triggered, m_gameWidget, &BomberGameWidget::setSoundsEnabled);
 
