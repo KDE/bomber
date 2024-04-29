@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:39+0000\n"
+"POT-Creation-Date: 2024-04-29 00:37+0000\n"
 "PO-Revision-Date: 2023-11-07 01:08+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -45,28 +45,28 @@ msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "Vides: %1"
 
-#: src/bomber.cpp:82
+#: src/bomber.cpp:83
 #, kde-format
-msgctxt "Menu item used to disable or enable sound"
-msgid "&Play Sounds"
-msgstr ""
-
-#: src/bomber.cpp:87
-#, kde-format
-msgctxt "The name of the action used for dropping bombs"
-msgid "&Drop bomb"
+msgctxt "@option:check"
+msgid "Play Sounds"
 msgstr ""
 
 #: src/bomber.cpp:88
 #, kde-format
-msgctxt "The tool tip text for the action used to drop bombs"
+msgctxt "@action"
+msgid "&Drop Bomb"
+msgstr ""
+
+#: src/bomber.cpp:89
+#, kde-format
+msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr ""
 
 #: src/bomber.cpp:90
 #, kde-format
-msgctxt "Description of the action used to drop bombs"
-msgid "Makes the plane drop a bomb while flying"
+msgctxt "@info:whatsthis"
+msgid "Makes the plane drop a bomb while flying."
 msgstr ""
 
 #: src/bomber.cpp:134
@@ -92,6 +92,7 @@ msgstr[1] ""
 
 #: src/bomber.cpp:170
 #, kde-format
+msgctxt "@title:window"
 msgid "End of Game"
 msgstr ""
 

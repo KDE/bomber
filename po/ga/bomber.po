@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-games/bomber.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:39+0000\n"
+"POT-Creation-Date: 2024-04-29 00:37+0000\n"
 "PO-Revision-Date: 2008-07-08 09:26-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -45,28 +45,36 @@ msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "Anamacha: %1"
 
-#: src/bomber.cpp:82
-#, kde-format
-msgctxt "Menu item used to disable or enable sound"
-msgid "&Play Sounds"
+#: src/bomber.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "Menu item used to disable or enable sound"
+#| msgid "&Play Sounds"
+msgctxt "@option:check"
+msgid "Play Sounds"
 msgstr "&Seinn Fuaimeanna"
 
-#: src/bomber.cpp:87
-#, kde-format
-msgctxt "The name of the action used for dropping bombs"
-msgid "&Drop bomb"
+#: src/bomber.cpp:88
+#, fuzzy, kde-format
+#| msgctxt "The name of the action used for dropping bombs"
+#| msgid "&Drop bomb"
+msgctxt "@action"
+msgid "&Drop Bomb"
 msgstr "&Lig buama titim"
 
-#: src/bomber.cpp:88
-#, kde-format
-msgctxt "The tool tip text for the action used to drop bombs"
+#: src/bomber.cpp:89
+#, fuzzy, kde-format
+#| msgctxt "The tool tip text for the action used to drop bombs"
+#| msgid "Drop bomb"
+msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Lig buama titim"
 
 #: src/bomber.cpp:90
-#, kde-format
-msgctxt "Description of the action used to drop bombs"
-msgid "Makes the plane drop a bomb while flying"
+#, fuzzy, kde-format
+#| msgctxt "Description of the action used to drop bombs"
+#| msgid "Makes the plane drop a bomb while flying"
+msgctxt "@info:whatsthis"
+msgid "Makes the plane drop a bomb while flying."
 msgstr "Lig buama titim ón eitleán le linn eitilt"
 
 #: src/bomber.cpp:134
@@ -98,6 +106,7 @@ msgstr[4] ""
 
 #: src/bomber.cpp:170
 #, kde-format
+msgctxt "@title:window"
 msgid "End of Game"
 msgstr ""
 

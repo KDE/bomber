@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:39+0000\n"
+"POT-Creation-Date: 2024-04-29 00:37+0000\n"
 "PO-Revision-Date: 2020-10-13 21:00+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -51,28 +51,36 @@ msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "Vides: %1"
 
-#: src/bomber.cpp:82
-#, kde-format
-msgctxt "Menu item used to disable or enable sound"
-msgid "&Play Sounds"
+#: src/bomber.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "Menu item used to disable or enable sound"
+#| msgid "&Play Sounds"
+msgctxt "@option:check"
+msgid "Play Sounds"
 msgstr "Reprodueix els &sons"
 
-#: src/bomber.cpp:87
-#, kde-format
-msgctxt "The name of the action used for dropping bombs"
-msgid "&Drop bomb"
+#: src/bomber.cpp:88
+#, fuzzy, kde-format
+#| msgctxt "The name of the action used for dropping bombs"
+#| msgid "&Drop bomb"
+msgctxt "@action"
+msgid "&Drop Bomb"
 msgstr "&Llançar bomba"
 
-#: src/bomber.cpp:88
-#, kde-format
-msgctxt "The tool tip text for the action used to drop bombs"
+#: src/bomber.cpp:89
+#, fuzzy, kde-format
+#| msgctxt "The tool tip text for the action used to drop bombs"
+#| msgid "Drop bomb"
+msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Llançar bomba"
 
 #: src/bomber.cpp:90
-#, kde-format
-msgctxt "Description of the action used to drop bombs"
-msgid "Makes the plane drop a bomb while flying"
+#, fuzzy, kde-format
+#| msgctxt "Description of the action used to drop bombs"
+#| msgid "Makes the plane drop a bomb while flying"
+msgctxt "@info:whatsthis"
+msgid "Makes the plane drop a bomb while flying."
 msgstr "Fa que l'avió llenci una bomba mentre vola"
 
 #: src/bomber.cpp:134
@@ -99,7 +107,9 @@ msgstr[0] "Heu guanyat una puntuació d'%1 punt."
 msgstr[1] "Heu guanyat una puntuació de %1 punts."
 
 #: src/bomber.cpp:170
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "End of Game"
+msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Final de la partida"
 

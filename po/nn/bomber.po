@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:39+0000\n"
+"POT-Creation-Date: 2024-04-29 00:37+0000\n"
 "PO-Revision-Date: 2019-07-29 09:16+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -47,28 +47,36 @@ msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "Liv: %1"
 
-#: src/bomber.cpp:82
-#, kde-format
-msgctxt "Menu item used to disable or enable sound"
-msgid "&Play Sounds"
+#: src/bomber.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "Menu item used to disable or enable sound"
+#| msgid "&Play Sounds"
+msgctxt "@option:check"
+msgid "Play Sounds"
 msgstr "&Spel lydar"
 
-#: src/bomber.cpp:87
-#, kde-format
-msgctxt "The name of the action used for dropping bombs"
-msgid "&Drop bomb"
+#: src/bomber.cpp:88
+#, fuzzy, kde-format
+#| msgctxt "The name of the action used for dropping bombs"
+#| msgid "&Drop bomb"
+msgctxt "@action"
+msgid "&Drop Bomb"
 msgstr "&Slepp bombe"
 
-#: src/bomber.cpp:88
-#, kde-format
-msgctxt "The tool tip text for the action used to drop bombs"
+#: src/bomber.cpp:89
+#, fuzzy, kde-format
+#| msgctxt "The tool tip text for the action used to drop bombs"
+#| msgid "Drop bomb"
+msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Slepp bombe"
 
 #: src/bomber.cpp:90
-#, kde-format
-msgctxt "Description of the action used to drop bombs"
-msgid "Makes the plane drop a bomb while flying"
+#, fuzzy, kde-format
+#| msgctxt "Description of the action used to drop bombs"
+#| msgid "Makes the plane drop a bomb while flying"
+msgctxt "@info:whatsthis"
+msgid "Makes the plane drop a bomb while flying."
 msgstr "Får flyet til å sleppa ei bombe mens det flyr"
 
 #: src/bomber.cpp:134
@@ -95,7 +103,9 @@ msgstr[0] "Du fekk %1 poeng."
 msgstr[1] "Du fekk %1 poeng."
 
 #: src/bomber.cpp:170
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "End of Game"
+msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Slutt på spelet"
 

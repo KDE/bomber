@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:39+0000\n"
+"POT-Creation-Date: 2024-04-29 00:37+0000\n"
 "PO-Revision-Date: 2024-03-08 19:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -48,28 +48,36 @@ msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "Haklar: %1"
 
-#: src/bomber.cpp:82
-#, kde-format
-msgctxt "Menu item used to disable or enable sound"
-msgid "&Play Sounds"
+#: src/bomber.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "Menu item used to disable or enable sound"
+#| msgid "&Play Sounds"
+msgctxt "@option:check"
+msgid "Play Sounds"
 msgstr "&Sesleri Çal"
 
-#: src/bomber.cpp:87
-#, kde-format
-msgctxt "The name of the action used for dropping bombs"
-msgid "&Drop bomb"
+#: src/bomber.cpp:88
+#, fuzzy, kde-format
+#| msgctxt "The name of the action used for dropping bombs"
+#| msgid "&Drop bomb"
+msgctxt "@action"
+msgid "&Drop Bomb"
 msgstr "&Bomba at"
 
-#: src/bomber.cpp:88
-#, kde-format
-msgctxt "The tool tip text for the action used to drop bombs"
+#: src/bomber.cpp:89
+#, fuzzy, kde-format
+#| msgctxt "The tool tip text for the action used to drop bombs"
+#| msgid "Drop bomb"
+msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Bomba at"
 
 #: src/bomber.cpp:90
-#, kde-format
-msgctxt "Description of the action used to drop bombs"
-msgid "Makes the plane drop a bomb while flying"
+#, fuzzy, kde-format
+#| msgctxt "Description of the action used to drop bombs"
+#| msgid "Makes the plane drop a bomb while flying"
+msgctxt "@info:whatsthis"
+msgid "Makes the plane drop a bomb while flying."
 msgstr "Bir uçağın uçarken bomba atmasını sağlar"
 
 #: src/bomber.cpp:134
@@ -96,7 +104,9 @@ msgstr[0] "%1 puan kazandınız."
 msgstr[1] "%1 puan kazandınız."
 
 #: src/bomber.cpp:170
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "End of Game"
+msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Oyun Sonu"
 

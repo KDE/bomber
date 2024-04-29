@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:39+0000\n"
+"POT-Creation-Date: 2024-04-29 00:37+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -45,28 +45,36 @@ msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "命数：%1"
 
-#: src/bomber.cpp:82
-#, kde-format
-msgctxt "Menu item used to disable or enable sound"
-msgid "&Play Sounds"
+#: src/bomber.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "Menu item used to disable or enable sound"
+#| msgid "&Play Sounds"
+msgctxt "@option:check"
+msgid "Play Sounds"
 msgstr "播放声音(&P)"
 
-#: src/bomber.cpp:87
-#, kde-format
-msgctxt "The name of the action used for dropping bombs"
-msgid "&Drop bomb"
+#: src/bomber.cpp:88
+#, fuzzy, kde-format
+#| msgctxt "The name of the action used for dropping bombs"
+#| msgid "&Drop bomb"
+msgctxt "@action"
+msgid "&Drop Bomb"
 msgstr "投弹(&D)"
 
-#: src/bomber.cpp:88
-#, kde-format
-msgctxt "The tool tip text for the action used to drop bombs"
+#: src/bomber.cpp:89
+#, fuzzy, kde-format
+#| msgctxt "The tool tip text for the action used to drop bombs"
+#| msgid "Drop bomb"
+msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "投弹"
 
 #: src/bomber.cpp:90
-#, kde-format
-msgctxt "Description of the action used to drop bombs"
-msgid "Makes the plane drop a bomb while flying"
+#, fuzzy, kde-format
+#| msgctxt "Description of the action used to drop bombs"
+#| msgid "Makes the plane drop a bomb while flying"
+msgctxt "@info:whatsthis"
+msgid "Makes the plane drop a bomb while flying."
 msgstr "让飞行中的轰炸机投下一颗炸弹"
 
 #: src/bomber.cpp:134
@@ -92,7 +100,9 @@ msgid_plural "You gained a score of %1 points."
 msgstr[0] "您获得了 %1 分。"
 
 #: src/bomber.cpp:170
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "End of Game"
+msgctxt "@title:window"
 msgid "End of Game"
 msgstr "游戏结束"
 
