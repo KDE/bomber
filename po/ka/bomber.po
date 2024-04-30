@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:37+0000\n"
-"PO-Revision-Date: 2022-11-27 11:31+0100\n"
+"PO-Revision-Date: 2024-04-29 10:03+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,36 +47,28 @@ msgid "Lives: %1"
 msgstr "სიცოცხლეები: %1"
 
 #: src/bomber.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr "&ხმის დაკვრა"
+msgstr "ხმების დაკვრა"
 
 #: src/bomber.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "The name of the action used for dropping bombs"
-#| msgid "&Drop bomb"
+#, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
 msgstr "&ბომბის ჩაგდება"
 
 #: src/bomber.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "The tool tip text for the action used to drop bombs"
-#| msgid "Drop bomb"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "ბომბის ჩაგდება"
 
 #: src/bomber.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "Description of the action used to drop bombs"
-#| msgid "Makes the plane drop a bomb while flying"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr "აიძულებს თვითმფრინავს, ბომბი ფრენისას ჩამოაგდოს"
+msgstr "აიძულებს თვითმფრინავს, ბომბი ფრენისას ჩამოაგდოს."
 
 #: src/bomber.cpp:134
 #, kde-format
@@ -102,8 +94,7 @@ msgstr[0] "მიიღეთ %1 ქულა."
 msgstr[1] "მიიღეთ %1 ქულა."
 
 #: src/bomber.cpp:170
-#, fuzzy, kde-format
-#| msgid "End of Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "თამაშის დასასრული"

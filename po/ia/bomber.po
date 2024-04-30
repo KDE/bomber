@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the bomber package.
 #
-# giovanni <g.sora@tiscali.it>, 2023.
+# giovanni <g.sora@tiscali.it>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:37+0000\n"
-"PO-Revision-Date: 2023-09-25 10:24+0200\n"
+"PO-Revision-Date: 2024-04-29 14:47+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -46,12 +46,10 @@ msgid "Lives: %1"
 msgstr "Vitas: %1"
 
 #: src/bomber.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr "Re&produce sonos"
+msgstr "Reproduce sonos"
 
 #: src/bomber.cpp:88
 #, kde-format
@@ -93,8 +91,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: src/bomber.cpp:170
-#, fuzzy, kde-format
-#| msgid "End of Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Fin de joco"
