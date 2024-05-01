@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the bomber package.
 # Antonino Arcudi <antonino.arcudi@gmail.com>, 2008, 2009.
 # Pino Toscano <toscano.pino@tiscali.it>, 2019.
-# Paolo Zamponi <feus73@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2019, 2024 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
