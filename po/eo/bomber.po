@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:37+0000\n"
-"PO-Revision-Date: 2023-05-29 21:25+0100\n"
+"PO-Revision-Date: 2024-05-01 17:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -48,36 +48,28 @@ msgid "Lives: %1"
 msgstr "Vivoj: %1"
 
 #: src/bomber.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr "&Ludi Sonojn"
+msgstr "Ludi Sonojn"
 
 #: src/bomber.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "The name of the action used for dropping bombs"
-#| msgid "&Drop bomb"
+#, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
-msgstr "&Pafi bombon"
+msgstr "&Ĵeti Bombon"
 
 #: src/bomber.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "The tool tip text for the action used to drop bombs"
-#| msgid "Drop bomb"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
-msgstr "Pafi bombon"
+msgstr "Ĵeti bombon"
 
 #: src/bomber.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "Description of the action used to drop bombs"
-#| msgid "Makes the plane drop a bomb while flying"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr "Pafigi bombon de la aviadilo flugante"
+msgstr "Igas la aviadilon ĵeti bombon dum flugo."
 
 #: src/bomber.cpp:134
 #, kde-format
@@ -103,8 +95,7 @@ msgstr[0] "Vi gajnis poentaron de %1 poento."
 msgstr[1] "Vi gajnis poentaron de %1 poentoj."
 
 #: src/bomber.cpp:170
-#, fuzzy, kde-format
-#| msgid "End of Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Fino de Ludo"
