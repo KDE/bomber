@@ -2,7 +2,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Angot Julien <angot.julien@gmail.com>, 2008.
-# Xavier Besnard <xavier.besnard@kde.org>, 2012, 2013.
+# SPDX-FileCopyrightText: 2012, 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
 # SPDX-FileCopyrightText: 2023 Xavier Besnard <xavier.besnard@kde.org>
@@ -12,15 +12,15 @@ msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:37+0000\n"
-"PO-Revision-Date: 2023-12-20 09:27+0100\n"
+"PO-Revision-Date: 2024-05-03 12:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -54,36 +54,28 @@ msgid "Lives: %1"
 msgstr "Vies : %1"
 
 #: src/bomber.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr "&Jouer les sons"
+msgstr "Jouer les sons"
 
 #: src/bomber.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "The name of the action used for dropping bombs"
-#| msgid "&Drop bomb"
+#, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
-msgstr "&Lâcher une bombe"
+msgstr "Lâcher une &bombe"
 
 #: src/bomber.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "The tool tip text for the action used to drop bombs"
-#| msgid "Drop bomb"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Lâcher une bombe"
 
 #: src/bomber.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "Description of the action used to drop bombs"
-#| msgid "Makes the plane drop a bomb while flying"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr "Permet à l'avion de lâcher une bombe en vol"
+msgstr "Permet à l'avion de lâcher une bombe en vol."
 
 #: src/bomber.cpp:134
 #, kde-format
@@ -109,8 +101,7 @@ msgstr[0] "Vous avez gagné un score de %1 point."
 msgstr[1] "Vous avez gagné un score de %1 points."
 
 #: src/bomber.cpp:170
-#, fuzzy, kde-format
-#| msgid "End of Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Fin de la partie"
