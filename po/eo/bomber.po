@@ -2,15 +2,15 @@
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the bomber package.
 # Emmanuelle Richard <emmanuelle@esperanto-jeunes.org>, 2009.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:39+0000\n"
-"PO-Revision-Date: 2023-05-29 21:25+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-01 17:30+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Emmanuelle Richard,Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "emmanuelle@esperanto-jeunes.org,okellogg@users.sourceforge.net"
+msgstr "emmanuelle@esperanto-jeunes.org,olivermkellogg@gmail.com"
 
 #: src/bomber.cpp:38 src/bomber.cpp:179
 #, kde-format
@@ -63,7 +63,7 @@ msgstr "&Pafi bombon"
 #, kde-format
 msgctxt "The tool tip text for the action used to drop bombs"
 msgid "Drop bomb"
-msgstr "Pafi bombon"
+msgstr "Ĵeti bombon"
 
 #: src/bomber.cpp:90
 #, kde-format
