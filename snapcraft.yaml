@@ -70,6 +70,7 @@ parts:
         - -usr/lib/gcc/$SNAPCRAFT_ARCH_TRIPLET/6.0.0
         - -usr/lib/aspell/*
         - -usr/share/lintian
+        - -etc/pulse/client.conf.d/01-enable-autospawn.conf
     cleanup:
         after:
         - bomber
