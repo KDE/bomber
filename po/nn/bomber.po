@@ -1,12 +1,11 @@
 # Translation of bomber to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2016, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-29 00:37+0000\n"
-"PO-Revision-Date: 2019-07-29 09:16+0200\n"
+"PO-Revision-Date: 2024-07-26 15:09+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 24.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -48,36 +47,28 @@ msgid "Lives: %1"
 msgstr "Liv: %1"
 
 #: src/bomber.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr "&Spel lydar"
+msgstr "Spel lydar"
 
 #: src/bomber.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "The name of the action used for dropping bombs"
-#| msgid "&Drop bomb"
+#, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
 msgstr "&Slepp bombe"
 
 #: src/bomber.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "The tool tip text for the action used to drop bombs"
-#| msgid "Drop bomb"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Slepp bombe"
 
 #: src/bomber.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "Description of the action used to drop bombs"
-#| msgid "Makes the plane drop a bomb while flying"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr "Får flyet til å sleppa ei bombe mens det flyr"
+msgstr "Får flyet til å sleppa ei bombe mens det flyr."
 
 #: src/bomber.cpp:134
 #, kde-format
@@ -103,8 +94,7 @@ msgstr[0] "Du fekk %1 poeng."
 msgstr[1] "Du fekk %1 poeng."
 
 #: src/bomber.cpp:170
-#, fuzzy, kde-format
-#| msgid "End of Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Slutt på spelet"
