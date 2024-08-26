@@ -49,32 +49,24 @@ msgstr "Liv: %1"
 
 #: src/bomber.cpp:83
 #, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "S&pill lyder"
 
 #: src/bomber.cpp:88
 #, fuzzy, kde-format
-#| msgctxt "The name of the action used for dropping bombs"
-#| msgid "&Drop bomb"
 msgctxt "@action"
 msgid "&Drop Bomb"
 msgstr "Slipp &bombe"
 
 #: src/bomber.cpp:89
 #, fuzzy, kde-format
-#| msgctxt "The tool tip text for the action used to drop bombs"
-#| msgid "Drop bomb"
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Slipp bombe"
 
 #: src/bomber.cpp:90
 #, fuzzy, kde-format
-#| msgctxt "Description of the action used to drop bombs"
-#| msgid "Makes the plane drop a bomb while flying"
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
 msgstr "Får flyet til å slippe en bombe mens det flyr"
@@ -104,7 +96,6 @@ msgstr[1] ""
 
 #: src/bomber.cpp:170
 #, fuzzy, kde-format
-#| msgid "End of Game"
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Slutt på spillet"
