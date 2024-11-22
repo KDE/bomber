@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-29 00:37+0000\n"
+"POT-Creation-Date: 2024-11-22 00:38+0000\n"
 "PO-Revision-Date: 2024-05-03 03:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -151,32 +151,32 @@ msgctxt "Used to tell the user that the game is over"
 msgid "Game over."
 msgstr "遊戲結束。"
 
-#: src/main.cpp:27
+#: src/main.cpp:49
 #, kde-format
 msgid "Bomber"
 msgstr "轟炸機"
 
-#: src/main.cpp:29
+#: src/main.cpp:51
 #, kde-format
 msgid "Arcade bombing game"
 msgstr "轟炸機遊戲"
 
-#: src/main.cpp:30
+#: src/main.cpp:52
 #, kde-format
 msgid "(C) 2007 John-Paul Stanford"
 msgstr "(C) 2007 John-Paul Stanford"
 
-#: src/main.cpp:33
+#: src/main.cpp:55
 #, kde-format
 msgid "John-Paul Stanford"
 msgstr "John-Paul Stanford"
 
-#: src/main.cpp:35
+#: src/main.cpp:57
 #, kde-format
 msgid "Mehmet Emre"
 msgstr "Mehmet Emre"
 
-#: src/main.cpp:35
+#: src/main.cpp:57
 #, kde-format
 msgid "Porting to QGraphicsView."
 msgstr "移植到 QGraphicsView 上。"
