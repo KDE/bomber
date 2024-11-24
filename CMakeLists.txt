@@ -32,19 +32,13 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     Config
     CoreAddons
     Crash
+    DBusAddons
     DocTools
     I18n
     WidgetsAddons
     XmlGui
     IconThemes
 )
-
-if(UNIX AND NOT HAIKU)
-    SET(WITH_DBUS ON)
-    FIND_PACKAGE(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
-        DBusAddons
-    )
-endif()
 
 find_package(KDEGames6 6.0.0 REQUIRED)
 
