@@ -34,13 +34,22 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     Config
     CoreAddons
     Crash
-    DBusAddons
     DocTools
     I18n
     WidgetsAddons
     XmlGui
     IconThemes
 )
+
+set(USE_DBUS_DEFAULT OFF)
+if(UNIX AND NOT APPLE AND NOT ANDROID AND NOT HAIKU)
+    set(USE_DBUS_DEFAULT ON)
+endif()
+option(USE_DBUS "Build components using DBus (used for interprocess communication, external open in same instance and various presentation related bits)" ${USE_DBUS_DEFAULT})
+if(USE_DBUS)
+    find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+    set(HAVE_DBUS 1)
+endif()
 
 find_package(KDEGames6 6.0.0 REQUIRED)
 
