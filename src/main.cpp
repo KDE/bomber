@@ -11,7 +11,10 @@
 // KF
 #include <KAboutData>
 #include <KCrash>
-#include <KDBusService>
+#include <config-bomber.h>
+#if HAVE_DBUS
+    #include <KDBusService>
+#endif
 #include <KLocalizedString>
 
 #define HAVE_KICONTHEME __has_include(<KIconTheme>)
@@ -65,7 +68,9 @@ int main(int argc, char ** argv)
     parser.process(app);
     about.processCommandLine(&parser);
 
+#if HAVE_DBUS
     KDBusService service;
+#if HAVE_DBUS
 
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("bomber")));
 

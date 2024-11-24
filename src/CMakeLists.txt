@@ -1,3 +1,6 @@
+configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/config-bomber.h.cmake
+                ${CMAKE_CURRENT_BINARY_DIR}/config-bomber.h )
+
 ecm_setup_version(${bomber_VERSION}
     VARIABLE_PREFIX BOMBER
     VERSION_HEADER bomber_version.h
@@ -34,10 +37,15 @@ target_link_libraries(bomber
     KF6::CoreAddons
     KF6::XmlGui
     KF6::I18n
-    KF6::DBusAddons
     KF6::Crash
     KF6::IconThemes
 )
+
+if(HAVE_DBUS)
+    target_link_libraries(bomber
+        KF6::DBusAddons
+    )
+endif()
 
 install(TARGETS bomber ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
