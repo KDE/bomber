@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2020.
+# SPDX-FileCopyrightText: 2010, 2020, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2014, 2016.
 #
 # KDE Finnish translation sprint participants:
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:38+0000\n"
-"PO-Revision-Date: 2020-06-30 13:55+0300\n"
+"PO-Revision-Date: 2024-10-19 09:29+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -19,8 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:23:55+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -51,36 +50,28 @@ msgid "Lives: %1"
 msgstr "Elämiä: %1"
 
 #: src/bomber.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "Soita &äänet"
 
 #: src/bomber.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "The name of the action used for dropping bombs"
-#| msgid "&Drop bomb"
+#, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
 msgstr "&Pudota pommi"
 
 #: src/bomber.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "The tool tip text for the action used to drop bombs"
-#| msgid "Drop bomb"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Pudota pommi"
 
 #: src/bomber.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "Description of the action used to drop bombs"
-#| msgid "Makes the plane drop a bomb while flying"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr "Saa koneen pudottamaan pommin ilmassa"
+msgstr "Saa koneen pudottamaan pommin ilmassa."
 
 #: src/bomber.cpp:134
 #, kde-format
@@ -106,8 +97,7 @@ msgstr[0] "Tulokseksesi tuli %1 piste."
 msgstr[1] "Tulokseksesi tuli %1 pistettä."
 
 #: src/bomber.cpp:170
-#, fuzzy, kde-format
-#| msgid "End of Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Pelin loppu"
