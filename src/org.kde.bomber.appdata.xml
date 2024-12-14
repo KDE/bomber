@@ -39,6 +39,7 @@
   <name xml:lang="pt">Bomber</name>
   <name xml:lang="pt-BR">Bomber</name>
   <name xml:lang="ru">Bomber</name>
+  <name xml:lang="sa">बमवर्षक</name>
   <name xml:lang="sk">Bomber</name>
   <name xml:lang="sl">Bomber</name>
   <name xml:lang="sr">Бомбардер</name>
@@ -81,6 +82,7 @@
   <summary xml:lang="pt">Jogo de Arcada de Bombardeamento</summary>
   <summary xml:lang="pt-BR">Jogo de bombardeiro tipo arcade</summary>
   <summary xml:lang="ru">Аркадная игра «Bomber»</summary>
+  <summary xml:lang="sa">आर्केड बमबारी खेल</summary>
   <summary xml:lang="sk">Arkádová bombardovacia hra</summary>
   <summary xml:lang="sl">Arkadna igra bombardiranja</summary>
   <summary xml:lang="sr">Аркадна бомбашка игра</summary>
@@ -128,6 +130,7 @@
     <p xml:lang="pt">O Bomber é um jogo simples para um jogador. O jogador está a invadir diversas cidades com um avião que vai reduzindo a sua altitude.</p>
     <p xml:lang="pt-BR">Bomber é um jogo tipo arcade para um único jogador. O jogador está invadindo várias cidades com um avião que vai descendo em altitude.</p>
     <p xml:lang="ru">Bomber — аркадная игра для одного игрока. Игрок атакует различные города с бомбардировщика, и они уменьшаются по высоте.</p>
+    <p xml:lang="sa">बम्बर् इति एकः खिलाडी आर्केड् क्रीडा अस्ति । क्रीडकः ऊर्ध्वतां न्यूनमानेन विमानेन नानानगरान् आक्रमयति ।</p>
     <p xml:lang="sk">Bomber je arkádová hra pre jedného hráča. Hráč napáda rôzne mestá v lietadle, ktoré klesá.</p>
     <p xml:lang="sl">Bomber je enoigralska arkadna igra. Igralec napada raznolika mesta z letalom, ki se sčasoma spušča.</p>
     <p xml:lang="sr">Бомбардер је аркадна игра за једног играча. Нападајте градове авионом којем опада висина.</p>
@@ -175,6 +178,7 @@
     <p xml:lang="pt">O objectivo do jogo é destruir todos os edifícios e avançar para o nível seguinte. Cada nível vai ficando mais difícil, aumentando a velocidade do avião e a altura dos edifícios.</p>
     <p xml:lang="pt-BR">O objetivo do jogo é destruir todos os edifícios e passar ao nível seguinte. Cada nível vai ficando um pouco mais difícil ao aumentar a velocidade do avião e a altura dos edifícios.</p>
     <p xml:lang="ru">Цель игры — разрушить все здания и продвинуться на следующий уровень. Очередной уровень сложнее предыдущего за счёт увеличения скорости самолёта и высоты зданий.</p>
+    <p xml:lang="sa">सर्वाणि भवनानि नाशयित्वा अग्रिमस्तरं प्रति गन्तुं क्रीडायाः लक्ष्यम् अस्ति । प्रत्येकं स्तरं विमानस्य वेगं भवनानां ऊर्ध्वतां च वर्धयित्वा किञ्चित् कठिनं भवति ।</p>
     <p xml:lang="sk">Cieľom hry je zničiť všetky budovy na postúpenie do ďalšej úrovne. Každá úroveň je o niečo ťažšia zvýšením rýchlosti lietadla a výškou budov.</p>
     <p xml:lang="sl">Cilj igre je uničiti vse zgradbe in tako preiti v naslednjo stopnjo. Vsaka stopnja je težja, saj se poveča hitrost letala in višina zgradb.</p>
     <p xml:lang="sr">Циљ игре је уништити све зграде и прећи на следећи ниво. Сваки ниво је мало тежи од претходног, тиме што се повећава брзина авиона и висина зграда.</p>
