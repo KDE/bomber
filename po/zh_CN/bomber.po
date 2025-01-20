@@ -49,13 +49,13 @@ msgstr "命数：%1"
 #, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr ""
+msgstr "播放声音"
 
 #: src/bomber.cpp:88
 #, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
-msgstr ""
+msgstr "丢炸弹(&D)"
 
 #: src/bomber.cpp:89
 #, kde-format
@@ -67,7 +67,7 @@ msgstr "投弹"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr ""
+msgstr "让飞行中的轰炸机投下一颗炸弹。"
 
 #: src/bomber.cpp:134
 #, kde-format
