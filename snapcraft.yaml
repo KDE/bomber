@@ -58,7 +58,8 @@ parts:
       - --log-level=STATUS
       - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
     build-environment: &build-environment
-      - LD_LIBRARY_PATH: "/snap/mesa-2404/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kde-qt6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/libproxy:$LD_LIBRARY_PATH"
+      - LD_LIBRARY_PATH: >
+          "/snap/mesa-2404/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kde-qt6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/libproxy:$LD_LIBRARY_PATH"
     prime:
       - -usr/lib/*/cmake/*
       - -usr/include/*
@@ -90,4 +91,3 @@ parts:
       for snap in "core24" "kf6-core24"; do
           cd "/snap/$snap/current" && find . -type f,l -exec rm -rf "${CRAFT_PRIME}/{}" \;
       done
-
