@@ -118,7 +118,7 @@ msgstr "إذا كان يمكن تشغيل المؤثرات الصوتية"
 #: src/bomberui.rc:14
 #, kde-format
 msgid "Main Toolbar"
-msgstr "قائمة الأدوات الرئيسية"
+msgstr "قائمة الأدوات الرئيسة"
 
 #: src/bomberwidget.cpp:310
 #, kde-format
