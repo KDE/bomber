@@ -10,8 +10,8 @@
 #include "explodable.h"
 
 /**
- * This class is used to represent the plane object in the game. It extends class
- * explodable as the plane will explode when it hits buildings. The plane
+ * This class is used to represent the plane object in the game. It extends
+ * class explodable as the plane will explode when it hits buildings. The plane
  * flys from left to right and each time it goes off the side of the screen it
  * is repositioned back at the left side, one place lower than before.
  */
@@ -27,7 +27,7 @@ public:
     /** The speed the plane will fly at */
     static const qreal DEFAULT_VELOCITY;
 
-    Plane(KGameRenderer * renderer, BomberBoard * board);
+    Plane(KGameRenderer *renderer, BomberBoard *board);
     ~Plane() override;
 
     /**

@@ -21,7 +21,8 @@
 class KGameThemeProvider;
 
 /**
- * This is the main game widget class. It manages things like the lives, source counts and game states.
+ * This is the main game widget class. It manages things like the lives, source
+ * counts and game states.
  */
 class BomberGameWidget : public QGraphicsView
 {
@@ -31,14 +32,16 @@ public:
     /**
      * The different states that the game can be in
      */
-    enum class State { BeforeFirstGame,
-                       Running,
-                       BetweenLevels,
-                       Paused,
-                       Suspended,
-                       GameOver };
+    enum class State {
+        BeforeFirstGame,
+        Running,
+        BetweenLevels,
+        Paused,
+        Suspended,
+        GameOver
+    };
 
-    explicit BomberGameWidget(KGameThemeProvider * provider, QWidget * parent = nullptr);
+    explicit BomberGameWidget(KGameThemeProvider *provider, QWidget *parent = nullptr);
     ~BomberGameWidget() override;
 
     /**
@@ -88,16 +91,17 @@ public Q_SLOTS:
     void setSoundsEnabled(bool enable);
 
     /**
-     * Used to toggle the suspended game state. If val is true and the state is currently running,
-     * them set the sate to suspended. If value is false and the state is suspended, set the sate to running.
+     * Used to toggle the suspended game state. If val is true and the state is
+     * currently running, them set the sate to suspended. If value is false and
+     * the state is suspended, set the sate to running.
      * \param value True to set state to suspended, False to set state to running.
      */
     void setSuspended(bool value);
 
     /**
-     * This is called when the drop bomb key is press or the mouse in the game area.
-     * If the game state is running, If it is between levels, then a new level is created and
-     * if it's BeforeFirstGame then a new game is started.
+     * This is called when the drop bomb key is press or the mouse in the game
+     * area. If the game state is running, If it is between levels, then a new
+     * level is created and if it's BeforeFirstGame then a new game is started.
      */
     void onDropBomb();
 
@@ -146,8 +150,8 @@ private Q_SLOTS:
     void onBombHit();
 
     /**
-     * This slot is called when a level has been cleared to change the state and get
-     * ready for the next level.
+     * This slot is called when a level has been cleared to change the state and
+     * get ready for the next level.
      */
     void onLevelCleared();
 
@@ -157,8 +161,8 @@ private Q_SLOTS:
     void onPlaneCrashed();
 
 private:
-    void resizeEvent(QResizeEvent * event) override;
-    void mouseReleaseEvent(QMouseEvent * event) override;
+    void resizeEvent(QResizeEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 
     /**
      * Create the overlay used to display info to the user. The info will
@@ -185,10 +189,10 @@ private:
     int m_scoreLeftBeforeNewLife;
 
     KGameRenderer m_renderer;
-    QTimer * m_clock;
-    BomberBoard * m_board;
+    QTimer *m_clock;
+    BomberBoard *m_board;
 
-    QGraphicsPixmapItem * m_overlay;
+    QGraphicsPixmapItem *m_overlay;
 
     KGameSound m_soundBomb;
     KGameSound m_soundCrash;

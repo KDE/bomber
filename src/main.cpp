@@ -28,7 +28,7 @@
 #include "bomber.h"
 #include "bomber_version.h"
 
-int main(int argc, char ** argv)
+int main(int argc, char **argv)
 {
 #if HAVE_KICONTHEME
     KIconTheme::initTheme();
@@ -43,19 +43,18 @@ int main(int argc, char ** argv)
 #endif // defined(Q_OS_MACOS) || defined(Q_OS_WIN)
 #endif // HAVE_STYLE_MANAGER
 
-
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("bomber"));
 
-    KAboutData about(QStringLiteral("bomber"), i18n("Bomber"),
+    KAboutData about(QStringLiteral("bomber"),
+                     i18n("Bomber"),
                      QStringLiteral(BOMBER_VERSION_STRING),
                      i18n("Arcade bombing game"),
-                     KAboutLicense::GPL, i18n("(C) 2007 John-Paul Stanford"),
+                     KAboutLicense::GPL,
+                     i18n("(C) 2007 John-Paul Stanford"),
                      QString(),
                      QStringLiteral("https://apps.kde.org//bomber"));
-    about.addAuthor(i18n("John-Paul Stanford"), QString(),
-                    QStringLiteral("jp@stanwood.org.uk"));
-    about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."),
-                    QStringLiteral("maemre2@gmail.com"));
+    about.addAuthor(i18n("John-Paul Stanford"), QString(), QStringLiteral("jp@stanwood.org.uk"));
+    about.addAuthor(i18n("Mehmet Emre"), i18n("Porting to QGraphicsView."), QStringLiteral("maemre2@gmail.com"));
     KAboutData::setApplicationData(about);
 
     KCrash::initialize();

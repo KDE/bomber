@@ -22,8 +22,7 @@ public:
     /** The height of the bomb relative to the tile */
     static const qreal BOMB_RELATIVE_SIZE_H;
 
-    Bomb(KGameRenderer * renderer, BomberBoard * board, qreal xPos, qreal yPos,
-         QSize tileSize);
+    Bomb(KGameRenderer *renderer, BomberBoard *board, qreal xPos, qreal yPos, QSize tileSize);
     ~Bomb() override;
 
     /**

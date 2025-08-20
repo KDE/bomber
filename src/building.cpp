@@ -30,8 +30,7 @@ const qreal BUILDING_RELATIVE_HEIGHT = 1.0;
 /** The vertical tile number of the bottom tile in the building */
 const unsigned int Building::BUILD_BASE_LOCATION = 16;
 
-Building::Building(KGameRenderer * renderer, BomberBoard * board, unsigned int position,
-                   unsigned int height)
+Building::Building(KGameRenderer *renderer, BomberBoard *board, unsigned int position, unsigned int height)
     : m_height(0)
     , m_renderer(renderer)
     , m_board(board)
@@ -43,7 +42,7 @@ Building::Building(KGameRenderer * renderer, BomberBoard * board, unsigned int p
 
 Building::~Building()
 {
-    for (KGameRenderedItem * tile : std::as_const(m_buildingTiles)) {
+    for (KGameRenderedItem *tile : std::as_const(m_buildingTiles)) {
         m_board->removeItem(tile);
     }
     qDeleteAll(m_buildingTiles);
@@ -63,13 +62,12 @@ void Building::setHeight(unsigned int height)
 
     m_height = height;
     m_boundingRect.moveTo(m_xPos, BUILD_BASE_LOCATION - m_height + 1);
-    m_boundingRect.setSize(QSizeF(BUILDING_RELATIVE_WIDTH,
-                                  BUILDING_RELATIVE_HEIGHT * height));
+    m_boundingRect.setSize(QSizeF(BUILDING_RELATIVE_WIDTH, BUILDING_RELATIVE_HEIGHT * height));
 }
 
 void Building::setupBuildingTiles()
 {
-    //determine number of building styles
+    // determine number of building styles
     static signed int styleCount = -1;
     if (styleCount == -1) {
         styleCount = 0;
@@ -89,12 +87,12 @@ void Building::setupBuildingTiles()
     const QString pixmap = QStringLiteral("roof_%1_0").arg(style);
     m_buildingTiles.append(createBuildingTile(pixmap));
     m_boundingRect.moveTo(m_xPos, BUILD_BASE_LOCATION - m_height + 1);
-    for (KGameRenderedItem * tile : std::as_const(m_buildingTiles)) {
+    for (KGameRenderedItem *tile : std::as_const(m_buildingTiles)) {
         m_board->addItem(tile);
     }
 }
 
-KGameRenderedItem * Building::createBuildingTile(const QString & pixmap)
+KGameRenderedItem *Building::createBuildingTile(const QString &pixmap)
 {
     auto tile = new KGameRenderedItem(m_renderer, pixmap);
     tile->setRenderSize(QSize(32, 64));
@@ -103,17 +101,16 @@ KGameRenderedItem * Building::createBuildingTile(const QString & pixmap)
 
 void Building::show()
 {
-    for (KGameRenderedItem * tile : std::as_const(m_buildingTiles)) {
+    for (KGameRenderedItem *tile : std::as_const(m_buildingTiles)) {
         tile->show();
     }
 }
 
-void Building::resize(const QSize & size)
+void Building::resize(const QSize &size)
 {
-    QSize tileSize(static_cast<unsigned int>(BUILDING_RELATIVE_WIDTH * size.width()),
-                   static_cast<unsigned int>(BUILDING_RELATIVE_HEIGHT * size.height()));
+    QSize tileSize(static_cast<unsigned int>(BUILDING_RELATIVE_WIDTH * size.width()), static_cast<unsigned int>(BUILDING_RELATIVE_HEIGHT * size.height()));
     for (int i = 0; i < m_buildingTiles.size(); ++i) {
-        KGameRenderedItem * tile = m_buildingTiles.at(i);
+        KGameRenderedItem *tile = m_buildingTiles.at(i);
         tile->setRenderSize(tileSize);
         tile->setPos(m_board->mapPosition(QPointF(m_xPos, BUILD_BASE_LOCATION - i)));
     }

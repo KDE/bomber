@@ -9,17 +9,15 @@
 
 // Qt
 #include <QGraphicsView>
+#include <QRandomGenerator>
 #include <QStandardPaths>
 #include <QTimer>
-#include <QRandomGenerator>
-
 
 // Bomber
 #include "bomb.h"
 #include "building.h"
 #include "plane.h"
 #include "settings.h"
-
 
 /** The value that the plane velocity increases by */
 const qreal PLANE_INC_VELOCITY = 0.0005;
@@ -34,13 +32,14 @@ const unsigned int TILE_NUM_W = ((NUMBER_BUILDINGS) + 2);
 /** The maximum level number before the game stops getting harder */
 const unsigned int MAX_LEVEL = 11;
 
-/** This time in milliseconds that the plane exploding animation is played for */
+/** This time in milliseconds that the plane exploding animation is played for
+ */
 const unsigned int PLANE_EXPLODE_TIME = 2000;
 
 /** This time in milliseconds that the bomb exploding animation is played for */
 const unsigned int BOMB_EXPLODE_TIME = 1000;
 
-BomberBoard::BomberBoard(KGameRenderer * renderer, QGraphicsView * view, QObject * parent)
+BomberBoard::BomberBoard(KGameRenderer *renderer, QGraphicsView *view, QObject *parent)
     : QGraphicsScene(parent)
     , m_renderer(renderer)
     , m_bomb(nullptr)
@@ -71,7 +70,7 @@ void BomberBoard::resetPlane()
     m_plane->resetPosition();
 }
 
-void BomberBoard::resize(QSize & size)
+void BomberBoard::resize(QSize &size)
 {
     setBackgroundBrush(m_renderer->spritePixmap(QStringLiteral("background"), size));
 
@@ -80,7 +79,7 @@ void BomberBoard::resize(QSize & size)
 
     m_tileSize = QSize(minTileSizeWidth, minTileSizeHeight);
 
-    for (Building * building : std::as_const(m_buildings)) {
+    for (Building *building : std::as_const(m_buildings)) {
         building->resize(m_tileSize);
     }
 
@@ -119,7 +118,7 @@ void BomberBoard::newLevel(unsigned int level)
     clear();
     m_plane->setState(Explodable::State::Moving);
     m_buildingBlocks = 0;
-    //Create the buildings
+    // Create the buildings
     for (unsigned int i = 0; i < NUMBER_BUILDINGS; ++i) {
         unsigned int min = level;
         if (min < 3) {
@@ -160,7 +159,7 @@ void BomberBoard::tick()
         m_bomb->advanceItem();
     }
 
-    for (Bomb * bomb : std::as_const(m_explodingBombs)) {
+    for (Bomb *bomb : std::as_const(m_explodingBombs)) {
         bomb->advanceItem();
     }
 
@@ -171,7 +170,7 @@ void BomberBoard::tick()
         m_bomb->update();
     }
 
-    for (Bomb * bomb : std::as_const(m_explodingBombs)) {
+    for (Bomb *bomb : std::as_const(m_explodingBombs)) {
         bomb->update();
     }
 }
@@ -189,7 +188,7 @@ void BomberBoard::dropBomb()
 void BomberBoard::checkCollisions()
 {
     const auto currentBuildings = m_buildings;
-    for (Building * building : currentBuildings) {
+    for (Building *building : currentBuildings) {
         if (m_plane->nextBoundingRect().intersects(building->boundingRect()) && m_plane->state() == Explodable::State::Moving) {
             // Plane crashed into the building
             building->destoryTop();
@@ -218,7 +217,7 @@ void BomberBoard::checkCollisions()
     }
 }
 
-void BomberBoard::bombHit(Bomb * bomb, qreal moveBombToX, qreal moveBombToY)
+void BomberBoard::bombHit(Bomb *bomb, qreal moveBombToX, qreal moveBombToY)
 {
     bomb->setPosition(moveBombToX, moveBombToY);
     bomb->setState(Bomb::State::Exploding);
@@ -229,7 +228,7 @@ void BomberBoard::bombHit(Bomb * bomb, qreal moveBombToX, qreal moveBombToY)
 
 void BomberBoard::bombExploded()
 {
-    Bomb * bomb = m_explodingBombs.dequeue();
+    Bomb *bomb = m_explodingBombs.dequeue();
     bomb->hide();
     delete bomb;
 }
@@ -266,12 +265,12 @@ void BomberBoard::clear()
     resetPlane();
 }
 
-QPoint BomberBoard::mapPosition(const QPointF & pos) const
+QPoint BomberBoard::mapPosition(const QPointF &pos) const
 {
     return QPoint(static_cast<unsigned int>(m_tileSize.width() * pos.x()), static_cast<int>(m_tileSize.height() * pos.y()));
 }
 
-QPointF BomberBoard::unmapPosition(const QPoint & pos) const
+QPointF BomberBoard::unmapPosition(const QPoint &pos) const
 {
     return QPointF(1.0 * pos.x() / m_tileSize.width(), 1.0 * pos.y() / m_tileSize.height());
 }

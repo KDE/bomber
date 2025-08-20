@@ -30,9 +30,12 @@ public:
     /** The height of the explosion relative to the tile */
     static const qreal EXPLOSION_RELATIVE_SIZE_H;
 
-    explicit Explodable(const QString & mainSvg, const QString & explosionSvg,
-                        qreal relativeWidth, qreal relativeHeight,
-                        KGameRenderer * renderer, BomberBoard * board);
+    explicit Explodable(const QString &mainSvg,
+                        const QString &explosionSvg,
+                        qreal relativeWidth,
+                        qreal relativeHeight,
+                        KGameRenderer *renderer,
+                        BomberBoard *board);
     ~Explodable() override;
 
     /**
@@ -45,7 +48,7 @@ public:
      * Sets width and height of bomb. Using the current tile size.
      * \param tileSize The size of the tile
      */
-    void resize(const QSize & tileSize);
+    void resize(const QSize &tileSize);
 
     /**
      * Sets the velocity of the explodable object
@@ -108,7 +111,7 @@ protected:
     QRectF m_nextBoundingRect;
 
 private:
-    BomberBoard * m_board;
+    BomberBoard *m_board;
 
     qreal m_velocity;
 

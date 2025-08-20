@@ -54,13 +54,13 @@ private:
     void initXMLUI();
 
     KGameThemeProvider m_provider;
-    KGameThemeSelector * m_selector;
+    KGameThemeSelector *m_selector;
 
-    BomberGameWidget * m_gameWidget;
-    QStatusBar * m_statusBar;
+    BomberGameWidget *m_gameWidget;
+    QStatusBar *m_statusBar;
 
     KToggleAction *m_pauseAction, *m_backgroundShowAction, *m_soundAction;
-    QAction * m_newAction;
+    QAction *m_newAction;
     QLabel *m_level, *m_score, *m_lives;
 };
 
