@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-22 00:38+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2024-05-03 03:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -31,75 +31,75 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
 
-#: src/bomber.cpp:38 src/bomber.cpp:179
+#: src/bomber.cpp:37 src/bomber.cpp:176
 #, kde-format
 msgctxt "Used to display the current level of play to the user"
 msgid "Level: %1"
 msgstr "等級：%1"
 
-#: src/bomber.cpp:40 src/bomber.cpp:185
+#: src/bomber.cpp:39 src/bomber.cpp:181
 #, kde-format
 msgctxt "Used to inform the user of their current score"
 msgid "Score: %1"
 msgstr "分數：%1"
 
-#: src/bomber.cpp:42 src/bomber.cpp:192
+#: src/bomber.cpp:41 src/bomber.cpp:186
 #, kde-format
 msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "生命數：%1"
 
-#: src/bomber.cpp:83
+#: src/bomber.cpp:81
 #, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "播放聲音"
 
-#: src/bomber.cpp:88
+#: src/bomber.cpp:86
 #, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
 msgstr "丟炸彈(&D)"
 
-#: src/bomber.cpp:89
+#: src/bomber.cpp:87
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "丟炸彈"
 
-#: src/bomber.cpp:90
+#: src/bomber.cpp:88
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
 msgstr "讓飛機飛行時丟個炸彈下去。"
 
-#: src/bomber.cpp:134
+#: src/bomber.cpp:131
 #, kde-format
 msgctxt ""
 "Message displayed when player tries to quit a game that is currently running"
 msgid "Do you really want to close the running game?"
 msgstr "您要關閉進行中的遊戲嗎？"
 
-#: src/bomber.cpp:165
+#: src/bomber.cpp:164
 #, kde-format
 msgid ""
 "Congratulations!\n"
 "You made it into the hall of fame."
 msgstr "恭喜！您進入了高分榜。"
 
-#: src/bomber.cpp:169
+#: src/bomber.cpp:168
 #, kde-format
 msgid "You gained a score of %1 point."
 msgid_plural "You gained a score of %1 points."
 msgstr[0] "您得到了 %1 分。"
 
-#: src/bomber.cpp:170
+#: src/bomber.cpp:169
 #, kde-format
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "遊戲結束"
 
-#: src/bomber.cpp:208
+#: src/bomber.cpp:202
 #, kde-format
 msgctxt "Game over messaged displayed in the status bar"
 msgid "Game over. Press '%1' for a new game"
@@ -161,12 +161,12 @@ msgstr "轟炸機"
 msgid "Arcade bombing game"
 msgstr "轟炸機遊戲"
 
-#: src/main.cpp:52
+#: src/main.cpp:53
 #, kde-format
 msgid "(C) 2007 John-Paul Stanford"
 msgstr "(C) 2007 John-Paul Stanford"
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "John-Paul Stanford"
 msgstr "John-Paul Stanford"

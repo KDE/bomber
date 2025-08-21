@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-22 00:38+0000\n"
+"POT-Creation-Date: 2025-08-21 00:40+0000\n"
 "PO-Revision-Date: 2016-05-01 17:34+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -32,28 +32,28 @@ msgid "Your emails"
 msgstr "slsimic@gmail.com"
 
 # >> @info:status
-#: src/bomber.cpp:38 src/bomber.cpp:179
+#: src/bomber.cpp:37 src/bomber.cpp:176
 #, kde-format
 msgctxt "Used to display the current level of play to the user"
 msgid "Level: %1"
 msgstr "ниво: %1"
 
 # >> @info:status
-#: src/bomber.cpp:40 src/bomber.cpp:185
+#: src/bomber.cpp:39 src/bomber.cpp:181
 #, kde-format
 msgctxt "Used to inform the user of their current score"
 msgid "Score: %1"
 msgstr "резултат: %1"
 
 # >> @info:status
-#: src/bomber.cpp:42 src/bomber.cpp:192
+#: src/bomber.cpp:41 src/bomber.cpp:186
 #, kde-format
 msgctxt "Used to tell the user how many lives they have left"
 msgid "Lives: %1"
 msgstr "живота: %1"
 
 # >> @option:check
-#: src/bomber.cpp:83
+#: src/bomber.cpp:81
 #, fuzzy, kde-format
 #| msgctxt "Menu item used to disable or enable sound"
 #| msgid "&Play Sounds"
@@ -61,7 +61,7 @@ msgctxt "@option:check"
 msgid "Play Sounds"
 msgstr "&Пуштај звукове"
 
-#: src/bomber.cpp:88
+#: src/bomber.cpp:86
 #, fuzzy, kde-format
 #| msgctxt "The name of the action used for dropping bombs"
 #| msgid "&Drop bomb"
@@ -69,7 +69,7 @@ msgctxt "@action"
 msgid "&Drop Bomb"
 msgstr "&Испусти бомбу"
 
-#: src/bomber.cpp:89
+#: src/bomber.cpp:87
 #, fuzzy, kde-format
 #| msgctxt "The tool tip text for the action used to drop bombs"
 #| msgid "Drop bomb"
@@ -77,7 +77,7 @@ msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Испусти бомбу"
 
-#: src/bomber.cpp:90
+#: src/bomber.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "Description of the action used to drop bombs"
 #| msgid "Makes the plane drop a bomb while flying"
@@ -85,14 +85,14 @@ msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
 msgstr "Авион ће у лету испустити бомбу."
 
-#: src/bomber.cpp:134
+#: src/bomber.cpp:131
 #, kde-format
 msgctxt ""
 "Message displayed when player tries to quit a game that is currently running"
 msgid "Do you really want to close the running game?"
 msgstr "Желите ли заиста да напустите текућу партију?"
 
-#: src/bomber.cpp:165
+#: src/bomber.cpp:164
 #, kde-format
 msgid ""
 "Congratulations!\n"
@@ -101,7 +101,7 @@ msgstr ""
 "Честитамо!\n"
 "Доспели сте у дворану славних."
 
-#: src/bomber.cpp:169
+#: src/bomber.cpp:168
 #, fuzzy, kde-format
 #| msgid "You gained a score of %1 point."
 msgid "You gained a score of %1 point."
@@ -111,14 +111,14 @@ msgstr[1] "Резултат вам је %1."
 msgstr[2] "Резултат вам је %1."
 msgstr[3] "Резултат вам је %1."
 
-#: src/bomber.cpp:170
+#: src/bomber.cpp:169
 #, fuzzy, kde-format
 #| msgid "End of Game"
 msgctxt "@title:window"
 msgid "End of Game"
 msgstr "Крај игре"
 
-#: src/bomber.cpp:208
+#: src/bomber.cpp:202
 #, kde-format
 msgctxt "Game over messaged displayed in the status bar"
 msgid "Game over. Press '%1' for a new game"
@@ -180,12 +180,12 @@ msgstr "Бомбардер"
 msgid "Arcade bombing game"
 msgstr "Аркадна игра бомбардовања"
 
-#: src/main.cpp:52
+#: src/main.cpp:53
 #, kde-format
 msgid "(C) 2007 John-Paul Stanford"
 msgstr "© 2007, Џон‑Пол Станфорд"
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "John-Paul Stanford"
 msgstr "Џон‑Пол Станфорд"
