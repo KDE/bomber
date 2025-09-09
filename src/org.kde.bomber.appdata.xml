@@ -49,7 +49,6 @@
   <name xml:lang="sv">Bomber</name>
   <name xml:lang="tr">Bombacı</name>
   <name xml:lang="uk">Bomber</name>
-  <name xml:lang="x-test">xxBomberxx</name>
   <name xml:lang="zh-CN">Bomber</name>
   <name xml:lang="zh-TW">戰鬥機_Bomber</name>
   <summary>Arcade Bombing Game</summary>
@@ -93,7 +92,6 @@
   <summary xml:lang="sv">Spelhallsbombspel</summary>
   <summary xml:lang="tr">Bombalama Macera Oyunu</summary>
   <summary xml:lang="uk">Аркадна гра у бомбометання</summary>
-  <summary xml:lang="x-test">xxArcade Bombing Gamexx</summary>
   <summary xml:lang="zh-CN">街机风格的轰炸游戏</summary>
   <summary xml:lang="zh-TW">大型遊戲機的戰鬥機遊戲</summary>
   <description>
@@ -142,7 +140,6 @@
     <p xml:lang="sv">Bomber är ett spelhallsspel för en ensam spelare. Spelaren invaderar olika städer i ett flygplan som flyger på allt lägre höjd.</p>
     <p xml:lang="tr">Bombacı tek oyunculu bir makine oyunudur. Oyuncu yüksekliği azalan bir uçakla çeşitli şehirleri istila eder.</p>
     <p xml:lang="uk">Bomber — аркадна гра для одного гравця. Гравець бомбардує з літака міста, висота будинків у яких поступово зростає.</p>
-    <p xml:lang="x-test">xxBomber is a single player arcade game. The player is invading various cities in a plane that is decreasing in height.xx</p>
     <p xml:lang="zh-CN">Bomber 是一个街机风格的单人游戏。玩家将乘坐一架高度正在徐徐降低的轰炸机入侵不同城市的领空。</p>
     <p xml:lang="zh-TW">Bomber 是個大型單玩家遊戲。玩家要侵略多個城市，由高到低。</p>
     <p>
@@ -191,7 +188,6 @@
     <p xml:lang="sv">Spelets mål är att förstöra alla byggnader och gå vidare till nästa nivå. Varje nivå blir lite svårare genom att planets hastighet och byggnadernas höjd ökar.</p>
     <p xml:lang="tr">Oyunun amacı şehirdeki bütün binaları yıkmak ve bir sonraki düzeye geçmektir. Her düzeyde uçağın hızı ve binaların yüksekliği artırılarak zorluk artırılır.</p>
     <p xml:lang="uk">Метою гри є зруйнувати всі будинки і перейти на наступний рівень. З кожним рівнем гра стає складнішою, оскільки зростає швидкість літака і висота будинків.</p>
-    <p xml:lang="x-test">xxThe goal of the game is to destroy all the buildings and advance to the next level. Each level gets a bit harder by increasing the speed of the plane and the height of the buildings.xx</p>
     <p xml:lang="zh-CN">游戏的目标是摧毁所有建筑物，达成目标后可以进入下一关。每过一关，轰炸机的速度和建筑物的高度都会比前一关有所提高，游戏的难度也因此越来越高。</p>
     <p xml:lang="zh-TW">遊戲的目的是要催毀所有的建築物，並進到下一關。每一關難度會越來越高，建築物也會越來越高。</p>
   </description>
