@@ -3,10 +3,10 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Albert Astals Cid <aacid@kde.org>, 2009.
-# Manuel Tortosa <manutortosa@gmail.com>, 2009.
-# Josep M. Ferrer <txemaq@gmail.com>, 2010, 2012, 2013, 2016, 2019, 2020, 2024.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
+# SPDX-FileCopyrightText: 2009 Albert Astals Cid <aacid@kde.org>
+# SPDX-FileCopyrightText: 2009 Manuel Tortosa <manutortosa@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2012, 2013, 2016, 2019, 2020, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
@@ -73,7 +73,7 @@ msgstr "Llança una bomba"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr "Fa que l'avió inicie una bomba mentre vola."
+msgstr "Fa que l'avió llance una bomba mentre vola."
 
 #: src/bomber.cpp:134
 #, kde-format
