@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-21 00:40+0000\n"
+"POT-Creation-Date: 2025-10-28 00:39+0000\n"
 "PO-Revision-Date: 2010-03-22 20:31+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -158,32 +158,32 @@ msgctxt "Used to tell the user that the game is over"
 msgid "Game over."
 msgstr "จบเกม"
 
-#: src/main.cpp:49
+#: src/main.cpp:52
 #, kde-format
 msgid "Bomber"
 msgstr "เครื่องบินทิ้งระเบิด"
 
-#: src/main.cpp:51
+#: src/main.cpp:54
 #, kde-format
 msgid "Arcade bombing game"
 msgstr "เกมอาเขต - เครื่องบินทิ้งระเบิด"
 
-#: src/main.cpp:53
+#: src/main.cpp:56
 #, kde-format
 msgid "(C) 2007 John-Paul Stanford"
 msgstr "สงวนลิขสิทธิ์ (C) 2007 John-Paul Stanford"
 
-#: src/main.cpp:56
+#: src/main.cpp:59
 #, kde-format
 msgid "John-Paul Stanford"
 msgstr "John-Paul Stanford"
 
-#: src/main.cpp:57
+#: src/main.cpp:60
 #, kde-format
 msgid "Mehmet Emre"
 msgstr ""
 
-#: src/main.cpp:57
+#: src/main.cpp:60
 #, kde-format
 msgid "Porting to QGraphicsView."
 msgstr ""
