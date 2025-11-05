@@ -98,7 +98,7 @@
 </mediaobject>
 </screenshot>
 		<para
->Le joueur vole dans un avion à travers une ville. L'avion vole de gauche à droite. Chaque fois qu'il disparaît de l'aire de jeu, il ré-apparaît de nouveau sur le coté gauche, mais à une altitude plus basse qu'avant. </para>
+>Le joueur vole dans un avion à travers une ville. L'avion vole de gauche à droite. Chaque fois qu'il disparait de l'aire de jeu, il ré-apparait de nouveau sur le coté gauche, mais à une altitude plus basse qu'avant. </para>
 		<para
 >Le joueur doit détruire tous les immeubles pour compléter le niveau. Si l'avion s'écrase sur un immeuble, le joueur perd une vie et l'avion est de nouveau placé en haut à gauche de l'aire de jeu. </para>
 		<para
@@ -113,13 +113,13 @@
 >Configuration du jeu</title
 ><!-- do not change this! -->
 		<para
->La boîte de dialogue de configuration de &bomber; vous permet de sélectionner des thèmes visuels pour &bomber;. </para>
+>La boite de dialogue de configuration de &bomber; vous permet de sélectionner des thèmes visuels pour &bomber;. </para>
 		<para
 >Pour sélectionner un nouveau thème, le choisir simplement dans la liste de sélection. Chaque élément dans la liste affiche un petit aperçu à gauche du nom du thème. La sélection est appliquée immédiatement. </para>
 		<para
 >Une fois que vous êtes satisfait du thème que vous avez sélectionné, vous pouvez cliquer sur le bouton <guibutton
 >Fermer</guibutton
->, situé en bas de cette boîte de dialogue. </para>
+>, situé en bas de cette boite de dialogue. </para>
 	</chapter>
 
 	<chapter id="credits-and-license">
