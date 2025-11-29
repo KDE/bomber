@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009.
+# SPDX-FileCopyrightText: 2008, 2009, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bomber\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:49+0000\n"
-"PO-Revision-Date: 2009-08-09 07:57+0300\n"
+"PO-Revision-Date: 2025-11-28 13:05+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Română <kde-i18n-ro@kde.org>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,46 +47,35 @@ msgid "Lives: %1"
 msgstr "Vieți: %1"
 
 #: src/bomber.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr "&Redă sunete"
+msgstr "Redă sunete"
 
 #: src/bomber.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "The name of the action used for dropping bombs"
-#| msgid "&Drop bomb"
+#, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
 msgstr "&Aruncă bomba"
 
 #: src/bomber.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "The tool tip text for the action used to drop bombs"
-#| msgid "Drop bomb"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
 msgstr "Aruncă bomba"
 
 #: src/bomber.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Description of the action used to drop bombs"
-#| msgid "Makes the plane drop a bomb while flying"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr "Determină avionul să arunce o bombă în timpul zborului"
+msgstr "Determină avionul să arunce o bombă în timpul zborului."
 
 #: src/bomber.cpp:131
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Message displayed when play tries to quit a game that is currently running"
-#| msgid "Do you really want to close the running game?"
+#, kde-format
 msgctxt ""
 "Message displayed when player tries to quit a game that is currently running"
 msgid "Do you really want to close the running game?"
-msgstr "Sigur doriți închideți jocul curent?"
+msgstr "Sigur doriți închideți jocul în desfășurare?"
 
 #: src/bomber.cpp:164
 #, kde-format
@@ -93,20 +83,22 @@ msgid ""
 "Congratulations!\n"
 "You made it into the hall of fame."
 msgstr ""
+"Felicitări!\n"
+"Ați ajuns în cartea recordurilor."
 
 #: src/bomber.cpp:168
 #, kde-format
 msgid "You gained a score of %1 point."
 msgid_plural "You gained a score of %1 points."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Ați obținut un scor de %1 punct."
+msgstr[1] "Ați obținut un scor de %1 puncte."
+msgstr[2] "Ați obținut un scor de %1 de puncte."
 
 #: src/bomber.cpp:169
 #, kde-format
 msgctxt "@title:window"
 msgid "End of Game"
-msgstr ""
+msgstr "Joc terminat"
 
 #: src/bomber.cpp:202
 #, kde-format
@@ -183,12 +175,12 @@ msgstr "John-Paul Stanford"
 #: src/main.cpp:60
 #, kde-format
 msgid "Mehmet Emre"
-msgstr ""
+msgstr "Mehmet Emre"
 
 #: src/main.cpp:60
 #, kde-format
 msgid "Porting to QGraphicsView."
-msgstr ""
+msgstr "Portarea către QGraphicsView."
 
 #~ msgid "The graphical theme to be used."
 #~ msgstr "Tematica grafică de utilizat."
