@@ -31,6 +31,7 @@
   <name xml:lang="it">Bomber</name>
   <name xml:lang="ka">ბომბდამშენი</name>
   <name xml:lang="ko">Bomber</name>
+  <name xml:lang="lt">Bombonešis</name>
   <name xml:lang="lv">Bomber</name>
   <name xml:lang="nds">Bomber</name>
   <name xml:lang="nl">Bomber</name>
@@ -75,6 +76,7 @@
   <summary xml:lang="it">Gioco di bombardamento arcade</summary>
   <summary xml:lang="ka">არკადული დაბომბვის თამაში</summary>
   <summary xml:lang="ko">아케이드 폭격 게임</summary>
+  <summary xml:lang="lt">Arkadinis bombardavimo žaidimas</summary>
   <summary xml:lang="lv">Bombardēšanas spēle</summary>
   <summary xml:lang="nl">Arcade-bommenwerpspel</summary>
   <summary xml:lang="nn">Bombespel</summary>
@@ -122,6 +124,7 @@
     <p xml:lang="it">Bomber è un semplice gioco arcade per un solo giocatore. Questi deve invadere delle città in una pianura inclinata.</p>
     <p xml:lang="ka">Bomber -ი ერთმომხმარებლიანი არკადული თამაშია. მოთამაშე თვითმფრინავით თავს ესხმის ქალაქებს, რომლის ფრენის სიმაღლეც იკლებს.</p>
     <p xml:lang="ko">Bomber는 단일 플레이어 아케이드 게임입니다. 플레이어는 계속 하강하는 비행기를 타고 도시를 침략합니다.</p>
+    <p xml:lang="lt">Bombonešis yra arkadinis žaidimas, skirtas vienam žaidėjui. Žaidėjas įsiveržia į skirtingus miestus skrisdamas lėktuvu, kuris praranda aukštį.</p>
     <p xml:lang="lv">„Bomber“ ir vienas personas arkādes tipa spēle. Šajā spēlē spēlētājs cenšas iekarot dažāds pilsētas lidmašīnā, kas pakāpeniski samazina lidojuma augstumu.</p>
     <p xml:lang="nds">Bomber is en Enkelspeler-Speelhallenspeel. De Speler griept en Reeg Steder mit en Fleger an, dat jümmers wieder daal kummt.</p>
     <p xml:lang="nl">Bomber is een arcade spel voor een enkele speler. De speler bezoekt verschillende steden in een vliegtuig dat dat steeds lager gaat.</p>
@@ -170,6 +173,7 @@
     <p xml:lang="it">Lo scopo del gioco è di distruggere tutti gli edifici e raggiungere il livello successivo. Ogni livello è un po' più difficile perché aumenta la pendenza del piano e l'altezza degli edifici. </p>
     <p xml:lang="ka">თამაშის იდეაა გაანადგუროთ ყველა შენობა და გადახვიდეთ შემდეგ დონეზე. თითოეული შემდეგი დონე ოდნავ უფრო რთულია, იზრდება თვითმფრინავის სიჩქარე და შენობების სიმაღლე.</p>
     <p xml:lang="ko">게임 목표는 모든 건물을 파괴하고 다음 단계로 진행하는 것입니다. 각각 단계별로 비행기가 빨라지고 건물이 높아집니다.</p>
+    <p xml:lang="lt">Žaidimo tikslas yra sunaikinti visus pastatus ir pereiti į kitą lygį. Kitas lygis tampa sunkesnis, nes jame padidėja lėktuvo greitis ir pastatų aukštis.</p>
     <p xml:lang="lv">Spēles mērķis ir iznīcināt visas ēkas un pāriet jaunā līmenī. Katrs līmenis kļūst nedaudz grūtāks par iepriekšējo, jo palielinās lidmašīnas ātrums un ēku augstums.</p>
     <p xml:lang="nds">Dat Speel is, Du rietst all Hüüs daal un kummst so na de nakamen Speelstoop. Elkeen Stoop is sworer; de Fleger fliggt gauer un de Hüüs sünd höger.</p>
     <p xml:lang="nl">Het doel van het spel is om alle gebouwen te vernietigen en verder te gaan naar het volgende niveau. Elk niveau wordt een beetje moeilijker door de snelheid van het vliegtuig te verhogen en de hoogte van de gebouwen.</p>
