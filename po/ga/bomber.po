@@ -46,46 +46,35 @@ msgid "Lives: %1"
 msgstr "Anamacha: %1"
 
 #: src/bomber.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "Menu item used to disable or enable sound"
-#| msgid "&Play Sounds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Play Sounds"
-msgstr "&Seinn Fuaimeanna"
+msgstr ""
 
 #: src/bomber.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "The name of the action used for dropping bombs"
-#| msgid "&Drop bomb"
+#, kde-format
 msgctxt "@action"
 msgid "&Drop Bomb"
-msgstr "&Lig buama titim"
+msgstr ""
 
 #: src/bomber.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "The tool tip text for the action used to drop bombs"
-#| msgid "Drop bomb"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Drop bomb"
-msgstr "Lig buama titim"
+msgstr ""
 
 #: src/bomber.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Description of the action used to drop bombs"
-#| msgid "Makes the plane drop a bomb while flying"
+#, kde-format
 msgctxt "@info:whatsthis"
 msgid "Makes the plane drop a bomb while flying."
-msgstr "Lig buama titim ón eitleán le linn eitilt"
+msgstr ""
 
 #: src/bomber.cpp:131
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Message displayed when play tries to quit a game that is currently running"
-#| msgid "Do you really want to close the running game?"
+#, kde-format
 msgctxt ""
 "Message displayed when player tries to quit a game that is currently running"
 msgid "Do you really want to close the running game?"
-msgstr "An bhfuil tú cinnte gur mian leat an cluiche reatha a dhúnadh?"
+msgstr ""
 
 #: src/bomber.cpp:164
 #, kde-format
@@ -100,9 +89,6 @@ msgid "You gained a score of %1 point."
 msgid_plural "You gained a score of %1 points."
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: src/bomber.cpp:169
 #, kde-format
@@ -191,15 +177,3 @@ msgstr "Mehmet Emre"
 #, kde-format
 msgid "Porting to QGraphicsView."
 msgstr "Leagan QGraphicsView."
-
-#~ msgid "The graphical theme to be used."
-#~ msgstr "An téama grafach le húsáid."
-
-#~ msgid "Theme"
-#~ msgstr "Téama"
-
-#~ msgid "Game over. Press <Space> for a new game"
-#~ msgstr "Cluiche thart. Brúigh an spásbharra chun cluiche nua a thosú"
-
-#~ msgid "sandyrb"
-#~ msgstr "sandyrb"
