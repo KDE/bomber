@@ -127,7 +127,7 @@ msgid ""
 "Welcome to Bomber.\n"
 "Click to start a game"
 msgstr ""
-"مرحبا بك في Bomber.\n"
+"مرحبًا بك في Bomber.\n"
 "انقر لبدء اللعبة"
 
 #: src/bomberwidget.cpp:313
