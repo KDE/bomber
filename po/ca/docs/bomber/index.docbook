@@ -93,9 +93,9 @@
 		</note>
 
 		<para
->&bomber; és un joc arcade d'un sol jugador. El jugador està envaint diverses ciutats en un avió que va disminuint en alçada. </para>
+>&bomber; és un joc arcade d'un sol jugador. El jugador està envaint diverses ciutats en un avió que va disminuint en altura. </para>
 		<para
->L'objectiu del joc és destruir tots els edificis i avançar al següent nivell. Cada nivell es torna més difícil, incrementant la velocitat de l'avió i l'alçada dels edificis. </para>
+>L'objectiu del joc és destruir tots els edificis i avançar al següent nivell. Cada nivell es torna més difícil, incrementant la velocitat de l'avió i l'altura dels edificis. </para>
 	</chapter>
 	<chapter id="how-to-play">
 		<title
