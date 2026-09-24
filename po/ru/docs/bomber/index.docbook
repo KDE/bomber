@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+<book id="bomber" lang="&language;">
+	<bookinfo>
+		<title
+>Руководство пользователя &bomber;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>John-Paul</firstname
+> <surname
+>Stanford</surname
+> <affiliation
+> <address
+> <email
+>jp@stanwood.org.uk</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><affiliation
+><address
+><email
+>kekcuha@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2008</year>
+			<holder
+>John-Paul Stanford</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>13 октября 2021 г.</date>
+		<releaseinfo
+>KDE Gear 21.08</releaseinfo>
+
+		<abstract>
+			<para
+>В этом руководстве описывается игра &bomber; версии 21.08 </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>игра</keyword
+><!-- do not change this! -->
+			<keyword
+>аркада</keyword>
+			<keyword
+>bomber</keyword>
+			<keyword
+>Bomber</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Введение</title>
+		<note>
+			<title
+>Тип игры:</title>
+			<para
+>Аркада</para>
+		</note>
+		<note>
+			<title
+>Возможное число игроков:</title>
+			<para
+>Один</para>
+		</note>
+
+		<para
+>&bomber; — аркадная игра для одного игрока. Игрок вторгается в различные города на самолёте, который постепенно снижается. </para>
+		<para
+>Цель игры — уничтожить все здания и перейти на следующий уровень. С каждым уровнем сложность возрастает: увеличивается скорость самолёта и высота зданий. </para>
+	</chapter>
+	<chapter id="how-to-play">
+		<title
+>Правила игры</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="mainscreen.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Главный экран &bomber;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+		<para
+>Игрок управляет самолётом в городе. Самолёт летит слева направо. Каждый раз, когда он исчезает за краем игрового поля, он вновь появляется слева, но ниже, чем прежде. </para>
+		<para
+>Игрок должен уничтожить все здания, чтобы пройти уровень. Если самолёт врезается в здание, игрок теряет жизнь, и самолёт снова перемещается в левый верхний угол игрового поля. </para>
+		<para
+>Здания разрушаются сброшенными на них бомбами. Чтобы сбросить бомбу, щёлкните левой кнопкой мыши или нажмите клавишу &Space;. Бомба падает с самолёта и поражает всё, что находится прямо под ней. </para>
+		<para
+>После прохождения уровня игрок переходит на следующий. С каждым уровнем сложность немного возрастает: здания становятся выше, а самолёт — быстрее. </para>
+	</chapter
+>	
+
+	<chapter id="configuration">
+		<title
+>Настройка игры</title
+><!-- do not change this! -->
+		<para
+>В диалоге настройки &bomber; можно выбрать оформление игры. </para>
+		<para
+>Чтобы выбрать новое оформление, достаточно указать его в списке. Каждый элемент списка содержит небольшой образец слева от названия оформления. Выбор применяется сразу. </para>
+		<para
+>После выбора подходящего оформления нажмите кнопку <guibutton
+>Закрыть</guibutton
+> в нижней части этого диалогового окна. </para>
+	</chapter>
+
+	<chapter id="credits-and-license">
+		<title
+>Авторские права и лицензия</title>
+
+
+		<para
+>&bomber;</para>
+		<itemizedlist>
+			<listitem>
+				<para
+>John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+> — первоначальный автор </para>
+			</listitem>
+		</itemizedlist>
+		<para
+>© John-Paul Stanford <email
+>jp@stanwood.org.uk</email
+>, 2008 (документация) </para>
+		
+		<para
+>Александр Яворский<email
+>kekcuha@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+</book>
